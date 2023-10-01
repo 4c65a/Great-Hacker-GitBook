@@ -17,10 +17,12 @@
 
 ## Networks
 
-* [Tipos de Red](networks/tipos-de-red.md)
-* [Transmisión de datos](networks/transmision-de-datos.md)
-* [Conectividad al ISP](networks/conectividad-al-isp.md)
-* [Page](networks/page.md)
+* [Network Basics](networks/network-basics/README.md)
+  * [Tipos de Red](networks/network-basics/tipos-de-red.md)
+  * [Transmisión de datos](networks/network-basics/transmision-de-datos.md)
+  * [Conectividad al ISP](networks/network-basics/conectividad-al-isp.md)
+  * [Protocolos de Comunicación](networks/network-basics/protocolos-de-comunicacion.md)
+* [Page 1](networks/page-1.md)
 
 ## Linux
 
