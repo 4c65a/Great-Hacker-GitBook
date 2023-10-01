@@ -20,7 +20,7 @@ Son reglas entre dispositivos que están conectados.Las reglas son de instruccio
 
 ***
 
-Algunos protocolos mas comunes son TCP, IP, UDP, FTP, HTTP,HTTPS,POP3, SMTP ,IMAP, SSH, IRC, SFTP, SSL, ICMP, DNS, TLS, DHCP,Telnet,,existen muchos tipos de protocolos.
+Algunos protocolos mas comunes son TCP, IP, UDP, FTP, HTTP,HTTPS,POP3, SMTP ,IMAP, SSH, IRC, SFTP, SSL, ICMP, DNS, TLS, DHCP,Telnet,etc,existen muchos tipos de protocolos.
 
 1. **TCP (Transmission Control Protocol)**: Un protocolo de transporte confiable que garantiza la entrega ordenada y sin errores de datos en una red.
 2. **IP (Internet Protocol)**: Se utiliza para en rutar y entregar paquetes de datos en una red. Hay versiones IPv4 e IPv6.
@@ -40,3 +40,4 @@ Algunos protocolos mas comunes son TCP, IP, UDP, FTP, HTTP,HTTPS,POP3, SMTP ,IMA
 16. **TLS (Transport Layer Security)**: Un protocolo de seguridad que garantiza la confidencialidad e integridad de las comunicaciones en línea, es la evolución de SSL.
 17. **DHCP (Dynamic Host Configuration Protocol)**: Utilizado para asignar direcciones IP de manera dinámica a dispositivos en una red.
 18. **Telnet**: Telnet es un protocolo de red que se utiliza para acceder y controlar dispositivos y servidores remotos a través de una red.
+19. **IPv4 y IPv6 :** Son los dos estándares principales para asignar direcciones IP a dispositivos en una red.
