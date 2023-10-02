@@ -39,4 +39,8 @@
 
 ## Programming
 
-* [Page 7](programming/page-7.md)
+* [Rust](programming/rust.md)
+* [C](programming/c.md)
+* [GO](programming/go.md)
+* [Python](programming/python.md)
+* [BASH](programming/bash.md)
