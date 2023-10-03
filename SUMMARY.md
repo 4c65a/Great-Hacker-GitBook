@@ -10,10 +10,10 @@
   * [Metodologías](ethical-hacker-pentesting/ethical-hacker/metodologias.md)
   * [Cumplimiento normativo](ethical-hacker-pentesting/ethical-hacker/cumplimiento-normativo.md)
   * [Fases de pentesting](ethical-hacker-pentesting/ethical-hacker/fases-de-pentesting.md)
-* [Pentesting Windows](ethical-hacker-pentesting/pentesting-windows.md)
-* [Pentesting Linux](ethical-hacker-pentesting/pentesting-linux.md)
 * [Pentesting web](ethical-hacker-pentesting/pentesting-web.md)
+* [Pentesting Linux](ethical-hacker-pentesting/pentesting-linux.md)
 * [Pentesting Networks](ethical-hacker-pentesting/pentesting-networks.md)
+* [Pentesting Windows](ethical-hacker-pentesting/pentesting-windows.md)
 
 ## Networks
 
