@@ -1,2 +1,7 @@
-# Page 7
+# Rust
 
+### Recursos de aprendizaje
+
+### Cheat sheet
+
+### Repositorios
