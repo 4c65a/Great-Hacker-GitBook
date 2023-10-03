@@ -18,14 +18,19 @@
 ## Networks
 
 * [Network Basics](networks/network-basics/README.md)
+  * [OSI](networks/network-basics/osi.md)
   * [Tipos de Red](networks/network-basics/tipos-de-red.md)
   * [Transmisión de datos](networks/network-basics/transmision-de-datos.md)
   * [Conectividad al ISP](networks/network-basics/conectividad-al-isp.md)
   * [Protocolos de Comunicación](networks/network-basics/protocolos-de-comunicacion.md)
-    * [IPv4 y IPv6](networks/network-basics/protocolos-de-comunicacion/ipv4-y-ipv6.md)
   * [MAC](networks/network-basics/mac.md)
   * [WIFI](networks/network-basics/wifi.md)
 * [Firmware](networks/firmware.md)
+
+***
+
+* [IPv4 y IPv6](ipv4-y-ipv6.md)
+* [Page](page.md)
 
 ## Linux
 
