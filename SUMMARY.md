@@ -26,11 +26,8 @@
   * [MAC](networks/network-basics/mac.md)
   * [WIFI](networks/network-basics/wifi.md)
 * [Firmware](networks/firmware.md)
-
-***
-
-* [IPv4 y IPv6](ipv4-y-ipv6.md)
-* [Page](page.md)
+* [Page](networks/page.md)
+* [IPv4 y IPv6](networks/ipv4-y-ipv6.md)
 
 ## Linux
 
