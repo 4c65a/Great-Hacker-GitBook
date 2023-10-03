@@ -21,8 +21,10 @@
   * [Tipos de Red](networks/network-basics/tipos-de-red.md)
   * [Transmisión de datos](networks/network-basics/transmision-de-datos.md)
   * [Conectividad al ISP](networks/network-basics/conectividad-al-isp.md)
-  * [Protocolos de Comunicación](networks/network-basics/protocolos-de-comunicacion.md)
+  * [Protocolos de Comunicación](networks/network-basics/protocolos-de-comunicacion/README.md)
+    * [IPv4 y IPv6](networks/network-basics/protocolos-de-comunicacion/ipv4-y-ipv6.md)
   * [MAC](networks/network-basics/mac.md)
+* [WIFI](networks/wifi.md)
 * [Page 1](networks/page-1.md)
 
 ## Linux
