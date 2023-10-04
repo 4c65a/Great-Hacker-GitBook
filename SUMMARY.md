@@ -25,9 +25,14 @@
   * [Protocolos de Comunicación](networks/network-basics/protocolos-de-comunicacion.md)
   * [MAC](networks/network-basics/mac.md)
   * [WIFI](networks/network-basics/wifi.md)
-* [Firmware](networks/firmware.md)
+  * [IP Address](networks/network-basics/ip-address.md)
+  * [Firmware](networks/network-basics/firmware.md)
+  * [IPv4 y IPv6](networks/network-basics/ipv4-y-ipv6.md)
+* [VPN](networks/vpn.md)
+* [VLANs](networks/vlans.md)
+* [SDN](networks/sdn.md)
+* [NFV](networks/nfv.md)
 * [Page](networks/page.md)
-* [IPv4 y IPv6](networks/ipv4-y-ipv6.md)
 
 ## Linux
 
