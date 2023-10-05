@@ -95,3 +95,45 @@ Las direcciones IPv4 públicas son direcciones que se enrutan globalmente entre 
 
 A mediados de la década de 1990, con la introducción de la World Wide Web (WWW), se introdujeron direcciones IPv4 privadas debido al agotamiento del espacio de direcciones IPv4. Las direcciones IPv4 privadas no son exclusivas y cualquier red interna puede usarlas.
 
+{% code fullWidth="true" %}
+```
+
+Rango de direcciones	        Tipo de dirección
+0.0.0.0 a 0.255.255.255	        Privado
+10.0.0.0 a 10.255.255.255	Privado
+172.16.0.0 a 172.31.255.255	Privado
+192.168.0.0 a 192.168.255.255	Privado
+169.254.0.0 a 169.254.255.255	Auto-configuración de direcciones IP
+Todo lo demás	                Público
+```
+{% endcode %}
+
+### Direcciones IPv4 de uso especial
+
+Existen ciertas direcciones, como la dirección de red y la dirección de difusión, que no se pueden asignar a los hosts. También hay direcciones especiales que pueden asignarse a los hosts, pero con restricciones respecto de la forma en que dichos hosts pueden interactuar dentro de la red.
+
+**Direcciones de loopback**
+
+Las direcciones de bucle invertido (loopback) (127.0.0.0 /8 o 127.0.0.1 a 127.255.255.254) se identifican más comúnmente como solo 127.0.0.1. Estas son direcciones especiales utilizadas por un host para dirigir el tráfico hacia sí mismo. Por ejemplo, el comando **ping** se usa comúnmente para probar conexiones a otros hosts.
+
+**Direcciones de enlace local**
+
+Direcciones link-local o direcciones IP privadas automáticas (APIPA) 169.254.0.0/16o 169.254.0.1 a 169.254.255.254 Los utiliza un cliente de Windows para auto configurarse en caso de que el cliente no pueda obtener un direccionamiento IP a través de otros métodos. Las direcciones locales de vínculo se pueden utilizar en una conexión de punto a punto, pero no se utilizan comúnmente para este propósito.
+
+### Ipv6
+
+> NAT, o Network Address Translation, es un mecanismo que permite a dispositivos con direcciones IP privadas comunicarse con dispositivos con direcciones IP públicas.
+
+IPv6 está diseñado para ser el sucesor de IPv4. IPv6 tiene un espacio de direcciones más grande de 128 bits, que proporciona 340 undecillones (es decir, 340 seguidos de 36 ceros) posibles direcciones. Sin embargo, IPv6 es más que solo direcciones más extensas.
+
+Cuando el IETF comenzó a desarrollar un sucesor de IPv4, aprovechó esta oportunidad para corregir las limitaciones de IPv4 e incluir mejoras. Un ejemplo es el Protocolo de mensajes de control de Internet versión 6 (ICMPv6), que incluye la resolución de direcciones y la configuración automática de direcciones que no se encuentran en ICMP para IPv4 (ICMPv4).
+
+El agotamiento del espacio de direcciones IPv4 fue el factor que motivó la migración a IPv6. A medida que África, Asia y otras áreas del mundo están más conectadas a Internet, no hay suficientes direcciones IPv4 para acomodar este crecimiento. Como se muestra en la ilustración, a cuatro de cinco Registros Regionales de Internet (RIR) se les agotaron las direcciones IPv4.
+
+### Las técnicas de migración de IPv4 a IPv6
+
+Doble pila permite que IPv4 e IPv6 coexistan en el mismo segmento de red. Los dispositivos dual-stack ejecutan pilas de protocolos IPv4 e IPv6 de manera simultánea. Conocido como IPv6 nativo, esto significa que la red del cliente tiene una conexión IPv6 a su ISP y puede acceder al contenido que se encuentra en Internet a través de IPv6.
+
+La tunelización es un método para transportar un paquete IPv6 a través de una red IPv4. El paquete IPv6 se encapsula dentro de un paquete IPv4, de manera similar a lo que sucede con otros tipos de datos
+
+La Traducción de Direcciones de Redes 64 (NAT64) permite que los dispositivos con IPv6 habilitado se comuniquen con dispositivos con IPv4 habilitado mediante una técnica de traducción similar a la NAT para IPv4. Un paquete IPv6 se traduce a un paquete IPv4 y un paquete IPv4 se traduce a un paquete IPv6.
