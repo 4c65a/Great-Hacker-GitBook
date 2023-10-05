@@ -152,14 +152,14 @@ Las direcciones IPv6 tienen una longitud de 128 bits y se escriben como una cade
 
 ### Omitir ceros iniciales
 
-La primera regla para ayudar a reducir la notación de las direcciones IPv6 es omitir los ceros iniciales en cualquier hexteto. Aquí hay cuatro ejemplos de formas de omitir ceros a la izquierda:
+La primera regla para ayudar a reducir la notación de las direcciones IPv6 es omitir los ceros iniciales en cualquier hexteto, omitir ceros a la izquierda:
 
 * 01ab se puede representar como 1ab
 * 09f0 se puede representar como 9f0
 * 0a00 se puede representar como a00
 * 00ab se puede representar como ab
 
-Esta regla solo es válida para los ceros iniciales, y NO para los ceros finales; de lo contrario, la dirección sería ambigua. Por ejemplo, el hexteto "abc" podría ser "0abc" o "abc0", pero no representan el mismo valor.
+Esta regla solo es válida para los ceros iniciales, y NO para los ceros finales; de lo contrario.
 
 ### Dos puntos dobles
 

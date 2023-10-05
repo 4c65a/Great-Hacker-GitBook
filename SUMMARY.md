@@ -32,7 +32,7 @@
 * [VLANs](networks/vlans.md)
 * [SDN](networks/sdn.md)
 * [NFV](networks/nfv.md)
-* [Page](networks/page.md)
+* [DHCP/v4](networks/dhcp-v4.md)
 
 ## Linux
 
