@@ -143,3 +143,37 @@ La tunelización es un método para transportar un paquete IPv6 a través de una
 #### Traducción
 
 La Traducción de Direcciones de Redes 64 (NAT64) permite que los dispositivos con IPv6 habilitado se comuniquen con dispositivos con IPv4 habilitado mediante una técnica de traducción similar a la NAT para IPv4.
+
+### Formatos de direccionamiento IPv6
+
+Las direcciones IPv6 son mucho más grandes que las direcciones IPv4, por lo que es poco probable que se nos quede sin ellas.
+
+Las direcciones IPv6 tienen una longitud de 128 bits y se escriben como una cadena de valores hexadecimales. Cada cuatro bits está representado por un solo dígito hexadecimal; para un total de 32 valores hexadecimales, como se muestra en la figura. Las direcciones IPv6 no distinguen entre mayúsculas y minúsculas, y pueden escribirse en minúsculas o en mayúsculas.
+
+### Omitir ceros iniciales
+
+La primera regla para ayudar a reducir la notación de las direcciones IPv6 es omitir los ceros iniciales en cualquier hexteto. Aquí hay cuatro ejemplos de formas de omitir ceros a la izquierda:
+
+* 01ab se puede representar como 1ab
+* 09f0 se puede representar como 9f0
+* 0a00 se puede representar como a00
+* 00ab se puede representar como ab
+
+Esta regla solo es válida para los ceros iniciales, y NO para los ceros finales; de lo contrario, la dirección sería ambigua. Por ejemplo, el hexteto "abc" podría ser "0abc" o "abc0", pero no representan el mismo valor.
+
+### Dos puntos dobles
+
+La segunda regla para ayudar a reducir la notación de las direcciones IPv6 es que dos puntos dobles (: :) puede reemplazar cualquier cadena única y contigua de uno o más hextetos de 16 bits que consisten en todos los ceros. Por ejemplo, 2001:db8:cafe: 1:0:0:0:1 (0 iniciales omitidos) podría representarse como 2001:db8:cafe:1: :1. Los dos puntos dobles (: :) se utilizan en lugar de los hextetos de tres ceros (0: 0: 0).
+
+Los dos puntos dobles (::) se pueden utilizar solamente una vez dentro de una dirección; de lo contrario, habría más de una dirección resultante posible. Cuando se utiliza junto con la técnica de omisión de ceros iniciales, la notación de direcciones IPv6 generalmente se puede reducir de manera considerable. Esto se suele conocer como “formato comprimido”.
+
+Aquí hay un ejemplo del uso incorrecto del dos puntos dobles: 2001:db8: :abcd: :1234.
+
+Los dos puntos dobles se utilizan dos veces en el ejemplo anterior. Aquí están las posibles expansiones de esta dirección de formato comprimido incorrecto:
+
+* 2001:db8::abcd:0000:0000:1234
+* 2001:db8::abcd:0000:0000:0000:1234
+* 2001:db8:0000:abcd::1234
+* 2001:db8:0000:0000:abcd::1234
+
+Si una dirección tiene más de una cadena contigua de hextetos, todos 0, la práctica recomendada es usar los dos puntos dobles (::) en la cadena más larga. Si las cadenas son iguales, la primera cadena debe usar los dos puntos dobles (::).
