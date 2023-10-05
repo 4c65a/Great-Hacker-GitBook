@@ -28,6 +28,7 @@
   * [IP Address](networks/network-basics/ip-address.md)
   * [Firmware](networks/network-basics/firmware.md)
   * [IPv4 y IPv6](networks/network-basics/ipv4-y-ipv6.md)
+  * [HOST](networks/network-basics/host.md)
 * [VPN](networks/vpn.md)
 * [VLANs](networks/vlans.md)
 * [SDN](networks/sdn.md)
@@ -53,3 +54,7 @@
 * [GO](programming/go.md)
 * [Python](programming/python.md)
 * [BASH](programming/bash.md)
+
+## Reverse Engineering
+
+* [Page 1](reverse-engineering/page-1.md)
