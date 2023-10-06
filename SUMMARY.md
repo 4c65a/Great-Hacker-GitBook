@@ -34,6 +34,8 @@
 * [NFV](networks/nfv.md)
 * [DHCP/v4](networks/dhcp-v4.md)
 * [TCP/UDP](networks/tcp-udp.md)
+* [FTP](networks/ftp.md)
+* [Telnet/ssh](networks/telnet-ssh.md)
 
 ## Linux
 
