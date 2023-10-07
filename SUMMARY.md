@@ -30,8 +30,6 @@
   * [IPv4 y IPv6](networks/network-basics/ipv4-y-ipv6.md)
 * [VPN](networks/vpn.md)
 * [VLANs](networks/vlans.md)
-* [SDN](networks/sdn.md)
-* [NFV](networks/nfv.md)
 * [DHCP/v4](networks/dhcp-v4.md)
 * [TCP/UDP](networks/tcp-udp.md)
 * [FTP](networks/ftp.md)
