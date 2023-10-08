@@ -37,7 +37,8 @@
 
 ## Linux
 
-* [Distros para hacker](linux/distros-para-hacker.md)
+* [Distros para hacker](linux/page-3.md)
+* [Carpetas](linux/carpetas.md)
 
 ## Windows
 
