@@ -39,6 +39,7 @@
 
 * [Distros para hacker](linux/page-3.md)
 * [Carpetas](linux/carpetas.md)
+* [Comando Básicos](linux/comando-basicos.md)
 
 ## Windows
 
