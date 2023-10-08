@@ -42,7 +42,7 @@
 * [Comando Básicos](linux/comando-basicos.md)
 * [Registro de sistema](linux/registro-de-sistema.md)
 * [Comprimir y descomprimir archivos](linux/comprimir-y-descomprimir-archivos.md)
-* [Administrador del servidor Linux](linux/administrador-del-servidor-linux.md)
+* [Administrador del servidores Linux](linux/administrador-del-servidores-linux.md)
 * [Usuario avanzado de Linux](linux/usuario-avanzado-de-linux.md)
 * [Técnicas de seguridad de Linux](linux/tecnicas-de-seguridad-de-linux.md)
 * [Administrador del sistema Linux](linux/administrador-del-sistema-linux.md)
