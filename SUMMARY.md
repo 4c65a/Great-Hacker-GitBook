@@ -40,6 +40,8 @@
 * [Distros para hacker](linux/page-3.md)
 * [Carpetas](linux/carpetas.md)
 * [Comando Básicos](linux/comando-basicos.md)
+* [Registro de sistema](linux/registro-de-sistema.md)
+* [Comprimir y descomprimir archivos](linux/comprimir-y-descomprimir-archivos.md)
 
 ## Windows
 
