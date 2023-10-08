@@ -42,6 +42,7 @@
 * [Comando Básicos](linux/comando-basicos.md)
 * [Registro de sistema](linux/registro-de-sistema.md)
 * [Comprimir y descomprimir archivos](linux/comprimir-y-descomprimir-archivos.md)
+* [Análisis y gestión de redes](linux/analisis-y-gestion-de-redes.md)
 
 ## Windows
 
