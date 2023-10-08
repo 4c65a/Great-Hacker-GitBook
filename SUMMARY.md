@@ -37,7 +37,7 @@
 
 ## Linux
 
-* [Page 3](linux/page-3.md)
+* [Distros para hacker](linux/distros-para-hacker.md)
 
 ## Windows
 
