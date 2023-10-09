@@ -53,7 +53,8 @@
 
 ## Machines
 
-* [Page 6](machines/page-6.md)
+* [HackTheBox](machines/hackthebox.md)
+* [Docker/Vulnhub](machines/docker-vulnhub.md)
 
 ## Programming
 
