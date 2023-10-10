@@ -14,15 +14,13 @@ layout:
 
 # OSI
 
-El modelo Open Systems Interconnection (OSI) es un modelo conceptual creado por la Organización Internacional para la Estandarización, el cual permite que diversos sistemas de comunicación se conecten usando protocolos estándar. En otras palabras, el OSI proporciona un estándar para que distintos sistemas de equipos puedan comunicarse entre sí.
-
-Las siete capas de abstracción del modelo OSI pueden definirse de la siguiente manera, en orden descendente:
+El modelo Open Systems Interconnection (OSI) , el OSI proporciona un estándar para que distintos sistemas de equipos puedan comunicarse entre sí.
 
 **7.Capa de aplicación**
 
-Esta es la única capa que interactúa directamente con los datos del usuario. Las aplicaciones de software, como navegadores web y clientes de correo electrónico, dependen de la capa de aplicación para iniciar comunicaciones. Sin embargo, debe quedar claro que las aplicaciones de software cliente no forman parte de la capa de aplicación; más bien, la capa de aplicación es responsable de los protocolos y la manipulación de datos de los que depende el software para presentar datos significativos al usuario.
+Esta es la única capa que interactúa directamente con los datos del usuario. Las aplicaciones de software, como navegadores web y clientes de correo electrónico, dependen de la capa de aplicación para iniciar comunicaciones, la capa de aplicación es responsable de los protocolos y la manipulación de datos de los que depende el software para presentar datos significativos al usuario.
 
-Los protocolos de la capa de aplicación incluyen HTTP, así como también SMTP (el Protocolo simple de transferencia por correo electrónico, uno de los protocolos que permiten las comunicaciones por correo electrónico).
+Los protocolos de la capa de aplicación incluyen HTTP, así como también SMTP.
 
 **6. Capa de presentación**
 
