@@ -20,7 +20,18 @@ El modelo Open Systems Interconnection (OSI) , el OSI proporciona un estándar p
 
 Esta es la única capa que interactúa directamente con los datos del usuario. Las aplicaciones de software, como navegadores web y clientes de correo electrónico, dependen de la capa de aplicación para iniciar comunicaciones, la capa de aplicación es responsable de los protocolos y la manipulación de datos de los que depende el software para presentar datos significativos al usuario.
 
-Los protocolos de la capa de aplicación incluyen HTTP, así como también SMTP.
+Los protocolos de la capa de aplicación:
+
+```
+HTTP
+FTP
+SMTP
+DNS
+Telnet
+SSH
+POP3
+IMAP
+```
 
 **6. Capa de presentación**
 
