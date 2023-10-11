@@ -35,3 +35,10 @@ layout:
 | mkdir   | Crear directorio                                                                    |
 | mrdir   | Eliminar directorio                                                                 |
 
+### Networks
+
+| Comando | Descripción |
+| ------- | ----------- |
+|         |             |
+|         |             |
+|         |             |
