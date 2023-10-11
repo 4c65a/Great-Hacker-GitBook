@@ -37,7 +37,7 @@
 
 ## Linux
 
-* [Distros para hacker](linux/page-3.md)
+* [Distribuciones para hacker](linux/distribuciones-para-hacker.md)
 * [Carpetas](linux/carpetas.md)
 * [Comando Básicos](linux/comando-basicos.md)
 * [Registro de sistema](linux/registro-de-sistema.md)
