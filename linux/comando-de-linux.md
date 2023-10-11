@@ -12,5 +12,13 @@ layout:
     visible: true
 ---
 
-# Comando Básicos
+# Comando de Linux
+
+### Básicos
+
+| Comando | descripción |
+| ------- | ----------- |
+|         |             |
+|         |             |
+|         |             |
 

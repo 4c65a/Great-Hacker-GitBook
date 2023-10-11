@@ -39,7 +39,7 @@
 
 * [Distribuciones para hacker](linux/distribuciones-para-hacker.md)
 * [Carpetas](linux/carpetas.md)
-* [Comando Básicos](linux/comando-basicos.md)
+* [Comando de Linux](linux/comando-de-linux.md)
 * [Registro de sistema](linux/registro-de-sistema.md)
 * [Comprimir y descomprimir archivos](linux/comprimir-y-descomprimir-archivos.md)
 * [Administrador del servidores Linux](linux/administrador-del-servidores-linux.md)
