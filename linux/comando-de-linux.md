@@ -18,7 +18,18 @@ layout:
 
 | Comando | descripción |
 | ------- | ----------- |
-|         |             |
-|         |             |
-|         |             |
+| ls      |             |
+| pwd     |             |
+| uname   |             |
+| arch    |             |
+| cat     |             |
+| cd      |             |
+| md      |             |
+| mp      |             |
+| touch   |             |
+| rm      |             |
+| whoami  |             |
+| date    |             |
+| locate  |             |
+| find    |             |
 
