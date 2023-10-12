@@ -75,8 +75,8 @@ layout:
 | netstat -a                        | Muestra todas las conexiones                                                                                                                       |
 | netstat -p                        | Muestra el número y nombre del dueño de dicha conexión                                                                                             |
 | netstat -t                        | Sólo muestra conexiones tcp                                                                                                                        |
-| traceroute -4 10                  |                                                                                                                                                    |
-|                                   |                                                                                                                                                    |
+| traceroute -4                     | Rastrea la ruta a una dirección IP IPv4                                                                                                            |
+| traceroute -6                     | Rastrea la ruta a una dirección IP IPv6                                                                                                            |
 |                                   |                                                                                                                                                    |
 |                                   |                                                                                                                                                    |
 |                                   |                                                                                                                                                    |
