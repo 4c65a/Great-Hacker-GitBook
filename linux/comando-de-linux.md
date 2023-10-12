@@ -77,10 +77,12 @@ layout:
 | netstat -t                        | Sólo muestra conexiones tcp                                                                                                                        |
 | traceroute -4                     | Rastrea la ruta a una dirección IP IPv4                                                                                                            |
 | traceroute -6                     | Rastrea la ruta a una dirección IP IPv6                                                                                                            |
-|                                   |                                                                                                                                                    |
-|                                   |                                                                                                                                                    |
-|                                   |                                                                                                                                                    |
-|                                   |                                                                                                                                                    |
+| traceroute -4 -m 5                | Limitar el número de saltos                                                                                                                        |
+| traceroute -i eth0                | Especificar la interfaz de red                                                                                                                     |
+| traceroute -r                     | Evitar que el comando use las cachés de resolución de nombres                                                                                      |
+| traceroute -s 60                  | Especificar el tamaño del paquete                                                                                                                  |
+| traceroute -w 100                 | Establecer el tiempo de espera para cada salto en mili segundos                                                                                    |
+|                                   | Imprimir la ruta en forma de lista                                                                                                                 |
 
 
 
