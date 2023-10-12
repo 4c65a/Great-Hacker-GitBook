@@ -39,24 +39,31 @@ layout:
 
 ### Networks
 
-| Comando                                | Descripción                                                                                               |
-| -------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| ip                                     | Para configurar las interfaces de red                                                                     |
-| ip addr                                | Imprimir una información en todos los dispositivos de la red                                              |
-| ip addr show dev eth0                  | Imprimir una información en el dispositivo _eth0_                                                         |
-| ip -4 a                                | Imprimir el protocolo IPv4                                                                                |
-| ip -6 a                                | Imprimir el protocolo IPv6                                                                                |
-| ip -4 addr show dev eth0               | Mostrar la información relacionada con IPv4 sobre la interfaz de red _eth0_                               |
-| ip -6 addr show dev eth0               | Mostrar la información relacionada con IPv4 sobre la interfaz de red _eth0_                               |
-| sudo ip addr del 10.0.2.15/24 dev eth0 | Para eliminar la IP _10.0.2.15/24_ de la interfaz de red _eth0_                                           |
-| sudo ip addr add 10.0.2.15/24 dev eth0 | Para agregar una dirección IP                                                                             |
-| sudo ip link set down eth0             | Para deshabilitar una tarjeta de red (eth0 debe reemplazarse con el nombre correcto de la tarjeta de red) |
-| sudo ip link set up eth0               | Para habilitar una tarjeta de red (eth0 debe reemplazarse con el nombre correcto de la tarjeta de red)    |
-| ping                                   | Se utiliza para saber si un dispositivo está conectado a una re                                           |
-| sudo dhclient eth0                     |                                                                                                           |
-|                                        |                                                                                                           |
-|                                        |                                                                                                           |
-|                                        |                                                                                                           |
-|                                        |                                                                                                           |
-|                                        |                                                                                                           |
-|                                        |                                                                                                           |
+| Comando                           | Descripción                                                                                               |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| ip                                | Para configurar las interfaces de red                                                                     |
+| ip addr                           | Imprimir una información en todos los dispositivos de la red                                              |
+| ip addr show dev eth0             | Imprimir una información en el dispositivo _eth0_                                                         |
+| ip -4 a                           | Imprimir el protocolo IPv4                                                                                |
+| ip -6 a                           | Imprimir el protocolo IPv6                                                                                |
+| ip -4 addr show dev eth0          | Mostrar la información relacionada con IPv4 sobre la interfaz de red _eth0_                               |
+| ip -6 addr show dev eth0          | Mostrar la información relacionada con IPv4 sobre la interfaz de red _eth0_                               |
+| ip addr del 10.0.2.15/24 dev eth0 | Para eliminar la IP _10.0.2.15/24_ de la interfaz de red _eth0_                                           |
+| ip addr add 10.0.2.15/24 dev eth0 | Para agregar una dirección IP                                                                             |
+| ip link set down eth0             | Para deshabilitar una tarjeta de red (eth0 debe reemplazarse con el nombre correcto de la tarjeta de red) |
+| ip link set up eth0               | Para habilitar una tarjeta de red (eth0 debe reemplazarse con el nombre correcto de la tarjeta de red)    |
+| ping                              | Se utiliza para saber si un dispositivo está conectado a una re                                           |
+| dhclient eth0                     | asignará una dirección IP a la interfaz de red eth0                                                       |
+| host                              | Permite conocer la dirección IP de un nombre de dominio (Tambien se puede agregar la ip)                  |
+| hostname                          | Permite editar el nombre de host de su sistema(solo hasta el reinicio)                                    |
+|                                   |                                                                                                           |
+|                                   |                                                                                                           |
+
+### Networks "wireless interfaces"
+
+| Comando                                       | Descripción                                             |
+| --------------------------------------------- | ------------------------------------------------------- |
+| <pre><code>iwlist eth0 scanning
+</code></pre> | iwlist de Linux se utiliza para escanear las redes wifi |
+|                                               |                                                         |
+|                                               |                                                         |
