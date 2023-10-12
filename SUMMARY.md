@@ -31,9 +31,10 @@
 * [VPN](networks/vpn.md)
 * [VLANs](networks/vlans.md)
 * [DHCP/v4](networks/dhcp-v4.md)
-* [TCP/UDP](networks/tcp-udp.md)
+* [TCP y UDP](networks/tcp-y-udp.md)
 * [FTP](networks/ftp.md)
 * [Telnet/ssh](networks/telnet-ssh.md)
+* [TCP/IP](networks/tcp-ip.md)
 
 ## Linux
 
