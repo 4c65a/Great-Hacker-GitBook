@@ -82,7 +82,7 @@ layout:
 | traceroute -r                     | Evitar que el comando use las cachés de resolución de nombres                                                                                      |
 | traceroute -s 60                  | Especificar el tamaño del paquete                                                                                                                  |
 | traceroute -w 100                 | Establecer el tiempo de espera para cada salto en mili segundos                                                                                    |
-|                                   |                                                                                                                                                    |
+| whois                             | Informacion detallada del dominio                                                                                                                  |
 
 
 
