@@ -61,9 +61,9 @@ layout:
 
 ### Networks "wireless interfaces"
 
-| Comando                                       | Descripción                                             |
-| --------------------------------------------- | ------------------------------------------------------- |
-| <pre><code>iwlist eth0 scanning
-</code></pre> | iwlist de Linux se utiliza para escanear las redes wifi |
-|                                               |                                                         |
-|                                               |                                                         |
+| Comando                                                        | Descripción                                                            |
+| -------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| <pre><code><strong>iwlist eth0 scanning
+</strong></code></pre> | iwlist de Linux se utiliza para escanear las redes wifi (cambiar eth0) |
+| `iwconfig`                                                     |                                                                        |
+|                                                                |                                                                        |
