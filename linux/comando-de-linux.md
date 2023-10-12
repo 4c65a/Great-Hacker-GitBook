@@ -34,6 +34,8 @@ layout:
 | find    | Buscar archivos y directorios en el sistema de archivos                             |
 | mkdir   | Crear directorio                                                                    |
 | mrdir   | Eliminar directorio                                                                 |
+| Exit    | Salir                                                                               |
+| Clear   | Limpiar terminal                                                                    |
 
 ### Networks
 
