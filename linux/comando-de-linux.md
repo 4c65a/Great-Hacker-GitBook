@@ -54,16 +54,12 @@ layout:
 | ip link set up eth0               | Para habilitar una tarjeta de red (eth0 debe reemplazarse con el nombre correcto de la tarjeta de red)    |
 | ping                              | Se utiliza para saber si un dispositivo está conectado a una re                                           |
 | dhclient eth0                     | asignará una dirección IP a la interfaz de red eth0                                                       |
-| host                              | Permite conocer la dirección IP de un nombre de dominio (Tambien se puede agregar la ip)                  |
+| host                              | Permite conocer la dirección IP de un nombre de dominio (También se puede agregar la ip)                  |
 | hostname                          | Permite editar el nombre de host de su sistema(solo hasta el reinicio)                                    |
+| iwconfig                          | Muestra configuraciones                                                                                   |
+| ifconfig                          | Muestra configuraciones                                                                                   |
+| ip route                          | Muestra las puertas de enlace configuradas(ip r)                                                          |
 |                                   |                                                                                                           |
 |                                   |                                                                                                           |
 
-### Networks "wireless interfaces"
-
-| Comando                                                        | Descripción                                                            |
-| -------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| <pre><code><strong>iwlist eth0 scanning
-</strong></code></pre> | iwlist de Linux se utiliza para escanear las redes wifi (cambiar eth0) |
-| `iwlist eth0 scanning`                                         |                                                                        |
-|                                                                |                                                                        |
+###
