@@ -65,5 +65,5 @@ layout:
 | -------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | <pre><code><strong>iwlist eth0 scanning
 </strong></code></pre> | iwlist de Linux se utiliza para escanear las redes wifi (cambiar eth0) |
-| `iwconfig`                                                     |                                                                        |
+| `iwlist eth0 scanning`                                         |                                                                        |
 |                                                                |                                                                        |
