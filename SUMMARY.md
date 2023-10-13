@@ -36,14 +36,15 @@
 * [Telnet/ssh](networks/telnet-ssh.md)
 * [TCP/IP](networks/tcp-ip.md)
 * [ARP](networks/arp.md)
+* [DNS](networks/dns.md)
 
 ## Linux
 
 * [Distribuciones para hacker](linux/distribuciones-para-hacker.md)
 * [Carpetas](linux/carpetas.md)
 * [Comando de Linux](linux/comando-de-linux.md)
-* [Registro de sistema](linux/registro-de-sistema.md)
 * [Comprimir y descomprimir archivos](linux/comprimir-y-descomprimir-archivos.md)
+* [Registro de sistema](linux/registro-de-sistema.md)
 * [Administrador del servidores Linux](linux/administrador-del-servidores-linux.md)
 * [Usuario avanzado de Linux](linux/usuario-avanzado-de-linux.md)
 * [Técnicas de seguridad de Linux](linux/tecnicas-de-seguridad-de-linux.md)
