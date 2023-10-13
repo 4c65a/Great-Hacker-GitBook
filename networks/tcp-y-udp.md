@@ -40,7 +40,7 @@ Entre los dos protocolos cubre varios puertos y estos son los mas conocidos:
 
 ### Protocolo TCP de Enlace de Tres Vías
 
-Los hosts mantienen el estado, rastrean cada segmento de datos dentro de una sesión e intercambian información sobre qué datos se reciben utilizando la información en el encabezado TCP. TCP es un protocolo full-duplex, donde cada conexión representa dos sesiones de comunicación unidireccionales. Para establecer la conexión, los hosts realizan un enlace de tres vías. Como se muestra en la figura, los bits de control en el encabezado TCP indican el progreso y el estado de la conexión.
+&#x20;Para establecer la conexión, los hosts realizan un enlace de tres vías. Como se muestra en la figura, los bits de control en el encabezado TCP indican el progreso y el estado de la conexión.
 
 Estas son las funciones del apretón de manos de tres vías:
 
@@ -49,8 +49,6 @@ Estas son las funciones del apretón de manos de tres vías:
 * Informa al dispositivo de destino que el cliente de origen intenta establecer una sesión de comunicación en dicho número de puerto.
 
 Una vez que se completa la comunicación, se cierran las sesiones y se finaliza la conexión. Los mecanismos de conexión y sesión habilitan la función de confiabilidad de TCP.
-
-Los seis bits del campo de bits de control del encabezado del segmento TCP también se conocen como marcadores. Una bandera es un bit que está activado o desactivado.
 
 Los seis indicadores de bits de control son los siguientes:
 
