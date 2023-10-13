@@ -57,7 +57,7 @@ Con el direccionamiento IPv4 pueden existir varias redes lógicas en una red fí
 
 ### Unidifusión
 
-En el tema anterior, aprendió acerca de la estructura de una dirección IPv4; cada una tiene una parte de red y una parte de host. Existen diferentes formas de enviar un paquete desde un dispositivo de origen, y estas diferentes transmisiones afectan a las direcciones IPv4 de destino.
+La estructura de una dirección IPv4; cada una tiene una parte de red y una parte de host. Existen diferentes formas de enviar un paquete desde un dispositivo de origen, y estas diferentes transmisiones afectan a las direcciones IPv4 de destino.
 
 La transmisión unidifusión se refiere a un dispositivo que envía un mensaje a otro dispositivo en comunicaciones uno a uno.
 
@@ -177,3 +177,35 @@ Los dos puntos dobles se utilizan dos veces en el ejemplo anterior. Aquí están
 * 2001:db8:0000:0000:abcd::1234
 
 Si una dirección tiene más de una cadena contigua de hextetos, todos 0, la práctica recomendada es usar los dos puntos dobles (::) en la cadena más larga. Si las cadenas son iguales, la primera cadena debe usar los dos puntos dobles (::).
+
+### Encabezados Paquete IPV4
+
+El encabezado del paquete IPv4 se utiliza para garantizar que este paquete se entrega en su siguiente parada en el camino a su dispositivo final de destino.
+
+El encabezado de paquetes IPv4 consta de campos que contienen información importante sobre el paquete.
+
+### Campos del Encabezado del Paquete IPV4
+
+Los campos significativos en el encabezado IPv4 incluyen lo siguiente:
+
+* **Versión -** Contiene un valor binario de 4 bits establecido en 0100 que identifica esto como un paquete IPv4.
+* **Servicios Diferenciados o DiffServ (DS) -** Este campo, formalmente conocido como Tipo de servicio (ToS), es un campo de 8 bits que se utiliza para determinar la prioridad de cada paquete. Los seis bits más significativos del campo DiffServ son los bits de punto de código de servicios diferenciados (DSCP) y los dos últimos bits son los bits de notificación de congestión explícita (ECN).
+* **Tiempo de Duración (Time to Live, TTL) -** El TTL contiene un valor binario de 8 bits que se utiliza para limitar la vida útil de un paquete. El dispositivo de origen del paquete IPv4 establece el valor TTL inicial. Se reduce en uno cada vez que el paquete es procesado por un router. Si el campo TTL llega a cero, el router descarta el paquete y envía a la dirección IP de origen un mensaje de tiempo superado del protocolo de mensajes de control de Internet (ICMP). Debido a que el router disminuye el TTL de cada paquete, el router también debe volver a calcular la suma de comprobación del encabezado.
+* **Protocolo -** Este campo se utiliza para identificar el protocolo del siguiente nivel. Este valor binario de 8 bits indica el tipo de carga de datos que lleva el paquete, lo que permite que la capa de red transmita los datos al protocolo de capa superior apropiado. ICMP (1), TCP (6) y UDP (17) son algunos valores comunes.
+* **Suma de comprobación de encabezado -** Se utiliza para detectar daños en el encabezado IPv4.
+* **Dirección IPv4 de origen -** Contiene un valor binario de 32 bits que representa la dirección IPv4 de origen del paquete. La dirección IPv4 de origen es siempre una dirección unicast.
+* **Dirección IPv4 de destino -** Contiene un valor binario de 32 bits que representa la dirección IPv4 de destino del paquete. La dirección IPv4 de destino es una dirección unicast, multicast o de difusión.
+
+### Encabezado del Paquete IPv6
+
+Los campos en el encabezado del paquete IPv6 incluyen lo siguiente:
+
+* **Versión -** Este campo contiene un valor binario de 4 bits establecido en 0110 que identifica esto como un paquete IP versión 6.
+* **Clase de Tráfico -** Este campo de 8 bits es el equivalente al campo Servicios Diferenciados (DS) de IPv4.
+* **Etiqueta de Flujo -** Este campo de 20 bits sugiere que todos los routers manipulen del mismo modo los paquetes con la misma etiqueta de flujo.
+* **Longitud de Carga Útil -** Este campo de 16 bits indica la longitud de la parte de los datos o la carga útil del paquete IPv6. Esto no incluye la longitud del encabezado IPv6, que es un encabezado fijo de 40 bytes.
+* **Siguiente Encabezado -** Este campo de 8 bits equivale al campo Protocolo IPv4. Es un valor que indica el tipo de contenido de datos que lleva el paquete, lo que permite que la capa de red transmita la información al protocolo de capa superior apropiado.
+* **Límite de Saltos -** Este campo de 8 bits reemplaza al campo TTL de IPv4. Cada router que reenvía el paquete reduce este valor en 1. Cuando el contador llega a 0, el paquete se descarta y se reenvía un mensaje ICMPv6 Tiempo excedido al host emisor. Esto indica que el paquete no llegó a su destino porque se excedió el límite de saltos. A diferencia de IPv4, IPv6 no incluye una suma de comprobación de encabezado IPv6, ya que esta función se realiza tanto en las capas inferior como superior. Esto significa que la suma de comprobación no necesita ser recalculada por cada router cuando disminuye el campo Límite de saltos, lo que también mejora el rendimiento de la red.
+* **Dirección IPv6 de Origen -** Este campo de 128 bits identifica la dirección IPv6 del host emisor.
+* **Dirección IPv6 de Destino -** Este campo de 128 bits identifica la dirección IPv6 del host receptor.
+
