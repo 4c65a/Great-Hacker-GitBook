@@ -63,6 +63,13 @@ La capa de red es responsable de facilitar la transferencia de datos entre dos r
 
 Esta capa de red proporciona servicios para permitir que los dispositivos finales intercambien datos a través de redes. IP versión 4 (IPv4) e IP versión 6 (IPv6) son los principales protocolos de comunicación de la capa de red. Otros protocolos de capa de red incluyen protocolos de enrutamiento como Open Shortest Path First (OSPF) y protocolos de mensajería como Internet Control Message Protocol (ICMP).
 
+Los protocolos de la capa de red realizan cuatro operaciones:
+
+* **Direccionamiento de dispositivos finales** - Los dispositivos finales deben configurarse con una dirección IP única para la identificación en la red.
+* **Encapsulación** - La capa de red encapsula la unidad de datos de protocolo (PDU) de la capa de transporte en un paquete. El proceso de encapsulamiento agrega información del encabezado IP, como la dirección IP de los hosts de origen (emisores) y de destino (receptores). El proceso de encapsulación lo realiza la fuente del paquete IP.
+* **Enrutamiento** - La capa de red proporciona servicios para dirigir los paquetes a un host de destino en otra red. La función del router debe dirigir los paquetes al host de destino en un proceso que se denomina "enrutamiento". Un paquete puede cruzar muchos routers antes de llegar al host de destino. Se denomina "salto" a cada router que cruza un paquete antes de alcanzar el host de destino.
+* **Desencapsulación** - Cuando el paquete llega a la capa de red del host de destino, el host verifica el encabezado IP del paquete. Si la dirección IP de destino dentro del encabezado coincide con su propia dirección IP, se elimina el encabezado IP del paquete. Una vez que la capa de red desencapsula el paquete, la PDU de capa 4 que se obtiene se transfiere al servicio apropiado en la capa de transporte.&#x20;
+
 **2. Capa de enlace de datos**
 
 La capa de enlace de datos es muy similar a la capa de red, excepto que la capa de enlace de datos facilita la transferencia de datos entre dos dispositivos dentro la _misma_ red. La capa de enlace de datos toma los paquetes de la capa de red y los divide en partes más pequeñas que se denominan tramas. Al igual que la capa de red, esta capa también es responsable del control de flujo y el control de errores en las comunicaciones dentro de la red (la capa de transporte solo realiza tareas de control de flujo y de control de errores para las comunicaciones dentro de la red).
