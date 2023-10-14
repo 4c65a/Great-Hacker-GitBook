@@ -21,3 +21,7 @@ El servidor FTP permite a un cliente intercambiar archivos entre dispositivos. T
 Para comenzar con una sesión FTP, se envían solicitudes de conexión de control al servidor mediante el puerto 21 TCP de destino. Cuando se abre la sesión, el servidor cambia al puerto 20 TCP para transferir los archivos de datos.
 
 El software cliente FTP viene incorporado en los sistemas operativos y en la mayoría de los exploradores Web. Los clientes FTP independientes ofrecen muchas opciones en una interfaz fácil de usar basada en GUI.
+
+Referencias
+
+{% embed url="https://skillsforall.com/course/networking-devices-and-initial-configuration?courseLang=en-US" %}

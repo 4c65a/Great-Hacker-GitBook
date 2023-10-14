@@ -77,3 +77,11 @@ La capa de enlace de datos es muy similar a la capa de red, excepto que la capa 
 **1. Capa física**
 
 Esta capa incluye el equipo físico implicado en la transferencia de datos, tal como los cables y los conmutadores de red. Esta también es la capa donde los datos se convierten en una secuencia de bits, es decir, una cadena de unos y ceros. La capa física de ambos dispositivos también debe estar de acuerdo en cuanto a una convención de señal para que los 1 puedan distinguirse de los 0 en ambos dispositivos.
+
+
+
+### Referencias
+
+{% embed url="https://www.cloudflare.com/es-es/learning/ddos/glossary/open-systems-interconnection-model-osi/" %}
+
+{% embed url="https://skillsforall.com/course/networking-devices-and-initial-configuration?courseLang=en-US" %}

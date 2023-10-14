@@ -40,7 +40,7 @@ El IPv4 binario anterior se convierte en esta representación decimal con puntos
 > Cuando se habla de host se refiere a los distintos dispositivos ,con el host se puede indicar que nombre de hosts corresponde a una determinada dirección IP.
 >
 > **Ejemplo:**\
-> Cuando realiza una maquina en <mark style="color:green;">HackTheBox</mark> generalmente deberá dirigirse al archivo /etc/host
+> Cuando realiza una maquina en HackTheBox generalmente deberá dirigirse al archivo /etc/host
 >
 > para poder avanzar con la maquina si es un sitio web deberá colocar en el archivo:\
 > 10.11.0.251  snoopy.htb
@@ -93,9 +93,7 @@ Del mismo modo que hay diferentes formas de transmitir un paquete IPv4, también
 
 Las direcciones IPv4 públicas son direcciones que se enrutan globalmente entre routeres de proveedores de servicios de Internet (ISP). Sin embargo, no todas las direcciones IPv4 disponibles pueden usarse en Internet. Existen bloques de direcciones denominadas direcciones privadas que la mayoría de las organizaciones usan para asignar direcciones IPv4 a los hosts internos.
 
-A mediados de la década de 1990, con la introducción de la World Wide Web (WWW), se introdujeron direcciones IPv4 privadas debido al agotamiento del espacio de direcciones IPv4. Las direcciones IPv4 privadas no son exclusivas y cualquier red interna puede usarlas.
-
-{% code fullWidth="true" %}
+{% code fullWidth="false" %}
 ```
 
 Rango de direcciones	        Tipo de dirección
@@ -209,3 +207,8 @@ Los campos en el encabezado del paquete IPv6 incluyen lo siguiente:
 * **Dirección IPv6 de Origen -** Este campo de 128 bits identifica la dirección IPv6 del host emisor.
 * **Dirección IPv6 de Destino -** Este campo de 128 bits identifica la dirección IPv6 del host receptor.
 
+### Referencias
+
+{% embed url="https://skillsforall.com/course/networking-basics?courseLang=en-US" %}
+
+{% embed url="https://skillsforall.com/course/networking-devices-and-initial-configuration?courseLang=en-US" %}

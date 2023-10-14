@@ -35,3 +35,9 @@ Redes utilizadas en empresas,escuelas,hospitales o cualquier lugar grande que ne
 #### Redes Mundiales
 
 Redes de redes conectados a cientos de computadoras.
+
+
+
+### Referencias
+
+{% embed url="https://skillsforall.com/course/networking-basics?courseLang=en-US" %}

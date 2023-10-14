@@ -58,3 +58,9 @@ Los seis indicadores de bits de control son los siguientes:
 * **RST**- Restablece la conexión cuando se produce un error o un tiempo de espera
 * **SYN**- Sincroniza números de secuencia utilizados en el establecimiento de conexión
 * **FIN**- No más datos del remitente y se utilizan en la terminación de la sesión
+
+
+
+### Referencias
+
+{% embed url="https://skillsforall.com/course/networking-devices-and-initial-configuration?courseLang=en-US" %}

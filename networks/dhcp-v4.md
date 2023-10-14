@@ -42,3 +42,7 @@ El mensaje DHCPACK es enviado por un servidor DHCP en respuesta a un mensaje DHC
 
 
 
+### Referencias
+
+{% embed url="https://www.redeszone.net/tutoriales/internet/que-es-protocolo-dhcp/" %}
+
