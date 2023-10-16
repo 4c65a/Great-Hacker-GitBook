@@ -14,8 +14,6 @@ layout:
 
 # Comprimir y descomprimir archivos
 
-### Tar
-
 #### Para comprimir&#x20;
 
 ```bash
@@ -48,22 +46,25 @@ gunzip TEST.tar.gz
 
 #### Para comprimir un archivo con la extensión .tar.bz2
 
-```
-bzip2 -c archivo.tar > archivo.tar.bz2
-```
-
-```
-bzip2 -d archivo.tar.bz2
+```bash
+bzip2 -c TEST.tar > TEST.tar.bz2
 ```
 
-which uses the extension .tar.z
+#### Para descomprimir
 
-Linux >compress HackersArise.\* Linux >uncompress HackersArise.\*
-
-```
-// Some code
+```bash
+bzip2 -d TEST.tar.bz2
 ```
 
+#### Para comprimir un archivo con la extensión .tar.z
+
+```bash
+compress TEST.tar
 ```
-// Some codec
+
+#### Para descomprimir
+
+```bash
+uncompress TEST.tar.z
 ```
+
