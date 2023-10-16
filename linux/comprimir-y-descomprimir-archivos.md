@@ -34,18 +34,16 @@ tar -tvf TEST.tar
 tar -xvf TEST.tar
 ```
 
-gzip, which uses the extension .tar.gz or .tgz.When we do a long
+#### Para comprimir archivo con .tar.gz o .tgz utilizar gzip o gunzip
 
-Linux >gzip HackersArise.\* Linux >gunzip HackersArise.\*
-
-```
-// Some codec
+```bash
+gzip -c TEST.tar > TEST.tar.gzc
 ```
 
+#### Para descomprimir
 
-
-```
-// Some code
+```bash
+gunzip TEST.tar.gz
 ```
 
 bzip2, which uses the extension .tar.bz2.
