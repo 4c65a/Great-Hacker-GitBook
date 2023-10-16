@@ -16,25 +16,23 @@ layout:
 
 ### Tar
 
-tar -cvf HackersArise.tarhackersarise1hackersarise2 hackersarise3
+#### Para comprimir&#x20;
 
-```
-// Some code
-```
-
-```
-// Some code
+```bash
+tar -cvf TEST.tar test test1 test2
 ```
 
-tar -tvf HackersArise.tar
+#### Listar el contenido
 
+```bash
+tar -tvf TEST.tar
 ```
-// Some code
+
+#### Descomprimir
+
+```bash
+tar -xvf TEST.tar
 ```
-
-tar -xvf HackersArise.tar
-
-
 
 gzip, which uses the extension .tar.gz or .tgz.When we do a long
 
