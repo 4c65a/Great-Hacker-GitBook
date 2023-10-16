@@ -46,16 +46,14 @@ gzip -c TEST.tar > TEST.tar.gzc
 gunzip TEST.tar.gz
 ```
 
-bzip2, which uses the extension .tar.bz2.
-
-Linux >bzip2 HackersArise.\* Linux >bunzip2 HackersArise.\*
+#### Para comprimir un archivo con la extensión .tar.bz2
 
 ```
-// Some code
+bzip2 -c archivo.tar > archivo.tar.bz2
 ```
 
 ```
-// Some code
+bzip2 -d archivo.tar.bz2
 ```
 
 which uses the extension .tar.z
