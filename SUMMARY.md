@@ -10,7 +10,7 @@
   * [Metodologías](ethical-hacker-pentesting/ethical-hacker/metodologias.md)
   * [Cumplimiento normativo](ethical-hacker-pentesting/ethical-hacker/cumplimiento-normativo.md)
   * [Introducción de las Fases de pentesting](ethical-hacker-pentesting/ethical-hacker/introduccion-de-las-fases-de-pentesting.md)
-  * [Reconocimiento activo y pasivo](ethical-hacker-pentesting/ethical-hacker/reconocimiento-activo-y-pasivo.md)
+  * [Reconocimiento activo vs pasivo](ethical-hacker-pentesting/ethical-hacker/reconocimiento-activo-vs-pasivo.md)
 * [Pentesting web](ethical-hacker-pentesting/pentesting-web.md)
 * [Pentesting Linux](ethical-hacker-pentesting/pentesting-linux.md)
 * [Pentesting Networks](ethical-hacker-pentesting/pentesting-networks.md)
