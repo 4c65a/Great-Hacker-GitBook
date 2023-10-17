@@ -9,7 +9,7 @@
 * [Ethical Hacker](ethical-hacker-pentesting/ethical-hacker/README.md)
   * [Metodologías](ethical-hacker-pentesting/ethical-hacker/metodologias.md)
   * [Cumplimiento normativo](ethical-hacker-pentesting/ethical-hacker/cumplimiento-normativo.md)
-  * [Fases de pentesting](ethical-hacker-pentesting/ethical-hacker/fases-de-pentesting.md)
+  * [Introducción de las Fases de pentesting](ethical-hacker-pentesting/ethical-hacker/introduccion-de-las-fases-de-pentesting.md)
   * [Page](ethical-hacker-pentesting/ethical-hacker/page.md)
 * [Pentesting web](ethical-hacker-pentesting/pentesting-web.md)
 * [Pentesting Linux](ethical-hacker-pentesting/pentesting-linux.md)
