@@ -15,7 +15,7 @@
 * [Pentesting Linux](ethical-hacker-pentesting/pentesting-linux.md)
 * [Pentesting Networks](ethical-hacker-pentesting/pentesting-networks.md)
 * [Pentesting Windows](ethical-hacker-pentesting/pentesting-windows.md)
-* [OSINT/Reconocimiento](ethical-hacker-pentesting/osint-reconocimiento.md)
+* [OSINT/Reconocimiento Tools](ethical-hacker-pentesting/osint-reconocimiento-tools.md)
 
 ## Networks
 
