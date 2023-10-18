@@ -4,18 +4,22 @@
 
 * [Bienvenidos](README.md)
 
-## Ethical Hacker / Pentesting
+## Ethical Hacker
 
-* [Ethical Hacker](ethical-hacker-pentesting/ethical-hacker/README.md)
-  * [Metodologías](ethical-hacker-pentesting/ethical-hacker/metodologias.md)
-  * [Cumplimiento normativo](ethical-hacker-pentesting/ethical-hacker/cumplimiento-normativo.md)
-  * [Introducción de las Fases de pentesting](ethical-hacker-pentesting/ethical-hacker/introduccion-de-las-fases-de-pentesting.md)
-  * [Reconocimiento activo vs pasivo](ethical-hacker-pentesting/ethical-hacker/reconocimiento-activo-vs-pasivo.md)
-* [Pentesting web](ethical-hacker-pentesting/pentesting-web.md)
-* [Pentesting Linux](ethical-hacker-pentesting/pentesting-linux.md)
-* [Pentesting Networks](ethical-hacker-pentesting/pentesting-networks.md)
-* [Pentesting Windows](ethical-hacker-pentesting/pentesting-windows.md)
-* [OSINT/Reconocimiento Tools](ethical-hacker-pentesting/osint-reconocimiento-tools.md)
+* [Ethical Hacker](ethical-hacker/ethical-hacker/README.md)
+  * [Metodologías](ethical-hacker/ethical-hacker/metodologias.md)
+  * [Cumplimiento normativo](ethical-hacker/ethical-hacker/cumplimiento-normativo.md)
+  * [Introducción de las Fases de pentesting](ethical-hacker/ethical-hacker/introduccion-de-las-fases-de-pentesting.md)
+  * [Reconocimiento activo vs pasivo](ethical-hacker/ethical-hacker/reconocimiento-activo-vs-pasivo.md)
+* [OSINT/Reconocimiento Tools](ethical-hacker/osint-reconocimiento-tools.md)
+
+## Pentesting Web
+
+* [Untitled](pentesting-web/untitled.md)
+
+## Pentesting Networks
+
+* [Untitled](pentesting-networks/untitled.md)
 
 ## Networks
 
@@ -53,10 +57,6 @@
 * [Técnicas de seguridad de Linux](linux/tecnicas-de-seguridad-de-linux.md)
 * [Administrador del sistema Linux](linux/administrador-del-sistema-linux.md)
 
-## Windows
-
-* [Page 2](windows/page-2.md)
-
 ## Machines
 
 * [HackTheBox](machines/hackthebox.md)
@@ -72,4 +72,4 @@
 
 ## Reverse Engineering
 
-* [Page 1](reverse-engineering/page-1.md)
+* [Untitled](reverse-engineering/untitled.md)
