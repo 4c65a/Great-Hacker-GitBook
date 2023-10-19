@@ -17,8 +17,8 @@
 
 ## Pentesting Networks
 
-* [Untitled](pentesting-networks/untitled.md)
-* [DNS](pentesting-networks/dns.md)
+* [NMAP](pentesting-networks/nmap.md)
+* [53:DNS](pentesting-networks/53-dns.md)
 
 ## Networks
 
