@@ -15,11 +15,10 @@
 
 ## Pentesting Web
 
-* [Untitled](pentesting-web/untitled.md)
-
 ## Pentesting Networks
 
 * [Untitled](pentesting-networks/untitled.md)
+* [DNS](pentesting-networks/dns.md)
 
 ## Networks
 
