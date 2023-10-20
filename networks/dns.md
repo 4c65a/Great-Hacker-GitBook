@@ -14,7 +14,7 @@ layout:
 
 # DNS
 
-En las redes de datos, los dispositivos se etiquetan con direcciones IP.Los nombres de dominio se crearon para convertir las direcciones numéricas en un nombre sencillo y reconocible.
+En las redes de datos, los dispositivos se etiquetan con direcciones IP.Los nombres de dominio se crearon para convertir las direcciones numéricas en un nombre sencillo y reconocible .Los DNS o llamado el sistema de nombres de dominios ([The Domain Name System](https://www.cloudflare.com/learning/dns/what-is-dns/)),lo que hace es asignarle un nombre o apodo a una dirección IP,por defecto este tiene el puerto 53.
 
 Los DNS traducen una ip para que las persona se puedan acordad del nombre de la pagina mas fácil ,por ejemplo, www.amazon.com a direcciones IP aptas para lectura por parte de máquinas 192.0.255.102.
 
