@@ -207,7 +207,7 @@ Los campos en el encabezado del paquete IPv6 incluyen lo siguiente:
 * **Dirección IPv6 de Origen -** Este campo de 128 bits identifica la dirección IPv6 del host emisor.
 * **Dirección IPv6 de Destino -** Este campo de 128 bits identifica la dirección IPv6 del host receptor.
 
-### Referencias
+#### Referencias
 
 {% embed url="https://skillsforall.com/course/networking-basics?courseLang=en-US" %}
 

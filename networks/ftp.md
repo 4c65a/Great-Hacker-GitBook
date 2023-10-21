@@ -22,6 +22,6 @@ Para comenzar con una sesión FTP, se envían solicitudes de conexión de contro
 
 El software cliente FTP viene incorporado en los sistemas operativos y en la mayoría de los exploradores Web. Los clientes FTP independientes ofrecen muchas opciones en una interfaz fácil de usar basada en GUI.
 
-Referencias
+#### Referencias
 
 {% embed url="https://skillsforall.com/course/networking-devices-and-initial-configuration?courseLang=en-US" %}

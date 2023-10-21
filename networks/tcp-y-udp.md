@@ -61,6 +61,6 @@ Los seis indicadores de bits de control son los siguientes:
 
 
 
-### Referencias
+#### Referencias
 
 {% embed url="https://skillsforall.com/course/networking-devices-and-initial-configuration?courseLang=en-US" %}

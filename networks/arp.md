@@ -45,7 +45,7 @@ Solo un dispositivo de la LAN tiene la dirección IPv4 que coincide con la direc
 
 
 
-### Referencias
+#### Referencias
 
 {% embed url="https://skillsforall.com/course/networking-devices-and-initial-configuration?courseLang=en-US" %}
 

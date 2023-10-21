@@ -38,6 +38,6 @@ Los sistemas principales de una red envían y reciben información simultáneame
 
 
 
-### Referencias
+#### Referencias
 
 {% embed url="https://skillsforall.com/course/networking-devices-and-initial-configuration?courseLang=en-US" %}

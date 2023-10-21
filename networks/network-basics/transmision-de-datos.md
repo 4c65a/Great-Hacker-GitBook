@@ -34,7 +34,7 @@ Se utilizan tres métodos:
 * **Señales ópticas -** La transmisión se realiza convirtiendo las señales eléctricas en pulsos de luz.
 * **Señales inalámbricas -** La transmisión se realiza por medio de ondas infrarrojas, de microondas o de radio por el aire.
 
-### Referencias
+#### Referencias
 
 {% embed url="https://skillsforall.com/course/networking-basics?courseLang=en-US" %}
 

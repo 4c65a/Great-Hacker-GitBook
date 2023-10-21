@@ -42,6 +42,6 @@ Algunos protocolos mas comunes son TCP, IP, UDP, FTP, HTTP,HTTPS,POP3, SMTP ,IMA
 18. **Telnet**: Telnet es un protocolo de red que se utiliza para acceder y controlar dispositivos y servidores remotos a través de una red.
 19. **IPv4 y IPv6 :** Son los dos estándares principales para asignar direcciones IP a dispositivos en una red.
 
-### Referencias
+#### Referencias
 
 {% embed url="https://www.ibm.com/docs/es/order-management?topic=organization-defining-communication-protocols" %}
