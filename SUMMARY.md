@@ -32,7 +32,6 @@
   * [Conectividad al ISP](networks/network-basics/conectividad-al-isp.md)
   * [Protocolos de Comunicación](networks/network-basics/protocolos-de-comunicacion.md)
   * [MAC](networks/network-basics/mac.md)
-  * [WIFI](networks/network-basics/wifi.md)
   * [IP Address](networks/network-basics/ip-address.md)
   * [Firmware](networks/network-basics/firmware.md)
   * [IPv4 y IPv6](networks/network-basics/ipv4-y-ipv6.md)
