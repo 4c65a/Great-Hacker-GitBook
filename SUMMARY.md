@@ -19,10 +19,6 @@
 
 * [53:DNS](pentesting-networks/53-dns.md)
 
-## Tools
-
-* [Nmap](tools/nmap.md)
-
 ## Networks
 
 * [Network Basics](networks/network-basics/README.md)
