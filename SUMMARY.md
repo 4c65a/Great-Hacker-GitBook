@@ -23,6 +23,13 @@
 * [23:Telnet](pentesting-networks/23-telnet.md)
 * [143,993:IMAP](pentesting-networks/143-993-imap.md)
 * [22:SFTP](pentesting-networks/22-sftp.md)
+* [3306:MYSQL](pentesting-networks/3306-mysql.md)
+* [25:SMTP](pentesting-networks/25-smtp.md)
+* [161:SNMP](pentesting-networks/161-snmp.md)
+* [445:SMB](pentesting-networks/445-smb.md)
+* [110:POP3](pentesting-networks/110-pop3.md)
+* [68:DHCP](pentesting-networks/68-dhcp.md)
+* [5009:VNC](pentesting-networks/5009-vnc.md)
 
 ## Networks
 
