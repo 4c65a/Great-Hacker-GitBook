@@ -22,6 +22,7 @@
 * [22:SSH](pentesting-networks/22-ssh.md)
 * [23:Telnet](pentesting-networks/23-telnet.md)
 * [143,993:IMAP](pentesting-networks/143-993-imap.md)
+* [22:SFTP](pentesting-networks/22-sftp.md)
 
 ## Networks
 
