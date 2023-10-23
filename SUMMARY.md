@@ -12,6 +12,7 @@
   * [Introducción de las Fases de pentesting](ethical-hacker/ethical-hacker/introduccion-de-las-fases-de-pentesting.md)
   * [Reconocimiento activo vs pasivo](ethical-hacker/ethical-hacker/reconocimiento-activo-vs-pasivo.md)
 * [OSINT/Reconocimiento Tools](ethical-hacker/osint-reconocimiento-tools.md)
+* [Recopilación de información](ethical-hacker/recopilacion-de-informacion.md)
 
 ## Pentesting Web
 
