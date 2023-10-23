@@ -18,6 +18,10 @@
 ## Pentesting Networks
 
 * [53:DNS](pentesting-networks/53-dns.md)
+* [21:FTP](pentesting-networks/21-ftp.md)
+* [22:SSH](pentesting-networks/22-ssh.md)
+* [23:Telnet](pentesting-networks/23-telnet.md)
+* [143,993:IMAP](pentesting-networks/143-993-imap.md)
 
 ## Networks
 
