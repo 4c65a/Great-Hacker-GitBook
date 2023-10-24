@@ -12,5 +12,5 @@ layout:
     visible: true
 ---
 
-# Recopilación de información
+# Reconocimiento pasivo
 
