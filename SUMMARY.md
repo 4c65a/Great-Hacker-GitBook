@@ -20,6 +20,26 @@
 
 ## Pentesting Networks
 
+* [Teoría Network](pentesting-networks/teoria-network/README.md)
+  * [OSI](pentesting-networks/teoria-network/osi.md)
+  * [Tipos de Red](pentesting-networks/teoria-network/tipos-de-red.md)
+  * [Transmisión de datos](pentesting-networks/teoria-network/transmision-de-datos.md)
+  * [Conectividad al ISP](pentesting-networks/teoria-network/conectividad-al-isp.md)
+  * [Protocolos de Comunicación](pentesting-networks/teoria-network/protocolos-de-comunicacion.md)
+  * [MAC](pentesting-networks/teoria-network/mac.md)
+  * [IP Address](pentesting-networks/teoria-network/ip-address.md)
+  * [Firmware](pentesting-networks/teoria-network/firmware.md)
+  * [IPv4 y IPv6](pentesting-networks/teoria-network/ipv4-y-ipv6.md)
+  * [Telnet/ssh](pentesting-networks/teoria-network/telnet-ssh.md)
+  * [DHCP/v4](pentesting-networks/teoria-network/dhcp-v4.md)
+  * [VLANs](pentesting-networks/teoria-network/vlans.md)
+  * [TCP y UDP](pentesting-networks/teoria-network/tcp-y-udp.md)
+  * [FTP](pentesting-networks/teoria-network/ftp.md)
+  * [ARP](pentesting-networks/teoria-network/arp.md)
+  * [DNS](pentesting-networks/teoria-network/dns.md)
+  * [TCP/IP](pentesting-networks/teoria-network/tcp-ip.md)
+  * [ICMPv4 e ICMPv6](pentesting-networks/teoria-network/icmpv4-e-icmpv6.md)
+  * [VPN](pentesting-networks/teoria-network/vpn.md)
 * [53:DNS](pentesting-networks/53-dns.md)
 * [21:FTP](pentesting-networks/21-ftp.md)
 * [22:SSH](pentesting-networks/22-ssh.md)
@@ -33,29 +53,6 @@
 * [110:POP3](pentesting-networks/110-pop3.md)
 * [68:DHCP](pentesting-networks/68-dhcp.md)
 * [5009:VNC](pentesting-networks/5009-vnc.md)
-
-## Networks
-
-* [Network Basics](networks/network-basics/README.md)
-  * [OSI](networks/network-basics/osi.md)
-  * [Tipos de Red](networks/network-basics/tipos-de-red.md)
-  * [Transmisión de datos](networks/network-basics/transmision-de-datos.md)
-  * [Conectividad al ISP](networks/network-basics/conectividad-al-isp.md)
-  * [Protocolos de Comunicación](networks/network-basics/protocolos-de-comunicacion.md)
-  * [MAC](networks/network-basics/mac.md)
-  * [IP Address](networks/network-basics/ip-address.md)
-  * [Firmware](networks/network-basics/firmware.md)
-  * [IPv4 y IPv6](networks/network-basics/ipv4-y-ipv6.md)
-* [VPN](networks/vpn.md)
-* [VLANs](networks/vlans.md)
-* [DHCP/v4](networks/dhcp-v4.md)
-* [TCP y UDP](networks/tcp-y-udp.md)
-* [FTP](networks/ftp.md)
-* [Telnet/ssh](networks/telnet-ssh.md)
-* [TCP/IP](networks/tcp-ip.md)
-* [ARP](networks/arp.md)
-* [DNS](networks/dns.md)
-* [ICMPv4 e ICMPv6](networks/icmpv4-e-icmpv6.md)
 
 ## Linux
 
