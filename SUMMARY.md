@@ -47,12 +47,15 @@
 * [143,993:IMAP](pentesting-networks/143-993-imap.md)
 * [22:SFTP](pentesting-networks/22-sftp.md)
 * [3306:MYSQL](pentesting-networks/3306-mysql.md)
-* [25:SMTP](pentesting-networks/25-smtp.md)
+* [25465,587:SMTP](pentesting-networks/25465-587-smtp.md)
 * [161:SNMP](pentesting-networks/161-snmp.md)
-* [445:SMB](pentesting-networks/445-smb.md)
+* [445,139:SMB](pentesting-networks/445-139-smb.md)
 * [110:POP3](pentesting-networks/110-pop3.md)
 * [68:DHCP](pentesting-networks/68-dhcp.md)
 * [5009:VNC](pentesting-networks/5009-vnc.md)
+* [69:TFTP](pentesting-networks/69-tftp.md)
+* [123:NTP](pentesting-networks/123-ntp.md)
+* [137,138,139:NetBios](pentesting-networks/137-138-139-netbios.md)
 
 ## Linux
 
