@@ -68,21 +68,76 @@ inurl:security-policy.txt ext:txt\
 site:_._.\* inurl:bug inurl:bounty\
 site:help._._ inurl:bounty\
 site:support._._ intext:security report reward\
-intext:security report monetary inurl:security\
-intext:security report reward inurl:report\
-site:security._._ inurl: bounty\
-site:_._.de inurl:bug inurl:bounty\
-site:_._.uk intext:security report reward\
-site:_._.cn intext:security report reward\
+\
+\
+\
+\
+\
+\
 "vulnerability reporting policy"\
 "van de melding met een minimum van een" -site:responsibledisclosure.nl\
-inurl:/security ext:txt "contact"\
-inurl:responsible-disclosure-policy\
-"Submission Form powered by Bugcrowd" -bugcrowd.com\
-"If you believe you've found a security vulnerability"\
-intext:"BugBounty" and intext:"BTC" and intext:"reward"\
-intext:bounty inurl:/security\
-inurl:"bug bounty" and intext:"€" and inurl:/security\
-inurl:"bug bounty" and intext:"$" and inurl:/security\
-inurl:"bug bounty" and intext:"INR" and inurl:/security\
-inurl:/security.txt "mailto\*" -github.com -wikipedia.org -portswigger.net -magento
+\
+\
+\
+\
+\
+\
+\
+\
+
+
+```
+inurl:/security.txt "mailto*" -github.com -wikipedia.org -portswigger.net -magento
+```
+
+```
+inurl:"bug bounty" and intext:"INR" and inurl:/security
+```
+
+```
+inurl:"bug bounty" and intext:"$" and inurl:/security
+```
+
+```
+inurl:"bug bounty" and intext:"€" and inurl:/security
+```
+
+```
+intext:bounty inurl:/security
+```
+
+```
+intext:"BugBounty" and intext:"BTC" and intext:"reward"
+```
+
+```
+inurl:responsible-disclosure-policy
+```
+
+```
+inurl:/security ext:txt "contact"
+```
+
+```
+site:..cn intext:security report reward
+```
+
+```
+site:..uk intext:security report reward
+```
+
+```
+site:..de inurl:bug inurl:bounty
+```
+
+```
+site:security.. inurl: bounty
+```
+
+```
+intext:security report reward inurl:report
+```
+
+```
+intext:security report monetary inurl:security
+```
