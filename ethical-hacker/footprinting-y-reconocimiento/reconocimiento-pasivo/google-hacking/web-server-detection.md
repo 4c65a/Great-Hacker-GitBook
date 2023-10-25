@@ -39,3 +39,7 @@ type:mil inurl:ftp ext:pdf | ps
 ```
 inurl:github.com intext:.ftpconfig -issues
 ```
+
+```
+filetype:config inurl:web.config inurl:ftp
+```
