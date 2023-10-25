@@ -13,7 +13,15 @@
   * [Reconocimiento activo vs pasivo](ethical-hacker/ethical-hacker/reconocimiento-activo-vs-pasivo.md)
 * [OSINT/Reconocimiento Tools](ethical-hacker/osint-reconocimiento-tools.md)
 * [footprinting y reconocimiento](ethical-hacker/footprinting-y-reconocimiento/README.md)
-  * [Reconocimiento pasivo](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo.md)
+  * [Reconocimiento pasivo](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/README.md)
+    * [Google Hacking](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking.md)
+    * [Page](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/page.md)
+    * [Page 2](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/page-2.md)
+    * [Page 3](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/page-3.md)
+    * [Page 4](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/page-4.md)
+    * [Page 5](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/page-5.md)
+    * [Page 6](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/page-6.md)
+    * [Page 7](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/page-7.md)
   * [Reconocimiento Activo](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-activo.md)
 
 ## Pentesting Web
