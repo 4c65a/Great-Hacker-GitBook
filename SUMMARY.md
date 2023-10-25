@@ -12,7 +12,7 @@
   * [Introducción de las Fases de pentesting](ethical-hacker/ethical-hacker/introduccion-de-las-fases-de-pentesting.md)
   * [Reconocimiento activo vs pasivo](ethical-hacker/ethical-hacker/reconocimiento-activo-vs-pasivo.md)
 * [OSINT/Reconocimiento Tools](ethical-hacker/osint-reconocimiento-tools.md)
-* [footprinting y reconocimiento](ethical-hacker/footprinting-y-reconocimiento/README.md)
+* [Footprinting y reconocimiento](ethical-hacker/footprinting-y-reconocimiento/README.md)
   * [Reconocimiento pasivo](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/README.md)
     * [Google Hacking](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/README.md)
       * [Google Hacking | Bug Bounty](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/google-hacking-or-bug-bounty.md)
@@ -25,7 +25,6 @@
       * [Error Messages](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/error-messages.md)
       * [Files Containing Juicy Info](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/files-containing-juicy-info.md)
       * [Files Containing Passwords](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/files-containing-passwords.md)
-      * [Files Containing Passwords](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/files-containing-passwords-1.md)
       * [Sensitive Online Shopping Info](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/sensitive-online-shopping-info.md)
       * [Various Online Devices](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/various-online-devices.md)
       * [Advisories and Vulnerabilities](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/advisories-and-vulnerabilities.md)
@@ -103,3 +102,7 @@
 ## Reverse Engineering
 
 * [Untitled](reverse-engineering/untitled.md)
+
+## 🔴 Red Team
+
+* [Page 1](red-team/page-1.md)
