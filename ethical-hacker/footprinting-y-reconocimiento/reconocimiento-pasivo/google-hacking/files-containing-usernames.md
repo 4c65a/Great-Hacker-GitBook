@@ -1,2 +1,6 @@
-# Page 9
+# Files Containing Usernames
+
+```
+allintext:username filetype:log
+```
 
