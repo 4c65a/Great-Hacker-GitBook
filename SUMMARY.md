@@ -25,7 +25,6 @@
       * [Error Messages](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/error-messages.md)
       * [Files Containing Juicy Info](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/files-containing-juicy-info.md)
       * [Files Containing Passwords](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/files-containing-passwords.md)
-      * [Sensitive Online Shopping Info](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/sensitive-online-shopping-info.md)
       * [Various Online Devices](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/various-online-devices.md)
       * [Advisories and Vulnerabilities](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/advisories-and-vulnerabilities.md)
       * [Network or Vulnerability Data](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/network-or-vulnerability-data.md)
