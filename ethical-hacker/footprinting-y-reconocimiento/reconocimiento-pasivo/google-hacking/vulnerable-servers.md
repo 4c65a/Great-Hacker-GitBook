@@ -1,9 +1,10 @@
 ---
+description: https://www.exploit-db.com/google-hacking-database?category=1
 layout:
   title:
     visible: true
   description:
-    visible: false
+    visible: true
   tableOfContents:
     visible: true
   outline:
@@ -13,6 +14,74 @@ layout:
 ---
 
 # Vulnerable Servers
+
+```
+filetype:php inurl:vAuthenticate
+```
+
+```
+inurl:"index.php?module=ew_filemanager"
+```
+
+```
+inurl:"index.php?module=ew_filemanager"
+```
+
+```
+intitle:phpMyAdmin "Welcome to phpMyAdmin ***" "running on * as root@*"
+```
+
+```
+intitle:awen+intitle:asp.net
+```
+
+```
+intext:SQL syntax & inurl:index.php?=id & inurl:gov & inurl:gov
+```
+
+```
+inurl:.php? intext:CHARACTER_SETS,COLLATIONS, ?intitle:phpmyadmin
+```
+
+```
+"OpenSSL" AND "1.0.1 Server at" OR "1.0.1a Server at" OR "1.0.1b Server at" OR "1.0.1c Server at" OR "1.0.1d Server at" OR "1.0.1e Server at" OR "1.0.1f Server at"
+```
+
+```
+ext:cgi inurl:cgi-bin intext:#!/bin/bash
+```
+
+```
+inurl:/proc/self/cwd
+```
+
+```
+inurl:robots.txt intext:CHANGELOG.txt intext:disallow ext:txt -site:github.com
+```
+
+```
+inurl:"q=user/password"
+```
+
+```
+intitle:"index of" "filemail.pl"
+```
+
+```
+intitle:"index of" "shell.php"
+```
+
+```
+intitle:"Wing FTP Server - Web"
+```
+
+```
+intitle:"index of" "/views/auth/passwords"
+```
+
+```
+inurl:"/geoserver/ows?service=wfs"
+```
 
 ```
 inurl:weblogin intitle:("USG20-VPN"|"USG20W-VPN"|USG40|USG40W|USG60|
