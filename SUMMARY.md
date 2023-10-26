@@ -18,7 +18,7 @@
       * [Google Hacking | Bug Bounty](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/google-hacking-or-bug-bounty.md)
       * [Footholds](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/footholds.md)
       * [Files Containing Usernames](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/files-containing-usernames.md)
-      * [Untitled](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/untitled.md)
+      * [Sensitive Directories](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/sensitive-directories.md)
       * [Web Server Detection](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/web-server-detection.md)
       * [Vulnerable Files](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/vulnerable-files.md)
       * [Vulnerable Servers](ethical-hacker/footprinting-y-reconocimiento/reconocimiento-pasivo/google-hacking/vulnerable-servers.md)

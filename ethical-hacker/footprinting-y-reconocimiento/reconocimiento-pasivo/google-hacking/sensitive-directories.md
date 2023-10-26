@@ -1,4 +1,8 @@
-# Untitled
+---
+description: https://www.exploit-db.com/google-hacking-database?category=1
+---
+
+# Sensitive Directories
 
 ```
 intitle:Index of "/venv"
@@ -286,4 +290,164 @@ intitle:"index of" "/admin_backup"
 
 ```
 intitle:"index of" db.frm
+```
+
+```
+intitle:"index of" "/db_backups/"
+```
+
+```
+intitle:"index of" "proxy.pac" OR "proxy.pac.bak"
+```
+
+```
+intitle:"index of" "common.crt" OR "ca.crt"
+```
+
+```
+intitle:"index of" "global.asa"
+```
+
+```
+intitle:"index of" "owncloud/config/*"
+```
+
+```
+intitle: "index of" "MySQL-Router"
+```
+
+```
+intitle:"index of" "iredadmin/*"
+```
+
+```
+intitle:"index of" "cctv"
+```
+
+```
+intitle:"index of" "/concrete/Authentication"
+```
+
+```
+intitle:"index of" "maven-metadata.xml" "Port 80"
+```
+
+```
+intitle:"index of" "jwt-auth"
+```
+
+```
+intitle:"index of" "ftp.log"
+```
+
+```
+intitle:"index of" "sms.log"
+```
+
+```
+inurl:"/includes/OAuth2" intext:"index of /"
+```
+
+```
+intitle:"index of" "config.py"
+```
+
+```
+intitle:index.of "db.zip"
+```
+
+```
+-pool intitle:"index of" wget-log -pub
+```
+
+```
+intitle:"index of" "/Cloudflare-CPanel-7.0.1"
+```
+
+```
+intitle:"index of" domain.key -public
+```
+
+```
+intitle:"index of" api_key OR "api key" OR apiKey -pool
+```
+
+```
+intitle:"index of" .oracle_jre_usage/
+```
+
+```
+"key" OR key.jar intitle:"index of" webstart
+```
+
+```
+index of /storage/logs/
+```
+
+```
+intitle:index.of "chroot.conf"
+```
+
+```
+intitle:index of "uploads"
+```
+
+```
+intitle:"index of" "ws_ftp.log"
+```
+
+```
+intitle:index.of "htaccess.txt"
+```
+
+```
+intext:"index of" intext:..bak intext:config
+```
+
+```
+site:* index.of: /android/manifest.xml
+```
+
+```
+intitle:index.of "system.db"
+```
+
+```
+intitle:index.of "database.db"
+```
+
+```
+site:*/logs/default.htm
+```
+
+```
+intitle:"index of" "/etc/mysql/"
+```
+
+```
+intitle:index.of "admin" filetype:sql
+```
+
+```
+site:ftp.* index of /ftp/backup
+```
+
+```
+inurl:/wp-admin/includes/plugin-install.php
+```
+
+```
+inurl:/wp-content/uploads/ninja-forms/ intitle:"index of"
+```
+
+```
+site:*/logs/default.htm
+```
+
+```
+intitle:index.of "admin.db"
+```
+
+```
+indexof:backup/mysql
 ```
