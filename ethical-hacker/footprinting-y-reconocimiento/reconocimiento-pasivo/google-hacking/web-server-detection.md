@@ -43,3 +43,69 @@ inurl:github.com intext:.ftpconfig -issues
 ```
 filetype:config inurl:web.config inurl:ftp
 ```
+
+```
+-pub -pool intitle:\"index of\" \"Served by\" \"Web Server\"
+```
+
+```
+inurl:?XDEBUG_SESSION_START=phpstorm
+```
+
+```
+inurl:/config/device/wcd
+```
+
+```
+inurl:\"/phpmyadmin/user_password.php
+```
+
+```
+intext:\"SonarQube\" + \"by SonarSource SA.\" + \"LGPL v3\"
+```
+
+```
+intext:\"SonarQube\" + \"by SonarSource SA.\" + \"LGPL v3\" 
+```
+
+```
+inurl:/xprober ext:php
+```
+
+```
+intext:\"Healthy\" + \"Product model\" + \" Client IP\" + \"Ethernet\"
+```
+
+```
+inurl:/phpPgAdmin/browser.php 
+```
+
+```
+ext:php | intitle:phpinfo \"published by the PHP Group\ 
+```
+
+```
+ext:php | intitle:phpinfo \"published by the PHP Group\"
+```
+
+```
+allintext:\"Index Of\" \"sftp-config.json\"
+```
+
+```
+inurl:_vti_bin/Authentication.asmx
+\"Powered by 123LogAnalyzer\"
+```
+
+```
+// Some code
+```
+
+
+
+
+
+
+
+
+
