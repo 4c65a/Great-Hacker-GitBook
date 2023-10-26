@@ -93,19 +93,68 @@ allintext:\"Index Of\" \"sftp-config.json\"
 ```
 
 ```
-inurl:_vti_bin/Authentication.asmx
-\"Powered by 123LogAnalyzer\"
+inurl:_vti_bin/Authentication.asmx\"Powered by 123LogAnalyzer\"
 ```
 
 ```
-// Some code
+allintitle:\"Pi-hole Admin Console\"
 ```
 
+```
+intitle:\"Monsta ftp\" intext:\"Lock session to IP\"
+```
 
+```
+intitle:\"Microsoft Internet Information Services 8\" -IIS
+```
 
+```
+intext:\"index of /\" \"Index of\" access_log
+```
 
+```
+inurl:\"id=*\" & intext:\"warning mysql_fetch_array()\" \"index of /private\" -site:net -site:com -site:org
+```
 
+```
+\"index of /private\" -site:net -site:com -site:org
+```
 
+```
+intitle:\"index of\" \"docker.yml\"
+```
+
+```
+intitle:\"index of\" \"debug.log\" OR \"debug-log\"
+```
+
+<pre><code>intext:\"This is the default welcome page used to test the correct operation of the Apache
+<strong>\"Powered by phpBB\" inurl:\"index.php?s\" OR inurl:\"index.php?style\"
+</strong></code></pre>
+
+```
+intitle:\"index of\" \"powered by apache \" \"port 80\"
+```
+
+```
+intitle:\"Web Server's Default Page\" intext:\"hosting using Plesk\" -www
+```
+
+```
+site:ftp.*.com \"Web File Manager\"
+```
+
+```
+intitle:\"index of\" \"server at\"
+```
+
+```
+-pub -pool intitle:\"index of\" \"Served by\" \"Web Server\"
+```
+
+```
+intitle:\"Welcome to nginx!\" intext:\"Welcome to nginx on Debian!\" intext:\"Thank you for\"
+```
 
 
 
