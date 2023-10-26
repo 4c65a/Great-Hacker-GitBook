@@ -1,3 +1,7 @@
+---
+description: https://www.exploit-db.com/google-hacking-database?category=1
+---
+
 # Web Server Detection
 
 ```
@@ -156,5 +160,26 @@ intitle:\"index of\" \"server at\"
 intitle:\"Welcome to nginx!\" intext:\"Welcome to nginx on Debian!\" intext:\"Thank you for\"
 ```
 
+```
+inurl: /ftp intitle:"office"
+```
 
+```
+inurl:"/phpmyadmin/user_password.php
+```
 
+```
+intext:"index of /" "Index of" access_log
+```
+
+```
+"index of /private" -site:net -site:com -site:org
+```
+
+```
+intitle:"index of" "docker.yml"
+```
+
+```
+intitle:"Apache2 Ubuntu Default Page: It works"
+```
