@@ -14,36 +14,6 @@ layout:
 
 # Vulnerable Servers
 
-<pre><code><strong>inurl:index.php?id=
-</strong>inurl:trainers.php?id=
-inurl:buy.php?category=
-inurl:article.php?ID=
-inurl:play_old.php?id=
-inurl:declaration_more.php?decl_id=
-inurl:pageid=
-inurl:games.php?id=
-inurl:page.php?file=
-inurl:newsDetail.php?id=
-inurl:gallery.php?id=
-inurl:article.php?id=
-inurl:show.php?id=
-inurl:staff_id=
-inurl:newsitem.php?num= and inurl:index.php?id=
-inurl:trainers.php?id=
-inurl:buy.php?category=
-inurl:article.php?ID=
-inurl:play_old.php?id=
-inurl:declaration_more.php?decl_id=
-inurl:pageid=
-inurl:games.php?id=
-inurl:page.php?file=
-inurl:newsDetail.php?id=
-inurl:gallery.php?id=
-inurl:article.php?id=
-inurl:show.php?id=
-inurl:staff_id=
-</code></pre>
-
 ```
 inurl:weblogin intitle:("USG20-VPN"|"USG20W-VPN"|USG40|USG40W|USG60|
 ```
@@ -189,17 +159,9 @@ inurl: inurl:"view.shtml" ext:shtml
 ```
 
 ```
-// Some code
+inurl:declaration_more.php?decl_id=
 ```
 
 ```
-// Some code
-```
-
-```
-// Some code
-```
-
-```
-// Some code
+inurl:newsitem.php?num= and inurl:index.php?id=
 ```
