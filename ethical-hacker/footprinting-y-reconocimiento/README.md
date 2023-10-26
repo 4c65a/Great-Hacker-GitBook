@@ -1,4 +1,0 @@
-# Recopilación de Información
-
-
-
