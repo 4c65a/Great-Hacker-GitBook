@@ -50,6 +50,7 @@
     * [Network or Vulnerability Data](ethical-hacker/reconocimiento-activos/google-hacking/network-or-vulnerability-data.md)
     * [Pages Containing Login Portals](ethical-hacker/reconocimiento-activos/google-hacking/pages-containing-login-portals.md)
     * [Google Hacking | Bug Bounty](ethical-hacker/reconocimiento-activos/google-hacking/google-hacking-or-bug-bounty.md)
+  * [DNS Lookups](ethical-hacker/reconocimiento-activos/dns-lookups.md)
 
 ## Pentesting Web
 
