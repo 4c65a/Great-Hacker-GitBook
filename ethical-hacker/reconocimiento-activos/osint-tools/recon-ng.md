@@ -32,6 +32,10 @@ Recon-ng tiene una gran cantidad de funciones, pero algunas de las más básicas
 
 **Workspaces**
 
+```
+recon-ng workspaces list
+```
+
 Un workspace es un conjunto de configuraciones y datos que se utilizan para un objetivo específico. Puede crear un nuevo workspace usando el siguiente comando:
 
 ```
@@ -42,6 +46,10 @@ Para cargar un workspace existente, use el siguiente comando:
 
 ```
 recon-ng workspaces load [nombre_del_workspace]
+```
+
+```
+recon-ng workspaces remove
 ```
 
 **Modules**
@@ -69,3 +77,4 @@ Para ver la información que se almacena en la base de datos, use el siguiente c
 ```
 recon-ng db show
 ```
+
