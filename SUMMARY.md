@@ -51,6 +51,7 @@
     * [Pages Containing Login Portals](ethical-hacker/reconocimiento-activos/google-hacking/pages-containing-login-portals.md)
     * [Google Hacking | Bug Bounty](ethical-hacker/reconocimiento-activos/google-hacking/google-hacking-or-bug-bounty.md)
   * [DNS Lookups](ethical-hacker/reconocimiento-activos/dns-lookups.md)
+  * [Whois](ethical-hacker/reconocimiento-activos/whois.md)
 
 ## Pentesting Web
 
