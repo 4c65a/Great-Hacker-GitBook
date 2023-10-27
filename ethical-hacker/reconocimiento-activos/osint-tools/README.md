@@ -1,5 +1,4 @@
 ---
-description: Distintos métodos y herramientas para un reconocimiento del objetivo.
 layout:
   title:
     visible: true
@@ -13,7 +12,7 @@ layout:
     visible: true
 ---
 
-# OSINT/Reconocimiento Tools
+# OSINT Tools
 
 **OSINT Framework:** [https://osintframework.com/](https://osintframework.com/)
 
