@@ -56,8 +56,6 @@
   * [Reputación](ethical-hacker/reconocimiento-activos/reputacion/README.md)
     * [Password dumps](ethical-hacker/reconocimiento-activos/reputacion/password-dumps.md)
     * [File metadata](ethical-hacker/reconocimiento-activos/reputacion/file-metadata.md)
-    * [Website archiving/caching](ethical-hacker/reconocimiento-activos/reputacion/website-archiving-caching.md)
-    * [Public source code repositories](ethical-hacker/reconocimiento-activos/reputacion/public-source-code-repositories.md)
 
 ## Pentesting Web
 
