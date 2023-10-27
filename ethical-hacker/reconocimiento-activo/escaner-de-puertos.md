@@ -108,3 +108,76 @@ Nmap proporciona seis plantillas de temporización que se pueden especificar con
 ```
 nmap -T0 192.168.1.251
 ```
+
+#### --exclude/excludefile
+
+Estas opciones son útiles cuando quieres evitar escanear objetivos específicos, como servidores de misión crítica o subredes administradas por otras personas.
+
+<pre><code><strong>nmap --exclude 192.168.1.100,192.168.1.0/24
+</strong></code></pre>
+
+#### Resolución de DNS `-n/-R`
+
+Las opciones `-n` y `-R` de Nmap controlan la resolución de nombres durante un escaneo. La opción `-n` desactiva la resolución de nombres ya que DNS es generalmente lento, esto acelera un poco las cosas, mientras que la opción `-R` la activa para todos los objetivos.
+
+La resolución de nombres es el proceso de traducir una dirección IP en un nombre de host. Nmap utiliza la resolución de nombres para identificar los nombres de host de los objetivos que encuentra.
+
+```
+nmap -sS -n 192.168.1.251
+```
+
+```
+nmap -sS -R 192.168.1.251
+```
+
+#### Sondeo de lista `-sL`
+
+El sondeo de lista es un tipo de descubrimiento de sistemas que simplemente enumera todos los equipos de la red especificada, sin enviar paquetes de ningún tipo a los objetivos.
+
+La opción `-sL` de Nmap permite realizar un sondeo de lista. Esta opción no tiene argumentos.
+
+```
+nmap -sL 192.168.1.251
+```
+
+#### Sondeo especifico `-p`
+
+La opción `-p` de Nmap especifica los puertos que deseas sondear. Puedes especificar tanto números de puerto de forma individual, como rangos de puertos separados por un guión. Puedes omitir el valor inicial y/o el valor final del rango. Nmap utilizará 1 ó 65535 respectivamente. De esta forma, puedes especificar `-p-` para sondear todos los puertos desde el 1 al 65535. Se permite sondear el puerto cero siempre que lo especifiques explícitamente.
+
+```
+nmap -p 80,443,22 192.168.1.251
+```
+
+o&#x20;
+
+```
+nmap -p- 192.168.1.251
+```
+
+#### `-sV` (Detección de versiones)
+
+Activa la detección de versiones como se ha descrito previamente. Puede utilizar la opción `-A` en su lugar para activar tanto la detección de versiones como la detección de sistema operativo.
+
+#### `--allports` (No excluir ningún puerto de la detección de versiones)
+
+La detección de versiones de Nmap omite el puerto TCP 9100 por omisión porque algunas impresoras imprimen cualquier cosa que reciben en este puerto, lo que da lugar a la impresión de múltiples páginas con solicitudes HTTP get, intentos de conexión de SSL, etc. Este comportamiento puede cambiarse modificando o eliminando la directiva `Exclude` en `nmap-service-probes`, o especificando `--allports` para sondear todos los puertos independientemente de lo definido en la directiva `Exclude`.
+
+#### `--version-intensity <intensidad>` (Fijar la intensidad de la detección de versiones)
+
+Nmap envía una serie de sondas cuando se activa la detección de versiones (`-sV`) con un nivel de rareza preasignado y variable de 1 a 9. Las sondas con un número bajo son efectivas contra un amplio número de servicios comunes, mientras que las de números más altos se utilizan rara vez. El nivel de intensidad indica que sondas deberían utilizarse. Cuanto más alto sea el número, mayor las probabilidades de identificar el servicio. Sin embargo, los sondeos de alta intensidad tardan más tiempo. El valor de intensidad puede variar de 0 a 9. El valor por omisión es 7. Se probará una sonda independientemente del nivel de intensidad cuando ésta se registra para el puerto objetivo a través de la directiva `nmap-service-probes` `ports`. De esta forma se asegura que las sondas de DNS se probarán contra cualquier puerto abierto 53, las sondas SSL contra el puerto 443, etc.
+
+#### `--version-light` (Activar modo ligero)
+
+Éste es un alias conveniente para `--version-intensity 2`. Este modo ligero hace que la detección de versiones sea más rápida pero también hace que sea menos probable identificar algunos servicios.
+
+#### `--version-all` (Utilizar todas las sondas)
+
+Éste es un alias para `--version-intensity 9`, hace que se utilicen todas las sondas contra cada puerto.
+
+#### `--version-trace` (Trazar actividad de sondeo de versiones)
+
+Esta opción hace que Nmap imprima información de depuración detallada explicando lo que está haciendo el sondeo de versiones. Es un conjunto de lo que obtendría si utilizara la opción `--packet-trace`.
+
+#### `-sR` (Sondeo RPC)
+
+Este método funciona conjuntamente con los distintos métodos de sondeo de puertos de Nmap. Toma todos los puertos TCP/UDP que se han encontrado y los inunda con órdenes de programa NULL SunRPC con el objetivo de determinar si son puertos RPC y, si es así, los programas y número de versión que están detrás. Así, puede obtener de una forma efectiva la misma información que **rpcinfo -p** aunque el mapeador de puertos («portmapper», N. del T.) está detrás de un cortafuegos (o protegido por TCP wrappers). Los señuelos no funcionan con el sondeo RPC actualmente. Esta opción se activa automáticamente como parte de la detección de versiones (`-sV`) si la ha seleccionado. Rara vez se utiliza la opción `-sR` dado que la detección de versiones lo incluye y es más completa.
