@@ -38,3 +38,87 @@ Unas de las forma mas conocidas para verificar certificados es ir al sitio web [
 | sslh        | Ejecuta múltiples servicios en el puerto 443                            | Utilidad       |
 | sslsplit    | Habilita los ataques MitM en conexiones de red cifradas con SSL         | Explotación    |
 | sslyze      | Analiza la configuración SSL de un servidor conectándose a él           | Reconocimiento |
+
+Unas de las formas para ver las certificaciones es usar :
+
+**SSLScan es una herramienta  que se utiliza para escanear la configuración SSL de un servidor.**
+
+**Escanear el dominio y guardar en un archivo .html**
+
+```bash
+sslscan skillsforall.com | aha > sfa_cert.html
+```
+
+**Escanear dominio**&#x20;
+
+```
+sslscan google.com
+```
+
+**Escanea una lista de dominios en un archivo**&#x20;
+
+```
+sslscan -t dominios.txt
+```
+
+**Escanea los puestos del servidor**
+
+```
+sslscan -d 192.168.1.1 -p 443
+```
+
+**Muestra información detallada**&#x20;
+
+```
+sslscan -d google.com -v
+```
+
+**Muestra información breve**
+
+```
+sslscan -d google.com -q
+```
+
+**Especifica una lista de cifrados**
+
+```
+sslscan -d google.com -c ciphers.txt
+```
+
+**Especifica una lista de protocolos**
+
+| Protocol   | Comment                                                                                                                                                                                           |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SSL        | Enables TLS v1.0, v1.1, and v1.2 protocols.                                                                                                                                                       |
+| SSLv3      | No protocols enabled.                                                                                                                                                                             |
+| TLS        | Enables TLS v1.0, v1.1, v1.2, and v1.3 protocols.                                                                                                                                                 |
+| TLSv1      | Enables TLS v1.0 protocol (defined in RFC 2246).                                                                                                                                                  |
+| TLSv1.1    | Enables TLS v1.1 protocol (defined by RFC 4346).                                                                                                                                                  |
+| TLSv1.2    | Enables TLS v1.2 protocol (defined by RFC 5246).                                                                                                                                                  |
+| TLSv1.3    | Enables TLS v1.3 protocol (defined by RFC 8446).                                                                                                                                                  |
+| SSL\_TLS   | Enables TLS v1.0 protocol.                                                                                                                                                                        |
+| SSL\_TLSv2 | Enables TLS v1.0, v1.1, and v1.2 protocols.                                                                                                                                                       |
+| SSLv2Hello | The SSLv3, TLSv1, TLSv1.1, and TLSv1.2 protocols allow you to send SSLv3, TLSv1, TLSv1.1, and TLSv1.2 ClientHellos encapsulated in an SSLv2 format hello by using the SSLv2Hello pseudo protocol. |
+
+```
+sslscan -d google.com -s protocols.txt
+```
+
+**Habilita el análisis avanzado**
+
+```
+sslscan -d google.com -a
+```
+
+**No muestra información sobre cifrados admitidos**
+
+```
+sslscan -d google.com -n
+```
+
+**Especifica un archivo que contiene un certificado de confianza**
+
+```
+sslscan -d google.com -k trust.pem
+```
+
