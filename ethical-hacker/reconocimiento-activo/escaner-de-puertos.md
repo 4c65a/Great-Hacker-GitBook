@@ -56,8 +56,6 @@ nmap -sT 192.168.1.251
 
 Para realizar un escáner de UDP se utiliza `-sU` si estás intentando enumerar un servidor DNS, SNMP o DHCP. Todos estos servicios utilizan UDP para la comunicación entre el cliente y el servidor.
 
-Para escanear puertos UDP, Nmap envía un paquete UDP a todos los puertos especificados en la configuración de la línea de comandos. Espera una respuesta del objetivo. Si recibe un mensaje ICMP de puerto inalcanzable de un objetivo, ese puerto se marca como cerrado. Si no recibe respuesta del puerto UDP de destino, Nmap marca el puerto como abierto/filtrado. La siguiente tabla muestra las respuestas del escaneo UDP:
-
 Dado que el sondeo UDP es generalmente más lento y más difícil que TCP, algunos auditores de seguridad ignoran estos puertos. Esto es un error, porque es muy frecuente encontrarse servicios UDP vulnerables y los atacantes no ignoran estos protocolos.
 
 El sondeo UDP se activa con la opción `-sU`. Puede combinarse con un tipo de sondeo TCP como el sondeo SYN (`-sS`) para comprobar ambos protocolos al mismo tiempo.
@@ -154,53 +152,41 @@ o&#x20;
 nmap -p- 192.168.1.251
 ```
 
-#### `-sV` (Detección de versiones)
+#### Detección de versiones `-sV`
 
 Activa la detección de versiones como se ha descrito previamente. Puede utilizar la opción `-A` en su lugar para activar tanto la detección de versiones como la detección de sistema operativo.
 
-#### `--allports` (No excluir ningún puerto de la detección de versiones)
+#### &#x20;No excluir ningún puerto de la detección de versiones `--allports`
 
 La detección de versiones de Nmap omite el puerto TCP 9100 por omisión porque algunas impresoras imprimen cualquier cosa que reciben en este puerto, lo que da lugar a la impresión de múltiples páginas con solicitudes HTTP get, intentos de conexión de SSL, etc. Este comportamiento puede cambiarse modificando o eliminando la directiva `Exclude` en `nmap-service-probes`, o especificando `--allports` para sondear todos los puertos independientemente de lo definido en la directiva `Exclude`.
 
-#### `--version-intensity <intensidad>` (Fijar la intensidad de la detección de versiones)
-
-Nmap envía una serie de sondas cuando se activa la detección de versiones (`-sV`) con un nivel de rareza preasignado y variable de 1 a 9. Las sondas con un número bajo son efectivas contra un amplio número de servicios comunes, mientras que las de números más altos se utilizan rara vez. El nivel de intensidad indica que sondas deberían utilizarse. Cuanto más alto sea el número, mayor las probabilidades de identificar el servicio. Sin embargo, los sondeos de alta intensidad tardan más tiempo. El valor de intensidad puede variar de 0 a 9. El valor por omisión es 7. Se probará una sonda independientemente del nivel de intensidad cuando ésta se registra para el puerto objetivo a través de la directiva `nmap-service-probes` `ports`. De esta forma se asegura que las sondas de DNS se probarán contra cualquier puerto abierto 53, las sondas SSL contra el puerto 443, etc.
-
-#### `--version-light` (Activar modo ligero)
+#### Modo ligero `--version-light`&#x20;
 
 Éste es un alias conveniente para `--version-intensity 2`. Este modo ligero hace que la detección de versiones sea más rápida pero también hace que sea menos probable identificar algunos servicios.
 
-#### `--version-all` (Utilizar todas las sondas)
+#### Utilizar todas las sondas `--version-all`&#x20;
 
 Éste es un alias para `--version-intensity 9`, hace que se utilicen todas las sondas contra cada puerto.
 
-#### `--version-trace` (Trazar actividad de sondeo de versiones)
-
-Esta opción hace que Nmap imprima información de depuración detallada explicando lo que está haciendo el sondeo de versiones. Es un conjunto de lo que obtendría si utilizara la opción `--packet-trace`.
-
-#### `-sR` (Sondeo RPC)
-
-Este método funciona conjuntamente con los distintos métodos de sondeo de puertos de Nmap. Toma todos los puertos TCP/UDP que se han encontrado y los inunda con órdenes de programa NULL SunRPC con el objetivo de determinar si son puertos RPC y, si es así, los programas y número de versión que están detrás. Así, puede obtener de una forma efectiva la misma información que **rpcinfo -p** aunque el mapeador de puertos («portmapper», N. del T.) está detrás de un cortafuegos (o protegido por TCP wrappers). Los señuelos no funcionan con el sondeo RPC actualmente. Esta opción se activa automáticamente como parte de la detección de versiones (`-sV`) si la ha seleccionado. Rara vez se utiliza la opción `-sR` dado que la detección de versiones lo incluye y es más completa.
-
-`-O` (Activa la detección de sistema operativo)
+#### Detección de sistema operativo `-O`&#x20;
 
 Tal y como se indica previamente, activa la detección de sistema operativo. También se puede utilizar la opción `-A` para activar la detección de sistema operativo y de versiones.
 
-`-v` (Incrementa el nivel de detalle)
+#### Incrementa el nivel de detalle `-v`&#x20;
 
 Hace que Nmap imprima más información sobre el sondeo que está realizando incrementando el nivel de detalle. Los puertos abiertos se muestran en cuanto se encuentran y se muestra una estimación del tiempo que Nmap espera que dure la tarea de sondeo si piensa que va a durar más de un par de minutos. Puede utilizarlo dos veces para obtener aún más detalle. No tiene ningún efecto el utilizarlo más de dos veces.
 
-`-oG <filespec>` (Salida «grepeable»)
+#### Salida grepeable `-oG`&#x20;
 
 Este formato de salida se trata el último porque está obsoleto. La salida en formato XML es mucho más poderosa, y es igual de conveniente para los usuarios experimentados. XML es un estándar para el que se dispone de docenas de intérpretes, mientras que la salida para grep es un «hack» propio. XML puede extenderse para soportar nuevas funcionalidades de Nmap tan pronto como se liberen, mientras que en general tengo que omitir estas funcionalidades de la salida para grep por no tener un lugar donde ponerlas.
 
-`-oX <filespec>` (salida XML)
+#### Salida XML  `-oX`&#x20;
 
-Solicita que la `salida en XML` se redirigida al archivo especificado. Nmap incluye un DTD que pueden utilizar los intérpretes de XML para validar la salida XML.
+Solicita que la `salida en XML` se redirigida al archivo especificado.&#x20;
 
-`-oN <filespec>` (Salida normal)
+#### Salida normal `-oN`&#x20;
 
-Solicita que la `salida normal` sea redirigida al archivo especificado. Como se ha dicho anteriormente, esto difiere un poco de la `salida interactiva`.
+Solicita que la `salida normal` sea redirigida al archivo especificado. Como se ha dicho anteriormente.
 
 `-6` (Activa el sondeo IPv6)
 
