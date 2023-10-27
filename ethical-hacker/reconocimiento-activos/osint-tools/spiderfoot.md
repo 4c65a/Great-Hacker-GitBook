@@ -40,3 +40,5 @@ Iniciar spiderfoot en el navegador
 ```
 spiderfoot -l 127.0.0.1:5001
 ```
+
+<figure><img src="../../../.gitbook/assets/2023-10-27_01-30.png" alt=""><figcaption></figcaption></figure>
