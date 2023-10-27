@@ -23,3 +23,11 @@ h8mail -t admin@evilcorp.com
 ```
 
 Este comando buscará el correo electrónico `admin@evilcorp.com` en todos los volcados de contraseñas conocidos. Si se encuentra una coincidencia, h8mail mostrará la contraseña correspondiente.
+
+**Se puede consultar a los siguientes sitios web:**&#x20;
+
+* haveibeenpwned.com
+* f-secure.com
+* hacknotice.com
+* breachdirectory.com
+* keepersecurity.com
