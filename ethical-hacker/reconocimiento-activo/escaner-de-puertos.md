@@ -26,8 +26,6 @@ Un escaneo de puertos es un escaneo activo en el que la herramienta de escaneo e
 
 ### Comandos
 
-**TIP** Nmap scans only the 1000 most common ports for each protocol. You can specify additional ports to scan by using the -p option. You can obtain additional information about the port specifications and scan order from [_https://nmap.org/book/man-port-specification.html_](https://nmap.org/book/man-port-specification.html). Omar Santos has also created an Nmap Cheat Sheet that includes all options and is available in his GitHub repository, [_https://github.com/The-Art-of-Hacking/h4cker/blob/master/cheat\_sheets/NMAP\_cheat\_sheet.md_](https://github.com/The-Art-of-Hacking/h4cker/blob/master/cheat\_sheets/NMAP\_cheat\_sheet.md).
-
 #### Scan SYN -sS
 
 El parámetro `-sS` indica a Nmap que utilice un escaneo SYN. Este tipo de escaneo es el más común y se utiliza para identificar los puertos abiertos en un host sin establecer una conexión completa.&#x20;
@@ -156,44 +154,82 @@ nmap -p- 192.168.1.251
 
 Activa la detección de versiones como se ha descrito previamente. Puede utilizar la opción `-A` en su lugar para activar tanto la detección de versiones como la detección de sistema operativo.
 
+```
+nmap -sV 192.168.1.251 
+```
+
 #### &#x20;No excluir ningún puerto de la detección de versiones `--allports`
 
 La detección de versiones de Nmap omite el puerto TCP 9100 por omisión porque algunas impresoras imprimen cualquier cosa que reciben en este puerto, lo que da lugar a la impresión de múltiples páginas con solicitudes HTTP get, intentos de conexión de SSL, etc. Este comportamiento puede cambiarse modificando o eliminando la directiva `Exclude` en `nmap-service-probes`, o especificando `--allports` para sondear todos los puertos independientemente de lo definido en la directiva `Exclude`.
+
+```
+nmap -A --allports 192.168.1.251 
+```
 
 #### Modo ligero `--version-light`&#x20;
 
 Éste es un alias conveniente para `--version-intensity 2`. Este modo ligero hace que la detección de versiones sea más rápida pero también hace que sea menos probable identificar algunos servicios.
 
+```
+nmap -A 192.168.1.251 --version-light 2
+```
+
 #### Utilizar todas las sondas `--version-all`&#x20;
 
 Éste es un alias para `--version-intensity 9`, hace que se utilicen todas las sondas contra cada puerto.
+
+```
+nmap -A 192.168.1.251 --version-intensity 9 
+```
+
+```
+nmap -A 192.168.1.251 --version-all 
+```
 
 #### Detección de sistema operativo `-O`&#x20;
 
 Tal y como se indica previamente, activa la detección de sistema operativo. También se puede utilizar la opción `-A` para activar la detección de sistema operativo y de versiones.
 
+```
+nmap -O 192.168.1.251 
+```
+
 #### Incrementa el nivel de detalle `-v`&#x20;
 
 Hace que Nmap imprima más información sobre el sondeo que está realizando incrementando el nivel de detalle. Los puertos abiertos se muestran en cuanto se encuentran y se muestra una estimación del tiempo que Nmap espera que dure la tarea de sondeo si piensa que va a durar más de un par de minutos. Puede utilizarlo dos veces para obtener aún más detalle. No tiene ningún efecto el utilizarlo más de dos veces.
 
-#### Salida grepeable `-oG`&#x20;
-
-Este formato de salida se trata el último porque está obsoleto. La salida en formato XML es mucho más poderosa, y es igual de conveniente para los usuarios experimentados. XML es un estándar para el que se dispone de docenas de intérpretes, mientras que la salida para grep es un «hack» propio. XML puede extenderse para soportar nuevas funcionalidades de Nmap tan pronto como se liberen, mientras que en general tengo que omitir estas funcionalidades de la salida para grep por no tener un lugar donde ponerlas.
+```
+nmap -A 192.168.1.251 -v 
+```
 
 #### Salida XML  `-oX`&#x20;
 
 Solicita que la `salida en XML` se redirigida al archivo especificado.&#x20;
 
+```
+nmap -A 192.168.1.251 -oX Port.xml
+```
+
 #### Salida normal `-oN`&#x20;
 
 Solicita que la `salida normal` sea redirigida al archivo especificado. Como se ha dicho anteriormente.
 
-`-6` (Activa el sondeo IPv6)
+```
+nmap -A 192.168.1.251 -oN Port
+```
 
-Nmap tiene soporte IPv6 para la mayoría de sus funcionalidades más populares desde 2002. En particular, tiene soporte de: sondeo ping (TCP-only), sondeo connect() y detección de versiones. La sintaxis de las órdenes es igual que las habituales salvo que debe especificar la opción `-6` Por supuesto, debe utilizarse la sintaxis IPv6 si se indica una dirección en lugar de un nombre de sistema. Una dirección IPv6 sería parecida a `3ffe:7501:4819:2000:210:f3ff:fe03:14d0`, por lo que se recomienda utilizar nombres de equipo. La salida es igual que en los otros casos. Lo único que distingue que esta opción está habilitada es que se muestran las direcciones IPv6 en la línea que indica los “puertos de interés”.
+#### Activa el sondeo IPv6 `-6`&#x20;
 
-Aunque IPv6 no se está utilizando en todo el mundo, sí que se utiliza mucho en algunos países (generalmente asiáticos) y muchos sistemas operativos modernos lo soportan. Tanto el origen como el objetivo de su sondeo deben estar configurados para utilizar IPv6 si desea utilizar Nmap con IPv6. Si su ISP (como sucede con la mayoría) no le da direcciones IPv6, puede encontrar gestores de túneles gratuitos en muchos sitios y funciona bien con Nmap. Una lista de gestores está [en Wikipedia](http://es.wikipedia.org/wiki/Anexo:Proveedores\_de\_t%C3%BAneles\_IPv6). Los túneles IPv6 a IPv4 («6to4») son también otro método muy popular y gratuito.
+En particular, tiene soporte de sondeo ping (TCP-only), sondeo connect() y detección de versiones. La sintaxis de las órdenes es igual que las habituales salvo que debe especificar la opción `-6` Por supuesto, debe utilizarse la sintaxis IPv6 si se indica una dirección en lugar de un nombre de sistema. Una dirección IPv6 sería parecida a `3ffe:7501:4819:2000:210:f3ff:fe03:14d0`, por lo que se recomienda utilizar nombres de equipo. La salida es igual que en los otros casos. Lo único que distingue que esta opción está habilitada es que se muestran las direcciones IPv6 en la línea que indica los “puertos de interés”.
 
-`-A` (Opciones de sondeos agresivos)
+```
+nmap -6 0000:0000:0000:0000:0000:ffff:c0a8:01fb
+```
 
-Esta opción activa algunas opciones avanzadas y agresivas. Aún no he decidido qué significa exactamente. Actualmente esto activa la detección de sistema operativo (`-O`) y el análisis de versiones (`-sV`). Aunque se añadirán más opciones en el futuro. La idea es que esta opción active un conjunto de opciones para evitar que los usuarios de Nmap tengan que recordar un número de opciones muy elevado. Esta opción sólo activa funcionalidades, no afecta a las opciones de temporización (como `-T4`) o de depuración (`-v`) que quizás desee activar también.
+#### Sondeo agresivos `-A`&#x20;
+
+Esta opción activa algunas opciones avanzadas y agresivas. Aún no he decidido qué significa exactamente.  Esta opción sólo activa funcionalidades, no afecta a las opciones de temporización (como `-T4`) o de depuración (`-v`) que quizás desee activar también.
+
+```
+nmap -A 192.168.1.251
+```
