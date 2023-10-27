@@ -53,6 +53,12 @@
   * [DNS Lookups](ethical-hacker/reconocimiento-activos/dns-lookups.md)
   * [Whois](ethical-hacker/reconocimiento-activos/whois.md)
   * [Fallas criptográficas](ethical-hacker/reconocimiento-activos/fallas-criptograficas.md)
+  * [Reputación](ethical-hacker/reconocimiento-activos/reputacion/README.md)
+    * [Password dumps](ethical-hacker/reconocimiento-activos/reputacion/password-dumps.md)
+    * [File metadata](ethical-hacker/reconocimiento-activos/reputacion/file-metadata.md)
+    * [Strategic search engine analysis/enumeration](ethical-hacker/reconocimiento-activos/reputacion/strategic-search-engine-analysis-enumeration.md)
+    * [Website archiving/caching](ethical-hacker/reconocimiento-activos/reputacion/website-archiving-caching.md)
+    * [Public source code repositories](ethical-hacker/reconocimiento-activos/reputacion/public-source-code-repositories.md)
 
 ## Pentesting Web
 
