@@ -31,10 +31,10 @@ Unas de las forma mas conocidas para verificar certificados es ir al sitio web [
 
 <figure><img src="../../.gitbook/assets/2023-10-27_03-00.png" alt=""><figcaption></figcaption></figure>
 
-| Tool     | Description                                                   | Recon, Exploitation, or Utility |
-| -------- | ------------------------------------------------------------- | ------------------------------- |
-| sslscan  | Queries SSL services to determine what cyphers are supported  | Reconnaissance                  |
-| ssldump  | Analyze and decode SSL traffic                                | Exploitation                    |
-| sslh     | Running multiple services on port 443                         | Utility                         |
-| sslsplit | Enable MitM attacks on SSL encrypted network connections      | Exploitation                    |
-| sslyze   | Analyze the SSL configuration of a server by connecting to it | Reconnaissance                  |
+| Herramienta | Descripción                                                             | Uso            |
+| ----------- | ----------------------------------------------------------------------- | -------------- |
+| sslscan     | Consulta los servicios SSL para determinar qué cifrados son compatibles | Reconocimiento |
+| ssldump     | Analiza y decodifica el tráfico SSL                                     | Explotación    |
+| sslh        | Ejecuta múltiples servicios en el puerto 443                            | Utilidad       |
+| sslsplit    | Habilita los ataques MitM en conexiones de red cifradas con SSL         | Explotación    |
+| sslyze      | Analiza la configuración SSL de un servidor conectándose a él           | Reconocimiento |
