@@ -52,6 +52,7 @@
     * [Google Hacking | Bug Bounty](ethical-hacker/reconocimiento-activos/google-hacking/google-hacking-or-bug-bounty.md)
   * [DNS Lookups](ethical-hacker/reconocimiento-activos/dns-lookups.md)
   * [Whois](ethical-hacker/reconocimiento-activos/whois.md)
+  * [Fallas criptográficas](ethical-hacker/reconocimiento-activos/fallas-criptograficas.md)
 
 ## Pentesting Web
 
