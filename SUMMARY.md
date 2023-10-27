@@ -57,7 +57,9 @@
     * [Password dumps](ethical-hacker/reconocimiento-pasivo/reputacion/password-dumps.md)
     * [File metadata](ethical-hacker/reconocimiento-pasivo/reputacion/file-metadata.md)
 * [Reconocimiento Activo](ethical-hacker/reconocimiento-activo/README.md)
-  * [Escáner de Puertos](ethical-hacker/reconocimiento-activo/escaner-de-puertos.md)
+  * [Nmap](ethical-hacker/reconocimiento-activo/nmap/README.md)
+    * [Combinaciones](ethical-hacker/reconocimiento-activo/nmap/combinaciones.md)
+    * [Script](ethical-hacker/reconocimiento-activo/nmap/script.md)
   * [Enumeracion](ethical-hacker/reconocimiento-activo/enumeracion.md)
 
 ## Pentesting Web
