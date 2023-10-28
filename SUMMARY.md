@@ -60,7 +60,10 @@
   * [Nmap](ethical-hacker/reconocimiento-activo/nmap/README.md)
     * [Combinaciones](ethical-hacker/reconocimiento-activo/nmap/combinaciones.md)
     * [Script](ethical-hacker/reconocimiento-activo/nmap/script.md)
-  * [Enumeracion](ethical-hacker/reconocimiento-activo/enumeracion.md)
+  * [Enumeracion](ethical-hacker/reconocimiento-activo/enumeracion/README.md)
+    * [Host Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/host-enumeration.md)
+    * [User Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/user-enumeration.md)
+    * [Group Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/group-enumeration.md)
 
 ## Pentesting Web
 

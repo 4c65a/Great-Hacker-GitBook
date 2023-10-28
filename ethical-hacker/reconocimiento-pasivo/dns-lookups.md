@@ -16,30 +16,6 @@ layout:
 
 ### Para ver mas comandos y herramientas ir a [53-dns.md](../../pentesting-networks/53-dns.md "mention")
 
-### Enumeración&#x20;
-
-```bash
-dnsrecon -d google.com
-```
-
-```bash
-nmap --script=broadcast-dns-service-discovery
-```
-
-```bash
-nmap -sU -p 53 --script=dns-recursion
-```
-
-```bash
-fierce --domain google.com
-```
-
-Enumeración todo en uno
-
-```bash
-nmap -sS --script=dns-*
-```
-
 ### Recuperación de registros DNS
 
 ```bash
