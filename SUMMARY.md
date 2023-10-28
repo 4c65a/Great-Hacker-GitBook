@@ -68,6 +68,7 @@
     * [Network Share Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/network-share-enumeration.md)
     * [Page Enumeration/ App Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/page-enumeration-app-enumeration.md)
     * [Service Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/service-enumeration.md)
+    * [Exploring Enumeration via Packet Crafting](ethical-hacker/reconocimiento-activo/enumeracion/exploring-enumeration-via-packet-crafting.md)
 
 ## Pentesting Web
 
