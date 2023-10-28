@@ -37,3 +37,18 @@ nmap -sS --script=dns-*
 ```bash
 nmap -T4 -p 53 --script dns-brute
 ```
+
+## Enumeración DNS
+
+```bash
+nmap --script=broadcast-dns-service-discovery
+```
+
+```bash
+nmap -sU -p 53 --script=dns-recursion
+```
+
+```bash
+nmap -sS --script=dns-*
+```
+
