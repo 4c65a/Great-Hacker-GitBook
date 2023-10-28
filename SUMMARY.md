@@ -66,6 +66,8 @@
       * [SMB enumeration](ethical-hacker/reconocimiento-activo/enumeracion/user-enumeration/smb-enumeration.md)
     * [Group Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/group-enumeration.md)
     * [Network Share Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/network-share-enumeration.md)
+    * [Page Enumeration/ App Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/page-enumeration-app-enumeration.md)
+    * [Service Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/service-enumeration.md)
 
 ## Pentesting Web
 
