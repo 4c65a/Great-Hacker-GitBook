@@ -22,7 +22,7 @@ La enumeración es un proceso de recopilación de información sobre un objetivo
 * User Enumeration
 * Group Enumeration
 * Network Share Enumeration
-* Additional SMB Enumeration Examples
+* Additional SMB Enumeration
 * Web Page Enumeration/Web Application Enumeration
 * Service Enumeration
 * Exploring Enumeration via Packet Crafting
