@@ -65,6 +65,7 @@
     * [User Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/user-enumeration/README.md)
       * [SMB enumeration](ethical-hacker/reconocimiento-activo/enumeracion/user-enumeration/smb-enumeration.md)
     * [Group Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/group-enumeration.md)
+    * [Network Share Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/network-share-enumeration.md)
 
 ## Pentesting Web
 
