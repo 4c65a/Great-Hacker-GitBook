@@ -21,7 +21,7 @@
     * [IP Address](ethical-hacker/ethical-hacker/teoria-network/ip-address.md)
     * [Firmware](ethical-hacker/ethical-hacker/teoria-network/firmware.md)
     * [IPv4 y IPv6](ethical-hacker/ethical-hacker/teoria-network/ipv4-y-ipv6.md)
-    * [Telnet/ssh](ethical-hacker/ethical-hacker/teoria-network/telnet-ssh.md)
+    * [Telnet/SSH](ethical-hacker/ethical-hacker/teoria-network/telnet-ssh.md)
     * [DHCP/v4](ethical-hacker/ethical-hacker/teoria-network/dhcp-v4.md)
     * [VLANs](ethical-hacker/ethical-hacker/teoria-network/vlans.md)
     * [TCP y UDP](ethical-hacker/ethical-hacker/teoria-network/tcp-y-udp.md)
