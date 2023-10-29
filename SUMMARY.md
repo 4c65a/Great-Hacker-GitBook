@@ -19,7 +19,6 @@
     * [Protocolos de Comunicación](ethical-hacker/ethical-hacker/teoria-network/protocolos-de-comunicacion.md)
     * [MAC](ethical-hacker/ethical-hacker/teoria-network/mac.md)
     * [IP Address](ethical-hacker/ethical-hacker/teoria-network/ip-address.md)
-    * [Firmware](ethical-hacker/ethical-hacker/teoria-network/firmware.md)
     * [IPv4 y IPv6](ethical-hacker/ethical-hacker/teoria-network/ipv4-y-ipv6.md)
     * [Telnet/SSH](ethical-hacker/ethical-hacker/teoria-network/telnet-ssh.md)
     * [DHCP/v4](ethical-hacker/ethical-hacker/teoria-network/dhcp-v4.md)
