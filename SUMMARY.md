@@ -76,10 +76,9 @@
 
 * [53:DNS](pentesting-networks/53-dns.md)
 * [21:FTP](pentesting-networks/21-ftp.md)
-* [22:SSH](pentesting-networks/22-ssh.md)
+* [22:SSH/SFTP](pentesting-networks/22-ssh-sftp.md)
 * [23:Telnet](pentesting-networks/23-telnet.md)
 * [143,993:IMAP](pentesting-networks/143-993-imap.md)
-* [22:SFTP](pentesting-networks/22-sftp.md)
 * [3306:MYSQL](pentesting-networks/3306-mysql.md)
 * [25465,587:SMTP](pentesting-networks/25465-587-smtp.md)
 * [161:SNMP](pentesting-networks/161-snmp.md)
