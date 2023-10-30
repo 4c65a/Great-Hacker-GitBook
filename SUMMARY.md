@@ -106,7 +106,8 @@
 
 ## Machines
 
-* [HackTheBox](machines/hackthebox.md)
+* [HackTheBox](machines/hackthebox/README.md)
+  * [Shoppy](machines/hackthebox/shoppy.md)
 * [Docker/Vulnhub](machines/docker-vulnhub.md)
 
 ## Programming
