@@ -80,7 +80,7 @@
 * [23:Telnet](pentesting-networks/23-telnet.md)
 * [143,993:IMAP](pentesting-networks/143-993-imap.md)
 * [3306:MYSQL](pentesting-networks/3306-mysql.md)
-* [25465,587:SMTP](pentesting-networks/25465-587-smtp.md)
+* [25,465,587:SMTP](pentesting-networks/25-465-587-smtp.md)
 * [161:SNMP](pentesting-networks/161-snmp.md)
 * [445,139:SMB](pentesting-networks/445-139-smb.md)
 * [110:POP3](pentesting-networks/110-pop3.md)
@@ -89,6 +89,8 @@
 * [69:TFTP](pentesting-networks/69-tftp.md)
 * [123:NTP](pentesting-networks/123-ntp.md)
 * [137,138,139:NetBios](pentesting-networks/137-138-139-netbios.md)
+* [27017,27018:MongoDB](pentesting-networks/27017-27018-mongodb.md)
+* [5432,5433:PostgreSQL](pentesting-networks/5432-5433-postgresql.md)
 
 ## Linux
 
