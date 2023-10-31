@@ -85,13 +85,11 @@ login                   [Status: 200, Size: 1074, Words: 152, Lines: 26, Duratio
 
 ```
 
-Nice! We have found a login page on `http://shoppy.htb/login`. To login, we need valid credentials. We do not currently have those credentials. Also, the location `http://shoppy.htb/exports` is interessting, but we cannot extract any information from this URL right now, maybe later on in this machine.
-
-
+Se descubrió dos URL interesantes `http://shoppy.htb/login y http://shoppy.htb/exports`
 
 ## Acceder
 
-### Access as admin webportal
+### Acceder como administrador
 
 If we are using a single quote (`'`) in the username field, we receive a `504 Gateway Time-out`. We have our first error message. We need to perform some more enumeration. This part of the machine, was the most confusing part of this box. It took me some time to find out how to get a foothold on this machine.
 
