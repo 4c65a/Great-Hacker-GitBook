@@ -31,9 +31,9 @@ Nmap done: 1 IP address (1 host up) scanned in 9.81 seconds
 
 ```
 
-The first discovered open port is `22/tcp` this is the default SSH port. The second open port is `80/tcp` this is the default HTTP port. The webserver is running on Nginx 1.23.1. According to the header, the webserver is listening on the hostname `shoppy.htb`. To perform further reconnaissance, we add the hostname `shoppy.htb` to our `/etc/hosts` file.
+Se descubrió dos puertos el `22/tcp` que por default es SSH y el puerto `80/tcp` que es HTTP,el servidor corre con Nginx 1.23.1.Tambien aparece `shoppy.htb`
 
-
+Debemos agregar la URL en `/etc/hosts`
 
 ## Enumeracion
 
@@ -118,8 +118,6 @@ username=admin'||'1==1//&password=toto
 After logging in, we are redirected to `http://shoppy.htb/admin`
 
 From this page, we can search for users. We can search for the user `admin`, and received the password for this user account. We’ve tried to crack this password, but it seems it is uncrackable. After filling in the payload `'||'1==1//` in the search bar (payload always trye), it shows all existing user accounts in the databse.
-
-\#
 
 Let’s try to crack the password of the useraccount `john`.
 
