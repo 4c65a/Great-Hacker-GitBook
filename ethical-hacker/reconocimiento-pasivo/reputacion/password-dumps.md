@@ -16,7 +16,7 @@ layout:
 
 Los atacantes pueden aprovechar los volcados de contraseñas de brechas anteriores. Hay varias formas en que un atacante puede obtener acceso a estos volcados de contraseñas, como mediante el uso de Pastebin, sitios web de la dark web e incluso GitHub en algunos casos. Varias herramientas y sitios web facilitan mucho esta tarea. Un ejemplo de una herramienta que le permite encontrar direcciones de correo electrónico y contraseñas expuestas en brechas anteriores es h8mail.
 
-**Ejemplo 3-9. Instalación y uso de h8mail**
+**Iso de h8mail**
 
 ```
 h8mail -t admin@evilcorp.com
