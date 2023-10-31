@@ -37,9 +37,11 @@ Debemos agregar la URL en `/etc/hosts`
 
 ## Enumeracion
 
-### Webserver
+### Servidor Web
 
-We start with the enumeration of the website. We visit the website through the URL `http://shoppy.htb`.
+Ahora tenemos que ir al sitio web y enumerar con fuff.
+
+`http://shoppy.htb`.
 
 ```bash
  ffuf -c -w /usr/share/wordlists/dirb/big.txt -u http://shoppy.htb/FUZZ
