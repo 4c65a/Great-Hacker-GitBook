@@ -102,6 +102,8 @@
 * [Usuario avanzado de Linux](linux/usuario-avanzado-de-linux.md)
 * [Técnicas de seguridad de Linux](linux/tecnicas-de-seguridad-de-linux.md)
 * [Administrador del sistema Linux](linux/administrador-del-sistema-linux.md)
+* [Anonymous](linux/anonymous.md)
+* [Proteger Linux](linux/proteger-linux.md)
 
 ## Machines
 
