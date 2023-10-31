@@ -113,38 +113,22 @@ username=admin'||'1==1//&password=admin
 
 ```
 
-After logging in, we are redirected to `http://shoppy.htb/admin`
+Después de iniciar sesión, somos redirigidos a `http://shoppy.htb/admin`
 
-From this page, we can search for users. We can search for the user `admin`, and received the password for this user account. We’ve tried to crack this password, but it seems it is uncrackable. After filling in the payload `'||'1==1//` in the search bar (payload always trye), it shows all existing user accounts in the databse.
+Desde esta página, podemos buscar usuarios. Podemos buscar al usuario admin y recibir la contraseña de esta cuenta de usuario. Hemos intentado descifrar esta contraseña, pero parece que no se puede descifrar. Después de completar la carga útil `'||'1==1//` en la barra de búsqueda, muestra todas las cuentas de usuario existentes en la base de datos.Intentemos descifrar la contraseña de la cuenta de usuario john.La contraseña encontrada es `remembermethisway.` Con esta contraseña se puede  intentar iniciar sesión a través de SSH con esta contraseña. Después de enumerar alrededor, encontramos un subdominio adicional `http://mattermost.shoppy.htb`.Después de mirar alrededor, encontramos las credenciales para la cuenta de usuario `jaeger` con la contraseña `Sh0ppyBest@pp!`
 
-Let’s try to crack the password of the useraccount `john`.
+## SSH acceder como jaeger <a href="#ssh-access-as-jaeger" id="ssh-access-as-jaeger"></a>
 
-We have found the password `remembermethisway`. With this password I’ve tried to login through SSH with this password, but no luck. After enumerating around, we found an extra sub-domain `http://mattermost.shoppy.htb`, using `ffuf`.
+Con el usuario y la contraseña encontrada antes podemos acceder a la maquina con SSH.
 
-We cannot now login with the user `josh` with the cracked password.
+## Movimiento lateral
 
-After looking around, we find the credentials for the user account `jaeger` with the password `Sh0ppyBest@pp!`.
+Esta cuenta de usuario tiene permiso para ejecutar /home/deploy/password-manager en nombre de la cuenta de usuario deploy.Después de ejecutar este programa, solicita una contraseña maestra. Como podemos ejecutar el programa, también podemos intentar leerlo.Parece que la contraseña es: Sample
 
-## SSH access as jaeger <a href="#ssh-access-as-jaeger" id="ssh-access-as-jaeger"></a>
+## Escalada de privilegios
 
-With this user account, we can access the machine through SSH and grab the user flag.
+&#x20;Ahora tenemos las credenciales para la cuenta de usuario deploy. Podemos cambiar a esta cuenta de usuario y ejecutar linpeas.sh.
 
-## Lateral Movement <a href="#lateral-movement" id="lateral-movement"></a>
+## Explotación de Docker
 
-### Move from jaeger to deploy
-
-This user account has the permission to run `/home/deploy/password-manager` on behalf of the user account `deploy`.
-
-After executing this program, it’s asking for a master password. As we are able to run the program, we can also try to read the program.
-
-It seems that the password is: `Sample`.
-
-## Privilege Escalation <a href="#privilege-escalation" id="privilege-escalation"></a>
-
-Yes! We have now the credentials for the user account `deploy`. We can switch to this user account and run `linpeas.sh`.
-
-## Exploit docker <a href="#exploit-docker" id="exploit-docker"></a>
-
-The user account `deploy` is in the `docker` group. Through [GTFObins](https://gtfobins.github.io/gtfobins/docker/) we can find the path to privilege escalation.
-
-Thanks for reading this write-up! Did you enjoy reading this write-up? Or learned something from it? Please consider spending a respect point: [https://app.hackthebox.com/profile/224856.com/profile/224856](https://app.hackthebox.com/profile/224856.com/profile/224856). Thanks!
+La cuenta de usuario deploy está en el grupo docker. A través de [GTFObins](https://gtfobins.github.io/gtfobins/docker/) podemos encontrar la ruta a la escalada de privilegios.
