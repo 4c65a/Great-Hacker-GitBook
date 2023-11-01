@@ -14,7 +14,7 @@ layout:
 
 # Registro de sistema
 
-Los registros del sistema en Linux son archivos que registran eventos e información sobre el sistema operativo y las aplicaciones que se ejecutan en él. Estos registros pueden ser útiles para diagnosticar problemas, solucionar errores y monitorear el rendimiento del sistema.
+Los registros del sistema en Linux son archivos que registran eventos e información sobre el sistema operativo y las aplicaciones que se ejecutan en él.&#x20;
 
 En Linux, los registros se almacenan en el directorio `/var/log`. Los archivos de registro más comunes son:
 
