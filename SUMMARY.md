@@ -71,6 +71,9 @@
 
 ## Pentesting Web
 
+* [GraphQL](pentesting-web/graphql/README.md)
+  * [Checklist](pentesting-web/graphql/checklist.md)
+
 ## Pentesting Networks
 
 * [53:DNS](pentesting-networks/53-dns.md)
