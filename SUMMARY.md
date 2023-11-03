@@ -93,6 +93,11 @@
 * [HTTP Desync](pentesting-web/http-desync.md)
 * [RCE](pentesting-web/rce.md)
 * [APIs](pentesting-web/apis.md)
+* [Fallas en el Registro y Monitoreo](pentesting-web/fallas-en-el-registro-y-monitoreo.md)
+* [Fallas en el Software y en la Integridad de los Datos](pentesting-web/fallas-en-el-software-y-en-la-integridad-de-los-datos.md)
+* [Fallas de Identificación y Autenticación](pentesting-web/fallas-de-identificacion-y-autenticacion.md)
+* [Inyección](pentesting-web/inyeccion.md)
+* [Pérdida de Control de Acceso](pentesting-web/perdida-de-control-de-acceso.md)
 
 ## Pentesting Networks
 
