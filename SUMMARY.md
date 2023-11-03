@@ -80,6 +80,10 @@
   * [Stored Cross Site Scripting](pentesting-web/xss-injection/stored-cross-site-scripting.md)
   * [DOM-Based Cross Site Scripting](pentesting-web/xss-injection/dom-based-cross-site-scripting.md)
   * [CSP-Bypass Cross Site Scripting](pentesting-web/xss-injection/csp-bypass-cross-site-scripting.md)
+* [File Inclusion](pentesting-web/file-inclusion.md)
+* [Untitled](pentesting-web/untitled.md)
+* [Untitled](pentesting-web/untitled-1.md)
+* [Untitled](pentesting-web/untitled-2.md)
 
 ## Pentesting Networks
 
@@ -112,8 +116,6 @@
 * [Usuario avanzado de Linux](linux/usuario-avanzado-de-linux.md)
 * [Técnicas de seguridad de Linux](linux/tecnicas-de-seguridad-de-linux.md)
 * [Administrador del sistema Linux](linux/administrador-del-sistema-linux.md)
-* [Anonymous](linux/anonymous.md)
-* [Proteger Linux](linux/proteger-linux.md)
 
 ## Machines
 
