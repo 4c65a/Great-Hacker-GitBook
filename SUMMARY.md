@@ -80,10 +80,19 @@
   * [Stored Cross Site Scripting](pentesting-web/xss-injection/stored-cross-site-scripting.md)
   * [DOM-Based Cross Site Scripting](pentesting-web/xss-injection/dom-based-cross-site-scripting.md)
   * [CSP-Bypass Cross Site Scripting](pentesting-web/xss-injection/csp-bypass-cross-site-scripting.md)
+  * [XSS filter evasion tips](pentesting-web/xss-injection/xss-filter-evasion-tips.md)
+  * [Blind XSS](pentesting-web/xss-injection/blind-xss.md)
 * [File Inclusion](pentesting-web/file-inclusion.md)
-* [Untitled](pentesting-web/untitled.md)
-* [Untitled](pentesting-web/untitled-1.md)
-* [Untitled](pentesting-web/untitled-2.md)
+* [CSRF](pentesting-web/csrf.md)
+* [IDOR/broken access control](pentesting-web/idor-broken-access-control.md)
+* [RFI](pentesting-web/rfi.md)
+* [SSTI](pentesting-web/ssti.md)
+* [XXE](pentesting-web/xxe.md)
+* [SSRF](pentesting-web/ssrf.md)
+* [SQL Injection](pentesting-web/sql-injection.md)
+* [HTTP Desync](pentesting-web/http-desync.md)
+* [RCE](pentesting-web/rce.md)
+* [APIs](pentesting-web/apis.md)
 
 ## Pentesting Networks
 
