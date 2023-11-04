@@ -73,3 +73,7 @@ layout:
 {% embed url="https://github.com/rapid7/metasploitable3" %}
 
 {% embed url="https://ctftime.org/ctfs" %}
+
+{% embed url="https://capturetheflag.withgoogle.com/beginners-quest" %}
+
+{% embed url="https://capturetheflag.withgoogle.com/challenges/hw-parking" %}
