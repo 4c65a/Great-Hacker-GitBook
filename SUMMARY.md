@@ -138,6 +138,7 @@
 * [HackTheBox](machines/hackthebox/README.md)
   * [Shoppy](machines/hackthebox/shoppy.md)
 * [Docker/Vulnhub](machines/docker-vulnhub.md)
+* [Recursos de CTF](machines/recursos-de-ctf.md)
 
 ## Programming
 
