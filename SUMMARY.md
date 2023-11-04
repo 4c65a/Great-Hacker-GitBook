@@ -143,9 +143,11 @@
 ## Programming
 
 * [Rust](programming/rust.md)
+* [Go](programming/go.md)
 * [C](programming/c.md)
 * [Python](programming/python.md)
 * [BASH](programming/bash.md)
+* [Assembly](programming/assembly.md)
 
 ## Reverse Engineering
 
