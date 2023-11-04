@@ -77,3 +77,7 @@ layout:
 {% embed url="https://capturetheflag.withgoogle.com/beginners-quest" %}
 
 {% embed url="https://capturetheflag.withgoogle.com/challenges/hw-parking" %}
+
+{% embed url="https://crackmes.one/" %}
+
+{% embed url="https://pwnable.kr/play.php" %}
