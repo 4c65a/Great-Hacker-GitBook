@@ -97,3 +97,7 @@ layout:
 {% embed url="https://reversing.ctfd.io/challenges" %}
 
 {% embed url="https://github.com/ReversingID/Crackmes-Repository/" %}
+
+{% embed url="https://reverse.put.as/crackmes/" %}
+
+{% embed url="https://github.com/ctfs" %}
