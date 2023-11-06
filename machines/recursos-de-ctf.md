@@ -87,3 +87,13 @@ layout:
 {% embed url="https://vulnmachines.com/about.php" %}
 
 {% embed url="https://cryptohack.org/" %}
+
+{% embed url="https://xss.pwnfunction.com/" %}
+
+{% embed url="https://challenges.re/" %}
+
+{% embed url="https://io.netgarage.org/" %}
+
+{% embed url="https://reversing.ctfd.io/challenges" %}
+
+{% embed url="https://github.com/ReversingID/Crackmes-Repository/" %}
