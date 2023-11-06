@@ -81,3 +81,9 @@ layout:
 {% embed url="https://crackmes.one/" %}
 
 {% embed url="https://pwnable.kr/play.php" %}
+
+{% embed url="https://vulnyx.com/" %}
+
+{% embed url="https://vulnmachines.com/about.php" %}
+
+{% embed url="https://cryptohack.org/" %}
