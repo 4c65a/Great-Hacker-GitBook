@@ -26,24 +26,3 @@ The victim’s posture or body language The color of the victim’s skin, such a
 
 For example, a social engineer may impersonate a delivery person from Amazon, UPS, or FedEx or even a bicycle messenger or courier with an important message for someone in the organization. As another example, someone might impersonate an IT support worker and provide unsolicited help to a user. Impersonating IT staff can be very effective because if you ask someone if he or she has a technical problem, it is quite likely that the victim will think about it and say something like, “Yes, as a matter of fact, yesterday this weird thing happened to my computer.” Impersonating IT staff can give an attacker physical access to systems in an organization. An attacker who has physical access can use a USB stick containing custom scripts to compromise a computer in seconds. Pharming is a type of impersonation attack in which a threat actor redirects a victim from a valid website or resource to a malicious one that could be made to appear as the valid site to the user. From there, an attempt is made to extract confidential information from the user or to install malware in the victim’s system. Pharming can be done by altering the host file on a victim’s system, through DNS poisoning, or by exploiting a vulnerability in a DNS server. Figure 4-1 illustrates how pharming works.
 
-Figure 4-1 - Pharming Example
-
-1 2 3 Legitimate website Malicious website
-
-(looks legitimate)
-
-Downloads malware User: Omar
-
-(victim)
-
-The following steps are illustrated in Figure 4-1:
-
-Step 1 . The user (Omar) visits a legitimate website and clicks on a legitimate link.
-
-Step 2. Omar’s system is compromised, the host file is modified, and Omar is redirected to a malicious site that appears to be legitimate. (This could also be accomplished by compromising a DNS server or spoofing a DNS reply.)
-
-Step 3 . Malware is downloaded and installed on Omar’s system.
-
-An attack that is similar to pharming is called malvertising. Malvertising involves incorporating malicious ads on trusted websites. Users who click these ads are inadvertently redirected to sites hosting malware.
-
-TIP To help prevent pharming attacks, it is important to keep software up to date and run regular anti-malware checks. You should also change the default passwords in network infrastructure devices (including your home router). Of course, you also need to be aware of what websites you visit and be careful about opening emails.
