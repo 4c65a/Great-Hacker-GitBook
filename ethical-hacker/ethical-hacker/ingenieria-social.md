@@ -14,9 +14,9 @@ layout:
 
 # Ingeniería social
 
+La ingeniería social,es utilizada por un atacante  para convencer al usuario objetivo de que realice una cierta acción, cómo enviarle dinero, divulgar información delicada del cliente o revelar credenciales de autenticación,tener influencia sobre la víctima ,interrogar,preguntas básicas.&#x20;
 
-
-Influence, interrogation, and impersonation are key components of social engineering. Elicitation is the act of gaining knowledge or information from people. In most cases, an attacker gets information from a victim without directly asking for that particular information.
+Muchas veces se puede obtener información si tener contacto directo con la víctima ,también en la mayoría de los casos, se obtiene información de una víctima sin pedirle directamente esa información en particular.&#x20;
 
 How an attacker interrogates and interacts with a victim is crucial for the success of a social engineering campaign. An interrogator can ask good open-ended questions to learn about an individual’s viewpoints, values, and goals. The interrogator can then use any information the target revealed to continue to gather additional information or to obtain information from another victim.
 
@@ -28,3 +28,4 @@ The victim’s posture or body language The color of the victim’s skin, such a
 
 
 
+{% embed url="https://www.proofpoint.com/es/threat-reference/social-engineering" %}
