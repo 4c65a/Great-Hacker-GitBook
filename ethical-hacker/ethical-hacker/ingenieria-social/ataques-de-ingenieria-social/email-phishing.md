@@ -14,35 +14,18 @@ layout:
 
 # Email Phishing
 
-With _**phishing**_, an attacker presents to a user a link or an attachment that looks like a valid, trusted resource. When the user clicks it, he or she is prompted to disclose confidential information such as his or her username and password. Example 4-1 shows an example of a phishing email.
+Con el phishing, un atacante presenta a un usuario un enlace o un archivo adjunto que parece un recurso válido y de confianza. Cuando el usuario hace clic en él, se le pide que revele información confidencial, como su nombre de usuario y contraseña.
 
-_**Example 4-1**_ _**-**_ _Phishing Email Example_
+Muchas veces el atacante se hace pasar por una organización  que alguien que se hace pasar por una institución legítima contacta a uno o varios objetivos por correo electrónico, teléfono o mensaje de texto a las personas a que proporcionen datos confidenciales, como información de identificación personal, datos bancarios y de tarjetas de crédito, y contraseñas.
 
-```
-Subject: PAYMENT CONFIRMATION
-Message Body:
-Dear sir,We have discovered that there are occasional delays from our accounts department in making complete payments to our suppliers.This has caused undue reduction in our stocks and in our production department of which suppliers do not deliver materials on time.The purpose of this letter is to confirm whether or not payment has been made for the attached supplies received.Kindly confirm receipt and advise.
-Attachment: SD_085_085_pdf.xz / SD_085_085_pdf.exeMD5 Checksum of the attachment: 0x8CB6D923E48B51A1CB3B080A0D43589D
-```
+### **Spear Phishing**
 
-**Spear Phishing**
+El spear phishing es un intento de phishing que se construye de una manera muy específica y se dirige directamente a grupos específicos de personas o empresas. El atacante estudia a la víctima y a la organización de la víctima para poder hacer que los correos electrónicos parezcan legítimos y tal vez hacer que parezcan provenir de usuarios de confianza dentro de la empresa.
 
-_**Spear phishing**_ is a phishing attempt that is constructed in a very specific way and directly targeted to specific groups of individuals or companies. The attacker studies a victim and the victim’s organization in order to be able to make emails look legitimate and perhaps make them appear to come from trusted users within the company. Example 4-2 shows an example of a spear phishing email.
+### **Whaling**
 
-In the email shown in Example 4-2, the threat actor has become aware that Chris and Omar are collaborating on a book. The threat actor impersonates Chris and sends an email asking Omar to review a document (a chapter of the book). The attachment actually contains malware that is installed on Omar’s system.
+Es un ataque dirigido a ejecutivos de negocios de alto perfil y personas clave de una empresa. Al igual que los actores de amenazas que realizan ataques de spear phishing, los actores de amenazas que realizan ataques de whaling también crean correos electrónicos y páginas web para servir malware o recopilar información confidencial; Sin embargo, los correos electrónicos y las páginas de los atacantes balleneros tienen un aspecto más oficial o serio. Los correos electrónicos de whaling están diseñados para parecerse a los correos electrónicos comerciales críticos o a los correos electrónicos de alguien que tiene autoridad legítima, ya sea dentro o fuera de la empresa. En los ataques de caza de ballenas, las páginas web están diseñadas para dirigirse específicamente a las víctimas de alto perfil. En un ataque de phishing normal, el correo electrónico puede ser una advertencia falsa de un banco o proveedor de servicios. En un ataque de caza de ballenas, el correo electrónico o la página web se crearía con un formulario de nivel ejecutivo más serio
 
-_**Example 4-2**_ _-_ _Spear Phishing Email Example_
+{% embed url="https://www.crowdstrike.com/cybersecurity-101/phishing/spear-phishing/" %}
 
-```
-From: Chris ClevelandTo: Omar SantosSubject: Please review chapter 3 for me and provide feedback by 2pm
-Message Body:Dear Omar,
-Please review the attached document.
-Regards,Chris
-Attachment: chapter.zipMD5 Checksum of the attachment: 0x61D60EA55AC14444291AA1F911F3B1BE
-```
-
-**Whaling**
-
-_**Whaling**_, which is similar to phishing and spear phishing, is an attack targeted at high-profile business executives and key individuals in a company. Like threat actors conducting spear phishing attacks, threat actors conducting whaling attacks also create emails and web pages to serve malware or collect sensitive information; however, the whaling attackers’ emails and pages have a more official or serious look and feel. Whaling emails are designed to look like critical business emails or emails from someone who has legitimate authority, either within or outside the company. In whaling attacks, web pages are designed to specifically address high-profile victims. In a regular phishing attack, the email might be a faked warning from a bank or service provider. In a whaling attack, the email or web page would be created with a more serious executive-level form. The content is created to target an upper manager such as the CEO or an individual who might have credentials for valuable accounts within the organization.
-
-The main goal in whaling attacks is to steal sensitive information or compromise the victim’s system and then target other key high-profile victims.
+{% embed url="https://www.ibm.com/topics/phishing" %}
