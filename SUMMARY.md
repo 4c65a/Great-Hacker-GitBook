@@ -11,6 +11,7 @@
   * [Investigación de vulnerabilidades](ethical-hacker/ethical-hacker/investigacion-de-vulnerabilidades.md)
   * [Cumplimiento normativo](ethical-hacker/ethical-hacker/cumplimiento-normativo.md)
   * [Introducción de las Fases de pentesting](ethical-hacker/ethical-hacker/introduccion-de-las-fases-de-pentesting.md)
+  * [Ingeniería social](ethical-hacker/ethical-hacker/ingenieria-social.md)
 * [Reconocimiento Pasivo](ethical-hacker/reconocimiento-pasivo/README.md)
   * [OSINT Tools](ethical-hacker/reconocimiento-pasivo/osint-tools/README.md)
     * [Recon-ng](ethical-hacker/reconocimiento-pasivo/osint-tools/recon-ng.md)
