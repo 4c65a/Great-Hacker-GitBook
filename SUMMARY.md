@@ -22,6 +22,7 @@
       * [Seguir demasiado cerca (Tailgating)](ethical-hacker/ethical-hacker/ingenieria-social/ataques-fisicos/seguir-demasiado-cerca-tailgating.md)
       * [Dumpster Diving](ethical-hacker/ethical-hacker/ingenieria-social/ataques-fisicos/dumpster-diving.md)
       * [Shoulder Surfing](ethical-hacker/ethical-hacker/ingenieria-social/ataques-fisicos/shoulder-surfing.md)
+      * [Clonación de insignias](ethical-hacker/ethical-hacker/ingenieria-social/ataques-fisicos/clonacion-de-insignias.md)
 * [Reconocimiento Pasivo](ethical-hacker/reconocimiento-pasivo/README.md)
   * [OSINT Tools](ethical-hacker/reconocimiento-pasivo/osint-tools/README.md)
     * [Recon-ng](ethical-hacker/reconocimiento-pasivo/osint-tools/recon-ng.md)
