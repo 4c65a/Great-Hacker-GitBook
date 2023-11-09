@@ -54,7 +54,6 @@
   * [Enumeración por fuerza bruta](ethical-hacker/reconocimiento-activo/enumeracion-por-fuerza-bruta.md)
   * [Nmap](ethical-hacker/reconocimiento-activo/nmap/README.md)
     * [Combinaciones](ethical-hacker/reconocimiento-activo/nmap/combinaciones.md)
-    * [Script](ethical-hacker/reconocimiento-activo/nmap/script.md)
   * [Enumeracion](ethical-hacker/reconocimiento-activo/enumeracion/README.md)
     * [Host Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/host-enumeration.md)
     * [User Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/user-enumeration/README.md)
