@@ -124,16 +124,17 @@
   * [2049:NFS](pentesting-networks/network-services/2049-nfs.md)
   * [123:NTP](pentesting-networks/network-services/123-ntp.md)
   * [445,139:SMB](pentesting-networks/network-services/445-139-smb.md)
+  * [137,138,139:NetBios](pentesting-networks/network-services/137-138-139-netbios.md)
 * [161:SNMP](pentesting-networks/161-snmp.md)
 * [110:POP3](pentesting-networks/110-pop3.md)
 * [68:DHCP](pentesting-networks/68-dhcp.md)
 * [5009:VNC](pentesting-networks/5009-vnc.md)
 * [69:TFTP](pentesting-networks/69-tftp.md)
-* [137,138,139:NetBios](pentesting-networks/137-138-139-netbios.md)
 * [27017,27018:MongoDB](pentesting-networks/27017-27018-mongodb.md)
 * [5432,5433:PostgreSQL](pentesting-networks/5432-5433-postgresql.md)
 * [Captura de Paquetes](pentesting-networks/captura-de-paquetes.md)
 * [Wireless](pentesting-networks/wireless.md)
+* [Resolución de nombres de Windows](pentesting-networks/resolucion-de-nombres-de-windows.md)
 
 ## Linux
 
