@@ -139,7 +139,7 @@
 * [DNS Cache Poisoning](pentesting-networks/dns-cache-poisoning.md)
 * [Explotaciones SNMP](pentesting-networks/explotaciones-snmp.md)
 * [Explotaciones SMTP](pentesting-networks/explotaciones-smtp.md)
-* [Explotaciones de FTP](pentesting-networks/explotaciones-de-ftp.md)
+* [Pass-the-Hash Attacks](pentesting-networks/pass-the-hash-attacks.md)
 
 ## Linux
 
