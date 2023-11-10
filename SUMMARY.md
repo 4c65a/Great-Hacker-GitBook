@@ -138,6 +138,7 @@
 * [Busca de vulnerabilidades de SMB con enum4linux](pentesting-networks/busca-de-vulnerabilidades-de-smb-con-enum4linux.md)
 * [DNS Cache Poisoning](pentesting-networks/dns-cache-poisoning.md)
 * [Explotaciones SNMP](pentesting-networks/explotaciones-snmp.md)
+* [Explotaciones SMTP](pentesting-networks/explotaciones-smtp.md)
 
 ## Linux
 
