@@ -135,6 +135,7 @@
 * [Captura de Paquetes](pentesting-networks/captura-de-paquetes.md)
 * [Wireless](pentesting-networks/wireless.md)
 * [Resolución de nombres de Windows](pentesting-networks/resolucion-de-nombres-de-windows.md)
+* [Busca de vulnerabilidades de SMB con enum4linux](pentesting-networks/busca-de-vulnerabilidades-de-smb-con-enum4linux.md)
 
 ## Linux
 
