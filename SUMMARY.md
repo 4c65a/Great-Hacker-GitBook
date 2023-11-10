@@ -125,7 +125,7 @@
   * [123:NTP](pentesting-networks/network-services/123-ntp.md)
   * [445,139:SMB](pentesting-networks/network-services/445-139-smb.md)
   * [161:SNMP](pentesting-networks/network-services/161-snmp.md)
-* [110:POP3](pentesting-networks/110-pop3.md)
+  * [110:POP3](pentesting-networks/network-services/110-pop3.md)
 * [68:DHCP](pentesting-networks/68-dhcp.md)
 * [5009:VNC](pentesting-networks/5009-vnc.md)
 * [69:TFTP](pentesting-networks/69-tftp.md)
@@ -139,6 +139,7 @@
 * [DNS Cache Poisoning](pentesting-networks/dns-cache-poisoning.md)
 * [Explotaciones SNMP](pentesting-networks/explotaciones-snmp.md)
 * [Explotaciones SMTP](pentesting-networks/explotaciones-smtp.md)
+* [Explotaciones de FTP](pentesting-networks/explotaciones-de-ftp.md)
 
 ## Linux
 
