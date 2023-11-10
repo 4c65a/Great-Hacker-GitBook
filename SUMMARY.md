@@ -124,7 +124,7 @@
   * [2049:NFS](pentesting-networks/network-services/2049-nfs.md)
   * [123:NTP](pentesting-networks/network-services/123-ntp.md)
   * [445,139:SMB](pentesting-networks/network-services/445-139-smb.md)
-* [161:SNMP](pentesting-networks/161-snmp.md)
+  * [161:SNMP](pentesting-networks/network-services/161-snmp.md)
 * [110:POP3](pentesting-networks/110-pop3.md)
 * [68:DHCP](pentesting-networks/68-dhcp.md)
 * [5009:VNC](pentesting-networks/5009-vnc.md)
