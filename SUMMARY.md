@@ -137,6 +137,7 @@
 * [Resolución de nombres de Windows](pentesting-networks/resolucion-de-nombres-de-windows.md)
 * [Busca de vulnerabilidades de SMB con enum4linux](pentesting-networks/busca-de-vulnerabilidades-de-smb-con-enum4linux.md)
 * [DNS Cache Poisoning](pentesting-networks/dns-cache-poisoning.md)
+* [Explotaciones SNMP](pentesting-networks/explotaciones-snmp.md)
 
 ## Linux
 
