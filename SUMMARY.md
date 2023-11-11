@@ -140,6 +140,7 @@
 * [Explotaciones SNMP](pentesting-networks/explotaciones-snmp.md)
 * [Explotaciones SMTP](pentesting-networks/explotaciones-smtp.md)
 * [Pass-the-Hash Attacks](pentesting-networks/pass-the-hash-attacks.md)
+* [Ataques basados ​​en Kerberos y LDAP](pentesting-networks/ataques-basados-en-kerberos-y-ldap.md)
 
 ## Linux
 
