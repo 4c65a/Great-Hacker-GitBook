@@ -143,6 +143,7 @@
   * [DNS Cache Poisoning](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/dns-cache-poisoning.md)
   * [Busca de vulnerabilidades de SMB con enum4linux](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/busca-de-vulnerabilidades-de-smb-con-enum4linux.md)
   * [Resolución de nombres de Windows](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/resolucion-de-nombres-de-windows.md)
+  * [Route Manipulation Attacks](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/route-manipulation-attacks.md)
 
 ## Linux
 
