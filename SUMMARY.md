@@ -82,6 +82,7 @@
   * [TCP/IP](ethical-hacker/teoria-network/tcp-ip.md)
   * [ICMPv4 e ICMPv6](ethical-hacker/teoria-network/icmpv4-e-icmpv6.md)
   * [VPN](ethical-hacker/teoria-network/vpn.md)
+* [Tipos de Malware](ethical-hacker/tipos-de-malware.md)
 
 ## Pentesting Web
 
@@ -145,7 +146,7 @@
   * [Resolución de nombres de Windows](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/resolucion-de-nombres-de-windows.md)
   * [Route Manipulation Attacks](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/route-manipulation-attacks.md)
   * [Ataques DoS y DDoS](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/ataques-dos-y-ddos.md)
-  * [Page](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/page.md)
+  * [Omisión del control de acceso a la red (NAC)](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/omision-del-control-de-acceso-a-la-red-nac.md)
 
 ## Linux
 
