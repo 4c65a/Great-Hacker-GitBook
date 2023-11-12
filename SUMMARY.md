@@ -148,7 +148,7 @@
   * [Ataques DoS y DDoS](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/ataques-dos-y-ddos.md)
   * [Omisión del control de acceso a la red (NAC)](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/omision-del-control-de-acceso-a-la-red-nac.md)
   * [Salto de VLAN](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/salto-de-vlan.md)
-  * [Page](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/page.md)
+  * [Ataques de inanición de DHCP y servidores DHCP no autorizados](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/ataques-de-inanicion-de-dhcp-y-servidores-dhcp-no-autorizados.md)
 
 ## Linux
 
