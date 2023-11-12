@@ -144,6 +144,8 @@
   * [Busca de vulnerabilidades de SMB con enum4linux](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/busca-de-vulnerabilidades-de-smb-con-enum4linux.md)
   * [Resolución de nombres de Windows](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/resolucion-de-nombres-de-windows.md)
   * [Route Manipulation Attacks](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/route-manipulation-attacks.md)
+  * [Ataques DoS y DDoS](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/ataques-dos-y-ddos.md)
+  * [Page](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/page.md)
 
 ## Linux
 
