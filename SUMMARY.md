@@ -140,6 +140,7 @@
     * [Ataques de gemelos malvados](pentesting-networks/wireless/explotacion-de-vulnerabilidades-inalambricas/ataques-de-gemelos-malvados.md)
     * [Ataques de disociación (o desautenticación)](pentesting-networks/wireless/explotacion-de-vulnerabilidades-inalambricas/ataques-de-disociacion-o-desautenticacion.md)
     * [Ataques de vector de inicialización (IV) y protocolos inalámbricos no seguros](pentesting-networks/wireless/explotacion-de-vulnerabilidades-inalambricas/ataques-de-vector-de-inicializacion-iv-y-protocolos-inalambricos-no-seguros.md)
+    * [Fragmentation Attacks](pentesting-networks/wireless/explotacion-de-vulnerabilidades-inalambricas/fragmentation-attacks.md)
 * [Vectores de Ataques(Vulnerabilidades comunes)](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/README.md)
   * [On-Path Attacks](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/on-path-attacks.md)
   * [Ataques basados ​​en Kerberos y LDAP](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/ataques-basados-en-kerberos-y-ldap.md)
