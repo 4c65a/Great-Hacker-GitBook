@@ -136,6 +136,7 @@
 * [Captura de Paquetes](pentesting-networks/captura-de-paquetes.md)
 * [Wireless](pentesting-networks/wireless/README.md)
   * [Explotación de vulnerabilidades inalámbricas](pentesting-networks/wireless/explotacion-de-vulnerabilidades-inalambricas/README.md)
+    * [Bluejacking y Bluesnarfing](pentesting-networks/wireless/explotacion-de-vulnerabilidades-inalambricas/bluejacking-y-bluesnarfing.md)
     * [Puntos de acceso no autorizados](pentesting-networks/wireless/explotacion-de-vulnerabilidades-inalambricas/puntos-de-acceso-no-autorizados.md)
     * [Ataques de gemelos malvados](pentesting-networks/wireless/explotacion-de-vulnerabilidades-inalambricas/ataques-de-gemelos-malvados.md)
     * [Ataques de disociación (o desautenticación)](pentesting-networks/wireless/explotacion-de-vulnerabilidades-inalambricas/ataques-de-disociacion-o-desautenticacion.md)
