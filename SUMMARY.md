@@ -138,6 +138,7 @@
   * [Explotación de vulnerabilidades inalámbricas](pentesting-networks/wireless/explotacion-de-vulnerabilidades-inalambricas/README.md)
     * [Puntos de acceso no autorizados](pentesting-networks/wireless/explotacion-de-vulnerabilidades-inalambricas/puntos-de-acceso-no-autorizados.md)
     * [Ataques de gemelos malvados](pentesting-networks/wireless/explotacion-de-vulnerabilidades-inalambricas/ataques-de-gemelos-malvados.md)
+    * [Ataques de disociación (o desautenticación)](pentesting-networks/wireless/explotacion-de-vulnerabilidades-inalambricas/ataques-de-disociacion-o-desautenticacion.md)
 * [Vectores de Ataques(Vulnerabilidades comunes)](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/README.md)
   * [On-Path Attacks](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/on-path-attacks.md)
   * [Ataques basados ​​en Kerberos y LDAP](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/ataques-basados-en-kerberos-y-ldap.md)
