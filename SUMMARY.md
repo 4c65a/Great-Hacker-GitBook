@@ -29,6 +29,7 @@
     * [Recon-ng](ethical-hacker/reconocimiento-pasivo/osint-tools/recon-ng.md)
     * [SpiderFoot](ethical-hacker/reconocimiento-pasivo/osint-tools/spiderfoot.md)
   * [Google Hacking](ethical-hacker/reconocimiento-pasivo/google-hacking/README.md)
+    * [Bug bounty program](ethical-hacker/reconocimiento-pasivo/google-hacking/bug-bounty-program.md)
     * [Footholds](ethical-hacker/reconocimiento-pasivo/google-hacking/footholds.md)
     * [Files Containing Usernames](ethical-hacker/reconocimiento-pasivo/google-hacking/files-containing-usernames.md)
     * [Sensitive Directories](ethical-hacker/reconocimiento-pasivo/google-hacking/sensitive-directories.md)
