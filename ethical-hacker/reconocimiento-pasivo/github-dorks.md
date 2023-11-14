@@ -16,6 +16,8 @@ layout:
 
 ## **Tool**
 
+[**https://github.com/techgaun/github-dorks**](https://github.com/techgaun/github-dorks)
+
 [**https://github.com/tillson/git-hound**](https://github.com/tillson/git-hound)
 
 [**https://github.com/BishopFox/GitGot**](https://github.com/BishopFox/GitGot)
