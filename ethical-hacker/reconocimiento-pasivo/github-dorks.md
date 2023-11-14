@@ -14,7 +14,14 @@ layout:
 
 # Github-Dorks
 
-**GitHub Dorks for Finding Files**
+## **Tool**
+
+\
+[**https://github.com/BishopFox/GitGot**\
+**https://github.com/hisxo/gitGraber**\
+**https://github.com/tillson/git-hound**](https://github.com/BishopFox/GitGothttps:/github.com/hisxo/gitGraberhttps:/github.com/tillson/git-hound)
+
+## **GitHub Dorks for Finding Files**
 
 * filename:manifest.xml
 * filename:travis.yml
@@ -57,7 +64,7 @@ layout:
 
 ***
 
-**GitHub Dorks for Finding Languages**
+## **GitHub Dorks for Finding Languages**
 
 * language:python username
 * language:php username
@@ -70,7 +77,7 @@ layout:
 
 ***
 
-**GiHub Dorks for Finding API Keys, Tokens and Passwords**
+## **GitHub Dorks for Finding API Keys, Tokens and Passwords**
 
 * api\_key
 * “api keys”
@@ -94,7 +101,7 @@ layout:
 
 ***
 
-**GitHub Dorks for Finding Username**s
+## **GitHub Dorks for Finding Username**s
 
 * user:name (user:admin)
 * org:name (org:google type:users)
