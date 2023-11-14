@@ -16,10 +16,11 @@ layout:
 
 ## **Tool**
 
-\
-[**https://github.com/BishopFox/GitGot**\
-**https://github.com/hisxo/gitGraber**\
-**https://github.com/tillson/git-hound**](https://github.com/BishopFox/GitGothttps:/github.com/hisxo/gitGraberhttps:/github.com/tillson/git-hound)
+[**https://github.com/tillson/git-hound**](https://github.com/tillson/git-hound)
+
+[**https://github.com/BishopFox/GitGot**](https://github.com/BishopFox/GitGot)
+
+[**https://github.com/hisxo/gitGraber**](https://github.com/hisxo/gitGraber)
 
 ## **GitHub Dorks for Finding Files**
 
