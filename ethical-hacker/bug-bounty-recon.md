@@ -16,6 +16,8 @@ layout:
 
 ## Pasos
 
+Muchas veces cuando tenes la extensión de shodan en el navegador te avisa que posibles vulnerabilidades podría tener.
+
 Link = [https://security.snyk.io/](https://security.snyk.io/) [https://www.cve.org/](https://www.cve.org/)
 
 ### Paso 1 <a href="#user-content-phase-one" id="user-content-phase-one"></a>
@@ -135,3 +137,7 @@ nmap -A -F -T1 10.10.23.51 -V
 \*\*\*Wappalyzer:\*\*\*Tools
 
 \*\*\*DoGit:\*\*\*Repositories
+
+{% content-ref url="reconocimiento-pasivo/google-hacking/" %}
+[google-hacking](reconocimiento-pasivo/google-hacking/)
+{% endcontent-ref %}

@@ -53,8 +53,7 @@
     * [Password dumps](ethical-hacker/reconocimiento-pasivo/reputacion/password-dumps.md)
     * [File metadata](ethical-hacker/reconocimiento-pasivo/reputacion/file-metadata.md)
 * [Reconocimiento Activo](ethical-hacker/reconocimiento-activo/README.md)
-  * [Subdominios](ethical-hacker/reconocimiento-activo/subdominios/README.md)
-    * [Bug bounty recon](ethical-hacker/reconocimiento-activo/subdominios/page.md)
+  * [Subdominios](ethical-hacker/reconocimiento-activo/subdominios.md)
   * [Enumeración por fuerza bruta](ethical-hacker/reconocimiento-activo/enumeracion-por-fuerza-bruta.md)
   * [Nmap](ethical-hacker/reconocimiento-activo/nmap/README.md)
     * [Combinaciones](ethical-hacker/reconocimiento-activo/nmap/combinaciones.md)
@@ -87,6 +86,7 @@
   * [ICMPv4 e ICMPv6](ethical-hacker/teoria-network/icmpv4-e-icmpv6.md)
   * [VPN](ethical-hacker/teoria-network/vpn.md)
 * [Tipos de Malware](ethical-hacker/tipos-de-malware.md)
+* [Bug bounty recon](ethical-hacker/bug-bounty-recon.md)
 
 ## Pentesting Web
 
