@@ -18,7 +18,7 @@ layout:
 
 Link = [https://security.snyk.io/](https://security.snyk.io/) [https://www.cve.org/](https://www.cve.org/)
 
-#### Paso 1 <a href="#user-content-phase-one" id="user-content-phase-one"></a>
+### Paso 1 <a href="#user-content-phase-one" id="user-content-phase-one"></a>
 
 ```
 subfinder -d example.com >> subdominios.txt
@@ -36,7 +36,7 @@ amass enum -d example.com -max-dns-queries 120 >> subdominios.txt
 amass enum -passive -d example.com >> subdominios.txt
 ```
 
-#### Paso 2 <a href="#user-content-phase-two" id="user-content-phase-two"></a>
+### Paso 2 <a href="#user-content-phase-two" id="user-content-phase-two"></a>
 
 ```
 cat subdominios.txt | httprobe -c 100 >> subdominios2.txt
@@ -54,7 +54,7 @@ httpx -l subdominios3.txt -sc | grep 200 >> subdominios4.txt
 httpx -l subdominios4.txt -sc -td
 ```
 
-Opcion 2
+#### Opcion 2
 
 ```
 cat subdominios.txt | httprobe -c 100 >> subdominios2.txt
@@ -80,15 +80,7 @@ httpx -l hosts_validos1.txt -sc -td >> hosts_validos2.txt
 httpx -l hosts_validos.txt -all-ports 80,443 -title -status-code -web-server > hosts_abiertos.txt
 ```
 
-_**200**_: Indicate that an HTTP request has been successful and the server will return an answer.
-
-_**301**_: Indicate that an URL request has been moved permanently an a new ubication.
-
-_**404**_: Indicate that a URL request has not been found on the server.
-
-_**500**_: Indicate that an internal server error has occurred and the request could not be completed.
-
-#### Paso 3 <a href="#user-content-phase-three" id="user-content-phase-three"></a>
+### Paso 3 <a href="#user-content-phase-three" id="user-content-phase-three"></a>
 
 ```
 ffuf -w /usr/share/sectlist -u http://example.com/login.php/FUZZ -p1
@@ -110,9 +102,9 @@ nmap -sS -T1 10.10.23.51 --top-ports -V
 nmap -A -F -T1 10.10.23.51 -V
 ```
 
-#### Paso 4 <a href="#user-content-phase-four-research" id="user-content-phase-four-research"></a>
+### Paso 4 <a href="#user-content-phase-four-research" id="user-content-phase-four-research"></a>
 
-[shodan](https://www.shodan.io/search/examples) hostname:example.com
+[shodan](https://www.shodan.io/search/examples)
 
 [Censys](https://search.censys.io/)
 
