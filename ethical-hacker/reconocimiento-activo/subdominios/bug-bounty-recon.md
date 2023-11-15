@@ -1,10 +1,10 @@
-# Page
+# Bug bounty recon
 
-### [step by step](https://github.com/Lean-b/BugBounty/blob/main/Recon.md#step-by-step) <a href="#user-content-step-by-step" id="user-content-step-by-step"></a>
+Pasos
 
 Link = [https://security.snyk.io/](https://security.snyk.io/) [https://www.cve.org/](https://www.cve.org/)
 
-#### [Phase One](https://github.com/Lean-b/BugBounty/blob/main/Recon.md#phase-one) <a href="#user-content-phase-one" id="user-content-phase-one"></a>
+#### Paso 1 <a href="#user-content-phase-one" id="user-content-phase-one"></a>
 
 ```
 subfinder -d example.com >> subdominios.txt
@@ -22,7 +22,7 @@ amass enum -d example.com -max-dns-queries 120 >> subdominios.txt
 amass enum -passive -d example.com >> subdominios.txt
 ```
 
-#### [Phase two](https://github.com/Lean-b/BugBounty/blob/main/Recon.md#phase-two) <a href="#user-content-phase-two" id="user-content-phase-two"></a>
+#### Paso 2 <a href="#user-content-phase-two" id="user-content-phase-two"></a>
 
 ```
 cat subdominios.txt | httprobe -c 100 >> subdominios2.txt
@@ -40,7 +40,7 @@ httpx -l subdominios3.txt -sc | grep 200 >> subdominios4.txt
 httpx -l subdominios4.txt -sc -td
 ```
 
-[**Option two**](https://github.com/Lean-b/BugBounty/blob/main/Recon.md#option-two)
+Opcion 2
 
 ```
 cat subdominios.txt | httprobe -c 100 >> subdominios2.txt
@@ -74,7 +74,7 @@ _**404**_: Indicate that a URL request has not been found on the server.
 
 _**500**_: Indicate that an internal server error has occurred and the request could not be completed.
 
-#### [Phase three](https://github.com/Lean-b/BugBounty/blob/main/Recon.md#phase-three) <a href="#user-content-phase-three" id="user-content-phase-three"></a>
+#### Paso 3 <a href="#user-content-phase-three" id="user-content-phase-three"></a>
 
 ```
 ffuf -w /usr/share/sectlist -u http://example.com/login.php/FUZZ -p1
@@ -96,7 +96,7 @@ nmap -sS -T1 10.10.23.51 --top-ports -V
 nmap -A -F -T1 10.10.23.51 -V
 ```
 
-#### [Phase four research](https://github.com/Lean-b/BugBounty/blob/main/Recon.md#phase-four-research) <a href="#user-content-phase-four-research" id="user-content-phase-four-research"></a>
+#### Paso 4 <a href="#user-content-phase-four-research" id="user-content-phase-four-research"></a>
 
 [shodan](https://www.shodan.io/search/examples) hostname:example.com
 
