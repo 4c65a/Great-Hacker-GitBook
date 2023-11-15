@@ -67,6 +67,7 @@
     * [Service Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/service-enumeration.md)
     * [Exploring Enumeration via Packet Crafting](ethical-hacker/reconocimiento-activo/enumeracion/exploring-enumeration-via-packet-crafting.md)
 * [Teoría Network](ethical-hacker/teoria-network/README.md)
+  * [Códigos de estado de respuesta HTTP](ethical-hacker/teoria-network/codigos-de-estado-de-respuesta-http.md)
   * [OSI](ethical-hacker/teoria-network/osi.md)
   * [Tipos de Red](ethical-hacker/teoria-network/tipos-de-red.md)
   * [Transmisión de datos](ethical-hacker/teoria-network/transmision-de-datos.md)
