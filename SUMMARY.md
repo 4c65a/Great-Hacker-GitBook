@@ -88,7 +88,8 @@
   * [VPN](ethical-hacker/teoria-network/vpn.md)
 * [Tipos de Malware](ethical-hacker/tipos-de-malware.md)
 * [Bug bounty recon](ethical-hacker/bug-bounty-recon.md)
-* [Checklist](ethical-hacker/checklist.md)
+* [Checklist](ethical-hacker/checklist/README.md)
+  * [Page](ethical-hacker/checklist/page.md)
 
 ## Pentesting Web
 
