@@ -202,3 +202,7 @@
 ## 🔴 Red Team
 
 * [Page 1](red-team/page-1.md)
+
+## Cloud Security
+
+* [Page 2](cloud-security/page-2.md)
