@@ -107,35 +107,27 @@ sudo nvim /etc/vsftpd.conf
 
 ### Permitir acceso anónimo en vsftpd
 
-1.  Primero, necesitaremos editar el `/etc/vsftpd.conf`archivo, así que ábrelo con nano o cualquier otro editor de texto.
+1.  Primero, necesitaremos editar el `/etc/vsftpd.conf`archivo.
 
     ```
-    sudo nano /etc/vsftpd.conf
+    sudo nvim /etc/vsftpd.conf
     ```
 2.  A continuación, busque la `anonymous_enable=NO`línea y cambie la configuración a `YES`.
 
     ```
-    anónimo_enable=SÍ
+    anonymous_enable=YES
     ```
 3.  Cuando termine, salga de este archivo mientras guarda los nuevos cambios, luego reinicie el servicio vsftpd para que los cambios surtan efecto.
 
     ```
-    sudo systemctl reiniciar vsftpd
+    sudo systemctl restart vsftpd
     ```
 
     ***
 
     ***
-4.  Para probar el inicio de sesión anónimo, emita el `ftp 127.0.0.1`comando, utilícelo `anonymous`como nombre de usuario y una contraseña en blanco. Debería recibir un `230 Login successful`mensaje como se muestra en la captura de pantalla a continuación.
+4.  Para probar el inicio de sesión anónimo, emita el `ftp 127.0.0.1`comando, utilícelo `anonymous`como nombre de usuario y una contraseña en blanco. Debería recibir un `230 Login successful.`
 
 
-
-### Cambiar el número de puerto FTP predeterminado
-
-De forma predeterminada, el protocolo FTP escucha en el puerto 21 para la autenticación del usuario y en el puerto 20 para la transferencia de datos. Sin embargo, podemos cambiar este comportamiento realizando una pequeña edición en el `/etc/vsftpd.conf`archivo. En la parte inferior del archivo, use la `listen_port`directiva para especificar un puerto diferente para que lo use vsftpd. Por ejemplo, agregar la siguiente línea le indicará a vsftpd que escuche en el puerto 2121:
-
-```
-puerto_escucha=2121
-```
 
 \
