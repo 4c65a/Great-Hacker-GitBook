@@ -179,6 +179,7 @@
   * [Configuring an FTP Server](linux/administrador-de-servidores-en-linux/configuring-an-ftp-server.md)
   * [Configuring an NFS File Server](linux/administrador-de-servidores-en-linux/configuring-an-nfs-file-server.md)
   * [Configuring a Windows File Sharing (Samba) Server](linux/administrador-de-servidores-en-linux/configuring-a-windows-file-sharing-samba-server.md)
+  * [Configuración de SSH](linux/administrador-de-servidores-en-linux/configuracion-de-ssh.md)
   * [Comprobación de la red desde la línea de comandos](linux/administrador-de-servidores-en-linux/comprobacion-de-la-red-desde-la-linea-de-comandos.md)
 * [Usuario y grupos](linux/usuario-y-grupos.md)
 * [Técnicas de seguridad de Linux](linux/tecnicas-de-seguridad-de-linux.md)
