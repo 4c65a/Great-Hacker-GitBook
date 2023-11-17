@@ -68,7 +68,9 @@ Con el paquete instalado, podrás montar la(s) compartición(es) NFS. Para proba
 sudo mount -t nfs4 192.168.1.110:/media/nfs /media/share
 ```
 
-Para una solución más permanente, puedes agregar la compartición al archivo /etc/fstab de tu cliente. La sintaxis general se parece mucho al comando que acabas de usar para montar tu compartición. Comienza con la ubicación de la compartición en tu red. Sigue eso con dónde se montará la compartición. El tipo de sistema de archivos aquí es nfs4. Las opciones dependen de ti, pero usar los valores predeterminados y permitir el acceso de usuario son bastante comunes para comparticiones no sensibles. El resultado final debería parecerse un poco al ejemplo a continuación.
+Para una solución más permanente, puedes agregar la compartición al archivo /etc/fstab de tu cliente.
+
+El resultado final debería parecerse un poco al ejemplo a continuación.
 
 ```bash
 192.168.1.110:/media/nfs	/media/share	nfs4	defaults,user,exec	0 0
