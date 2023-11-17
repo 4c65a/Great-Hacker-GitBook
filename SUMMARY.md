@@ -175,6 +175,7 @@
 * [Comprimir y descomprimir archivos](linux/comprimir-y-descomprimir-archivos.md)
 * [Registro de sistema](linux/registro-de-sistema.md)
 * [Administrador de servidores en Linux](linux/administrador-de-servidores-en-linux/README.md)
+  * [Configurar servidor web apache](linux/administrador-de-servidores-en-linux/configurar-servidor-web-apache.md)
   * [Comprobación de la red desde la línea de comandos](linux/administrador-de-servidores-en-linux/comprobacion-de-la-red-desde-la-linea-de-comandos.md)
 * [Usuario y grupos](linux/usuario-y-grupos.md)
 * [Técnicas de seguridad de Linux](linux/tecnicas-de-seguridad-de-linux.md)
