@@ -73,7 +73,9 @@ Verifica si el servidor SSH está en ejecución utilizando el comando systemctl 
 sudo systemctl status ssh
 ```
 
-En Ubuntu y sistemas que usan ufw (firewall sin complicaciones):
+Para aceptar conexiones entrantes, también deberás permitir el servicio a través del firewall de tu sistema. Los comandos para hacer eso pueden diferir dependiendo de tu distribución de Linux. Usa los apropiados a continuación.
+
+En Ubuntu y sistemas que usan ufw:
 
 ```bash
 sudo ufw allow ssh
