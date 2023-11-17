@@ -38,7 +38,7 @@ sudo mv /etc/vsftpd.conf /etc/vsftpd.conf_orig
 sudo nvim /etc/vsftpd.conf
 ```
 
-1.  Copie la siguiente configuración base en su archivo. Esta configuración será suficiente para un servidor FTP básico y luego podrá modificarse para las necesidades específicas de su entorno una vez que haya verificado que funciona correctamente:
+1.  Esta configuración  para un servidor FTP básico:
 
     ```bash
     listen=NO
@@ -63,18 +63,7 @@ sudo nvim /etc/vsftpd.conf
     allow_writeable_chroot=YES
     ```
 
-    Copiar
 
-    Pegue las líneas anteriores en su archivo /etc/vsftpd.conf recién creado y luego [guarde los cambios y cierre el archivo](https://linuxconfig.org/how-to-save-and-exit-file-using-nano-editor) .
-
-
-
-    \
-
-
-    ***
-
-    ***
 2.  Es posible que su firewall de Linux esté configurado para bloquear las conexiones a FTP actualmente, pero ejecutar el comando apropiado a continuación para su distribución creará una excepción para permitir el tráfico:
 
     En Ubuntu y sistemas que utilizan ufw (firewall sencillo):
