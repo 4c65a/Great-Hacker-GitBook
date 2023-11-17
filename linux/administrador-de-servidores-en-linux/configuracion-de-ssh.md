@@ -14,29 +14,15 @@ layout:
 
 # Configuración de SSH
 
-Cómo Instalar SSH en Linux
-
-Lo primero que necesitamos hacer es instalar SSH. Hay paquetes de software separados disponibles dependiendo de si deseas instalar el paquete del cliente, el paquete del servidor o ambos. El paquete del Cliente OpenSSH te permitirá usar SSH para iniciar sesión o iniciar conexiones con sistemas remotos. El paquete del Servidor OpenSSH te permitirá configurar el servicio SSH y aceptar conexiones entrantes. No es necesario (ni recomendado) instalar este paquete si solo planeas usar SSH como cliente. El comando SSH generalmente está disponible por defecto en todas las distribuciones de Linux, pero si tu sistema no lo tiene, puedes usar el comando apropiado a continuación para instalar el paquete del cliente OpenSSH con el administrador de paquetes de tu sistema. El segundo comando en cada ejemplo a continuación instalará el paquete del servidor (omitir si no lo necesitas).
-
-Para instalar el Cliente y Servidor OpenSSH en Ubuntu, Debian y Linux Mint:
+## Instalar SSH en Linux
 
 ```bash
-bashCopy code$ sudo apt update
-$ sudo apt install openssh-client
-$ sudo apt install openssh-server
+sudo apt install openssh-client
+sudo apt install openssh-server
 ```
 
-Para instalar el Cliente y Servidor OpenSSH en Fedora, CentOS, AlmaLinux y Red Hat:
-
 ```bash
-bashCopy code$ sudo dnf install openssh
-$ sudo dnf install openssh-server
-```
-
-Para instalar el Cliente y Servidor OpenSSH en Arch Linux y Manjaro:
-
-```bash
-bashCopy code$ sudo pacman -S openssh # todo en un paquete
+sudo pacman -S openssh
 ```
 
 Uso del Comando SSH Ahora que SSH está instalado, podemos usar el comando ssh para conectarnos a un servidor remoto e iniciar sesión. La sintaxis básica es la siguiente, donde el usuario es el nombre de usuario y linuxconfig.org es el servidor remoto. También puedes usar la dirección IP en lugar del nombre de host.
