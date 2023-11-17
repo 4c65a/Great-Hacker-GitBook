@@ -64,24 +64,18 @@ sudo nvim /etc/vsftpd.conf
     ```
 
 
-2.  Es posible que su firewall de Linux esté configurado para bloquear las conexiones a FTP actualmente, pero ejecutar el comando apropiado a continuación para su distribución creará una excepción para permitir el tráfico:
+2.  Permitir el tráfico de FTP:
 
     En Ubuntu y sistemas que utilizan ufw (firewall sencillo):
 
-    ```
-    $ sudo ufw permite desde cualquier puerto 20,21 proto tcp
-    ```
-
-    En distribuciones basadas en RHEL o cualquier otra que utilice firewalld:
-
-    ```
-    $ sudo firewall-cmd --zone=public --permanent --add-service=ftp
+    ```bash
+    sudo ufw  20,21 proto tcp
     ```
 
-    O si solo estás usando iptables y no tienes una interfaz de firewall:
+    O si sólo estás usando iptables y no tienes una interfaz de firewall:
 
-    ```
-    $ sudo iptables -A ENTRADA -m estado --estado NUEVO,ESTABLECIDO -m tcp -p tcp --dport 20,21 -j ACEPTAR
+    ```bash
+    sudo iptables -A INPUT -m state --state NEW,ESTABLISHED -m tcp -p tcp --dport 20,21 -j ACCEPT
     ```
 3.  Con el archivo de configuración guardado y las reglas del firewall actualizadas, reinicie vsftpd para aplicar los nuevos cambios:
 
