@@ -80,7 +80,7 @@ sudo nvim /etc/vsftpd.conf
 3.  Con el archivo de configuración guardado y las reglas del firewall actualizadas, reinicie vsftpd para aplicar los nuevos cambios:
 
     ```
-    $ sudo systemctl reiniciar vsftpd
+    sudo systemctl restart vsftpd
     ```
 
 ### Crear un usuario FTP
