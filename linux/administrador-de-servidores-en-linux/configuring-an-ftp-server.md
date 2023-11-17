@@ -99,50 +99,18 @@ sudo nvim /etc/vsftpd.conf
 
 ### Conéctese al servidor FTP a través de la línea de comando
 
-1.  Ahora debería poder conectarse a su servidor FTP ya sea por dirección IP o nombre de host. Para conectarse desde la línea de comando y verificar que todo esté funcionando, abra una terminal y use el `ftp`comando para conectarse a su dirección de loopback (127.0.0.1).
+1.  Conectarse a su servidor FTP.
 
     ```
-    $ ftp 127.0.0.1
+    ftp 127.0.0.1
     ```
-
-
-2.  Como puede ver en la captura de pantalla anterior, pudimos iniciar sesión en el servidor FTP especificando el nombre de usuario y la contraseña que configuramos anteriormente. A continuación, intentemos emitir un `ls`comando, que debería enumerar el archivo de prueba que creamos en los pasos anteriores.
-
-    ```
-    ftp>ls
-    ```
-
-
-
-***
-
-***
-
-\
-Su resultado debería verse como la captura de pantalla anterior, indicando un inicio de sesión exitoso y un `ls`comando que revela nuestro archivo de prueba que creamos anteriormente.
-
-### Conéctese al servidor FTP a través de GUI
-
-La mayoría de los entornos de escritorio tienen una forma integrada de conectarse a servidores FTP. Incluso si el suyo no lo hace, hay muchos clientes FTP gratuitos disponibles para Linux. En las instrucciones a continuación, usaremos el entorno de escritorio GNOME en Ubuntu para conectarnos al servidor FTP. Si está ejecutando otra GUI, busque una opción para conectarse a un servidor externo en su [administrador de archivos](https://linuxconfig.org/best-file-manager-for-linux) ; desde allí, las instrucciones deberían ser más o menos las mismas que se muestran a continuación:
-
-1.  En su administrador de archivos, haga clic en "Otras ubicaciones" (puede llamarse de otra manera si no usa GNOME) e ingrese `ftp://127.0.0.1`en el cuadro "Conectar al servidor" en la parte inferior de la ventana y haga clic en conectar.
-
-
-2.  Elija "usuario registrado" y luego ingrese las credenciales de la cuenta FTP que configuramos anteriormente y haga clic en conectar.
-
-
-3.  Tras una conexión exitosa, verá el archivo de prueba que creó anteriormente. Ahora podrá descargar y ver este archivo, o cargar su propio contenido en el directorio.
-
-
 
 ### Permitir acceso anónimo en vsftpd
-
-Hasta ahora hemos visto cómo crear nuevos usuarios que puedan acceder al servidor FTP. Si desea que otros puedan acceder a su servidor FTP sin proporcionar un nombre de usuario y contraseña, puede configurar la autenticación anónima. Siga los pasos a continuación para configurarlo.
 
 1.  Primero, necesitaremos editar el `/etc/vsftpd.conf`archivo, así que ábrelo con nano o cualquier otro editor de texto.
 
     ```
-    $ sudo nano /etc/vsftpd.conf
+    sudo nano /etc/vsftpd.conf
     ```
 2.  A continuación, busque la `anonymous_enable=NO`línea y cambie la configuración a `YES`.
 
@@ -152,7 +120,7 @@ Hasta ahora hemos visto cómo crear nuevos usuarios que puedan acceder al servid
 3.  Cuando termine, salga de este archivo mientras guarda los nuevos cambios, luego reinicie el servicio vsftpd para que los cambios surtan efecto.
 
     ```
-    $ sudo systemctl reiniciar vsftpd
+    sudo systemctl reiniciar vsftpd
     ```
 
     ***
