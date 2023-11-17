@@ -182,7 +182,9 @@
   * [Configuración de SSH](linux/administrador-de-servidores-en-linux/configuracion-de-ssh.md)
   * [Comprobación de la red desde la línea de comandos](linux/administrador-de-servidores-en-linux/comprobacion-de-la-red-desde-la-linea-de-comandos.md)
 * [Usuario y grupos](linux/usuario-y-grupos.md)
-* [Técnicas de seguridad de Linux](linux/tecnicas-de-seguridad-de-linux.md)
+* [Técnicas de seguridad de Linux](linux/tecnicas-de-seguridad-de-linux/README.md)
+  * [Configurar Fail2Ban](linux/tecnicas-de-seguridad-de-linux/configurar-fail2ban.md)
+  * [Configuracion UFW](linux/tecnicas-de-seguridad-de-linux/configuracion-ufw.md)
 
 ## Machines
 
