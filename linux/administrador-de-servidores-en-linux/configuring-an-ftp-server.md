@@ -85,21 +85,16 @@ sudo nvim /etc/vsftpd.conf
 
 ### Crear un usuario FTP
 
-Nuestro servidor FTP está listo para recibir conexiones entrantes, por lo que ahora es el momento de crear una nueva cuenta de usuario que usaremos para conectarnos al servicio FTP.
+1.  Para crear una nueva cuenta.
 
-1.  Utilice este primer comando para crear una nueva cuenta llamada `ftpuser`y el segundo comando para establecer una contraseña para la cuenta:
-
-    ```
-    $ sudo useradd -m ftpuser
-    $ sudo contraseña ftpuser
-    Nueva contraseña:
-    Reescriba nueva contraseña:
-    passwd: contraseña actualizada correctamente
+    ```bash
+    sudo useradd -m user
+    sudo passwd user
     ```
 2.  Para verificar que todo funciona correctamente, debe almacenar al menos un archivo en el directorio de inicio de ftpuser. Este archivo debería estar visible cuando iniciemos sesión en FTP en los siguientes pasos.
 
-    ```
-    $ sudo bash -c "echo PRUEBA DE FTP > /home/ftpuser/FTP-TEST"
+    ```bash
+    sudo bash -c "echo FTP TESTING > /home/ftpuser/FTP-TEST"
     ```
 
 ### Conéctese al servidor FTP a través de la línea de comando
