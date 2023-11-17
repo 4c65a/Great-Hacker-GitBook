@@ -14,47 +14,34 @@ layout:
 
 # Configuring an NFS File Server
 
-\
-Configuración del Servidor NFS
-
-Esta sección de la guía abordará la configuración del servidor NFS, es decir, la máquina que albergará las comparticiones NFS. Las máquinas cliente pueden conectarse al servidor para acceder y/o cargar archivos.
-
-Lo primero que debemos hacer es instalar el paquete del servidor NFS, que está disponible en los repositorios principales. Utiliza el comando apropiado a continuación para instalar el software en tu sistema.
-
-En Ubuntu, Linux Mint y otras distribuciones basadas en Debian:
+## Configuración del Servidor NFS
 
 ```bash
-bashCopy code$ sudo apt install nfs-kernel-server
+sudo apt install nfs-kernel-server
 ```
 
-En Fedora, CentOS, AlmaLinux y otras distribuciones basadas en RHEL:
+A continuación, asegúrate de que el servicio NFS esté en ejecución y se inicie automáticamente en los arranques.
 
 ```bash
-bashCopy code$ sudo dnf install nfs-utils
+sudo systemctl enable --now nfs-server
 ```
 
-A continuación, asegúrate de que el servicio NFS esté en ejecución y se inicie automáticamente en los arranques subsiguientes de la máquina.
+Crear un directorio ,para almacenaremos nuestra compartición NFS en /media/nfs.
 
 ```bash
-bashCopy code$ sudo systemctl enable --now nfs-server
+sudo mkdir -p /media/nfs
 ```
 
-Si aún no has creado un directorio que deseas compartir, es el momento de crear uno ahora. Para este ejemplo, almacenaremos nuestra compartición NFS en /media/nfs.
+Luego, editaremos el archivo de configuración /etc/exports. Aquí puedes configurar qué directorios estás compartiendo y quién puede acceder a ellos.
 
 ```bash
-bashCopy code$ sudo mkdir -p /media/nfs
-```
-
-Luego, editaremos el archivo de configuración /etc/exports. Aquí puedes configurar qué directorios estás compartiendo y quién puede acceder a ellos. También puedes establecer permisos específicos para las comparticiones para limitar aún más el acceso. Usa nano o tu editor de texto favorito para abrir el archivo.
-
-```bash
-bashCopy code$ sudo nano /etc/exports
+sudo nano /etc/exports
 ```
 
 En el archivo, cada compartición tiene su propia línea. Esa línea comienza con la ubicación de la compartición en la máquina del servidor. Frente a eso, puedes listar el nombre de host de un cliente aceptado, si está disponible en el archivo de hosts del servidor, o una IP o rango de IPs. Directamente detrás de la dirección IP, coloca las reglas para la compartición entre paréntesis. En conjunto, debería lucir algo así:
 
 ```bash
-bashCopy code/media/nfs		192.168.1.0/24(rw,sync,no_subtree_check)
+/media/nfs		192.168.1.0/24(rw,sync,no_subtree_check)
 ```
 
 Puedes incluir tantas comparticiones como desees, siempre y cuando cada una tenga su propia línea. También puedes incluir más de un nombre de host o IP en cada línea y asignarles diferentes permisos. Por ejemplo:
