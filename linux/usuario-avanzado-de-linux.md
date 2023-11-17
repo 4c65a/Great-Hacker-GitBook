@@ -1,2 +1,0 @@
-# Usuario avanzado de Linux
-
