@@ -16,46 +16,29 @@ layout:
 
 ### Cómo instalar vsftpd en Linux
 
-***
-
-***
-
-\
-**vsftpd** (demonio FTP muy seguro) es uno de los mejores y más populares servidores FTP para Linux. También existen otros, pero vsftpd es lo que recomendamos usar. Puede utilizar el comando apropiado a continuación para instalar vsftpd con [el administrador de paquetes](https://linuxconfig.org/comparison-of-major-linux-package-management-systems) de su sistema .
-
-Para instalar vsftpd en [Ubuntu](https://linuxconfig.org/ubuntu-linux-download) , [Debian](https://linuxconfig.org/debian-linux-download) y [Linux Mint](https://linuxconfig.org/linux-mint-download) :
-
-```
-$ sudo apto instalar vsftpd
+```bash
+sudo apt install vsftpd
 ```
 
-Para instalar vsftpd en [Fedora](https://linuxconfig.org/fedora-linux-download) , [CentOS](https://linuxconfig.org/centos-linux-download) , [AlmaLinux](https://linuxconfig.org/almalinux-download) y [Red Hat](https://linuxconfig.org/red-hat-linux-download) :
-
-```
-$ sudo dnf instalar vsftpd
-```
-
-Para instalar vsftpd en [Arch Linux](https://linuxconfig.org/arch-linux-download) y [Manjaro](https://linuxconfig.org/manjaro-linux-download) :
-
-```
-$ sudo pacman -S vsftpd
+```bash
+sudo pacman -S vsftpd
 ```
 
 ### Configurar un servidor vsftpd
 
-Después de la instalación, realizaremos una configuración básica para que el servidor FTP esté en funcionamiento:
+* Cambiemos el nombre del archivo de configuración predeterminado
 
-1.  Siempre es una buena práctica mantener una copia de seguridad del archivo de configuración original, en caso de que algo salga mal más adelante. Cambiemos el nombre del archivo de configuración predeterminado:
+```bash
+sudo mv /etc/vsftpd.conf /etc/vsftpd.conf_orig
+```
 
-    ```
-    $ sudo mv /etc/vsftpd.conf /etc/vsftpd.conf_orig
-    ```
-2.  Cree un nuevo archivo de configuración vsftpd usando nano o el editor de texto que prefiera:
+* Cree un nuevo archivo de configuración vsftpd usando nano o el editor de texto que prefiera:
 
-    ```
-    $ sudo nano /etc/vsftpd.conf
-    ```
-3.  Copie la siguiente configuración base en su archivo. Esta configuración será suficiente para un servidor FTP básico y luego podrá modificarse para las necesidades específicas de su entorno una vez que haya verificado que funciona correctamente:
+```bash
+sudo nvim /etc/vsftpd.conf
+```
+
+1.  Copie la siguiente configuración base en su archivo. Esta configuración será suficiente para un servidor FTP básico y luego podrá modificarse para las necesidades específicas de su entorno una vez que haya verificado que funciona correctamente:
 
     ```bash
     listen=NO
@@ -92,7 +75,7 @@ Después de la instalación, realizaremos una configuración básica para que el
     ***
 
     ***
-4.  Es posible que su firewall de Linux esté configurado para bloquear las conexiones a FTP actualmente, pero ejecutar el comando apropiado a continuación para su distribución creará una excepción para permitir el tráfico:
+2.  Es posible que su firewall de Linux esté configurado para bloquear las conexiones a FTP actualmente, pero ejecutar el comando apropiado a continuación para su distribución creará una excepción para permitir el tráfico:
 
     En Ubuntu y sistemas que utilizan ufw (firewall sencillo):
 
@@ -111,7 +94,7 @@ Después de la instalación, realizaremos una configuración básica para que el
     ```
     $ sudo iptables -A ENTRADA -m estado --estado NUEVO,ESTABLECIDO -m tcp -p tcp --dport 20,21 -j ACEPTAR
     ```
-5.  Con el archivo de configuración guardado y las reglas del firewall actualizadas, reinicie vsftpd para aplicar los nuevos cambios:
+3.  Con el archivo de configuración guardado y las reglas del firewall actualizadas, reinicie vsftpd para aplicar los nuevos cambios:
 
     ```
     $ sudo systemctl reiniciar vsftpd
