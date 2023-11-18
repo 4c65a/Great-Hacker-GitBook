@@ -66,6 +66,7 @@
     * [Page Enumeration/ App Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/page-enumeration-app-enumeration.md)
     * [Service Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/service-enumeration.md)
     * [Exploring Enumeration via Packet Crafting](ethical-hacker/reconocimiento-activo/enumeracion/exploring-enumeration-via-packet-crafting.md)
+  * [Escaneo de vulnerabilidades de sitios web](ethical-hacker/reconocimiento-activo/escaneo-de-vulnerabilidades-de-sitios-web.md)
 * [Teoría Network](ethical-hacker/teoria-network/README.md)
   * [Protocolo HTTP](ethical-hacker/teoria-network/protocolo-http.md)
   * [Códigos de estado de respuesta HTTP](ethical-hacker/teoria-network/codigos-de-estado-de-respuesta-http.md)
