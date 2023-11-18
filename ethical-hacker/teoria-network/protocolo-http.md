@@ -40,4 +40,5 @@ Cuando los servidores HTTP y los navegadores se comunican entre sí, realizan in
 * **El user agent:** Se utilizó Chrome para acceder al sitio web.&#x20;
 * **También aparecen varios otros campos:  accept, accept-language, accept encoding.**
 
-#### **Estructura de URL HTTP**
+
+
