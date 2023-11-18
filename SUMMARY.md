@@ -68,6 +68,7 @@
     * [Exploring Enumeration via Packet Crafting](ethical-hacker/reconocimiento-activo/enumeracion/exploring-enumeration-via-packet-crafting.md)
   * [Escaneo de vulnerabilidades de sitios web](ethical-hacker/reconocimiento-activo/escaneo-de-vulnerabilidades-de-sitios-web/README.md)
     * [Nikto](ethical-hacker/reconocimiento-activo/escaneo-de-vulnerabilidades-de-sitios-web/nikto.md)
+    * [Escanear host gvm](ethical-hacker/reconocimiento-activo/escaneo-de-vulnerabilidades-de-sitios-web/escanear-host-gvm.md)
 * [Teoría Network](ethical-hacker/teoria-network/README.md)
   * [Protocolo HTTP](ethical-hacker/teoria-network/protocolo-http.md)
   * [Códigos de estado de respuesta HTTP](ethical-hacker/teoria-network/codigos-de-estado-de-respuesta-http.md)
