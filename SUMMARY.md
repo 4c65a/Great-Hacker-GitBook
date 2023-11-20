@@ -114,6 +114,7 @@
 * [XXE](pentesting-web/xxe.md)
 * [SSRF](pentesting-web/ssrf.md)
 * [SQL Injection](pentesting-web/sql-injection.md)
+* [Inyección de comandos](pentesting-web/inyeccion-de-comandos.md)
 * [HTTP Desync](pentesting-web/http-desync.md)
 * [RCE](pentesting-web/rce.md)
 * [APIs](pentesting-web/apis.md)
