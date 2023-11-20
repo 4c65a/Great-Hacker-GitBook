@@ -119,7 +119,7 @@
 * [Fallas en el Registro y Monitoreo](pentesting-web/fallas-en-el-registro-y-monitoreo.md)
 * [Fallas en el Software y en la Integridad de los Datos](pentesting-web/fallas-en-el-software-y-en-la-integridad-de-los-datos.md)
 * [Fallas de Identificación y Autenticación](pentesting-web/fallas-de-identificacion-y-autenticacion/README.md)
-  * [Secuestro de sesión](pentesting-web/fallas-de-identificacion-y-autenticacion/secuestro-de-sesion.md)
+  * [Secuestro de sesión(Session Hijacking)](pentesting-web/fallas-de-identificacion-y-autenticacion/secuestro-de-sesion-session-hijacking.md)
 * [Inyección](pentesting-web/inyeccion/README.md)
   * [SQL Injection](pentesting-web/inyeccion/sql-injection.md)
   * [Inyección de comandos](pentesting-web/inyeccion/inyeccion-de-comandos.md)
