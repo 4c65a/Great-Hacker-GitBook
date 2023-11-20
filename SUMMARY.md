@@ -104,7 +104,7 @@
   * [Stored Cross Site Scripting](pentesting-web/xss-injection/stored-cross-site-scripting.md)
   * [DOM-Based Cross Site Scripting](pentesting-web/xss-injection/dom-based-cross-site-scripting.md)
   * [CSP-Bypass Cross Site Scripting](pentesting-web/xss-injection/csp-bypass-cross-site-scripting.md)
-  * [XSS filter evasion tips](pentesting-web/xss-injection/xss-filter-evasion-tips.md)
+  * [XSS evasion](pentesting-web/xss-injection/xss-evasion.md)
   * [Blind XSS](pentesting-web/xss-injection/blind-xss.md)
 * [File Inclusion](pentesting-web/file-inclusion.md)
 * [CSRF](pentesting-web/csrf.md)
