@@ -116,6 +116,8 @@
 * [HTTP Desync](pentesting-web/http-desync.md)
 * [RCE](pentesting-web/rce.md)
 * [APIs](pentesting-web/apis.md)
+* [Parameter Pollution](pentesting-web/parameter-pollution.md)
+* [Insecure Direct Object Reference](pentesting-web/insecure-direct-object-reference.md)
 * [Fallas en el Registro y Monitoreo](pentesting-web/fallas-en-el-registro-y-monitoreo.md)
 * [Fallas en el Software y en la Integridad de los Datos](pentesting-web/fallas-en-el-software-y-en-la-integridad-de-los-datos.md)
 * [Fallas de Identificación y Autenticación](pentesting-web/fallas-de-identificacion-y-autenticacion/README.md)
