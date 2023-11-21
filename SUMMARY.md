@@ -109,7 +109,7 @@
 * [CSRF](pentesting-web/csrf.md)
 * [Path Traversal](pentesting-web/path-traversal.md)
 * [IDOR/broken access control](pentesting-web/idor-broken-access-control.md)
-* [RFI](pentesting-web/rfi.md)
+* [Remote File Inclusion (RFI)](pentesting-web/remote-file-inclusion-rfi.md)
 * [SSTI](pentesting-web/ssti.md)
 * [XXE](pentesting-web/xxe.md)
 * [SSRF](pentesting-web/ssrf.md)
