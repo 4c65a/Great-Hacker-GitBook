@@ -14,7 +14,26 @@ layout:
 
 # Credential Harvesting
 
-_**La recolección de credenciales**_ no es un tipo de ataque nuevo, pero las metodologías utilizadas por los atacantes han evolucionado a lo largo de los años. La recolección de credenciales (o recolección de contraseñas) es el acto de recopilar y robar nombres de usuario, contraseñas, tokens, PIN y cualquier otro tipo de credenciales válidos a través de violaciones de infraestructura. En el Módulo 4, “Ataques de ingeniería social”, aprendió todo sobre el phishing y los ataques de phishing. Una de las formas más comunes en que los atacantes realizan la recolección de credenciales es mediante el uso de correos electrónicos de phishing y de phishing con enlaces que podrían redirigir a un usuario a un sitio falso. Este "sitio falso" podría simular un servicio en la nube legítimo, como Gmail, Office 365 o incluso un sitio de redes sociales como Twitter, LinkedIn, Instagram o Facebook. Por eso es tan importante utilizar la autenticación multifactor. Sin embargo, en algunos casos, los atacantes podrían eludir la autenticación multifactor redirigiendo al usuario a un sitio malicioso y robando una cookie de sesión del navegador del usuario.
+La recolección de credenciales es una técnica de recopilan credenciales de usuario (como ID de usuario, direcciones de correo electrónico, contraseñas y otra información de inicio de sesión).
+
+### ¿Cómo funciona la recolección de credenciales?
+
+Lo más habitual es que se instale un recolector de credenciales  como una extensión maliciosa de un sitio web o una aplicación. Una vez instalado, el recolector registra cualquier información que los usuarios ingresen durante el proceso de inicio de sesión.
+
+Debido a que los recolectores de credenciales registran todos los inicios de sesión de manera indiscriminada, los ciberdelincuentes pueden crear una reserva de nombres de usuario y contraseñas.
+
+Si un ciberdelincuente tiene acceso a una o más contraseñas comprometidas que un individuo usó en el pasado, esa credencial le proporciona un excelente punto de partida para adivinar su información de inicio de sesión para otros sitios o sistemas.
+
+### Técnicas comunes utilizadas en ataques de recolección de credenciales <a href="#techniques" id="techniques"></a>
+
+La recolección de credenciales normalmente se lleva a cabo junto con otra técnica de ciberataque. Métodos de ataque más frecuentes incluyen los siguientes:
+
+* **Malware**
+* **Phishing**
+* **Suplantación de dominio**
+* **Ataques Man-in-the-Middle (MitM)**
+
+La recolección de credenciales no es un tipo de ataque nuevo, pero las metodologías utilizadas por los atacantes han evolucionado a lo largo de los años. La recolección de credenciales (o recolección de contraseñas) es el acto de recopilar y robar nombres de usuario, contraseñas, tokens, PIN y cualquier otro tipo de credenciales válidos a través de violaciones de infraestructura. En el Módulo 4, “Ataques de ingeniería social”, aprendió todo sobre el phishing y los ataques de phishing. Una de las formas más comunes en que los atacantes realizan la recolección de credenciales es mediante el uso de correos electrónicos de phishing y de phishing con enlaces que podrían redirigir a un usuario a un sitio falso. Este "sitio falso" podría simular un servicio en la nube legítimo, como Gmail, Office 365 o incluso un sitio de redes sociales como Twitter, LinkedIn, Instagram o Facebook. Por eso es tan importante utilizar la autenticación multifactor. Sin embargo, en algunos casos, los atacantes podrían eludir la autenticación multifactor redirigiendo al usuario a un sitio malicioso y robando una cookie de sesión del navegador del usuario.
 
 Muchos servicios y aplicaciones alojadas en la nube utilizan el inicio de sesión único (SSO) y otros utilizan autenticación federada. A veces, las aplicaciones basadas en la nube le permiten iniciar sesión con sus credenciales de Google, Apple o Facebook. Los atacantes podrían redirigir a los usuarios a sitios web suplantados que pueden parecer páginas de inicio de sesión legítimas de Google, Apple, Facebook o Twitter. Desde allí, el atacante podría robar el nombre de usuario y la contraseña de la víctima. La Figura 7-1 muestra un ejemplo de un ataque común de recolección de credenciales en el que el atacante envía a la víctima un correo electrónico de phishing que incluye un enlace a un sitio falso (en este ejemplo, un inicio de sesión de Twitter).
 
@@ -88,3 +107,7 @@ _**Ejemplo 7-7**_ _: Recopilación de credenciales de usuario_
 ```
 
 Se sabe que los atacantes recopilan las credenciales de los proveedores de servicios en la nube una vez que ingresan a los sistemas de sus víctimas. Diferentes actores de amenazas han ampliado sus capacidades de recolección de credenciales para apuntar a múltiples servicios en la nube y fuera de la nube en las redes y sistemas internos de las víctimas después de la explotación de otras vulnerabilidades.
+
+<mark style="color:red;">**Recursos**</mark>&#x20;
+
+{% embed url="https://www.crowdstrike.com/cybersecurity-101/cyberattacks/credential-harvesting/" %}
