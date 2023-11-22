@@ -220,4 +220,4 @@
 
 ## Cloud Security
 
-* [Page 2](cloud-security/page-2.md)
+* [Credential Harvesting](cloud-security/credential-harvesting.md)
