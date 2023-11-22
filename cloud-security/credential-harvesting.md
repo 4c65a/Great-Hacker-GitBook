@@ -45,27 +45,75 @@ Realizar un ataque de ingeniería social y crear una instancia de un sitio web f
 
 **Paso 2** . Seleccioneen el menú principal, como se muestra en el Ejemplo 7-1.
 
-_**Ejemplo 7-1**_  : Inicio del ataque de ingeniería social
+Inicio del ataque de ingeniería social
 
-<pre><code><strong>                Select from the menu:   1) Social-Engineering Attacks   2) Penetration Testing (Fast-Track)   3) Third Party Modules   4) Update the Social-Engineer Toolkit   5) Update SET configuration   6) Help, Credits, and About  99) Exit the Social-Engineer Toolkitset> 1
-</strong></code></pre>
+```
+Select from the menu:
+   1) Social-Engineering Attacks
+   2) Penetration Testing (Fast-Track)
+   3) Third Party Modules
+   4) Update the Social-Engineer Toolkit
+   5) Update SET configuration
+   6) Help, Credits, and About
+  99) Exit the Social-Engineer Toolkit
+set> 1
+```
 
-**Paso 3** . En el menú que aparece (ver Ejemplo 7-2), seleccione **2) Vectores de ataque a sitios web** .
+**Paso 3** . Selección de vectores de ataque a sitios web
 
-_**Ejemplo 7-2**_  : Selección de vectores de ataque a sitios web
-
-<pre><code><strong>                Select from the menu:    1) Spear-Phishing Attack Vectors    2) Website Attack Vectors    3) Infectious Media Generator    4) Create a Payload and Listener    5) Mass Mailer Attack    6) Arduino-Based Attack Vector    7) Wireless Access Point Attack Vector    8) QRCode Generator Attack Vector    9) Powershell Attack Vectors   10) Third Party Modules   99) Return back to the main menu.set>2 
-</strong></code></pre>
-
-<pre><code><strong>                The Web Attack module is a unique way of utilizing multiple web-basedattacks in order to compromise the intended victim.The Java Applet Attack method will spoof a Java Certificate anddeliver a metasploit based payload. Uses a customized java appletcreated by Thomas Werth to deliver the payload.The Metasploit Browser Exploit method will utilize select Metasploitbrowser exploits through an iframe and deliver a Metasploit payload.The Credential Harvester method will utilize web cloning of awebsite that has a username and password field and harvest allthe information posted to the website.The TabNabbing method will wait for a user to move to a differenttab, then refresh the page to something different.The Web-Jacking Attack method was introduced by white_sheep, emgent.This method utilizes iframe replacements to make the highlighted URLlink to appear legitimate however when clicked a window pops up thenis replaced with the malicious link. You can edit the link replacementsettings in the set_config if it's too slow/fast.The Multi-Attack method will add a combination of attacks throughthe web attack menu. For example, you can utilize the Java Applet,Metasploit Browser, Credential Harvester/Tabnabbing all at once to seewhich is successful.The HTA Attack method will allow you to clone a site and performpowershell injection through HTA files which can be used forWindows-based powershell exploitation through the browser.   1) Java Applet Attack Method   2) Metasploit Browser Exploit Method   3) Credential Harvester Attack Method   4) Tabnabbing Attack Method   5) Web Jacking Attack Method   6) Multi-Attack Web Method   7) HTA Attack Method  99) Return to Main Menuset:webattack>3
-</strong></code></pre>
-
-_**Ejemplo 7-3**_  : Selección del método de ataque de recolección de credenciales
+```
+Select from the menu:
+    1) Spear-Phishing Attack Vectors
+    2) Website Attack Vectors
+    3) Infectious Media Generator
+    4) Create a Payload and Listener
+    5) Mass Mailer Attack
+    6) Arduino-Based Attack Vector
+    7) Wireless Access Point Attack Vector
+    8) QRCode Generator Attack Vector
+    9) Powershell Attack Vectors
+   10) Third Party Modules
+   99) Return back to the main menu.
+set>2 
+```
 
 **Etapa 4** . En el menú y la explicación que aparecen a continuación (consulte el Ejemplo 7-3), seleccione **3) Método de ataque de recolección de credenciales** .
 
-<pre><code><strong>                The first method will allow SET to import a list of pre-defined webapplications that it can utilize within the attack.The second method will completely clone a website of your choosingand allow you to utilize the attack vectors within the completelysame web application you were attempting to clone.The third method allows you to import your own website, note that youshould only have an index.html when using the import websitefunctionality.   1) Web Templates   2) Site Cloner   3) Custom Import  99) Return to Webattack Menuset:webattack>1
-</strong></code></pre>
+```
+The Web Attack module is a unique way of utilizing multiple web-based
+attacks in order to compromise the intended victim.
+The Java Applet Attack method will spoof a Java Certificate and
+deliver a metasploit based payload. Uses a customized java applet
+created by Thomas Werth to deliver the payload.
+The Metasploit Browser Exploit method will utilize select Metasploit
+browser exploits through an iframe and deliver a Metasploit payload.
+The Credential Harvester method will utilize web cloning of a
+website that has a username and password field and harvest all
+the information posted to the website.
+The TabNabbing method will wait for a user to move to a different
+tab, then refresh the page to something different.
+The Web-Jacking Attack method was introduced by white_sheep, emgent.
+This method utilizes iframe replacements to make the highlighted URL
+link to appear legitimate however when clicked a window pops up then
+is replaced with the malicious link. You can edit the link replacement
+settings in the set_config if it's too slow/fast.
+The Multi-Attack method will add a combination of attacks through
+the web attack menu. For example, you can utilize the Java Applet,
+Metasploit Browser, Credential Harvester/Tabnabbing all at once to see
+which is successful.
+The HTA Attack method will allow you to clone a site and perform
+powershell injection through HTA files which can be used for
+Windows-based powershell exploitation through the browser.
+   1) Java Applet Attack Method
+   2) Metasploit Browser Exploit Method
+   3) Credential Harvester Attack Method
+   4) Tabnabbing Attack Method
+   5) Web Jacking Attack Method
+   6) Multi-Attack Web Method
+   7) HTA Attack Method
+  99) Return to Main Menu
+set:webattack>3
+```
 
 _**Ejemplo 7-4**_  : Selección de una plantilla web predefinida
 
