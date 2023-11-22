@@ -77,7 +77,7 @@ Select from the menu:
 set>2 
 ```
 
-**Etapa 4** . En el menú y la explicación que aparecen a continuación (consulte el Ejemplo 7-3), seleccione **3) Método de ataque de recolección de credenciales** .
+**Etapa 4** . En el menú y la explicación que aparecen a continuación (consulte el Ejemplo 7-3), seleccione **Método de ataque de recolección de credenciales** .
 
 ```
 The Web Attack module is a unique way of utilizing multiple web-based
