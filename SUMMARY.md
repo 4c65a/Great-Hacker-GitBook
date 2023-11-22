@@ -226,7 +226,3 @@
   * [Privilege Escalation](cloud-security/tipos-de-ataques/privilege-escalation.md)
   * [Ataques al servicio de metadatos](cloud-security/tipos-de-ataques/ataques-al-servicio-de-metadatos.md)
   * [Ataques de canal lateral](cloud-security/tipos-de-ataques/ataques-de-canal-lateral.md)
-
-## Mobile
-
-* [Page 2](mobile/page-2.md)
