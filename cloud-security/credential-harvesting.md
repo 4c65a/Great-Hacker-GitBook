@@ -33,11 +33,11 @@ La recolección de credenciales normalmente se lleva a cabo junto con otra técn
 * **Suplantación de dominio**
 * **Ataques Man-in-the-Middle (MitM)**
 
-La recolección de credenciales no es un tipo de ataque nuevo, pero las metodologías utilizadas por los atacantes han evolucionado a lo largo de los años. La recolección de credenciales (o recolección de contraseñas) es el acto de recopilar y robar nombres de usuario, contraseñas, tokens, PIN y cualquier otro tipo de credenciales válidos a través de violaciones de infraestructura. En el Módulo 4, “Ataques de ingeniería social”, aprendió todo sobre el phishing y los ataques de phishing. Una de las formas más comunes en que los atacantes realizan la recolección de credenciales es mediante el uso de correos electrónicos de phishing y de phishing con enlaces que podrían redirigir a un usuario a un sitio falso. Este "sitio falso" podría simular un servicio en la nube legítimo, como Gmail, Office 365 o incluso un sitio de redes sociales como Twitter, LinkedIn, Instagram o Facebook. Por eso es tan importante utilizar la autenticación multifactor. Sin embargo, en algunos casos, los atacantes podrían eludir la autenticación multifactor redirigiendo al usuario a un sitio malicioso y robando una cookie de sesión del navegador del usuario.
+Una de las formas más comunes en que los atacantes realizan la recolección de credenciales es mediante el uso de correos electrónicos de phishing y de phishing con enlaces que podrían redirigir a un usuario a un sitio falso. Este "sitio falso" podría simular un servicio en la nube legítimo, como Gmail, Office 365 o incluso un sitio de redes sociales como Twitter, LinkedIn, Instagram o Facebook. Por eso es tan importante utilizar la autenticación multifactor. Sin embargo, en algunos casos, los atacantes podrían eludir la autenticación multifactor redirigiendo al usuario a un sitio malicioso y robando una cookie de sesión del navegador del usuario.
 
-Muchos servicios y aplicaciones alojadas en la nube utilizan el inicio de sesión único (SSO) y otros utilizan autenticación federada. A veces, las aplicaciones basadas en la nube le permiten iniciar sesión con sus credenciales de Google, Apple o Facebook. Los atacantes podrían redirigir a los usuarios a sitios web suplantados que pueden parecer páginas de inicio de sesión legítimas de Google, Apple, Facebook o Twitter. Desde allí, el atacante podría robar el nombre de usuario y la contraseña de la víctima. La Figura 7-1 muestra un ejemplo de un ataque común de recolección de credenciales en el que el atacante envía a la víctima un correo electrónico de phishing que incluye un enlace a un sitio falso (en este ejemplo, un inicio de sesión de Twitter).
+Muchos servicios y aplicaciones alojadas en la nube utilizan el inicio de sesión único (SSO) y otros utilizan autenticación federada. A veces, las aplicaciones basadas en la nube le permiten iniciar sesión con sus credenciales de Google, Apple o Facebook. Los atacantes podrían redirigir a los usuarios a sitios web suplantados que pueden parecer páginas de inicio de sesión legítimas de Google, Apple, Facebook o Twitter. Desde allí, el atacante podría robar el nombre de usuario y la contraseña de la víctima.&#x20;
 
-_**Figura 7-1**_ _: Ataque de recolección de credenciales mediante correos electrónicos de ingeniería social y phishing_
+_Ataque de recolección de credenciales mediante correos electrónicos de ingeniería social y phishing_
 
 Agresor1. Correo electrónico con enlace a inicio de sesión falso en TwitterVíctima3. El atacante roba credencialesSitio falso de inicio de sesión en Twitter2. El usuario ingresa las credenciales
 
@@ -94,9 +94,9 @@ _**Ejemplo 7-6**_  : Selección de la plantilla para Twitter
 
 Luego, puede redirigir a los usuarios a este sitio falso de Twitter enviando un correo electrónico de phishing o aprovechando vulnerabilidades web como secuencias de comandos entre sitios (XSS) y falsificación de solicitudes entre sitios (CSRF). La Figura 7-2 muestra la página de inicio de sesión falsa de Twitter, donde el usuario ingresa sus credenciales.
 
-_**Figura 7-2**_ _- Página de inicio de sesión falsa_
+_Página de inicio de sesión falsa_
 
-![](https://skillsforall.com/content/eh/1.0/m7/course/en-US/assets/edb61cd6bd789cdc4476775889252c5ef8780d77.png)
+
 
 El ejemplo 7-7 muestra cómo el sistema atacante recopila las credenciales del usuario. El nombre de usuario ingresado es _santosomar_ y la contraseña es _superbadpassword_ . También puede ver el token de sesión.
 
@@ -105,8 +105,6 @@ _**Ejemplo 7-7**_ _: Recopilación de credenciales de usuario_
 ```
 192.168.78.238 - - [28/Jun/2021 23:07:41] "GET / HTTP/1.1" 200 -[*] WE GOT A HIT! Printing the output:POSSIBLE USERNAME FIELD FOUND: session[username_or_email]=santosomarPOSSIBLE PASSWORD FIELD FOUND: session[password]=superbadpasswordPARAM: authenticity_token=dba33c0b2bfdd8e6dcb14a7ab4bd121f38177d52PARAM: scribe_log=POSSIBLE USERNAME FIELD FOUND: redirect_after_login=PARAM: authenticity_token=dba33c0b2bfdd8e6dcb14a7ab4bd121f38177d52[*] WHEN YOU'RE FINISHED, HIT CONTROL-C TO GENERATE A REPORT.192.168.78.238 - - [28/Jun/2021 23:08:27] "POST /sessions HTTP/1.1"302 - 
 ```
-
-Se sabe que los atacantes recopilan las credenciales de los proveedores de servicios en la nube una vez que ingresan a los sistemas de sus víctimas. Diferentes actores de amenazas han ampliado sus capacidades de recolección de credenciales para apuntar a múltiples servicios en la nube y fuera de la nube en las redes y sistemas internos de las víctimas después de la explotación de otras vulnerabilidades.
 
 <mark style="color:red;">**Recursos**</mark>&#x20;
 
