@@ -221,3 +221,4 @@
 ## Cloud Security
 
 * [Credential Harvesting](cloud-security/credential-harvesting.md)
+* [Privilege Escalation](cloud-security/privilege-escalation.md)
