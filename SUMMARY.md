@@ -224,3 +224,4 @@
 * [Privilege Escalation](cloud-security/privilege-escalation.md)
 * [Adquisición de cuenta (Account Takeover)](cloud-security/adquisicion-de-cuenta-account-takeover.md)
 * [Ataques al servicio de metadatos](cloud-security/ataques-al-servicio-de-metadatos.md)
+* [Ataques de canal lateral](cloud-security/ataques-de-canal-lateral.md)
