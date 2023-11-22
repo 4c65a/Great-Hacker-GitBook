@@ -37,15 +37,13 @@ Una de las formas más comunes en que los atacantes realizan la recolección de 
 
 Muchos servicios y aplicaciones alojadas en la nube utilizan el inicio de sesión único (SSO) y otros utilizan autenticación federada. A veces, las aplicaciones basadas en la nube le permiten iniciar sesión con sus credenciales de Google, Apple o Facebook. Los atacantes podrían redirigir a los usuarios a sitios web suplantados que pueden parecer páginas de inicio de sesión legítimas de Google, Apple, Facebook o Twitter. Desde allí, el atacante podría robar el nombre de usuario y la contraseña de la víctima.&#x20;
 
-_Ataque de recolección de credenciales mediante correos electrónicos de ingeniería social y phishing_
+#### Ataque de recolección de credenciales mediante correos electrónicos de ingeniería social y phishing
 
-Agresor1. Correo electrónico con enlace a inicio de sesión falso en TwitterVíctima3. El atacante roba credencialesSitio falso de inicio de sesión en Twitter2. El usuario ingresa las credenciales
+Realizar un ataque de ingeniería social y crear una instancia de un sitio web falso para realizar un ataque de recolección de credenciales.
 
-En el Módulo 4, aprendió sobre el Conjunto de herramientas de ingeniería social (SET). En los siguientes ejemplos, verá lo fácil que es realizar un ataque de ingeniería social y crear una instancia de un sitio web falso (en este caso, un sitio de inicio de sesión de Twitter falso) para realizar un ataque de recolección de credenciales.
+**Paso 1** . Inicie SET ingresando el comando **setoolkit**.
 
-**Paso 1** . Inicie SET ingresando el comando **setoolkit** .
-
-**Paso 2** . Seleccione **1) Ataques de ingeniería social** en el menú principal, como se muestra en el Ejemplo 7-1.
+**Paso 2** . Seleccioneen el menú principal, como se muestra en el Ejemplo 7-1.
 
 _**Ejemplo 7-1**_  : Inicio del ataque de ingeniería social
 
