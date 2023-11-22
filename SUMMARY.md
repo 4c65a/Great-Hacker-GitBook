@@ -220,8 +220,13 @@
 
 ## Cloud Security
 
-* [Credential Harvesting](cloud-security/credential-harvesting.md)
-* [Privilege Escalation](cloud-security/privilege-escalation.md)
-* [Adquisición de cuenta (Account Takeover)](cloud-security/adquisicion-de-cuenta-account-takeover.md)
-* [Ataques al servicio de metadatos](cloud-security/ataques-al-servicio-de-metadatos.md)
-* [Ataques de canal lateral](cloud-security/ataques-de-canal-lateral.md)
+* [Tipos de ataques](cloud-security/tipos-de-ataques/README.md)
+  * [Adquisición de cuenta (Account Takeover)](cloud-security/tipos-de-ataques/adquisicion-de-cuenta-account-takeover.md)
+  * [Credential Harvesting](cloud-security/tipos-de-ataques/credential-harvesting.md)
+  * [Privilege Escalation](cloud-security/tipos-de-ataques/privilege-escalation.md)
+  * [Ataques al servicio de metadatos](cloud-security/tipos-de-ataques/ataques-al-servicio-de-metadatos.md)
+  * [Ataques de canal lateral](cloud-security/tipos-de-ataques/ataques-de-canal-lateral.md)
+
+## Mobile
+
+* [Page 2](mobile/page-2.md)
