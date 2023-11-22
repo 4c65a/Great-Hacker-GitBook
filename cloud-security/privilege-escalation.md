@@ -27,3 +27,7 @@ Este tipo de escalada de privilegios, también llamada elevación de privilegios
 **Escalada de privilegios horizontales**
 
 Este tipo de escalada de privilegios ocurre cuando un usuario normal accede a funciones o contenido reservado para otros usuarios normales (por ejemplo, un usuario lee el correo electrónico de otro). Esto se puede hacer mediante piratería informática o mediante una persona que se acerca a la computadora de otra persona y simplemente lee su correo electrónico. Haga que sus usuarios siempre bloqueen su computadora (o cierren sesión) cuando no estén físicamente en su escritorio.
+
+<mark style="color:red;">**Recursos**</mark>
+
+{% embed url="https://www.crowdstrike.com/cybersecurity-101/privilege-escalation/" %}
