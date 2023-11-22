@@ -14,9 +14,11 @@ layout:
 
 # Adquisición de cuenta (Account Takeover)
 
-La mecánica subyacente y el motivo del atacante de un ataque de apropiación de cuentas en la nube son los mismos que para una apropiación de cuentas que se lleva a cabo en las instalaciones. En una _**apropiación de cuentas**_ , el actor de amenazas obtiene acceso a una cuenta de usuario o aplicación y la utiliza para luego obtener acceso a más cuentas e información. Hay diferentes formas en que puede ocurrir una apropiación de cuenta en la nube. El impacto que tiene una apropiación de cuentas en la nube también puede ser un poco diferente del impacto de un ataque local. Algunas de las mayores diferencias son la capacidad de la organización para detectar una apropiación de una cuenta en la nube, descubrir qué se vio afectado y determinar cómo remediarlo y recuperarlo.
+La mecánica subyacente y el motivo del atacante de un ataque de apropiación de cuentas en la nube son los mismos que para una apropiación de cuentas que se lleva a cabo en las instalaciones. En una apropiación de cuentas , el actor de amenazas obtiene acceso a una cuenta de usuario o aplicación y la utiliza para luego obtener acceso a más cuentas e información. Hay diferentes formas en que puede ocurrir una apropiación de cuenta en la nube.&#x20;
 
-Hay varias formas de detectar ataques de apropiación de cuentas. Seleccione cada uno para obtener más detalles.
+Algunas de las mayores diferencias son la capacidad de la organización para detectar una apropiación de una cuenta en la nube, descubrir qué se vio afectado y determinar cómo remediarlo y recuperarlo.
+
+Hay varias formas de detectar ataques de apropiación de cuentas.
 
 **Ubicación de inicio de sesión**
 
@@ -24,9 +26,7 @@ La ubicación del usuario puede indicarle una adquisición. Por ejemplo, no pued
 
 **Intentos fallidos de inicio de sesión**
 
-Ahora es bastante fácil detectar y bloquear intentos fallidos de inicio de sesión de un usuario o atacante.
-
-\
+Ahora es bastante fácil detectar y bloquear intentos fallidos de inicio de sesión de un usuario o atacante.\
 **Correos electrónicos de phishing laterales**
 
 Se trata de correos electrónicos de phishing que se originan en una cuenta que ya ha sido comprometida por el atacante.
@@ -39,3 +39,6 @@ Un atacante podría crear una aplicación falsa que podría requerir permisos de
 
 Podría sospechar de un ataque de apropiación de cuenta si nota que un usuario en particular comparte o descarga repentinamente una gran cantidad de archivos.
 
+<mark style="color:red;">**Recursos**</mark>
+
+{% embed url="https://www.cloudflare.com/en-gb/learning/access-management/account-takeover/" %}
