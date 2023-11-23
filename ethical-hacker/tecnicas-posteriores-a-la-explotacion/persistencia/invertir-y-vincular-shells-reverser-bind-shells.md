@@ -24,9 +24,11 @@ Con un shell de enlace, un atacante abre un puerto o un escucha en el sistema co
 
 <img src="../../../.gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
 
-Un shell inverso es una vulnerabilidad en la que un sistema atacante tiene un oyente (puerto abierto y la víctima inicia una conexión con el sistema atacante. La Figura 8-2 ilustra un caparazón inverso.
+Un shell inverso es una vulnerabilidad en la que un sistema atacante tiene un oyente (puerto abierto y la víctima inicia una conexión con el sistema atacante.
 
-Muchas herramientas le permiten crear shells de enlace e inversión desde un host comprometido. Algunos de los más populares son el módulo Meterpreter en Metasploit y Netcat. Netcat es una de las mejores y más versátiles herramientas para probadores de lápiz porque es liviana y muy portátil. Incluso puede ver esto explicado en los primeros párrafos de la página de manual **de netcat** , como se muestra en el Ejemplo 8-1.
+<img src="../../../.gitbook/assets/file.excalidraw (3).svg" alt="" class="gitbook-drawing">
+
+Netcat es una de las mejores y más versátiles herramientas para probadores de lápiz porque es liviana y muy portátil. Incluso puede ver esto explicado en los primeros párrafos de la página de manual **de netcat** , como se muestra en el Ejemplo 8-1.
 
 _La herramienta Netcat._
 
