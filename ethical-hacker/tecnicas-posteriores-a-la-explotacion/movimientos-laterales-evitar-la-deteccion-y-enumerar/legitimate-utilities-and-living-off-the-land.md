@@ -37,7 +37,7 @@ Cuando utiliza PowerSploit, normalmente expone los scripts que inician un servic
 
 Otro marco de post-explotación basado en PowerShell es _**Empire**_ , que es un marco de código abierto que incluye un agente PowerShell para Windows y un agente Python para Linux. Empire implementa la capacidad de ejecutar agentes PowerShell sin la necesidad de powershell.exe. Le permite implementar rápidamente módulos posteriores a la explotación, incluidos registradores de teclas, _**shells de enlace**_ , _**shells inversos**_ , _**Mimikatz**_ y comunicaciones adaptables para evadir la detección.
 
-Módulos de Empire (una instantánea de la cámara web de macOS X). Este módulo toma una fotografía utilizando la cámara web de un sistema macOS X comprometido.
+Módulos de Empire una instantánea de la cámara web de macOS X. Este módulo toma una fotografía utilizando la cámara web de un sistema macOS X comprometido.
 
 La herramienta pos-explotación del Imperio.
 
