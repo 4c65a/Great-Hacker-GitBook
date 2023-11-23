@@ -27,7 +27,7 @@ El uso de herramientas legítimas para realizar actividades posteriores a la exp
 
 **PowerShell para tareas posteriores a la explotación**
 
-Puede usar PowerShell para obtener listados de directorios, copiar y mover archivos, obtener una lista de procesos en ejecución y realizar tareas administrativas. La Tabla 8-4 enumera y describe algunos de los comandos de PowerShell más útiles que se pueden utilizar para tareas posteriores a la explotación.
+PowerShell para obtener listados de directorios, copiar y mover archivos, obtener una lista de procesos en ejecución y realizar tareas administrativas.
 
 _**Tabla 8- 4**_ _- Comandos útiles de PowerShell para tareas posteriores a la explotación_
 
