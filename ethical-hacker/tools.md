@@ -73,3 +73,31 @@ Es una herramienta de escaneo de redes version gui.
 **Enum4linux :** [**https://github.com/CiscoCXSecurity/enum4linux**](https://github.com/CiscoCXSecurity/enum4linux)
 
 Es una gran herramienta para enumerar recursos compartidos de SMB, implementaciones de Samba vulnerables y usuarios correspondientes.
+
+## Análisis de vulnerabilidades
+
+**OpenVAS :** [**https://www.openvas.org/**](https://www.openvas.org/)
+
+**Nessus :** [**https://www.tenable.com/downloads/nessus**](https://www.tenable.com/downloads/nessus)
+
+**Nexpose :** [**https://www.rapid7.com/products/nexpose/**](https://www.rapid7.com/products/nexpose/)
+
+**Qualys :** [**https://www.qualys.com/**](https://www.qualys.com/)
+
+**SQLmap :** [**http://sqlmap.org/**](http://sqlmap.org/)
+
+**Nikto :** [**https://github.com/sullo/nikto**](https://github.com/sullo/nikto)
+
+**OWASP (ZAP) :** [**https://www.owasp.org/index.php/OWASP\_Zed\_Attack\_Proxy\_Project**](https://www.owasp.org/index.php/OWASP\_Zed\_Attack\_Proxy\_Project)
+
+**w3af :** [**https://w3af.org/**](https://w3af.org/)
+
+**DirBuster :** [**https://www.kali.org/tools/dirbuster/**](https://www.kali.org/tools/dirbuster/)
+
+**Brakeman :** [**https://github.com/presidentbeef/brakeman**](https://github.com/presidentbeef/brakeman)
+
+**Wapiti :** [**https://github.com/wapiti-scanner/wapiti**](https://github.com/wapiti-scanner/wapiti)
+
+**Scout Suite :** [**https://github.com/nccgroup/ScoutSuite**](https://github.com/nccgroup/ScoutSuite)
+
+**WPScan :** [**https://github.com/wpscanteam/wpscan**](https://github.com/wpscanteam/wpscan)
