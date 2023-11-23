@@ -139,3 +139,28 @@ Es una herramienta utilizada para recuperar contraseñas, hashes y tickets de au
 **Patator :** [**https://github.com/lanjelot/patator**](https://github.com/lanjelot/patator)
 
 Es un marco de prueba de penetración que permite a los profesionales de seguridad realizar ataques de fuerza bruta y otros tipos de ataques contra diversos sistemas y servicios.
+
+## Persistencia
+
+**Netcat:** Utilizado para crear un shell de enlace en un sistema víctima y ejecutar el shell Bash.
+
+**Protocolos de acceso remoto:**
+
+* Protocolo de escritorio remoto (RDP) de Microsoft.
+* Escritorio remoto de Apple.
+* VNC.
+* Reenvío del servidor X.
+
+**PowerShell:**
+
+* Puede ser utilizado para obtener listados de directorios, copiar y mover archivos, obtener una lista de procesos en ejecución y realizar tareas administrativas.
+
+**PowerSploit:**
+
+* Colección de módulos de PowerShell para la fase posterior a la explotación y otras fases de una evaluación. Puede descargarse desde [https://github.com/PowerShellMafia/PowerSploit](https://github.com/PowerShellMafia/PowerSploit).
+
+**Empire:**
+
+* Marco de post explotación basado en PowerShell. Incluye un agente PowerShell para Windows y un agente Python para Linux. Puede descargarse desde [https://github.com/EmpireProject/Empire](https://github.com/EmpireProject/Empire).
+
+\
