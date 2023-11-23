@@ -72,6 +72,7 @@
 * [Técnicas posteriores a la explotación](ethical-hacker/tecnicas-posteriores-a-la-explotacion/README.md)
   * [Movimientos laterales, evitar la detección y enumerar](ethical-hacker/tecnicas-posteriores-a-la-explotacion/movimientos-laterales-evitar-la-deteccion-y-enumerar/README.md)
     * [Legitimate Utilities and Living-off-the-Land](ethical-hacker/tecnicas-posteriores-a-la-explotacion/movimientos-laterales-evitar-la-deteccion-y-enumerar/legitimate-utilities-and-living-off-the-land.md)
+    * [Cómo cubrir tus huellas](ethical-hacker/tecnicas-posteriores-a-la-explotacion/movimientos-laterales-evitar-la-deteccion-y-enumerar/como-cubrir-tus-huellas.md)
     * [Escalada de privilegios posterior a la explotación](ethical-hacker/tecnicas-posteriores-a-la-explotacion/movimientos-laterales-evitar-la-deteccion-y-enumerar/escalada-de-privilegios-posterior-a-la-explotacion.md)
     * [Escaneo post-explotación](ethical-hacker/tecnicas-posteriores-a-la-explotacion/movimientos-laterales-evitar-la-deteccion-y-enumerar/escaneo-post-explotacion.md)
   * [Persistencia](ethical-hacker/tecnicas-posteriores-a-la-explotacion/persistencia/README.md)
