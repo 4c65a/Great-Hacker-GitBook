@@ -72,6 +72,7 @@
 * [Técnicas posteriores a la explotación](ethical-hacker/tecnicas-posteriores-a-la-explotacion/README.md)
   * [Persistencia](ethical-hacker/tecnicas-posteriores-a-la-explotacion/persistencia/README.md)
     * [Invertir y vincular shells(Reverser/Bind Shells)](ethical-hacker/tecnicas-posteriores-a-la-explotacion/persistencia/invertir-y-vincular-shells-reverser-bind-shells.md)
+    * [Utilidades de comando y control (C2)](ethical-hacker/tecnicas-posteriores-a-la-explotacion/persistencia/utilidades-de-comando-y-control-c2.md)
 * [Teoría Network](ethical-hacker/teoria-network/README.md)
   * [Protocolo HTTP](ethical-hacker/teoria-network/protocolo-http.md)
   * [Códigos de estado de respuesta HTTP](ethical-hacker/teoria-network/codigos-de-estado-de-respuesta-http.md)
