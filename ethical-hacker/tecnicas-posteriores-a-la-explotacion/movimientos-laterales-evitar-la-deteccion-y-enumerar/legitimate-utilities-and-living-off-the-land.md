@@ -29,8 +29,6 @@ El uso de herramientas legítimas para realizar actividades posteriores a la exp
 
 PowerShell para obtener listados de directorios, copiar y mover archivos, obtener una lista de procesos en ejecución y realizar tareas administrativas.
 
-_**Tabla 8- 4**_ _- Comandos útiles de PowerShell para tareas posteriores a la explotación_
-
 **PowerSploit and Empire**
 
 PowerSploit es una colección de módulos de PowerShell que se pueden utilizar para la postexplotación y otras fases de una evaluación. La Tabla 8-5 enumera los módulos y scripts de PowerSploit más populares. Consulte [_https://github.com/PowerShellMafia/PowerSploit_](https://github.com/PowerShellMafia/PowerSploit) para obtener una lista completa y actualizada de scripts.
@@ -41,7 +39,7 @@ Otro marco de post-explotación basado en PowerShell es _**Empire**_ , que es un
 
 El ejemplo 8-9 muestra uno de los módulos de Empire (una instantánea de la cámara web de macOS X). Este módulo toma una fotografía utilizando la cámara web de un sistema macOS X comprometido.
 
-_**Ejemplo 8-9**_ _: La herramienta posexplotación del Imperio_
+La herramienta pos-explotación del Imperio.
 
 ```
 (Empire) > usemodule python/collection/osx/webcam
