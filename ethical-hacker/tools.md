@@ -157,10 +157,10 @@ Es un marco de prueba de penetración que permite a los profesionales de segurid
 
 **PowerSploit:**
 
-* Colección de módulos de PowerShell para la fase posterior a la explotación y otras fases de una evaluación. Puede descargarse desde [https://github.com/PowerShellMafia/PowerSploit](https://github.com/PowerShellMafia/PowerSploit).
+* Colección de módulos de PowerShell para la fase posterior a la explotación y otras fases de una evaluación.
 
 **Empire:**
 
-* Marco de post explotación basado en PowerShell. Incluye un agente PowerShell para Windows y un agente Python para Linux. Puede descargarse desde [https://github.com/EmpireProject/Empire](https://github.com/EmpireProject/Empire).
+* Marco de post explotación basado en PowerShell. Incluye un agente PowerShell para Windows y un agente Python para Linux.
 
 \
