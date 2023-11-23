@@ -104,25 +104,38 @@ Es una gran herramienta para enumerar recursos compartidos de SMB, implementacio
 
 ## Ataques a credenciales
 
-**John the Ripper:**
+John the Ripper:&#x20;
 
 Es un programa para romper contraseñas. Utiliza ataques de fuerza bruta y otros métodos para descifrar contraseñas almacenadas en archivos con formato hash.
 
-&#x20;**and Abel:**
+Cain and Abel:&#x20;
 
-* **Función:** Se utiliza para recuperar contraseñas mediante ataques de fuerza bruta, ataques de diccionario y otros métodos. También puede realizar ataques de descifrado de hashes.
+Se utiliza para recuperar contraseñas mediante ataques de fuerza bruta, ataques de diccionario y otros métodos. También puede realizar ataques de descifrado de hashes.
 
-1. **Hashcat:**
-   * **Función:** Es una herramienta avanzada de recuperación de contraseñas que utiliza técnicas de ataque de fuerza bruta, ataques de diccionario y ataques de tabla arcoíris para descifrar contraseñas almacenadas en formato hash.
-2. **Hydra:**
-   * **Función:** Es una herramienta de prueba de penetración que realiza ataques de fuerza bruta y ataques de diccionario para romper contraseñas en diferentes protocolos, como SSH, HTTP, FTP, etc.
-3. **RainbowCrack:**
-   * **Función:** Se especializa en ataques de tabla arcoíris. Genera tablas arcoíris precalculadas para acelerar el proceso de descifrado de contraseñas almacenadas en formato hash.
-4. **Medusa and Ncrack:**
-   * **Función:** Ambas son herramientas de prueba de penetración que realizan ataques de fuerza bruta y ataques de diccionario para obtener acceso no autorizado a sistemas a través de protocolos como SSH, FTP, HTTP, etc.
-5. **CeWL:**
-   * **Función:** Esta herramienta se utiliza para la generación de listas de palabras clave (wordlists) a partir del contenido de páginas web. Es útil para ataques de fuerza bruta y ataques de diccionario.
-6. **Mimikatz:**
-   * **Función:** Es una herramienta utilizada para recuperar contraseñas, hashes y tickets de autenticación en sistemas Windows. Puede extraer credenciales almacenadas en memoria.
-7. **Patator:**
-   * **Función:** Es un marco de prueba de penetración que permite a los profesionales de seguridad realizar ataques de fuerza bruta y otros tipos de ataques contra diversos sistemas y servicios.
+Hashcat:&#x20;
+
+Es una herramienta avanzada de recuperación de contraseñas que utiliza técnicas de ataque de fuerza bruta, ataques de diccionario y ataques de tabla arcoíris para descifrar contraseñas almacenadas en formato hash.
+
+Hydra:&#x20;
+
+Es una herramienta de prueba de penetración que realiza ataques de fuerza bruta y ataques de diccionario para romper contraseñas en diferentes protocolos, como SSH, HTTP, FTP, etc.
+
+RainbowCrack:&#x20;
+
+Se especializa en ataques de tabla arcoíris. Genera tablas arcoíris precalculadas para acelerar el proceso de descifrado de contraseñas almacenadas en formato hash.
+
+Medusa and Ncrack:&#x20;
+
+Ambas son herramientas de prueba de penetración que realizan ataques de fuerza bruta y ataques de diccionario para obtener acceso no autorizado a sistemas a través de protocolos como SSH, FTP, HTTP, etc.
+
+CeWL:&#x20;
+
+Esta herramienta se utiliza para la generación de listas de palabras clave (wordlists) a partir del contenido de páginas web. Es útil para ataques de fuerza bruta y ataques de diccionario.
+
+Mimikatz:&#x20;
+
+Es una herramienta utilizada para recuperar contraseñas, hashes y tickets de autenticación en sistemas Windows. Puede extraer credenciales almacenadas en memoria.
+
+Patator:&#x20;
+
+Es un marco de prueba de penetración que permite a los profesionales de seguridad realizar ataques de fuerza bruta y otros tipos de ataques contra diversos sistemas y servicios.
