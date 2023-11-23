@@ -26,14 +26,12 @@ Después de comprometer un sistema durante una prueba de penetración, siempre d
 
 Los atacantes pueden utilizar la esteganografía para ofuscar, evadir y cubrir sus huellas. La esteganografía implica ocultar un mensaje o cualquier otro contenido dentro de una imagen o un archivo de video. Para realizar esta tarea, puedes utilizar herramientas como steghide . Puede instalar fácilmente esta herramienta en un sistema Linux basado en Debian.
 
-_Uso del comando **steghide**_
+**Uso del comando steghide**
 
 ```
 |--[omar@websploit]-[~]
 |---- $steghide --help
-steghide version 0.5.1
-
-the first argument must be one of the following:
+st be one of the following:
  embed, --embed             embed data
  extract, --extract        extract data
  info, --info                display information about a cover- or
@@ -68,32 +66,13 @@ embedding options:
  -q, --quiet                 suppress information messages
  -v, --verbose              display detailed information
 
-extracting options:
- -sf, --stegofile          select stego file
-   -sf <filename>          extract data from <filename>
- -p, --passphrase          specify passphrase
-   -p <passphrase>         use <passphrase> to extract data
- -xf, --extractfile        select file name for extracted data
-   -xf <filename>           write the extracted data to <filename>
- -f, --force                overwrite existing files
- -q, --quiet                suppress information messages
- -v, --verbose              display detailed information
 
-options for the info command:
- -p, --passphrase          specify passphrase
-   -p <passphrase>         use <passphrase> to get info about
-                              embedded data
-
-To embed emb.txt in cvr.jpg: steghide embed -cf cvr.jpg -ef emb.txt
-To extract embedded data from stg.jpg: steghide extract -sf stg.jpg
-|--[omar@websploit]-[~]
-|---- $
 
 ```
 
-Echemos un vistazo a un ejemplo de cómo incrustar información confidencial y ocultar un mensaje dentro de un archivo de imagen mediante el uso de esteganografía. En el ejemplo 8-11, un archivo llamado secret.txt incluye información confidencial (datos de tarjetas de crédito) que se extraerá mediante esteganografía.
+Echemos un vistazo a un ejemplo de cómo incrustar información confidencial y ocultar un mensaje dentro de un archivo de imagen mediante el uso de esteganografía. n archivo llamado secret.txt incluye información confidencial que se extraerá mediante esteganografía.
 
-_**Ejemplo 8-11**_ _: Datos confidenciales que se ocultarán mediante esteganografía_
+**Datos confidenciales que se ocultan mediante esteganografía.**
 
 ```
 
@@ -103,14 +82,9 @@ Credit card data:
 4011 5555 5555 5555 5555 exp 08/29 ccv: 123
 4021 6666 7777 8888 9999 exp 02/29 ccv: 321
 
-|--[omar@websploit]-[~]
-|---- $ 
-
 ```
 
-El ejemplo 8-12 muestra cómo incrustar estos datos confidenciales (secret.txt) en un archivo de imagen (websploit-logo.png) usando **steghide** .
-
-_**Ejemplo 8-12**_ _: uso **de steghide**_ _para ocultar datos confidenciales en un archivo de imagen_
+_**Uso de steghide**_ _**para ocultar datos confidenciales en un archivo de imagen.**_
 
 ```
 |--[omar@websploit]-[~]
@@ -122,9 +96,7 @@ embedding "secret.txt" in "websploit-logo.jpg"... done
 |---- $ 
 ```
 
-El ejemplo 8-13 muestra cómo se recuperan los datos confidenciales de la imagen y se guardan en un archivo ( **extraído\_datos.txt** ).
-
-_**Ejemplo 8-13**_ _: Extracción de datos ocultos de un archivo de imagen_
+**Extracción de datos ocultos de un archivo de imagen.**
 
 ```
 |--[omar@websploit] ⊠[~]
@@ -134,9 +106,7 @@ wrote extracted data to "extracted_data.txt".
 
 ```
 
-El ejemplo 8-14 muestra el contenido del archivo de datos extraído (extracto\_datos.txt).
-
-_**Ejemplo 8-14**_ _: El contenido del archivo de datos extraído_
+**Muestra el contenido del archivo de datos extraído (extracto\_datos.txt).**
 
 ```
 |--[omar@websploit]-[~]
