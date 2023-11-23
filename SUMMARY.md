@@ -106,6 +106,7 @@
 * [Bug bounty recon](ethical-hacker/bug-bounty-recon.md)
 * [Checklist](ethical-hacker/checklist/README.md)
   * [Page](ethical-hacker/checklist/page.md)
+* [Tools](ethical-hacker/tools.md)
 
 ## Pentesting Web
 
