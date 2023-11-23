@@ -104,23 +104,23 @@ Es una gran herramienta para enumerar recursos compartidos de SMB, implementacio
 
 ## Ataques a credenciales
 
-John the Ripper:&#x20;
+**John the Ripper :** [**https://www.openwall.com/john**](https://www.openwall.com/john)&#x20;
 
 Es un programa para romper contraseñas. Utiliza ataques de fuerza bruta y otros métodos para descifrar contraseñas almacenadas en archivos con formato hash.
 
-Cain and Abel:&#x20;
+&#x20;**Cain y Abel :** [**https://sectools.org/tool/cain/**](https://sectools.org/tool/cain/)
 
 Se utiliza para recuperar contraseñas mediante ataques de fuerza bruta, ataques de diccionario y otros métodos. También puede realizar ataques de descifrado de hashes.
 
-Hashcat:&#x20;
+**Hashcat :** [**https://hashcat.net/hashcat**](https://hashcat.net/hashcat)
 
 Es una herramienta avanzada de recuperación de contraseñas que utiliza técnicas de ataque de fuerza bruta, ataques de diccionario y ataques de tabla arcoíris para descifrar contraseñas almacenadas en formato hash.
 
-Hydra:&#x20;
+**Hydra** : [http://project-rainbowcrack.com/](http://project-rainbowcrack.com/)
 
 Es una herramienta de prueba de penetración que realiza ataques de fuerza bruta y ataques de diccionario para romper contraseñas en diferentes protocolos, como SSH, HTTP, FTP, etc.
 
-RainbowCrack:&#x20;
+RainbowCrack :&#x20;
 
 Se especializa en ataques de tabla arcoíris. Genera tablas arcoíris precalculadas para acelerar el proceso de descifrado de contraseñas almacenadas en formato hash.
 
