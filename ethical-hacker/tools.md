@@ -116,26 +116,26 @@ Se utiliza para recuperar contraseñas mediante ataques de fuerza bruta, ataques
 
 Es una herramienta avanzada de recuperación de contraseñas que utiliza técnicas de ataque de fuerza bruta, ataques de diccionario y ataques de tabla arcoíris para descifrar contraseñas almacenadas en formato hash.
 
-**Hydra** : [http://project-rainbowcrack.com/](http://project-rainbowcrack.com/)
+**Hydra** : [https://www.kali.org/tools/hydra/](https://www.kali.org/tools/hydra/)
 
 Es una herramienta de prueba de penetración que realiza ataques de fuerza bruta y ataques de diccionario para romper contraseñas en diferentes protocolos, como SSH, HTTP, FTP, etc.
 
-RainbowCrack :&#x20;
+**RainbowCrack :** [http://project-rainbowcrack.com/](http://project-rainbowcrack.com/)
 
 Se especializa en ataques de tabla arcoíris. Genera tablas arcoíris precalculadas para acelerar el proceso de descifrado de contraseñas almacenadas en formato hash.
 
-Medusa and Ncrack:&#x20;
+**Medusa and Ncrack :** [https://nmap.org/ncrack](https://nmap.org/ncrack)
 
 Ambas son herramientas de prueba de penetración que realizan ataques de fuerza bruta y ataques de diccionario para obtener acceso no autorizado a sistemas a través de protocolos como SSH, FTP, HTTP, etc.
 
-CeWL:&#x20;
+**CeWL :** [**https://digi.ninja/projects/cewl.php**](https://digi.ninja/projects/cewl.php)
 
 Esta herramienta se utiliza para la generación de listas de palabras clave (wordlists) a partir del contenido de páginas web. Es útil para ataques de fuerza bruta y ataques de diccionario.
 
-Mimikatz:&#x20;
+**Mimikatz :** [https://github.com/gentilkiwi/mimikatz](https://github.com/gentilkiwi/mimikatz)
 
 Es una herramienta utilizada para recuperar contraseñas, hashes y tickets de autenticación en sistemas Windows. Puede extraer credenciales almacenadas en memoria.
 
-Patator:&#x20;
+**Patator :** [**https://github.com/lanjelot/patator**](https://github.com/lanjelot/patator)
 
 Es un marco de prueba de penetración que permite a los profesionales de seguridad realizar ataques de fuerza bruta y otros tipos de ataques contra diversos sistemas y servicios.
