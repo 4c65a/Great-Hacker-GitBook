@@ -39,7 +39,7 @@ Otro marco de post-explotación basado en PowerShell es _**Empire**_ , que es un
 
 Módulos de Empire una instantánea de la cámara web de macOS X. Este módulo toma una fotografía utilizando la cámara web de un sistema macOS X comprometido.
 
-La herramienta pos-explotación del Imperio.
+**La herramienta pos-explotación del Imperio.**
 
 ```
 (Empire) > usemodule python/collection/osx/webcam
@@ -77,9 +77,7 @@ Options:
 
 **BloodHound**
 
-Puede utilizar una aplicación web JavaScript de una sola página llamada _**BloodHound**_ que utiliza la teoría de grafos para revelar las relaciones ocultas en un entorno de Windows Active Directory. Un atacante puede utilizar BloodHound para identificar numerosas rutas de ataque. De manera similar, los equipos de respuesta a incidentes pueden utilizar BloodHound para detectar y eliminar esas mismas rutas de ataque. Puede descargar BloodHound desde el siguiente repositorio de GitHub: [_https://github.com/BloodHoundAD/Bloodhound_](https://github.com/BloodHoundAD/Bloodhound) .
-
-**NOTA** También puede utilizar BloodHound para encontrar rutas de ataque complejas en Microsoft Azure.
+Puede utilizar una aplicación web JavaScript de una sola página llamada _**BloodHound**_ que utiliza la teoría de grafos para revelar las relaciones ocultas en un entorno de Windows Active Directory. Un atacante puede utilizar BloodHound para identificar numerosas rutas de ataque. De manera similar, los equipos de respuesta a incidentes pueden utilizar BloodHound para detectar y eliminar esas mismas rutas de ataque(también rutas compleja de azure).
 
 **Windows Management Instrumentation for Post-Exploitation Tasks**
 
