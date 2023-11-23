@@ -14,7 +14,7 @@ layout:
 
 # Cómo cubrir tus huellas
 
-Después de comprometer un sistema durante una prueba de penetración, siempre debe cubrir sus pistas para evitar la detección suprimiendo registros (cuando sea posible), eliminando cuentas de usuario que podrían haberse creado en el sistema y eliminando cualquier archivo que se haya creado. Además, una vez finalizada la prueba de penetración, debe limpiar todos los sistemas. Como mejor práctica, debe discutir estas tareas y documentarlas en el documento de reglas de participación durante la fase previa al compromiso. Las siguientes son algunas de las mejores prácticas a tener en cuenta durante el proceso de limpieza:
+Después de comprometer un sistema durante una prueba de penetración, siempre debe cubrir sus pistas para evitar la detección suprimiendo registros, eliminando cuentas de usuario que podrían haberse creado en el sistema y eliminando cualquier archivo que se haya creado. Además, una vez finalizada la prueba de penetración, debe limpiar todos los sistemas. Como mejor práctica, debe discutir estas tareas y documentarlas en el documento de reglas de participación durante la fase previa al compromiso. Las siguientes son algunas de las mejores prácticas a tener en cuenta durante el proceso de limpieza:
 
 * Elimine todas las cuentas de usuario utilizadas durante la prueba.
 * Elimine todos los archivos, binarios ejecutables, scripts y archivos temporales de los sistemas comprometidos. Es posible que se prefiera un método de eliminación seguro. Publicación especial del NIST 800-88, Revisión 1: “Pautas para la desinfección de medios”, proporciona orientación para la desinfección de medios. Esta metodología debe discutirse con su cliente y el propietario de los sistemas afectados.
@@ -24,9 +24,9 @@ Después de comprometer un sistema durante una prueba de penetración, siempre d
 
 **Steganography**
 
-Los atacantes pueden utilizar la esteganografía para ofuscar, evadir y cubrir sus huellas. _**La esteganografía**_ implica ocultar un mensaje o cualquier otro contenido dentro de una imagen o un archivo de video. Para realizar esta tarea, puedes utilizar herramientas como **steghide** . Puede instalar fácilmente esta herramienta en un sistema Linux basado en Debian utilizando el comando **sudo apt install steghide** . El ejemplo 8-10 muestra el uso del comando **steghide** y la información de ayuda.
+Los atacantes pueden utilizar la esteganografía para ofuscar, evadir y cubrir sus huellas. La esteganografía implica ocultar un mensaje o cualquier otro contenido dentro de una imagen o un archivo de video. Para realizar esta tarea, puedes utilizar herramientas como steghide . Puede instalar fácilmente esta herramienta en un sistema Linux basado en Debian.
 
-_**Ejemplo 8-10**_ _: uso del comando **steghide**_
+_Uso del comando **steghide**_
 
 ```
 |--[omar@websploit]-[~]
