@@ -14,15 +14,17 @@ layout:
 
 # Invertir y vincular shells(Reverser/Bind Shells)
 
-Un _shell_ es una utilidad (software) que actúa como interfaz entre un usuario y el sistema operativo (el kernel y sus servicios). Por ejemplo, en Linux existen varios entornos de shell, como Bash, ksh y tcsh. Tradicionalmente, en Windows el shell es el símbolo del sistema (interfaz de línea de comandos), que se invoca mediante cmd.exe. Windows PowerShell es un shell de Microsoft más nuevo que combina la antigua funcionalidad CMD con un nuevo conjunto de instrucciones de scripting/cmdlet con funcionalidad de administración del sistema integrada. Los cmdlets de PowerShell permiten a los usuarios y administradores automatizar tareas complicadas con scripts reutilizables.
+Un _shell_ es una utilidad que actúa como interfaz entre un usuario y el sistema operativo.&#x20;
 
-**NOTA** Microsoft ha publicado una lista completa y documentación para todos los comandos de Windows compatibles; consulte [_https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands_](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands) .
+En Linux existen varios entornos de shell, como Bash, ksh y tcsh.En Windows el shell es el símbolo del sistema , que se invoca mediante cmd.exe.
 
-Repasemos las diferencias entre los caparazones enlazado e inverso. Con un shell de enlace, un atacante abre un puerto o un escucha en el sistema comprometido y espera una conexión. Esto se hace para conectarse a la víctima desde cualquier sistema y ejecutar comandos y manipular aún más a la víctima. La Figura 8-1 ilustra un shell de enlace.
+Windows PowerShell es un shell de Microsoft más nuevo que combina la antigua funcionalidad CMD con un nuevo conjunto de instrucciones de scripting/cmdlet con funcionalidad de administración del sistema integrada. Los cmdlets de PowerShell permiten a los usuarios y administradores automatizar tareas complicadas con scripts reutilizables.
 
-_**Figura 8-1**_ _: Un shell de enlace_
+Con un shell de enlace, un atacante abre un puerto o un escucha en el sistema comprometido y espera una conexión. Esto se hace para conectarse a la víctima desde cualquier sistema y ejecutar comandos y manipular aún más a la víctima.&#x20;
 
-Un shell inverso es una vulnerabilidad en la que un sistema atacante tiene un oyente (puerto abierto) y la víctima inicia una conexión con el sistema atacante. La Figura 8-2 ilustra un caparazón inverso.
+<img src="../../../.gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
+
+Un shell inverso es una vulnerabilidad en la que un sistema atacante tiene un oyente (puerto abierto y la víctima inicia una conexión con el sistema atacante. La Figura 8-2 ilustra un caparazón inverso.
 
 Muchas herramientas le permiten crear shells de enlace e inversión desde un host comprometido. Algunos de los más populares son el módulo Meterpreter en Metasploit y Netcat. Netcat es una de las mejores y más versátiles herramientas para probadores de lápiz porque es liviana y muy portátil. Incluso puede ver esto explicado en los primeros párrafos de la página de manual **de netcat** , como se muestra en el Ejemplo 8-1.
 
