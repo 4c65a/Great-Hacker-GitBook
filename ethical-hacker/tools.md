@@ -101,3 +101,23 @@ Es una gran herramienta para enumerar recursos compartidos de SMB, implementacio
 **Scout Suite :** [**https://github.com/nccgroup/ScoutSuite**](https://github.com/nccgroup/ScoutSuite)
 
 **WPScan :** [**https://github.com/wpscanteam/wpscan**](https://github.com/wpscanteam/wpscan)
+
+## Ataques a credenciales
+
+**John the Ripper**
+
+**Cain and Abel**
+
+**Hashcat**
+
+**Hydra**
+
+**RainbowCrack**
+
+**Medusa and Ncrack**
+
+**CeWL**
+
+**Mimikatz**
+
+**Patator**
