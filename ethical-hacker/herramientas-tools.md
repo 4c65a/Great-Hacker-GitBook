@@ -214,3 +214,16 @@ Es un marco de explotación para pruebas de aplicaciones web. BeEF explota las v
 
 ## Decompilation, Disassembly, and Debugging
 
+**The GNU Project Debugger (GDB)**
+
+**Windows Debugger**
+
+**OllyDbg**
+
+**edb Debugger**
+
+**Immunity Debugger**
+
+**Interactive Disassembler (IDA)**
+
+**Objdump**
