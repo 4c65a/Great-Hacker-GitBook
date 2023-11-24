@@ -200,4 +200,4 @@ Se han creado varias utilidades para realizar túneles DNS.
 * **psudp:** desarrollada por Kenton Born, esta herramienta inyecta datos en solicitudes DNS existentes modificando la longitud de los encabezados IP/UDP. Puede obtener información adicional sobre psudp en [_https://pdfs.semanticscholar.org/0e28/637370748803bcefa5b89ce8b48cf0422adc.pdf_](https://pdfs.semanticscholar.org/0e28/637370748803bcefa5b89ce8b48cf0422adc.pdf) .
 * **Feederbot y Moto:** los atacantes han utilizado este malware con DNS para robar información confidencial de muchas organizaciones. Puede obtener información adicional sobre estas herramientas en [_https://chrisdietri.ch/post/feederbot-botnet-using-dns-command-and-control/_](https://chrisdietri.ch/post/feederbot-botnet-using-dns-command-and-control/) .
 
-\
+## Marcos de explotación
