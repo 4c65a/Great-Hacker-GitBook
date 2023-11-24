@@ -163,4 +163,20 @@ Es un marco de prueba de penetración que permite a los profesionales de segurid
 
 * Marco de post explotación basado en PowerShell. Incluye un agente PowerShell para Windows y un agente Python para Linux.
 
-\
+## Evasión
+
+**Veil :** [**https://github.com/Veil-Framework/Veil**](https://github.com/Veil-Framework/Veil)
+
+Veil es un marco que se puede utilizar con Metasploit para evadir comprobaciones antivirus y otros controles de seguridad
+
+**Tor :** [**https://www.torproject.org/**](https://www.torproject.org/)
+
+Tor permite a sus usuarios navegar por la Web de forma anónima. Tor funciona "enrutando" el tráfico IP a través de una red mundial gratuita que consta de miles de retransmisiones Tor. Cambia constantemente la forma en que dirige el tráfico para ocultar la ubicación de un usuario a cualquiera que esté monitoreando la red.
+
+**Proxychains :** [**https://github.com/haad/proxychains**](https://github.com/haad/proxychains)
+
+Se puede utilizar para evadir, ya que es una herramienta que obliga a cualquier conexión TCP realizada por una aplicación específica a utilizar Tor o cualquier otro proxy SOCKS4, SOCKS5, HTTP o HTTPS.
+
+**Encryption :**&#x20;
+
+**Encapsulation and tunneling using DNS and protocols such as NTP :**&#x20;
