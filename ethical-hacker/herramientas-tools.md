@@ -292,10 +292,10 @@ Herramienta se utiliza para realizar fuzzing, evasiones de IDS y otros ataques i
 
 Esta herramienta se utiliza para falsificar y clonar dispositivos Bluetooth .
 
-**Reaver:**&#x20;
+**Reaver :** [https://gitlab.com/kalilinux/packages/reaver](https://gitlab.com/kalilinux/packages/reaver)
 
 Esta herramienta se utiliza para realizar ataques de fuerza bruta contra implementaciones de configuración protegida Wi-Fi (WPS).
 
-**WiGLE :** puede obtener información sobre esta herramienta de conducción de guerra en [_https://wigle.net_](https://wigle.net/) .
+**Fern Wi-Fi Cracker :** [https://gitlab.com/kalilinux/packages/fern-wifi-cracker](https://gitlab.com/kalilinux/packages/fern-wifi-cracker)
 
-**Fern Wi-Fi Cracker:** esta herramienta se utiliza para realizar diferentes ataques contra redes inalámbricas, incluido el descifrado de claves WEP, WPA y WPS. Puede descargar Fern Wi-Fi Cracker desde [_https://gitlab.com/kalilinux/packages/fern-wifi-cracker_](https://gitlab.com/kalilinux/packages/fern-wifi-cracker) .
+Esta herramienta se utiliza para realizar diferentes ataques contra redes inalámbricas, incluido el descifrado de claves WEP, WPA y WPS.
