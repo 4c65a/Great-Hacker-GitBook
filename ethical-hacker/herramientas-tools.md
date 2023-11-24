@@ -202,6 +202,15 @@ Se han creado varias utilidades para realizar túneles DNS.
 
 ## Marcos de explotación
 
-**Metasploit :**&#x20;
+**Metasploit :** [**https://www.offsec.com/metasploit-unleashed/**](https://www.offsec.com/metasploit-unleashed/)
 
-**BeEF :**&#x20;
+{% embed url="https://www.metasploit.com/" %}
+
+{% embed url="https://github.com/rapid7/metasploit-framework/tree/master/scripts/meterpreter" %}
+
+**BeEF :** [**https://beefproject.com/**](https://beefproject.com/)
+
+Es un marco de explotación para pruebas de aplicaciones web. BeEF explota las vulnerabilidades del navegador e interactúa con uno o más navegadores web para iniciar módulos de comando dirigidos. Cada navegador se puede configurar en un contexto de seguridad diferente.
+
+## Decompilation, Disassembly, and Debugging
+
