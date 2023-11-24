@@ -241,3 +241,5 @@ Es uno de los desensambladores, depuradores y decompiladores.
 **Objdump :**
 
 Objdump es un programa de Linux que se puede utilizar para mostrar información sobre uno o más archivos objeto. Puede utilizar Objdump para realizar comprobaciones rápidas y desensamblar archivos binarios.
+
+## Análisis forense
