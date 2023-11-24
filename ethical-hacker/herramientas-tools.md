@@ -269,3 +269,33 @@ Security Onion, una distribución de Linux destinada al monitoreo de la segurida
 **Estación de trabajo SIFT** : [https://digital-forensics.sans.org/community/downloads](https://digital-forensics.sans.org/community/downloads)
 
 La estación de trabajo SANS Investigative Forensic Toolkit (SIFT) demuestra que se pueden lograr capacidades avanzadas de respuesta a incidentes y técnicas forenses digitales profundas para intrusiones utilizando herramientas de código abierto de vanguardia que están disponibles gratuitamente y se actualizan con frecuencia.
+
+## Inalámbricas
+
+**Wifite2 :** [**https://github.com/derv82/wifite2**](https://github.com/derv82/wifite2)
+
+Este es un programa Python para probar redes inalámbricas.
+
+**Rogue access points :** [https://github.com/The-Art-of-Hacking/h4cker/blob/master/wireless\_resources/virtual\_adapters.md](https://github.com/The-Art-of-Hacking/h4cker/blob/master/wireless\_resources/virtual\_adapters.md)
+
+Puede crear fácilmente puntos de acceso no autorizados utilizando herramientas de código abierto como hostapd.
+
+**EAPHammer :** [https://github.com/s0lst1c3/eaphammer](https://github.com/s0lst1c3/eaphammer)
+
+Utilizar para realizar ataques de gemelos malvados.
+
+**mdk4 :** [https://github.com/aircrack-ng/mdk4](https://github.com/aircrack-ng/mdk4)
+
+Herramienta se utiliza para realizar fuzzing, evasiones de IDS y otros ataques inalámbricos.&#x20;
+
+**Spooftooph :** [https://gitlab.com/kalilinux/packages/spooftooph](https://gitlab.com/kalilinux/packages/spooftooph)
+
+Esta herramienta se utiliza para falsificar y clonar dispositivos Bluetooth .
+
+**Reaver:**&#x20;
+
+Esta herramienta se utiliza para realizar ataques de fuerza bruta contra implementaciones de configuración protegida Wi-Fi (WPS).
+
+**WiGLE :** puede obtener información sobre esta herramienta de conducción de guerra en [_https://wigle.net_](https://wigle.net/) .
+
+**Fern Wi-Fi Cracker:** esta herramienta se utiliza para realizar diferentes ataques contra redes inalámbricas, incluido el descifrado de claves WEP, WPA y WPS. Puede descargar Fern Wi-Fi Cracker desde [_https://gitlab.com/kalilinux/packages/fern-wifi-cracker_](https://gitlab.com/kalilinux/packages/fern-wifi-cracker) .
