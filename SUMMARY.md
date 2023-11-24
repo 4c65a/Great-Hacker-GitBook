@@ -225,7 +225,7 @@
 
 ## Reverse Engineering
 
-* [Untitled](reverse-engineering/untitled.md)
+* [Recursos](reverse-engineering/recursos.md)
 
 ## 🔴 Red Team
 
