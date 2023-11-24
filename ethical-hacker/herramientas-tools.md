@@ -201,3 +201,7 @@ Se han creado varias utilidades para realizar túneles DNS.
 * **Feederbot y Moto:** los atacantes han utilizado este malware con DNS para robar información confidencial de muchas organizaciones. Puede obtener información adicional sobre estas herramientas en [_https://chrisdietri.ch/post/feederbot-botnet-using-dns-command-and-control/_](https://chrisdietri.ch/post/feederbot-botnet-using-dns-command-and-control/) .
 
 ## Marcos de explotación
+
+**Metasploit :**&#x20;
+
+**BeEF :**&#x20;
