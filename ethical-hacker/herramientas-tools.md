@@ -298,7 +298,7 @@ Esta herramienta se utiliza para realizar ataques de fuerza bruta contra impleme
 
 **Fern Wi-Fi Cracker :** [https://gitlab.com/kalilinux/packages/fern-wifi-cracker](https://gitlab.com/kalilinux/packages/fern-wifi-cracker)
 
-## Nube
+## Steganography
 
 **OpenStego :** [_https://www.openstego.com_](https://www.openstego.com/).
 
@@ -311,3 +311,13 @@ Esta herramienta se utiliza para realizar ataques de fuerza bruta contra impleme
 **TinEye :** [_https://tineye.com_](https://tineye.com/).
 
 **metagoofil :** [_https://github.com/laramies/metagoofil_](https://github.com/laramies/metagoofil)
+
+## _Nube_
+
+**ScoutSuite :** [_https://github.com/nccgroup/ScoutSuite_](https://github.com/nccgroup/ScoutSuite).
+
+**CloudBrute:** [_https://github.com/0xsha/CloudBrute_](https://github.com/0xsha/CloudBrute).
+
+**Pacu:** [_https://github.com/RhinoSecurityLabs/pacu_](https://github.com/RhinoSecurityLabs/pacu)
+
+**Cloud Custodian :** [_https://cloudcustodian.io_](https://cloudcustodian.io/)
