@@ -246,14 +246,26 @@ Objdump es un programa de Linux que se puede utilizar para mostrar información 
 
 {% embed url="https://github.com/The-Art-of-Hacking/h4cker/tree/master/dfir" %}
 
-**ADIA (Dispositivo para la investigación y el análisis digital)** : ADIA es un dispositivo basado en VMware que se utiliza para la investigación y adquisición digital y que está construido íntegramente a partir de software de dominio público. Entre las herramientas contenidas en ADIA se encuentran Autopsy, Sleuth Kit, Digital Forensics Framework, log2timeline, Xplico y Wireshark. La mayor parte del mantenimiento del sistema utiliza Webmin. ADIA está diseñado para investigaciones y adquisiciones digitales de pequeñas y medianas empresas. El dispositivo se ejecuta en Linux, Windows y macOS. Están disponibles las versiones i386 (32 bits) y x86\_64 (64 bits). Puede descargar ADIA desde [_https://forensics.cert.org/#ADIA_](https://forensics.cert.org/#ADIA) .
+**ADIA** : [_https://forensics.cert.org/#ADIA_](https://forensics.cert.org/#ADIA)
 
-**CAINE** : El entorno de investigación asistido por computadora (CAINE) contiene numerosas herramientas que ayudan a los investigadores con los análisis, incluida la recopilación de pruebas forenses. Puede descargar CAINE desde [_http://www.caine-live.net/index.html_](http://www.caine-live.net/index.html) .
+ADIA es un dispositivo basado en VMware que se utiliza para la investigación y adquisición digital y que está construido íntegramente a partir de software de dominio público. Entre las herramientas contenidas en ADIA se encuentran Autopsy, Sleuth Kit, Digital Forensics Framework, log2timeline, Xplico y Wireshark.
 
-**Skadi** : esta solución todo en uno para analizar los datos recopilados hace que los datos se puedan buscar fácilmente con búsquedas comunes integradas y permite la búsqueda de uno o varios hosts simultáneamente. Puede descargar Skadi desde [_https://github.com/orlikoski/Skadi_](https://github.com/orlikoski/Skadi) .
+**CAINE** : [_http://www.caine-live.net/index.html_](http://www.caine-live.net/index.html)
 
-**PALADIN** : PALADIN es una distribución de Linux modificada para realizar diversas tareas de recopilación de pruebas de forma forense. Incluye muchas herramientas forenses de código abierto. Puede descargar PALADIN desde [_https://sumuri.com/software/paladin/_](https://sumuri.com/software/paladin/) .
+El entorno de investigación asistido por computadora (CAINE) contiene numerosas herramientas que ayudan a los investigadores con los análisis, incluida la recopilación de pruebas forenses.&#x20;
 
-**Security Onion** : Security Onion, una distribución de Linux destinada al monitoreo de la seguridad de la red, presenta herramientas de análisis avanzadas, algunas de las cuales pueden ayudar en investigaciones forenses. Puede descargar Security Onion desde [_https://github.com/Security-Onion-Solutions/security-onion_](https://github.com/Security-Onion-Solutions/security-onion) .
+**Skadi** : [_https://github.com/orlikoski/Skadi_](https://github.com/orlikoski/Skadi)
 
-**Estación de trabajo SIFT** : La estación de trabajo SANS Investigative Forensic Toolkit (SIFT) demuestra que se pueden lograr capacidades avanzadas de respuesta a incidentes y técnicas forenses digitales profundas para intrusiones utilizando herramientas de código abierto de vanguardia que están disponibles gratuitamente y se actualizan con frecuencia. Puede descargar SIFT Workstation desde [_https://digital-forensics.sans.org/community/downloads_](https://digital-forensics.sans.org/community/downloads) .
+Esta solución todo en uno para analizar los datos recopilados hace que los datos se puedan buscar fácilmente con búsquedas comunes integradas y permite la búsqueda de uno o varios hosts simultáneamente.
+
+**PALADIN** : [_https://sumuri.com/software/paladin/_](https://sumuri.com/software/paladin/)
+
+PALADIN es una distribución de Linux modificada para realizar diversas tareas de recopilación de pruebas de forma forense. Incluye muchas herramientas forenses de código abierto.&#x20;
+
+**Security Onion** : [_https://github.com/Security-Onion-Solutions/security-onion_](https://github.com/Security-Onion-Solutions/security-onion)
+
+Security Onion, una distribución de Linux destinada al monitoreo de la seguridad de la red, presenta herramientas de análisis avanzadas, algunas de las cuales pueden ayudar en investigaciones forenses.
+
+**Estación de trabajo SIFT** : [https://digital-forensics.sans.org/community/downloads](https://digital-forensics.sans.org/community/downloads)
+
+La estación de trabajo SANS Investigative Forensic Toolkit (SIFT) demuestra que se pueden lograr capacidades avanzadas de respuesta a incidentes y técnicas forenses digitales profundas para intrusiones utilizando herramientas de código abierto de vanguardia que están disponibles gratuitamente y se actualizan con frecuencia.
