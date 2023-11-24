@@ -214,16 +214,30 @@ Es un marco de explotación para pruebas de aplicaciones web. BeEF explota las v
 
 ## Decompilation, Disassembly, and Debugging
 
-**The GNU Project Debugger (GDB)**
+**The GNU Project Debugger (GDB) :** [**https://www.gnu.org/software/gdb**](https://www.gnu.org/software/gdb)
 
-**Windows Debugger**
+Tradicionalmente, GDB se ha utilizado principalmente para depurar programas escritos en C y C++; sin embargo, también se admiten varios otros lenguajes de programación, como Go, Objective-C y OpenCL C.
 
-**OllyDbg**
+**Windows Debugger (**_**WinDbg**_**) :** [**https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/getting-started-with-windows-debugging**](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/getting-started-with-windows-debugging)
 
-**edb Debugger**
+Para depurar el código del kernel y del modo de usuario. También puede usarlo para analizar volcados de memoria y analizar los registros de la CPU a medida que se ejecuta el código.
 
-**Immunity Debugger**
+**OllyDbg :** [**https://www.ollydbg.de/**](https://www.ollydbg.de/)
 
-**Interactive Disassembler (IDA)**
+Es un depurador creado para analizar aplicaciones de Windows de 32 bits.
 
-**Objdump**
+**edb Debugger :** [**https://github.com/eteran/edb-debugger**](https://github.com/eteran/edb-debugger)
+
+El depurador edb es un depurador multiplataforma que admite arquitecturas AArch32, x86 y x86-64.
+
+**Immunity Debugger :** [**https://www.immunityinc.com/products/debugger/**](https://www.immunityinc.com/products/debugger/)
+
+Le permite escribir exploits, analizar malware y aplicar ingeniería inversa a archivos binarios.
+
+**Interactive Disassembler (IDA) :** [**https://www.hex-rays.com/products/ida/index.shtml**](https://www.hex-rays.com/products/ida/index.shtml)
+
+Es uno de los desensambladores, depuradores y decompiladores.
+
+**Objdump :**
+
+Objdump es un programa de Linux que se puede utilizar para mostrar información sobre uno o más archivos objeto. Puede utilizar Objdump para realizar comprobaciones rápidas y desensamblar archivos binarios.
