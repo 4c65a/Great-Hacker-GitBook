@@ -298,4 +298,16 @@ Esta herramienta se utiliza para realizar ataques de fuerza bruta contra impleme
 
 **Fern Wi-Fi Cracker :** [https://gitlab.com/kalilinux/packages/fern-wifi-cracker](https://gitlab.com/kalilinux/packages/fern-wifi-cracker)
 
-Esta herramienta se utiliza para realizar diferentes ataques contra redes inalámbricas, incluido el descifrado de claves WEP, WPA y WPS.
+## Nube
+
+**OpenStego :** [_https://www.openstego.com_](https://www.openstego.com/).
+
+**snow :** [_https://github.com/mattkwan-zz/snow_](https://github.com/mattkwan-zz/snow).
+
+**Coagula :** [_https://www.abc.se/\~re/Coagula/Coagula.html_](https://www.abc.se/\~re/Coagula/Coagula.html).
+
+**Sonic Visualiser :** [_https://www.sonicvisualiser.org_](https://www.sonicvisualiser.org/).
+
+**TinEye :** [_https://tineye.com_](https://tineye.com/).
+
+**metagoofil :** [_https://github.com/laramies/metagoofil_](https://github.com/laramies/metagoofil)
