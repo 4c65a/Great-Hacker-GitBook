@@ -20,7 +20,7 @@ Hola, soy Leandro. Soy una persona autodidacta en las áreas de ciberseguridad y
 
 Considero esta guía o notas en GitBook como un proyecto a largo plazo en el área de ciberseguridad, más enfocado en pentesting o red team. Poco a poco, planeo agregar más áreas. Por ejemplo, debo incluir el área de red team con algunos conceptos, así como la de reverse engineering. En el futuro, podría añadir las áreas de Malware o Cloud. La ciberseguridad tiene muchas áreas para explorar y todo puede cambiar en el futuro.
 
-Dado que mi aprendizaje es continuo día a día, trato de aprender cosas nuevas o reforzar lo aprendido. Muchas de estas adiciones las incluyo aquí. Siempre intentaré mejorar, actualizar cada área y ampliar muchas áreas.
+Como mi aprendizaje es constante día a día, busco aprender cosas nuevas o reforzar lo aprendido, y añado muchas de estas experiencias aquí. Siempre me esforzaré por mejorarlo, actualizar cada área y ampliar diversos aspectos.
 
 {% hint style="success" %}
 Siempre trato de agregar los enlaces de donde obtuve la información. Obtengo todo de distintas páginas, videos, documentos, PDF o cursos. La base principal son los cursos de Cisco de ciberseguridad, redes o de Ethical Hacker.
