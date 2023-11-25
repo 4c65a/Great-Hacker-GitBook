@@ -105,7 +105,7 @@
 * [Tipos de Malware](ethical-hacker/tipos-de-malware.md)
 * [Bug bounty recon](ethical-hacker/bug-bounty-recon.md)
 * [Checklist](ethical-hacker/checklist/README.md)
-  * [Page](ethical-hacker/checklist/page.md)
+  * [OWASP](ethical-hacker/checklist/owasp.md)
 * [Herramientas/Tools](ethical-hacker/herramientas-tools.md)
 
 ## Pentesting Web
