@@ -162,7 +162,6 @@
   * [5432,5433:PostgreSQL](pentesting-networks/network-services/5432-5433-postgresql.md)
   * [137,138,139:NetBios](pentesting-networks/network-services/137-138-139-netbios.md)
   * [27017,27018:MongoDB](pentesting-networks/network-services/27017-27018-mongodb.md)
-* [Captura de Paquetes](pentesting-networks/captura-de-paquetes.md)
 * [Wireless](pentesting-networks/wireless/README.md)
   * [Explotación de vulnerabilidades inalámbricas](pentesting-networks/wireless/explotacion-de-vulnerabilidades-inalambricas/README.md)
     * [Bluejacking y Bluesnarfing](pentesting-networks/wireless/explotacion-de-vulnerabilidades-inalambricas/bluejacking-y-bluesnarfing.md)
@@ -174,6 +173,7 @@
     * [Ataques de vector de inicialización (IV) y protocolos inalámbricos no seguros](pentesting-networks/wireless/explotacion-de-vulnerabilidades-inalambricas/ataques-de-vector-de-inicializacion-iv-y-protocolos-inalambricos-no-seguros.md)
     * [Fragmentation Attacks](pentesting-networks/wireless/explotacion-de-vulnerabilidades-inalambricas/fragmentation-attacks.md)
     * [Ataques de KARMA](pentesting-networks/wireless/explotacion-de-vulnerabilidades-inalambricas/ataques-de-karma.md)
+* [Captura de Paquetes](pentesting-networks/captura-de-paquetes.md)
 * [Vectores de Ataques(Vulnerabilidades comunes)](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/README.md)
   * [On-Path Attacks](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/on-path-attacks.md)
   * [Ataques basados ​​en Kerberos y LDAP](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/ataques-basados-en-kerberos-y-ldap.md)
@@ -211,6 +211,8 @@
 
 * [HackTheBox](machines/hackthebox/README.md)
   * [Shoppy](machines/hackthebox/shoppy.md)
+  * [Wifinetic](machines/hackthebox/wifinetic.md)
+  * [TwoMillion](machines/hackthebox/twomillion.md)
 * [Docker/Vulnhub](machines/docker-vulnhub.md)
 * [Recursos de CTF](machines/recursos-de-ctf.md)
 
