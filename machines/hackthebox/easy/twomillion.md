@@ -74,19 +74,13 @@ ________________________________________________
 
 
 
-I’ll add this line to my `/etc/hosts`
+`Agregar 2millon.htb al archivo /etc/hosts`
 
 ```
 10.10.10.11 2million.htb
 ```
 
-#### Website - TCP 80 <a href="#website---tcp-80" id="website---tcp-80"></a>
-
-**Site**
-
-The site is a throwback to what HackTheBox looked like when it released in 2017:
-
-[![image-20230602171207436](https://0xdf.gitlab.io/img/image-20230602171207436.png)](https://0xdf.gitlab.io/img/image-20230602171207436.png)[_Click for full image_](https://0xdf.gitlab.io/img/image-20230602171207436.png)
+### Website - TCP 8 <a href="#website---tcp-80" id="website---tcp-80"></a>
 
 It’s worth taking a look at the full page, as it has some fun easter eggs, including the original 32 machines, and the scoreboard from September 2017.
 
