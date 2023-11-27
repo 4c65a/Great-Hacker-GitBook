@@ -14,14 +14,10 @@ layout:
 
 # ✅ TwoMillion
 
-### Recon <a href="#recon" id="recon"></a>
+## Recon <a href="#recon" id="recon"></a>
 
-#### nmap <a href="#nmap" id="nmap"></a>
-
-`nmap` finds two open TCP ports, SSH (22) and HTTP (80):
-
-```
-oxdf@hacky$ nmap -p- --min-rate 10000 10.10.10.11
+```bash
+nmap -p- --min-rate 10000 10.10.10.11
 Starting Nmap 7.80 ( https://nmap.org ) at 2023-06-01 16:59 EDT
 Nmap scan report for 2million.htb (10.10.10.11)
 Host is up (0.097s latency).
@@ -46,17 +42,12 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 10.19 seconds
 ```
 
-Based on the [OpenSSH](https://packages.ubuntu.com/search?keywords=openssh-server) version, the host is likely running Ubuntu 22.04 jammy.
+#### Subdomain <a href="#subdomain-bruteforce" id="subdomain-bruteforce"></a>
 
-The webserver is redirecting to `http://2million.htb`.
+`http://2million.htb`
 
-#### Subdomain Bruteforce <a href="#subdomain-bruteforce" id="subdomain-bruteforce"></a>
-
-Because there’s a DNS server names in use, I’ll bruteforce the server to see if anything different comes back with different subdomains of `2million.htb` with `ffuf`:
-
-```
-oxdf@hacky$ ffuf -u http://10.10.10.11 -H "Host: FUZZ.2million.htb" -w /opt/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -mc all -ac
-
+```bash
+ ffuf -u http://10.10.10.11 -H "Host: FUZZ.2million.htb" -w /opt/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -mc all -ac
         /'___\  /'___\           /'___\       
        /\ \__/ /\ \__/  __  __  /\ \__/       
        \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
@@ -81,9 +72,9 @@ ________________________________________________
 :: Progress: [4989/4989] :: Job [1/1] :: 408 req/sec :: Duration: [0:00:12] :: Errors: 0 ::
 ```
 
-This run sends HTTP requests to the web server with various different subdomains in the `Host` header, and looks for any that aren’t the same. It doesn’t find any.
 
-I’ll add this line to my `/etc/hosts` file:
+
+I’ll add this line to my `/etc/hosts`
 
 ```
 10.10.10.11 2million.htb
