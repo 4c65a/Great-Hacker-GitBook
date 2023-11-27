@@ -214,6 +214,9 @@
     * [✅ Shoppy](machines/hackthebox/easy/shoppy.md)
     * [Wifinetic](machines/hackthebox/easy/wifinetic.md)
     * [TwoMillion](machines/hackthebox/easy/twomillion.md)
+  * [🔵 Medium](machines/hackthebox/medium.md)
+  * [🔴 Hard](machines/hackthebox/hard.md)
+  * [🟥 Insane](machines/hackthebox/insane.md)
 * [Docker/Vulnhub](machines/docker-vulnhub.md)
 * [Recursos de CTF](machines/recursos-de-ctf.md)
 
