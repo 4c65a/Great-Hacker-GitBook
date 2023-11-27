@@ -19,8 +19,7 @@ layout:
 ## Escaneo de la máquina.
 
 ```bash
-┌─[darknite@parrot]─[~/Documents/htb/wifinetic]
-└──╼ $ nmap -sV -sC 10.10.11.247  -oA initial 
+nmap -sV -sC 10.10.11.247  -oA initial 
 Starting Nmap 7.93 ( https://nmap.org ) at 2023-09-14 23:23 EDT
 Nmap scan report for 10.10.11.247
 Host is up (0.20s latency).
@@ -57,7 +56,56 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 49.08 seconds
-┌─[darknite@parrot]─[~/Documents/htb/wifinetic]
-└──╼ $ 
 
+
+```
+
+### Realizar prueba con FTP
+
+```bash
+ftp 10.10.11.247
+```
+
+```bash
+ftp> ls
+229 Entering Extended Passive Mode (|||41883|)
+150 Here comes the directory listing.
+-rw-r--r--    1 ftp      ftp          4434 Jul 31 11:03 MigrateOpenWrt.txt
+-rw-r--r--    1 ftp      ftp       2501210 Jul 31 11:03 ProjectGreatMigration.pdf
+-rw-r--r--    1 ftp      ftp         60857 Jul 31 11:03 ProjectOpenWRT.pdf
+-rw-r--r--    1 ftp      ftp         40960 Sep 11 15:25 backup-OpenWrt-2023-07-26.tar                                                                         
+-rw-r--r--    1 ftp      ftp         52946 Jul 31 11:03 employees_wellness.pdf
+226 Directory send OK.
+
+```
+
+```bash
+ftp> prompt off
+Interactive mode off.
+ftp> mget *
+local: MigrateOpenWrt.txt remote: MigrateOpenWrt.txt
+229 Entering Extended Passive Mode (|||46603|)
+150 Opening BINARY mode data connection for MigrateOpenWrt.txt (4434 bytes).
+100% |****************************************************|  4434       12.66 MiB/s    00:00 ETA226 Transfer complete.
+4434 bytes received in 00:00 (45.51 KiB/s)
+local: ProjectGreatMigration.pdf remote: ProjectGreatMigration.pdf
+229 Entering Extended Passive Mode (|||43303|)
+150 Opening BINARY mode data connection for ProjectGreatMigration.pdf (2501210 bytes).
+100% |****************************************************|  2442 KiB    1.19 MiB/s    00:00 ETA226 Transfer complete.
+2501210 bytes received in 00:02 (1.14 MiB/s)
+local: ProjectOpenWRT.pdf remote: ProjectOpenWRT.pdf
+229 Entering Extended Passive Mode (|||41309|)
+150 Opening BINARY mode data connection for ProjectOpenWRT.pdf (60857 bytes).
+100% |****************************************************| 60857      312.13 KiB/s    00:00 ETA226 Transfer complete.
+60857 bytes received in 00:00 (208.67 KiB/s)
+local: backup-OpenWrt-2023-07-26.tar remote: backup-OpenWrt-2023-07-26.tar
+229 Entering Extended Passive Mode (|||48627|)
+150 Opening BINARY mode data connection for backup-OpenWrt-2023-07-26.tar (40960 bytes).
+100% |****************************************************| 40960      418.15 KiB/s    00:00 ETA226 Transfer complete.
+40960 bytes received in 00:00 (210.50 KiB/s)
+local: employees_wellness.pdf remote: employees_wellness.pdf
+229 Entering Extended Passive Mode (|||45844|)
+150 Opening BINARY mode data connection for employees_wellness.pdf (52946 bytes).
+100% |****************************************************| 52946      271.76 KiB/s    00:00 ETA226 Transfer complete.
+52946 bytes received in 00:00 (181.35 KiB/s)
 ```
