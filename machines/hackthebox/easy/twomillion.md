@@ -219,7 +219,7 @@ curl -X POST http://2million.htb/api/v1/invite/generate
 Para verlo bien, lo agregaré `-s`y lo canalizaré en `jq`:
 
 ```
-oxdf@hacky$ curl -X POST http://2million.htb/api/v1/invite/generate -s | jq .
+curl -X POST http://2million.htb/api/v1/invite/generate -s | jq .
 {
   "0": 200,
   "success": 1,
@@ -255,13 +255,9 @@ Puedo registrarme aquí e iniciar sesión.
 
 Con una cuenta, tengo acceso a lo que parece el sitio web original de HackTheBox:
 
-[![imagen-20230602180451178](https://0xdf.gitlab.io/img/image-20230602180451178.png)](https://0xdf.gitlab.io/img/image-20230602180451178.png)[_Haga clic para ver la imagen completa_](https://0xdf.gitlab.io/img/image-20230602180451178.png)
+[![imagen-20230602180451178](https://0xdf.gitlab.io/img/image-20230602180451178.png)](https://0xdf.gitlab.io/img/image-20230602180451178.png)
 
-Dice que el sitio está realizando migraciones de bases de datos y algunas funciones no están disponibles. En realidad, eso significa la mayoría. Los enlaces del Panel de control, las Reglas y el Registro de cambios en "Principal" funcionan y tienen bonitas páginas de retroceso al HTB original.
-
-En "Labs", el único enlace que realmente funciona es la página "Acceso", que conduce a `/home/access`:
-
-[![imagen-20230602180615851](https://0xdf.gitlab.io/img/image-20230602180615851.png)](https://0xdf.gitlab.io/img/image-20230602180615851.png)[_Haga clic para ver la imagen completa_](https://0xdf.gitlab.io/img/image-20230602180615851.png)
+[![imagen-20230602180615851](https://0xdf.gitlab.io/img/image-20230602180615851.png)](https://0xdf.gitlab.io/img/image-20230602180615851.png)
 
 Al hacer clic en "Paquete de conexión" y "Regenerar", se devuelve un `.ovpn`archivo. Es una configuración de conexión OpenVPN válida y puedo intentar conectarme con ella, pero no funciona.
 
@@ -386,7 +382,7 @@ bash: no job control in this shell
 www-data@2million:~/html$
 ```
 
-Actualizaré el shell usando el [truco](https://www.youtube.com/watch?v=DqE6DxqJg8Q)`script` / :`stty`
+Actualizaré el shell`script` / :`stty`
 
 ```
 www-data@2million:~/html$ script /dev/null -c bash
@@ -523,13 +519,7 @@ No está claro cómo se compara con 5.15.70-051570-generic. Dicho esto, esto se 
 
 #### CVE-2023-0386 <a href="#cve-2023-0386" id="cve-2023-0386"></a>
 
-**Fondo**
-
-[Este blog](https://securitylabs.datadoghq.com/articles/overlayfs-cve-2023-0386/) de Datadog hace un muy buen trabajo al analizar los detalles del exploit. El problema tiene que ver con el sistema de archivos superpuesto y cómo se mueven los archivos entre ellos. Para explotar esto, un atacante primero crea un sistema de archivos FUSE (Sistema de archivos en el espacio del usuario) y agrega un binario que pertenece al ID de usuario 0 en ese sistema de archivos y tiene el bit SetUID establecido. El error en OverlayFS permite que ese archivo se copie de FUSE FS al archivo principal manteniendo su propietario y SetUID.
-
 **Explotar**
-
-Hay una [prueba de concepto para este exploit](https://github.com/xkaneiki/CVE-2023-0386) en GitHub del investigador xkaneiki. Es `README.md`escaso, pero proporciona suficientes instrucciones de uso.
 
 Descargaré la versión ZIP del repositorio:
 
@@ -604,5 +594,4 @@ Voy a agarrar `root.txt`:
 
 ```
 root@2million:/root# cat root.txt
-05636c51************************
 ```
