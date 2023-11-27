@@ -210,9 +210,10 @@
 ## Machines
 
 * [HackTheBox](machines/hackthebox/README.md)
-  * [Shoppy](machines/hackthebox/shoppy.md)
-  * [Wifinetic](machines/hackthebox/wifinetic.md)
-  * [TwoMillion](machines/hackthebox/twomillion.md)
+  * [🟢 Easy](machines/hackthebox/easy/README.md)
+    * [✅ Shoppy](machines/hackthebox/easy/shoppy.md)
+    * [Wifinetic](machines/hackthebox/easy/wifinetic.md)
+    * [TwoMillion](machines/hackthebox/easy/twomillion.md)
 * [Docker/Vulnhub](machines/docker-vulnhub.md)
 * [Recursos de CTF](machines/recursos-de-ctf.md)
 

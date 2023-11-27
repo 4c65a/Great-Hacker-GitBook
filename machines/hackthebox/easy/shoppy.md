@@ -2,7 +2,7 @@
 description: Linux · Easy
 ---
 
-# Shoppy
+# ✅ Shoppy
 
 ## Reconocimiento
 
