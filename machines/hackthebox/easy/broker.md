@@ -38,3 +38,21 @@ sudo nmap -sS -p- -Pn --open 10.10.11.243 -vvv
   10   │ 61616/tcp open  unknown     syn-ack ttl 63
 ```
 
+### Servicios de puertos
+
+```
+ sudo nmap -sV -p 22,80,1883,5672,8161,40157,61613,61614,61616  10.10.11.243 -vvv
+```
+
+```
+PORT      STATE SERVICE    REASON         VERSION
+22/tcp    open  ssh        syn-ack ttl 63 OpenSSH 8.9p1 Ubuntu 3ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+80/tcp    open  http       syn-ack ttl 63 nginx 1.18.0 (Ubuntu)
+1883/tcp  open  mqtt       syn-ack ttl 63
+5672/tcp  open  amqp?      syn-ack ttl 63
+8161/tcp  open  http       syn-ack ttl 63 Jetty 9.4.39.v20210325
+40157/tcp open  tcpwrapped syn-ack ttl 63
+61613/tcp open  stomp      syn-ack ttl 63 Apache ActiveMQ
+61614/tcp open  http       syn-ack ttl 63 Jetty 9.4.39.v20210325
+61616/tcp open  apachemq   syn-ack ttl 63 ActiveMQ OpenWire transport
+```
