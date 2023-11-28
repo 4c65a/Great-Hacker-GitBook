@@ -66,3 +66,10 @@ PORT      STATE SERVICE    REASON         VERSION
 **Realice una pruba con contraseña y usuario basica: admin y admin y logre ingresar a este sitio.**
 
 <figure><img src="../../../.gitbook/assets/ActiveMQ.png" alt=""><figcaption></figcaption></figure>
+
+**Hasta ahora puedo saber que utiliza el servicio ActiveMQ ,tambien lo descubrimos con nmap.**
+
+```
+   1  | 61613/tcp open  stomp      syn-ack ttl 63 Apache ActiveMQ
+   2  │ 61616/tcp open  apachemq   syn-ack ttl 63 ActiveMQ OpenWire transport
+```
