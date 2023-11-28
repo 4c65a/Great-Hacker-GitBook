@@ -12,7 +12,7 @@ layout:
     visible: true
 ---
 
-# Escáner de Puertos
+# Nmap
 
 ## Escanear puerto con nmap
 
@@ -233,3 +233,7 @@ Esta opción activa algunas opciones avanzadas y agresivas. Aún no he decidido 
 ```
 nmap -A 192.168.1.251
 ```
+
+<mark style="color:red;">**Recursos**</mark>
+
+{% embed url="https://www.stationx.net/nmap-cheat-sheet/" %}
