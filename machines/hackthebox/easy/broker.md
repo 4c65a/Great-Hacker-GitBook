@@ -81,3 +81,7 @@ Apache ActiveMQ® es el intermediario de mensajes basado en Java, multiprotocolo
 {% embed url="https://activemq.apache.org/" %}
 
 **Realizando una busqueda mas profunda descubri la vulnerabilidad CVE-2023-46604 de ActiveMQ con la version 5.15.15.**
+
+{% embed url="https://nvd.nist.gov/vuln/detail/CVE-2023-46604?ref=blog.ecoit.com.br" %}
+https://mvnrepository.com/artifact/org.apache.ac
+{% endembed %}
