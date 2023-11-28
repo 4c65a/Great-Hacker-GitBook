@@ -189,6 +189,7 @@
   * [Salto de VLAN](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/salto-de-vlan.md)
   * [Ataques de inanición de DHCP y servidores DHCP no autorizados](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/ataques-de-inanicion-de-dhcp-y-servidores-dhcp-no-autorizados.md)
 * [Transferencias de Archivos](pentesting-networks/transferencias-de-archivos.md)
+* [Curl](pentesting-networks/curl.md)
 
 ## Linux
 
