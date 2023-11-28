@@ -206,6 +206,7 @@
 * [Técnicas de seguridad de Linux](linux/tecnicas-de-seguridad-de-linux/README.md)
   * [Configurar Fail2Ban](linux/tecnicas-de-seguridad-de-linux/configurar-fail2ban.md)
   * [Configuracion UFW](linux/tecnicas-de-seguridad-de-linux/configuracion-ufw.md)
+* [Tratamiento de la TTY](linux/tratamiento-de-la-tty.md)
 
 ## Machines
 
