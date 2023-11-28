@@ -73,3 +73,11 @@ PORT      STATE SERVICE    REASON         VERSION
    1  | 61613/tcp open  stomp      syn-ack ttl 63 Apache ActiveMQ
    2  │ 61616/tcp open  apachemq   syn-ack ttl 63 ActiveMQ OpenWire transport
 ```
+
+¿Qu**e es ActiveMQ**?
+
+Apache ActiveMQ® es el intermediario de mensajes basado en Java, multiprotocolo y de código abierto más popular. Admite protocolos estándar de la industria para que los usuarios obtengan los beneficios de las opciones del cliente en una amplia gama de idiomas y plataformas. Conéctese desde clientes escritos en JavaScript, C, C++, Python, .Net y más. Integre sus aplicaciones multiplataforma utilizando el omnipresente protocolo AMQP . Intercambie mensajes entre sus aplicaciones web usando STOMP sobre websockets. Administre sus dispositivos IoT usando MQTT . Respalde su infraestructura JMS existente y más allá. ActiveMQ ofrece el poder y la flexibilidad para admitir cualquier caso de uso de mensajería.
+
+{% embed url="https://activemq.apache.org/" %}
+
+**Realizando una busqueda mas profunda descubri la vulnerabilidad CVE-2023-46604 de ActiveMQ con la version 5.15.15.**
