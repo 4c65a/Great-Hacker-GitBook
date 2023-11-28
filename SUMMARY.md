@@ -188,6 +188,7 @@
   * [Omisión del control de acceso a la red (NAC)](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/omision-del-control-de-acceso-a-la-red-nac.md)
   * [Salto de VLAN](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/salto-de-vlan.md)
   * [Ataques de inanición de DHCP y servidores DHCP no autorizados](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/ataques-de-inanicion-de-dhcp-y-servidores-dhcp-no-autorizados.md)
+* [Transferencias de Archivos](pentesting-networks/transferencias-de-archivos.md)
 
 ## Linux
 
