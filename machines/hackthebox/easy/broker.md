@@ -56,3 +56,13 @@ PORT      STATE SERVICE    REASON         VERSION
 61614/tcp open  http       syn-ack ttl 63 Jetty 9.4.39.v20210325
 61616/tcp open  apachemq   syn-ack ttl 63 ActiveMQ OpenWire transport
 ```
+
+## Ir al navegador&#x20;
+
+**Cuando fui al navegador a la direccion `10.10.11.243 Ip.`**
+
+<figure><img src="../../../.gitbook/assets/SignIn.png" alt=""><figcaption></figcaption></figure>
+
+**Realice una pruba con contraseña y usuario basica: admin y admin y logre ingresar a este sitio.**
+
+<figure><img src="../../../.gitbook/assets/ActiveMQ.png" alt=""><figcaption></figcaption></figure>
