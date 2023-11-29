@@ -229,8 +229,9 @@
 
 * [Rust](programming/rust.md)
 * [Go](programming/go.md)
-* [C](programming/c.md)
 * [Python](programming/python.md)
+* [JavaScript](programming/javascript.md)
+* [C](programming/c.md)
 * [BASH](programming/bash.md)
 * [Assembly](programming/assembly.md)
 
