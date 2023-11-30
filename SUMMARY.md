@@ -238,10 +238,11 @@
 ## Reverse Engineering
 
 * [Recursos](reverse-engineering/recursos.md)
+* [Binary exploitation](reverse-engineering/binary-exploitation.md)
 
 ## 🔴 Red Team
 
-* [Page 1](red-team/page-1.md)
+* [Escalacion de privilegios](red-team/escalacion-de-privilegios.md)
 
 ## Cloud Security
 
@@ -251,3 +252,7 @@
   * [Privilege Escalation](cloud-security/tipos-de-ataques/privilege-escalation.md)
   * [Ataques al servicio de metadatos](cloud-security/tipos-de-ataques/ataques-al-servicio-de-metadatos.md)
   * [Ataques de canal lateral](cloud-security/tipos-de-ataques/ataques-de-canal-lateral.md)
+
+## Windows
+
+* [Page 1](windows/page-1.md)
