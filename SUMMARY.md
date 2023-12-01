@@ -54,7 +54,7 @@
     * [File metadata](ethical-hacker/reconocimiento-pasivo/reputacion/file-metadata.md)
 * [Reconocimiento Activo](ethical-hacker/reconocimiento-activo/README.md)
   * [Subdominios](ethical-hacker/reconocimiento-activo/subdominios.md)
-  * [Enumeración por fuerza bruta](ethical-hacker/reconocimiento-activo/enumeracion-por-fuerza-bruta.md)
+  * [Busquedas de directorios](ethical-hacker/reconocimiento-activo/busquedas-de-directorios.md)
   * [Nmap](ethical-hacker/reconocimiento-activo/nmap/README.md)
     * [Combinaciones](ethical-hacker/reconocimiento-activo/nmap/combinaciones.md)
   * [Enumeracion](ethical-hacker/reconocimiento-activo/enumeracion/README.md)

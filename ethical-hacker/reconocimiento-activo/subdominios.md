@@ -40,3 +40,7 @@ amass enum -d example.com -max-dns-queries 120 >> subdominios.txt
 amass enum -passive -d example.com >> subdominios.txt
 ```
 
+<mark style="color:red;">**Recursos**</mark>
+
+{% embed url="https://pentester.land/blog/subdomains-enumeration-cheatsheet/" %}
+

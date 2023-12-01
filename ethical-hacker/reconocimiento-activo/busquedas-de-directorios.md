@@ -12,5 +12,5 @@ layout:
     visible: true
 ---
 
-# Enumeración por fuerza bruta
+# Busquedas de directorios
 
