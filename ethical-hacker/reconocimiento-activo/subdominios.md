@@ -22,3 +22,21 @@ La busquedas de subdominos,son muy importante a la hora de hacer una auditoria d
 
 Existen varias forma de buscar subdominos tanto de forma pasiva o activa.
 
+**De forma activa:**
+
+```
+subfinder -d example.com >> subdominios.txt
+```
+
+```
+sublist3r -d example.com  >> subdominios.txt
+```
+
+```
+amass enum -d example.com -max-dns-queries 120 >> subdominios.txt
+```
+
+```
+amass enum -passive -d example.com >> subdominios.txt
+```
+
