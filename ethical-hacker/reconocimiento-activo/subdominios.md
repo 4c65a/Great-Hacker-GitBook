@@ -19,3 +19,6 @@ La busquedas de subdominos,son muy importante a la hora de hacer una auditoria d
 
 
 <img src="../../.gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
+
+Existen varias forma de buscar subdominos tanto de forma pasiva o activa.
+
