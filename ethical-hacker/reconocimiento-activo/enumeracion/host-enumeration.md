@@ -22,4 +22,10 @@ Enumeración de hosts es el proceso de identificar los hosts activos en una red.
 Nmap -sn 192.168.1.10
 ```
 
-###
+### Gobuster host virtuales
+
+`vhost` descubre nombres de host virtuales en los servidores web de destino.
+
+```
+gobuster vhost -u https://example.com -t 50 -w /wordlists/Discovery/DNS/subdomains-top1million-5000.txt
+```
