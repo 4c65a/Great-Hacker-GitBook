@@ -65,3 +65,6 @@ Usando otra de las listas de palabras de Seclists /wordlists/Discovery/DNS/subdo
 
 {% embed url="https://pentester.land/blog/subdomains-enumeration-cheatsheet/" %}
 
+{% embed url="https://github.com/OJ/gobuster" %}
+
+{% embed url="https://www.poplabsec.com/gobuster-tutorial/" %}
