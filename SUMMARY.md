@@ -95,7 +95,7 @@
   * [IPv4 y IPv6](ethical-hacker/teoria-network/ipv4-y-ipv6.md)
   * [Telnet/SSH](ethical-hacker/teoria-network/telnet-ssh.md)
   * [DHCP/v4](ethical-hacker/teoria-network/dhcp-v4.md)
-  * [VLANs](ethical-hacker/teoria-network/vlans.md)
+  * [VLAN](ethical-hacker/teoria-network/vlan.md)
   * [TCP y UDP](ethical-hacker/teoria-network/tcp-y-udp.md)
   * [FTP](ethical-hacker/teoria-network/ftp.md)
   * [ARP](ethical-hacker/teoria-network/arp.md)
