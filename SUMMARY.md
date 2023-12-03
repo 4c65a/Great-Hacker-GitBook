@@ -103,7 +103,6 @@
   * [TCP/IP](ethical-hacker/teoria-network/tcp-ip.md)
   * [ICMPv4 e ICMPv6](ethical-hacker/teoria-network/icmpv4-e-icmpv6.md)
   * [VPN](ethical-hacker/teoria-network/vpn.md)
-* [Tipos de Malware](ethical-hacker/tipos-de-malware.md)
 * [Bug bounty recon](ethical-hacker/bug-bounty-recon.md)
 * [Checklist](ethical-hacker/checklist/README.md)
   * [OWASP](ethical-hacker/checklist/owasp.md)
@@ -261,3 +260,8 @@
 ## web3/Blockchain
 
 * [Pentesting web3/Blockchain](web3-blockchain/pentesting-web3-blockchain.md)
+
+## Malware
+
+* [Page 2](malware/page-2.md)
+* [Tipos de Malware](malware/tipos-de-malware.md)
