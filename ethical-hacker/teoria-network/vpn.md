@@ -18,4 +18,6 @@ La VPN es una red privada y cifrada a internet desde un dispositivoa una red.Ayu
 
 
 
+<img src="../../.gitbook/assets/file.excalidraw (4).svg" alt="" class="gitbook-drawing">
+
 &#x20;
