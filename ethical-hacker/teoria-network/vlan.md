@@ -14,11 +14,9 @@ layout:
 
 # VLAN
 
-Puede definir una red de área local (LAN) como dominio de transmisión. Los concentradores, puentes y conmutadores en el mismo segmento o segmentos físicos conectan todos los nodos finales. Los nodos finales pueden comunicarse entre sí sin un enrutador. Los enrutadores conectan las LAN y enrutan el tráfico a cada puerto apropiado.
-
 Una LAN virtual (VLAN) es una red de área local que asigna dispositivos según una base distinta a la ubicación geográfica, por ejemplo, por departamento, tipo de usuario o aplicación principal. El tráfico que fluye entre diferentes VLAN debe pasar a través de un enrutador, como si las VLAN estuvieran en dos LAN separadas.
 
-Una VLAN es un grupo de dispositivos de red (computadoras, servidores y otros recursos) que se comportan como si estuvieran conectados a un único segmento de red, aunque no lo estén. Por ejemplo, el personal de marketing puede estar ubicado en todo un edificio, pero si todos están asignados a una única VLAN, pueden compartir recursos y ancho de banda como si estuvieran conectados al mismo segmento. Los recursos de otros departamentos pueden ser invisibles para los miembros de marketing de la VLAN, accesibles para todos o solo para personas específicas, dependiendo de cómo configure la VLAN.
+Una VLAN es un grupo de dispositivos de red  que se comportan como si estuvieran conectados a un único segmento de red, aunque no lo estén.&#x20;
 
 Las VLAN tienen una serie de ventajas:
 
