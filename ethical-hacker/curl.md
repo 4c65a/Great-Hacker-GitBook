@@ -258,6 +258,18 @@ The process of obtaining an access key depends on the API you’re using. Once y
 curl -X GET -H "Authorization: Bearer {ACCESS_TOKEN}" "https://api.server.io/posts"
 ```
 
+#### Cronometrar una conexión con Curl <a href="#timing-a-connection-with-curl" id="timing-a-connection-with-curl"></a>
+
+Otra razón por la que comencé a aprender más sobre curl fue que quería ver cuánto tiempo exactamente tardaba mi sitio web en responder.
+
+Aunque la documentación básica no lo cubre, al buscar un poco en Google se descubrió este comando, que me resultó muy útil:
+
+```
+curl -w "%{time_total}\n" -o /dev/null -s www.example.com
+```
+
+Esto simplemente generará el tiempo total que tomó obtener la respuesta del dominio dado.
+
 <mark style="color:red;">**Recursos**</mark>
 
 {% embed url="https://linuxize.com/post/curl-command-examples/#install-curl-on-centos-and-fedora" %}
@@ -265,3 +277,9 @@ curl -X GET -H "Authorization: Bearer {ACCESS_TOKEN}" "https://api.server.io/pos
 {% embed url="https://linuxize.com/post/curl-rest-api/#http-get" %}
 
 {% embed url="https://www.freecodecamp.org/news/how-to-start-using-curl-and-why-a-hands-on-introduction-ea1c913caaaa/" %}
+
+{% embed url="https://www.digitalocean.com/community/tutorials/workflow-downloading-files-curl" %}
+
+{% embed url="https://www.stationx.net/curl-cheat-sheet/" %}
+
+{% embed url="https://linuxopsys.com/topics/curl-command-cheat-sheet" %}
