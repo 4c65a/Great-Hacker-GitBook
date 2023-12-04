@@ -190,4 +190,74 @@ Si el servidor proxy requiere autenticación, utilice la opción `-U`( `--proxy-
 curl -U username:password -x 192.168.44.1:8888 http://linux.com/Copiar
 ```
 
-\
+### HTTP GET <a href="#http-get" id="http-get"></a>
+
+The GET method requests a specific resource from the server.
+
+GET is the default method when making HTTP requests with `curl`. Here is an example of making a GET request to the [JSONPlaceholder](https://jsonplaceholder.typicode.com/) API to a JSON representation of all posts:
+
+```
+curl https://jsonplaceholder.typicode.com/postsCopy
+```
+
+To filter the results use query params:
+
+```
+curl https://jsonplaceholder.typicode.com/posts?userId=1Copy
+```
+
+### HTTP POST <a href="#http-post" id="http-post"></a>
+
+The POST method is used to create a resource on the server. If the resource exists, it is overridden.
+
+The following command makes a [POST request](https://linuxize.com/post/curl-post-request/) using the data specified with the `-d` option:
+
+```
+curl -X POST -d "userId=5&title=Hello World&body=Post body." https://jsonplaceholder.typicode.com/postsCopy
+```
+
+The type of the request body is specified using the `Content-Type` header. By default when this header is not given `curl` uses `Content-Type: application/x-www-form-urlencoded`.
+
+To send a JSON formatted data set the body type to `application/json`:
+
+```
+curl -X POST -H "Content-Type: application/json" \    -d '{"userId": 5, "title": "Hello World", "body": "Post body."}' \    https://jsonplaceholder.typicode.com/postsCopyCopyCopy
+```
+
+### HTTP PUT <a href="#http-put" id="http-put"></a>
+
+The PUT method is used to update or replace a resource on the server. It replaces all data of the specified resource with the request data.
+
+```
+curl -X PUT -d "userId=5&title=Hello World&body=Post body." https://jsonplaceholder.typicode.com/posts/5Copy
+```
+
+### HTTP PATCH <a href="#http-patch" id="http-patch"></a>
+
+The PUT method is used to make partial updates to the resource on the server.
+
+```
+curl -X PUT -d "title=Hello Universe" https://jsonplaceholder.typicode.com/posts/5Copy
+```
+
+### HTTP DELETE <a href="#http-delete" id="http-delete"></a>
+
+The DELETE method removes the specified resource from the server.
+
+```
+curl -X DELETE https://jsonplaceholder.typicode.com/posts/5Copy
+```
+
+### Authentication <a href="#authentication" id="authentication"></a>
+
+If the API endpoint requires authentication, you’ll need to obtain an access key. Otherwise, the API server will respond with the “Access Forbidden” or “Unauthorized” response message.
+
+The process of obtaining an access key depends on the API you’re using. Once you have your access token you can send it in the header:
+
+```
+curl -X GET -H "Authorization: Bearer {ACCESS_TOKEN}" "https://api.server.io/posts"
+```
+
+<mark style="color:red;">**Recursos**</mark>
+
+{% embed url="https://linuxize.com/post/curl-command-examples/#install-curl-on-centos-and-fedora" %}
