@@ -261,3 +261,7 @@ curl -X GET -H "Authorization: Bearer {ACCESS_TOKEN}" "https://api.server.io/pos
 <mark style="color:red;">**Recursos**</mark>
 
 {% embed url="https://linuxize.com/post/curl-command-examples/#install-curl-on-centos-and-fedora" %}
+
+{% embed url="https://linuxize.com/post/curl-rest-api/#http-get" %}
+
+{% embed url="https://www.freecodecamp.org/news/how-to-start-using-curl-and-why-a-hands-on-introduction-ea1c913caaaa/" %}
