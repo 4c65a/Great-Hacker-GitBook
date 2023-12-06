@@ -220,7 +220,7 @@
     * [✅ Wifinetic](machines/hackthebox/easy/wifinetic.md)
     * [✅ TwoMillion](machines/hackthebox/easy/twomillion.md)
     * [✅ Broker](machines/hackthebox/easy/broker.md)
-    * [Pilgrimage](machines/hackthebox/easy/pilgrimage.md)
+    * [✅ Pilgrimage](machines/hackthebox/easy/pilgrimage.md)
   * [🔵 Medium](machines/hackthebox/medium.md)
   * [🟣 Hard](machines/hackthebox/hard.md)
   * [🔴 Insane](machines/hackthebox/insane.md)
