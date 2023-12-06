@@ -269,7 +269,7 @@ git-dumper http://pilgrimage.htb/ ~/Desktop/HTB/Pilgrimage/contend/
 
 <figure><img src="../../../.gitbook/assets/Contend.png" alt=""><figcaption></figcaption></figure>
 
-
+## Explotacion
 
 Sabiendo que magick se puede ejecutar decidi ver su version.
 
@@ -282,6 +282,8 @@ ImageMagick 7.1.0-49
 Buscando su vulnerabilidad:
 
 {% embed url="https://nvd.nist.gov/vuln/detail/CVE-2022-44268" %}
+
+Un actor malintencionado podría crear un archivo PNG o utilizar uno existente y agregar un tipo de fragmento de texto (por ejemplo, `tEXt`). Estos tipos tienen una palabra clave y una cadena de texto. Si la palabra clave es la cadena "profile" (sin comillas), entonces ImageMagick interpretará la cadena de texto como un nombre de archivo y cargará el contenido como un perfil sin procesar. Luego, el atacante puede descargar la imagen redimensionada que contendrá el contenido de un archivo remoto.
 
 Para hacer una imagen maliciosa se puede usar este exploit:&#x20;
 
@@ -302,6 +304,8 @@ sudo pacman -S imagemagick
 #### Run the project
 
 `cargo run "/etc/passwd"`
+
+El camino de explotación consiste en crear un archivo PNG malicioso con un fragmento `tEXT` que contiene un atributo `profile` que hace referencia a un archivo local. Cuando se utiliza la herramienta para convertir, modificar o procesar de alguna otra manera la imagen, el contenido de los archivos referenciados se incorpora en la nueva imagen.
 
 <figure><img src="../../../.gitbook/assets/2023-12-05_23-08.png" alt=""><figcaption></figcaption></figure>
 
