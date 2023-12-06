@@ -362,3 +362,46 @@ emily:x:1000:1000:emily,,,:/home/emily:/bin/bash
 ```
 
 El objectivo es hacer otra ejecucion mas ,pero a otros directorios para recaudar ma sinformacion.
+
+Analizando algunos archivo ,se encontro repetida mente la misma ruta. ,que al parecer es de la base de datos.
+
+```
+sqlite:/var/db/pilgrimage
+```
+
+```php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $image = new Bulletproof\Image($_FILES);
+  if($image["toConvert"]) {
+    $image->setLocation("/var/www/pilgrimage.htb/tmp");
+    $image->setSize(100, 4000000);
+    $image->setMime(array('png','jpeg'));
+    $upload = $image->upload();
+    if($upload) {
+      $mime = ".png";
+      $imagePath = $upload->getFullPath();
+      if(mime_content_type($imagePath) === "image/jpeg") {
+        $mime = ".jpeg";
+      }
+      $newname = uniqid();
+      exec("/var/www/pilgrimage.htb/magick convert /var/www/pilgrimage.htb/tmp/" . $upload->getName() . $mime . " -resize 50% /var/www/pilgrimage.htb/shrunk/" . $newname . $mime);
+      unlink($upload->getFullPath());
+      $upload_path = "http://pilgrimage.htb/shrunk/" . $newname . $mime;
+      if(isset($_SESSION['user'])) {
+        $db = new PDO('sqlite:/var/db/pilgrimage');
+        $stmt = $db->prepare("INSERT INTO `images` (url,original,username) VALUES (?,?,?)");
+        $stmt->execute(array($upload_path,$_FILES["toConvert"]["name"],$_SESSION['user']));
+      }
+      header("Location: /?message=" . $upload_path . "&status=success");
+    }
+    else {
+      header("Location: /?message=Image shrink failed&status=fail");
+    }
+  }
+  else {
+    header("Location: /?message=Image shrink failed&status=fail");
+  }
+}
+
+```
+
