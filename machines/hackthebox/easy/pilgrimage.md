@@ -1027,3 +1027,27 @@ python format.py -t "code.txt"
 
 <figure><img src="../../../.gitbook/assets/2Emil.png" alt=""><figcaption></figcaption></figure>
 
+Posiblemente esta es el pasword de emily.
+
+```
+abigchonkyboi123
+```
+
+## SSH
+
+```
+ssh emily@10.10.11.219
+password: abigchonkyboi123
+```
+
+<figure><img src="../../../.gitbook/assets/2023-12-06_23-21.png" alt=""><figcaption></figcaption></figure>
+
+Ahora se hace el comando ls y cat al user.txt primera bandera.
+
+## Escalada de privilegio
+
+Hice un sudo -l y no tuve exito ,escribi este comando.
+
+`find / -perm -4000 2>/dev/null`
+
+&#x20;Este comando busca y muestra en la salida estándar todos los archivos en el sistema de archivos que tienen el bit setuid activado, y los errores se redirigen a `/dev/null` para evitar que se muestren.
