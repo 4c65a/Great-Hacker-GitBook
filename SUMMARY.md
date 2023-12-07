@@ -225,6 +225,7 @@
   * [🟣 Hard](machines/hackthebox/hard.md)
   * [🔴 Insane](machines/hackthebox/insane.md)
 * [Docker/Vulnhub](machines/docker-vulnhub.md)
+* [Docker/WebSploit](machines/docker-websploit.md)
 * [Recursos de CTF](machines/recursos-de-ctf.md)
 
 ## Programming
