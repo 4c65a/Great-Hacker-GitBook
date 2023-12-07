@@ -1118,16 +1118,16 @@ Ahora a eso lo debes envia.
 
 <figure><img src="../../../.gitbook/assets/2023-12-07_00-24.png" alt=""><figcaption></figcaption></figure>
 
-EN la carpeta donde se creo la imagen ,active el servidor con python,de forma paralela estuve en escucha con nc,me posicione en el directorio
+En la carpeta donde se creo la imagen ,active el servidor con python,de forma paralela estuve en escucha con nc,me posicione en el directorio
 
 ```php
 /var/www/pilgrimage.htb/shrunk/
 ```
 
-En ese directorio se alacenan las imagen que se suben en el sitio web, en ese directorio hice un curl para descargar la imagen.
+En ese directorio se almacenan las imagen que se suben en el sitio web, en ese directorio hice un curl para descargar la imagen.
 
 ```bash
-#En el momento que se descraga la imagen se conecta a la maquina victima.
+#En el momento que se descarga la imagen se conecta a la maquina victima.
 #Coloque los siguentes comandos:
 cd 
 ls 
