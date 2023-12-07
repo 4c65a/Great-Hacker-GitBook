@@ -266,5 +266,5 @@
 
 ## Malware
 
-* [Page 2](malware/page-2.md)
+* [Recursos](malware/recursos.md)
 * [Tipos de Malware](malware/tipos-de-malware.md)
