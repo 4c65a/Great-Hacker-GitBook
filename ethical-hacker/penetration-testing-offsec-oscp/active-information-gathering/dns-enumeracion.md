@@ -122,3 +122,145 @@ router.megacorpone.com has address 51.222.169.214
 Utilizando esta lista de palabras simplificada, descubrimos entradas para "www", "mail" y "router". Sin embargo, los nombres de host "ftp", "owa" y "proxy" no se encontraron. Existen listas de palabras mucho más completas como parte del proyecto SecLists.248 Estas listas de palabras se pueden instalar en el directorio /usr/share/seclists usando el comando sudo apt install seclists.
 
 Con la excepción del registro www, nuestra enumeración de fuerza bruta hacia adelante de DNS reveló un conjunto de direcciones IP dispersas en el mismo rango aproximado (51.222.169.X). Si el administrador de DNS
+
+Si el administrador de DNS de megacorpone.com configuró registros PTR249 para el dominio, podríamos escanear el rango aproximado con búsquedas inversas para solicitar el nombre de host de cada IP.
+
+Usemos un bucle para escanear las direcciones IP 51.222.169.200 a 51.222.169.254. Filtraremos los resultados no válidos (usando grep -v) mostrando solo las entradas que no contienen "no encontrado".
+
+```
+kali@kali:~$ for ip in $(seq 200 254); do host 51.222.169.$ip; done | grep -v "not
+found"
+...
+208.169.222.51.in-addr.arpa domain name pointer admin.megacorpone.com.
+209.169.222.51.in-addr.arpa domain name pointer beta.megacorpone.com.
+210.169.222.51.in-addr.arpa domain name pointer fs1.megacorpone.com.
+211.169.222.51.in-addr.arpa domain name pointer intranet.megacorpone.com.
+212.169.222.51.in-addr.arpa domain name pointer mail.megacorpone.com.
+213.169.222.51.in-addr.arpa domain name pointer mail2.megacorpone.com.
+214.169.222.51.in-addr.arpa domain name pointer router.megacorpone.com.
+215.169.222.51.in-addr.arpa domain name pointer siem.megacorpone.com.
+216.169.222.51.in-addr.arpa domain name pointer snmp.megacorpone.com.
+217.169.222.51.in-addr.arpa domain name pointer syslog.megacorpone.com.
+218.169.222.51.in-addr.arpa domain name pointer support.megacorpone.com.
+219.169.222.51.in-addr.arpa domain name pointer test.megacorpone.com.
+220.169.222.51.in-addr.arpa domain name pointer vpn.megacorpone.com.
+...
+```
+
+Hemos logrado resolver con éxito una serie de direcciones IP a hosts válidos utilizando búsquedas inversas de DNS. Si estuviéramos realizando una evaluación, podríamos extrapolar aún más estos resultados y analizar "mail2", "router", etc., y realizar una búsqueda inversa de los resultados positivos. Este tipo de escaneos suelen ser cíclicos; ampliamos nuestra búsqueda en función de la información que recibimos en cada ronda.
+
+Ahora que hemos desarrollado nuestras habilidades básicas de enumeración de DNS, exploremos cómo podemos automatizar el proceso utilizando algunas aplicaciones.
+
+En Kali Linux existen varias herramientas que pueden automatizar la enumeración de DNS. Dos ejemplos notables son DNSRecon y DNSenum; exploremos sus capacidades.
+
+DNSRecon250 es un script avanzado de enumeración de DNS escrito en Python. Ejecutemos dnsrecon contra megacorpone.com, usando la opción `-d` para especificar un nombre de dominio y `-t` para especificar el tipo de enumeración a realizar (en este caso, un escaneo estándar).
+
+```
+kali@kali:~$ dnsrecon -d megacorpone.com -t std
+[*] std: Performing General Enumeration against: megacorpone.com...
+[-] DNSSEC is not configured for megacorpone.com
+[*]
+SOA ns1.megacorpone.com 51.79.37.18
+[*]
+NS ns1.megacorpone.com 51.79.37.18
+[*]
+NS ns3.megacorpone.com 66.70.207.180
+[*]
+NS ns2.megacorpone.com 51.222.39.63
+[*]
+MX mail.megacorpone.com 51.222.169.212
+[*]
+MX spool.mail.gandi.net 217.70.178.1
+[*]
+MX fb.mail.gandi.net 217
+```
+
+**Basándonos en la salida anterior, hemos logrado realizar un análisis DNS exitoso en los principales tipos de registros del dominio megacorpone.com.**
+
+**Ahora intentemos forzar la búsqueda de nombres de host adicionales utilizando el archivo list.txt que creamos previamente para búsquedas directas.**
+
+```
+kali@kali:~$ cat list.txt
+www
+ftp
+mail
+owa
+proxy
+router
+```
+
+**Para realizar nuestro intento de fuerza bruta, utilizaremos la opción `-d` para especificar un nombre de dominio, `-D` para especificar un nombre de archivo que contenga posibles cadenas de subdominio y `-t` para especificar el tipo de enumeración a realizar, en este caso `brt` para fuerza bruta.**
+
+```
+kali@kali:~$ dnsrecon -d megacorpone.com -D ~/list.txt -t brt
+[*] Usando el archivo de diccionario: /home/kali/list.txt (proporcionado por el usuario)
+[*] brt: Realizando fuerza bruta de host y subdominio contra megacorpone.com...
+[+]
+A www.megacorpone.com 149.56.244.87
+[+]
+A mail.megacorpone.com 51.222.169.212
+[+]
+A router.megacorpone.com 51.222.169.214
+[+] Se encontraron 3 registros
+```
+
+**Nuestro intento de fuerza bruta ha finalizado y hemos logrado resolver algunos nombres de host.**
+
+**DNSEnum es otra herramienta popular de enumeración de DNS que se puede utilizar para automatizar aún más la enumeración de DNS del dominio megacorpone.com. Podemos pasarle a la herramienta algunas opciones, pero para este ejemplo solo le pasaremos el parámetro del dominio objetivo:**
+
+```
+kali@kali:~$ dnsenum megacorpone.com
+...
+dnsenum VERSION:1.2.6
+-----
+megacorpone.com
+-----
+...
+Fuerza bruta con /usr/share/dnsenum/dns.txt:
+_______________________________________________
+admin.megacorpone.com.
+5
+PWK - Copyright © 2023 OffSec Services Limited. All rights reserved.
+IN
+A
+51.222.169.208
+```
+
+**Como resultado de nuestra extensa enumeración de DNS, ahora hemos descubierto varios hosts previamente desconocidos.**
+
+**Como se mencionó al inicio de este módulo, la recopilación de información tiene un patrón cíclico, por lo que necesitaremos realizar todas las demás tareas de enumeración pasiva y activa en este nuevo subconjunto de hosts para revelar cualquier nuevo detalle potencial.**
+
+**Las herramientas de enumeración que se han cubierto son prácticas y directas, y debemos familiarizarnos con cada una antes de continuar.**
+
+**Habiendo cubierto las herramientas de Kali, exploremos qué tipo de enumeración de DNS podemos realizar desde una perspectiva de Windows.**
+
+**Aunque no se encuentra en la lista LOLBAS, `nslookup` es otra excelente utilidad para la enumeración de DNS de Windows y aún se utiliza durante escenarios de `Living off the Land`. Las aplicaciones que pueden proporcionar una ejecución de código no intencionada normalmente se enumeran en el proyecto LOLBAS.**
+
+**Una vez conectados al cliente Windows 11, podemos ejecutar una consulta simple para resolver el registro A del host `mail.megacorptwo.com`.**
+
+```
+C:\Users\student>nslookup mail.megacorptwo.com
+La solicitud de DNS ha expirado.
+El tiempo de espera fue de 2 segundos.
+Servidor: Desconocido
+Dirección: 192.168.50.151
+Nombre:
+mail.megacorptwo.com
+Dirección: 192.168.50.154
+```
+
+**En la salida anterior, consultamos al servidor DNS predeterminado (`192.168.50.151`) para resolver la dirección IP de `mail.megacorptwo.com`, a lo que el servidor DNS respondió con "192.168.50.154".**
+
+**De manera similar al comando `host` de Linux, `nslookup` puede realizar consultas más granulares. Por ejemplo, podemos consultar un DNS determinado sobre un registro TXT que pertenece a un host específico.**
+
+```
+C:\Users\student>nslookup -type=TXT info.megacorptwo.com 192.168.50.151
+Servidor: Desconocido
+Dirección: 192.168.50.151
+```
+
+"saludos del cuerpo del registro TXT"
+
+**En este ejemplo, estamos consultando específicamente el servidor DNS `192.168.50.151` para cualquier registro TXT relacionado con el host `info.megacorptwo.com`.**
+
+**La utilidad `nslookup` es tan versátil como el comando `host` de Linux y las consultas también se pueden automatizar aún más a través de `PowerShell` o scripts de `Batch`.**
