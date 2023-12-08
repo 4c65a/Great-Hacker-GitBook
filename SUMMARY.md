@@ -109,7 +109,8 @@
 * [Herramientas/Tools](ethical-hacker/herramientas-tools.md)
 * [Docker](ethical-hacker/docker.md)
 * [Curl](ethical-hacker/curl.md)
-* [Penetration testing offSec](ethical-hacker/penetration-testing-offsec.md)
+* [Penetration testing offSec](ethical-hacker/penetration-testing-offsec/README.md)
+  * [Whois enumeracion](ethical-hacker/penetration-testing-offsec/whois-enumeracion.md)
 
 ## Pentesting Web
 
