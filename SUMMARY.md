@@ -113,7 +113,7 @@
   * [Whois enumeracion](ethical-hacker/penetration-testing-offsec/whois-enumeracion.md)
   * [Netcraft](ethical-hacker/penetration-testing-offsec/netcraft.md)
   * [Open Sourcer code](ethical-hacker/penetration-testing-offsec/open-sourcer-code.md)
-  * [Page 2](ethical-hacker/penetration-testing-offsec/page-2.md)
+  * [Security Headers and SSL/TLS](ethical-hacker/penetration-testing-offsec/security-headers-and-ssl-tls.md)
   * [Page 3](ethical-hacker/penetration-testing-offsec/page-3.md)
   * [Page 4](ethical-hacker/penetration-testing-offsec/page-4.md)
 

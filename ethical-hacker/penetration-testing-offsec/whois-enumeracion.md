@@ -14,6 +14,8 @@ layout:
 
 # Whois enumeracion
 
+**La enumeración Whois es una técnica de reconocimiento pasivo.**
+
 **¿Qué es Whois?**
 
 Whois es un servicio TCP, herramienta y tipo de base de datos que puede proporcionar información sobre un nombre de dominio, como servidor de nombres y registrador. Esta información a menudo es pública, ya que los registradores cobran una tarifa por la registración privada.
