@@ -14,7 +14,7 @@ layout:
 
 # Netcraft
 
-**Netcraft**
+**Netcraft :** Una herramienta para la recopilación pasiva de información
 
 Estas funciones incluyen la detección de tecnologías utilizadas en un sitio web específico y la identificación de otros hosts que comparten el mismo bloque de red IP.
 
