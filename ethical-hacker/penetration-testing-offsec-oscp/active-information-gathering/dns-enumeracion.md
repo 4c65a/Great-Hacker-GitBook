@@ -75,3 +75,50 @@ Ahora, determinemos si megacorpone.com tiene un servidor con el nombre de host "
 kali@kali:~$ host idontexist.megacorpone.com
 Host idontexist.megacorpone.com not found: 3(NXDOMAIN)
 ```
+
+En el Listado 41, consultamos un nombre de host válido y recibimos una respuesta de resolución de IP. Por el contrario, el Listado 42 devolvió un error (NXDOMAIN247) indicando que no existe un registro DNS público para ese nombre de host. Como ahora comprendemos cómo buscar nombres de host válidos, podemos automatizar nuestros esfuerzos.
+
+Una vez aprendidos los conceptos básicos de enumeración de DNS, podemos desarrollar técnicas de fuerza bruta de DNS para acelerar nuestra investigación.
+
+La fuerza bruta es una técnica de prueba y error que busca encontrar información válida, como directorios en un servidor web, combinaciones de nombre de usuario y contraseña o, en este caso, registros DNS válidos. Mediante el uso de una lista de palabras que contiene nombres de host comunes, podemos intentar adivinar registros DNS y verificar la respuesta de los nombres de host válidos.
+
+En los ejemplos anteriores, utilizamos búsquedas directas, que solicitan la dirección IP de un nombre de host para consultar tanto un nombre de host válido como uno no válido. Si el host resuelve con éxito un nombre a una IP, esto podría ser una indicación de un servidor funcional.
+
+```
+kali@kali:~$ cat list.txt
+www
+ftp
+mail
+owa
+proxy
+router
+no
+```
+
+Primero, creamos una lista de posibles nombres de host.
+
+```
+kali@kali:~$ for ip in $(cat list.txt); do host $ip.megacorpone.com; done
+www.megacorpone.com has address 149.56.244.87
+Host ftp.megacorpone.com not found: 3(NXDOMAIN)
+mail.megacorpone.com has address 51.222.169.212
+Host owa.megacorpone.com not found: 3(NXDOMAIN)
+Host proxy.megacorpone.com not found: 3(NXDOMAIN)
+router.megacorpone.com has address 51.222.169.214
+```
+
+A continuación, podemos usar una línea de comandos de Bash para intentar resolver cada nombre de host.
+
+```
+kali@kali:~$ for ip in $(cat list.txt); do host $ip.megacorpone.com; done
+www.megacorpone.com has address 149.56.244.87
+Host ftp.megacorpone.com not found: 3(NXDOMAIN)
+mail.megacorpone.com has address 51.222.169.212
+Host owa.megacorpone.com not found: 3(NXDOMAIN)
+Host proxy.megacorpone.com not found: 3(NXDOMAIN)
+router.megacorpone.com has address 51.222.169.214
+```
+
+Utilizando esta lista de palabras simplificada, descubrimos entradas para "www", "mail" y "router". Sin embargo, los nombres de host "ftp", "owa" y "proxy" no se encontraron. Existen listas de palabras mucho más completas como parte del proyecto SecLists.248 Estas listas de palabras se pueden instalar en el directorio /usr/share/seclists usando el comando sudo apt install seclists.
+
+Con la excepción del registro www, nuestra enumeración de fuerza bruta hacia adelante de DNS reveló un conjunto de direcciones IP dispersas en el mismo rango aproximado (51.222.169.X). Si el administrador de DNS
