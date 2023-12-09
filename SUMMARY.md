@@ -217,8 +217,6 @@
 
 ## Linux
 
-* [NDG Linux Essentials](linux/ndg-linux-essentials/README.md)
-  * [Aplicaciones de código abierto y Licencias](linux/ndg-linux-essentials/aplicaciones-de-codigo-abierto-y-licencias.md)
 * [Distribuciones para hacker](linux/distribuciones-para-hacker.md)
 * [Carpetas](linux/carpetas.md)
 * [Comando de Linux](linux/comando-de-linux.md)
