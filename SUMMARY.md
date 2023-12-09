@@ -117,7 +117,7 @@
     * [Security Headers and SSL/TLS](ethical-hacker/penetration-testing-offsec-oscp/passive-information-gathering/security-headers-and-ssl-tls.md)
   * [Active Information Gathering](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/README.md)
     * [DNS Enumeracion](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/dns-enumeracion.md)
-    * [Page 7](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/page-7.md)
+    * [TCP/UDP Port Scanning](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/tcp-udp-port-scanning.md)
     * [Page 8](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/page-8.md)
     * [Page 6](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/page-6.md)
   * [Page 5](ethical-hacker/penetration-testing-offsec-oscp/page-5.md)
