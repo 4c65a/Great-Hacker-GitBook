@@ -4,6 +4,14 @@
 
 * [Bienvenidos](README.md)
 
+## ⚫ Red Team/Black Hat
+
+* [Escalacion de privilegios](red-team-black-hat/escalacion-de-privilegios.md)
+* [Reconocimiento](red-team-black-hat/reconocimiento.md)
+* [Enumeracion](red-team-black-hat/enumeracion.md)
+* [Explotacion](red-team-black-hat/explotacion.md)
+* [Post – Explotación](red-team-black-hat/post-explotacion.md)
+
 ## Ethical Hacker
 
 * [Ethical Hacker](ethical-hacker/ethical-hacker/README.md)
@@ -225,6 +233,8 @@
   * [Configurar Fail2Ban](linux/tecnicas-de-seguridad-de-linux/configurar-fail2ban.md)
   * [Configuracion UFW](linux/tecnicas-de-seguridad-de-linux/configuracion-ufw.md)
 * [Tratamiento de la TTY](linux/tratamiento-de-la-tty.md)
+* [BASH](linux/bash.md)
+* [Backup](linux/backup.md)
 
 ## Machines
 
@@ -249,17 +259,12 @@
 * [Python](programming/python.md)
 * [JavaScript](programming/javascript.md)
 * [C](programming/c.md)
-* [BASH](programming/bash.md)
 * [Assembly](programming/assembly.md)
 
 ## Reverse Engineering
 
 * [Recursos](reverse-engineering/recursos.md)
 * [Binary exploitation](reverse-engineering/binary-exploitation.md)
-
-## 🔴 Red Team
-
-* [Escalacion de privilegios](red-team/escalacion-de-privilegios.md)
 
 ## Cloud Security
 
@@ -272,7 +277,14 @@
 
 ## Windows
 
-* [Page 1](windows/page-1.md)
+* [PowerShell](windows/powershell.md)
+* [CMD](windows/cmd.md)
+* [Directorios](windows/directorios.md)
+* [Batch](windows/batch.md)
+* [Servicios basicos](windows/servicios-basicos.md)
+* [Comandos basicos](windows/comandos-basicos.md)
+* [Seguridad](windows/seguridad.md)
+* [Backup](windows/backup.md)
 
 ## web3/Blockchain
 
