@@ -14,15 +14,15 @@ layout:
 
 # DNS Enumeracion
 
-El Sistema de Nombres de Dominio (DNS)246 es una base de datos distribuida responsable de traducir nombres de dominio fáciles de recordar para los usuarios en direcciones IP. Es uno de los sistemas más críticos de internet.
+El Sistema de Nombres de Dominio DNS es una base de datos distribuida responsable de traducir nombres de dominio fáciles de recordar para los usuarios en direcciones IP.&#x20;
 
 Esto se facilita mediante una estructura jerárquica dividida en varias zonas, comenzando por la zona raíz de nivel superior.
 
 Cada dominio puede utilizar diferentes tipos de registros DNS. Algunos de los tipos de registros DNS más comunes son:
 
 * **NS:** Los registros de servidor de nombres contienen el nombre de los servidores autorizados que alojan los registros DNS de un dominio.
-* **A:** También conocido como registro de host, el "registro A" contiene la dirección IPv4 de un nombre de host (como [www.megacorpone.com](https://www.megacorpone.com/)).
-* **AAAA:** También conocido como registro de host cuádruple A, el "registro AAAA" contiene la dirección IPv6 de un nombre de host (como [www.megacorpone.com](https://www.megacorpone.com/)).
+* **A:** También conocido como registro de host, el "registro A" contiene la dirección IPv4 de un nombre de host.
+* **AAAA:** También conocido como registro de host cuádruple A, el "registro AAAA" contiene la dirección IPv6 de un nombre de host.
 * **MX:** Los registros de intercambio de correo electrónico contienen los nombres de los servidores responsables de manejar el correo electrónico del dominio. Un dominio puede contener varios registros MX.
 * **PTR:** Los registros de puntero se utilizan en zonas de búsqueda inversa y pueden encontrar los registros asociados con una dirección IP.
 * **CNAME:** Los registros de nombre canónico se utilizan para crear alias para otros registros de host.
@@ -30,17 +30,17 @@ Cada dominio puede utilizar diferentes tipos de registros DNS. Algunos de los ti
 
 Debido a la gran cantidad de información contenida en el DNS, suele ser un objetivo lucrativo para la recopilación activa de información.
 
-Demostremos esto usando el comando `host` para encontrar la dirección IP de [www.megacorpone.com](https://www.megacorpone.com/).
+Demostremos esto usando el comando `host` para encontrar la dirección IP.
 
 ```
-kali@kali:~$ host www.megacorpone.com
-www.megacorpone.com has address 149.56.244.87
+host www.example.com
+www.example.com has address 149.56.244.87
 ```
 
 El comando `host` busca por defecto un registro A, pero también podemos consultar otros campos, como registros MX o TXT, especificando el tipo de registro en nuestra consulta usando la opción `-t`.
 
 ```
-kali@kali:~$ host -t mx megacorpone.com
+host -t mx megacorpone.com
 megacorpone.com mail is handled by 10 fb.mail.gandi.net.
 megacorpone.com mail is handled by 20 spool.mail.gandi.net.
 megacorpone.com mail is handled by 50 mail.megacorpone.com.
