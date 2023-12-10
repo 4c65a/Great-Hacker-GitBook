@@ -108,7 +108,6 @@
   * [Exfiltration](red-team-black-hat/explotacion/exfiltration.md)
   * [Emulating Ransomware](red-team-black-hat/explotacion/emulating-ransomware.md)
   * [Collection](red-team-black-hat/explotacion/collection.md)
-* [Page 22](red-team-black-hat/page-22.md)
 * [Red Team Tools](red-team-black-hat/red-team-tools.md)
 
 ## ⚪ Ethical Hacker
