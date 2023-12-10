@@ -6,11 +6,29 @@
 
 ## ⚫ Red Team/Black Hat
 
-* [Escalacion de privilegios](red-team-black-hat/escalacion-de-privilegios.md)
-* [Reconocimiento](red-team-black-hat/reconocimiento.md)
-* [Enumeracion](red-team-black-hat/enumeracion.md)
+* [Reconocimiento](red-team-black-hat/reconocimiento/README.md)
+  * [Reconocimiento externo](red-team-black-hat/reconocimiento/reconocimiento-externo.md)
+  * [Reconocimeinto de Hots](red-team-black-hat/reconocimiento/reconocimeinto-de-hots.md)
+  * [Reconociemiento de dominios](red-team-black-hat/reconocimiento/reconociemiento-de-dominios.md)
+* [Persistencia y Escalada de Privilegios](red-team-black-hat/persistencia-y-escalada-de-privilegios/README.md)
+  * [Persistencia](red-team-black-hat/persistencia-y-escalada-de-privilegios/persistencia.md)
+  * [Escalada de Privilegios](red-team-black-hat/persistencia-y-escalada-de-privilegios/escalada-de-privilegios.md)
+* [Credenciales y Suplantación de Usuario](red-team-black-hat/credenciales-y-suplantacion-de-usuario/README.md)
+  * [Password Cracking](red-team-black-hat/credenciales-y-suplantacion-de-usuario/password-cracking.md)
+  * [Credentials & User Impersonation](red-team-black-hat/credenciales-y-suplantacion-de-usuario/credentials-and-user-impersonation.md)
+* [Movimiento Lateral](red-team-black-hat/movimiento-lateral/README.md)
+  * [Lateral Movement](red-team-black-hat/movimiento-lateral/lateral-movement.md)
+  * [Session Passing](red-team-black-hat/movimiento-lateral/session-passing.md)
+  * [SOCKS Proxies](red-team-black-hat/movimiento-lateral/socks-proxies.md)
+  * [Reverse Port Forwards](red-team-black-hat/movimiento-lateral/reverse-port-forwards.md)
+* [Abuso de Tecnologías Específicas](red-team-black-hat/abuso-de-tecnologias-especificas/README.md)
+  * [DPAPI](red-team-black-hat/abuso-de-tecnologias-especificas/dpapi.md)
+  * [Kerberos](red-team-black-hat/abuso-de-tecnologias-especificas/kerberos.md)
+  * [Group Policy](red-team-black-hat/abuso-de-tecnologias-especificas/group-policy.md)
+  * [MS SQL Server](red-team-black-hat/abuso-de-tecnologias-especificas/ms-sql-server.md)
 * [Explotacion](red-team-black-hat/explotacion.md)
 * [Post – Explotación](red-team-black-hat/post-explotacion.md)
+* [Page 1](red-team-black-hat/page-1.md)
 
 ## Ethical Hacker
 
