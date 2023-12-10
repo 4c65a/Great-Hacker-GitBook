@@ -111,7 +111,7 @@
 * [Page 22](red-team-black-hat/page-22.md)
 * [Red Team Tools](red-team-black-hat/red-team-tools.md)
 
-## Ethical Hacker
+## ⚪ Ethical Hacker
 
 * [Ethical Hacker](ethical-hacker/ethical-hacker/README.md)
   * [Metodologías](ethical-hacker/ethical-hacker/metodologias.md)
@@ -232,7 +232,7 @@
   * [Page 2](ethical-hacker/penetration-testing-offsec-oscp/page-2.md)
   * [Page](ethical-hacker/penetration-testing-offsec-oscp/page.md)
 
-## Pentesting Web
+## 🟢 Pentesting Web
 
 * [GraphQL](pentesting-web/graphql/README.md)
   * [Checklist](pentesting-web/graphql/checklist.md)
@@ -265,7 +265,7 @@
   * [Inyección de comandos](pentesting-web/inyeccion/inyeccion-de-comandos.md)
 * [Pérdida de Control de Acceso](pentesting-web/perdida-de-control-de-acceso.md)
 
-## Pentesting Networks
+## 🔵 Pentesting Networks
 
 * [Network Services](pentesting-networks/network-services/README.md)
   * [143,993:IMAP](pentesting-networks/network-services/143-993-imap.md)
@@ -314,7 +314,7 @@
   * [Ataques de inanición de DHCP y servidores DHCP no autorizados](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/ataques-de-inanicion-de-dhcp-y-servidores-dhcp-no-autorizados.md)
 * [Transferencias de Archivos](pentesting-networks/transferencias-de-archivos.md)
 
-## Linux
+## 🔵 Linux
 
 * [Distribuciones para hacker](linux/distribuciones-para-hacker.md)
 * [Carpetas](linux/carpetas.md)
@@ -335,7 +335,7 @@
 * [BASH](linux/bash.md)
 * [Backup](linux/backup.md)
 
-## Machines
+## 🟠 Machines
 
 * [HackTheBox](machines/hackthebox/README.md)
   * [🟢 Easy](machines/hackthebox/easy/README.md)
@@ -351,7 +351,7 @@
 * [Docker/WebSploit](machines/docker-websploit.md)
 * [Recursos de CTF](machines/recursos-de-ctf.md)
 
-## Programming
+## 🟡 Programming
 
 * [Rust](programming/rust.md)
 * [Go](programming/go.md)
@@ -360,12 +360,12 @@
 * [C](programming/c.md)
 * [Assembly](programming/assembly.md)
 
-## Reverse Engineering
+## 🟣 Reverse Engineering
 
 * [Recursos](reverse-engineering/recursos.md)
 * [Binary exploitation](reverse-engineering/binary-exploitation.md)
 
-## Cloud Security
+## 🟢 Cloud Security
 
 * [Tipos de ataques](cloud-security/tipos-de-ataques/README.md)
   * [Adquisición de cuenta (Account Takeover)](cloud-security/tipos-de-ataques/adquisicion-de-cuenta-account-takeover.md)
@@ -374,7 +374,7 @@
   * [Ataques al servicio de metadatos](cloud-security/tipos-de-ataques/ataques-al-servicio-de-metadatos.md)
   * [Ataques de canal lateral](cloud-security/tipos-de-ataques/ataques-de-canal-lateral.md)
 
-## Windows
+## 🟤 Windows
 
 * [PowerShell](windows/powershell.md)
 * [CMD](windows/cmd.md)
@@ -386,11 +386,7 @@
 * [Backup](windows/backup.md)
 * [Networks](windows/networks.md)
 
-## web3/Blockchain
-
-* [Pentesting web3/Blockchain](web3-blockchain/pentesting-web3-blockchain.md)
-
-## Malware
+## 🔴 Malware
 
 * [Recursos](malware/recursos.md)
 * [Tipos de Malware](malware/tipos-de-malware.md)
