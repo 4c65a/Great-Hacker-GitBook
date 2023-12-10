@@ -366,6 +366,7 @@
 * [Comandos basicos](windows/comandos-basicos.md)
 * [Seguridad](windows/seguridad.md)
 * [Backup](windows/backup.md)
+* [Networks](windows/networks.md)
 
 ## web3/Blockchain
 
