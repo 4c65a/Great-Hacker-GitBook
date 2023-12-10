@@ -63,9 +63,63 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 10.99 seconds
 ```
 
-**SSH**
+**Whatweb**
 
 ```
-nmap -p 22 --script ssh-brute  10.10.11.228
+whatweb http://cybermonday.htb/
+http://cybermonday.htb/ [200 OK] Cookies[XSRF-TOKEN,cybermonday_session], Country[RESERVED][ZZ]
+, HTML5, HTTPServer[nginx/1.25.1], HttpOnly[cybermonday_session], IP[10.10.11.228], PHP[8.1.20]
+, Script, Title[Welcome - Cyber Monday], X-Powered-By[PHP/8.1.20], X-UA-Compatible[IE=edge], ng
+inx[1.25.1]
+```
+
+## Enumeracion de directorios
+
+```
+feroxbuster --url http://cybermonday.htb -w ~/.repositories/SecLists/Discovery/Web-Content/co
+mmon.txt --filter-status 400 401 402 403 404
+
+ ___  ___  __   __     __      __         __   ___
+|__  |__  |__) |__) | /  `    /  \ \_/ | |  \ |__
+|    |___ |  \ |  \ | \__,    \__/ / \ | |__/ |___
+by Ben "epi" Risher 🤓                 ver: 2.7.1
+───────────────────────────┬──────────────────────
+ 🎯  Target Url            │ http://cybermonday.htb
+ 🚀  Threads               │ 50
+ 📖  Wordlist              │ /home/titan/.repositories/SecLists/Discovery/Web-Content/common.tx
+t
+ 💢  Status Code Filters   │ [400, 401, 402, 403, 404]
+ 💥  Timeout (secs)        │ 7
+ 🦡  User-Agent            │ feroxbuster/2.7.1
+ 🏁  HTTP methods          │ [GET]
+ 🔃  Recursion Depth       │ 4
+ 🎉  New Version Available │ https://github.com/epi052/feroxbuster/releases/latest
+───────────────────────────┴──────────────────────
+ 🏁  Press [ENTER] to use the Scan Management Menu™
+──────────────────────────────────────────────────
+200      GET       21l       56w      603c http://cybermonday.htb/.htaccess
+200      GET      239l      986w        0c http://cybermonday.htb/
+301      GET        7l       11w      169c http://cybermonday.htb/assets => http://cybermonday.
+htb/assets/
+301      GET        7l       11w      169c http://cybermonday.htb/assets/css => http://cybermon
+day.htb/assets/css/
+301      GET        7l       11w      169c http://cybermonday.htb/assets/img => http://cybermon
+day.htb/assets/img/
+301      GET        7l       11w      169c http://cybermonday.htb/assets/js => http://cybermond
+ay.htb/assets/js/
+301      GET        7l       11w      169c http://cybermonday.htb/assets/views => http://cyberm
+onday.htb/assets/views/
+301      GET        7l       11w      169c http://cybermonday.htb/assets/views/components => ht
+tp://cybermonday.htb/assets/views/components/
+```
+
+## Busqueda de vulnerabilidades y explotacion
+
+**Registros**
+
+```
+Username: kirov
+password : admin
+email: kirov@htb.com
 ```
 
