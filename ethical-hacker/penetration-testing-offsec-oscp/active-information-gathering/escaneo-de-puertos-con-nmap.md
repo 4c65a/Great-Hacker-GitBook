@@ -504,3 +504,83 @@ TCP port 88 is open
 
 **A continuación, exploraremos algunas técnicas avanzadas de escaneo de redes, como la detección de servicios y la identificación de sistemas operativos.**
 
+Vulnerability Scanning with Nmap
+
+Esta Unidad de Aprendizaje cubre los siguientes Objetivos de Aprendizaje:
+
+* Comprender los conceptos básicos del Motor de Scripts de Nmap (NSE).
+* Realizar un escaneo de vulnerabilidades ligero con Nmap.
+* Trabajar con scripts personalizados de NSE.
+
+En esta Unidad de Aprendizaje, exploraremos el Motor de Scripts de Nmap (NSE) y cómo aprovechar Nmap como un escáner de vulnerabilidades ligero. Además, aprenderemos sobre las categorías de scripts de NSE, cómo usar scripts de NSE en Nmap y cómo trabajar con scripts personalizados de NSE.
+
+#### 7.3.1 Scripts de Vulnerabilidad de NSE
+
+Como alternativa a Nessus, también podemos utilizar el NSE335 para realizar escaneos automatizados de vulnerabilidades. Los scripts de NSE amplían la funcionalidad básica de Nmap para realizar diversas tareas de redes. Estas tareas se agrupan en categorías en torno a casos como detección de vulnerabilidades, fuerza bruta y descubrimiento de redes. Los scripts también pueden ampliar las capacidades de detección de versiones y recopilación de información de Nmap.
+
+Un script de NSE puede tener más de una categoría. Por ejemplo, puede ser categorizado como seguro y vuln, o intrusivo y vuln. Los scripts categorizados como "seguros" no tienen un impacto potencial en la estabilidad, mientras que los scripts en la categoría "intrusiva" podrían hacer que un servicio o sistema objetivo falle. Para evitar problemas de estabilidad, es imperativo verificar cómo se categorizan los scripts y nunca ejecutar un script o categoría de NSE sin entender las implicaciones.
+
+En esta sección, nos centraremos en la categoría vuln para aprovechar Nmap como un escáner de vulnerabilidades ligero.
+
+En nuestra máquina virtual Kali, los scripts de NSE se encuentran en el directorio /usr/share/nmap/scripts/ con la extensión de archivo .nse. Este directorio también contiene el archivo script.db, que sirve como un índice de todos los scripts de NSE disponibles actualmente. Podemos usarlo para obtener una lista de scripts en la categoría vuln.
+
+```bash
+kali@kali:~$ cd /usr/share/nmap/scripts/
+kali@kali:/usr/share/nmap/scripts$ cat script.db | grep "\"vuln\""
+...
+```
+
+Cada entrada tiene un nombre de archivo y categorías. El nombre de archivo representa el nombre del script de NSE en el directorio de NSE.
+
+Algunos de los scripts de NSE estándar están bastante desactualizados. Afortunadamente, se integró el script vulners337, que proporciona información de vulnerabilidad actualizada sobre versiones de servicios detectados a partir de la Base de Datos de Vulnerabilidades Vulners.338 El script en sí tiene las categorías safe, vuln y external.
+
+Antes de iniciar nuestro primer escaneo de vulnerabilidades con el NSE, examinaremos el parámetro --script de Nmap. Este parámetro es responsable de determinar qué scripts de NSE se ejecutan en un escaneo. Los argumentos para este parámetro pueden ser una categoría, una expresión booleana, una lista de categorías separadas por comas, el nombre completo o con comodines de un script de NSE en script.db, o una ruta absoluta a un script específico.
+
+Comencemos con un escaneo de Nmap utilizando todos los scripts de NSE de la categoría vuln. El comando que utilizaremos contiene el parámetro --script mencionado anteriormente con el argumento vuln, que especifica todos los scripts con esta categoría. Además, proporcionaremos -sV para activar las capacidades de detección de servicios de Nmap. Finalmente, usaremos -p para escanear solo el puerto 443.
+
+```bash
+kali@kali:~$ sudo nmap -sV -p 443 --script "vuln" 192.168.50.124
+...
+```
+
+Nmap detectó el servicio Apache con la versión 2.4.49 e intentó todos los scripts de NSE de la categoría vuln. La mayor parte de la salida proviene del script vulners, que utiliza la información del servicio y la versión detectados para proporcionar datos de vulnerabilidad relacionados.
+
+El script vulners no solo muestra información sobre las CVE encontradas, sino también las puntuaciones CVSS y enlaces para obtener información adicional. Por ejemplo, el Listado 95 muestra que Nmap, en combinación con el script vulners, detectó que el objetivo es vulnerable a CVE-2021-41773.339
+
+Otra característica útil del script vulners es que también enumera Pruebas de Concepto para las vulnerabilidades encontradas, que están marcadas con "_EXPLOIT_". Sin embargo, sin una detección exitosa del servicio, el script vulners no proporcionará resultados.
+
+#### 7.3.2 Trabajando con Scripts de NSE
+
+En la sección anterior, aprendimos sobre la categoría vuln de NSE y el script vulners. Mientras que el script vulners proporciona una descripción general de todas las CVE asignadas a la versión detectada, a veces queremos verificar una CVE específica. Esto es especialmente útil cuando queremos escanear una red en busca de la existencia de una vulnerabilidad. Si lo hacemos con el script vulners, necesitaríamos revisar una enorme cantidad de información. Para la mayoría de las vulnerabilidades modernas, necesitamos integrar scripts de NSE dedicados manualmente.
+
+Practiquemos cómo hacer esto con CVE-2021-41773. Para encontrar un script de NSE adecuado, podemos utilizar un motor de búsqueda para encontrar el número de CVE más NSE (CVE-2021-41773 nse).
+
+**CVE-2021-41773 NSE Script**
+
+Una de las primeras entradas de búsqueda es un enlace a una página de GitHub340 que proporciona un script para verificar esta vulnerabilidad. Descarguemos este script y guárdelo como /usr/share/nmap/scripts/http-vuln-cve2021-41773.nse para cumplir con la sintaxis de nomenclatura de los demás scripts de NSE. Antes de que podamos usar el script, necesitaremos actualizar script.db con --script-updatedb.
+
+```bash
+bashCopy codekali@kali:~$ sudo cp /home/kali/Downloads/http-vuln-cve-2021-41773.nse /usr/share/nmap/scripts/http-vuln-cve2021-41773.nse
+kali@kali:~$ sudo nmap --script-updatedb
+```
+
+Para usar el script de NSE, proporcionaremos el nombre del script, la información del objetivo y el número de puerto. También habilitaremos la detección de servicios.
+
+```bash
+bashCopy codekali@kali:~$ sudo nmap -sV -p 443 --script "http-vuln-cve2021-41773" 192.168.50.124
+```
+
+El resultado indica que el objetivo es vulnerable a CVE-2021-41773 y nos proporciona información de fondo adicional.
+
+```bash
+bashCopy codePORT    STATE SERVICE           VERSION
+443/tcp open  http              Apache httpd 2.4.49 ((Unix))
+| http-vuln-cve2021-41773:
+|
+VULNERABLE:
+|
+Path traversal and file disclosure vulnerability in Apache HTTP Server 2.4.49
+...
+```
+
+Aunque Nmap no es un escáner de vulnerabilidades en el sentido tradicional, encontramos que el NSE es una característica potente que nos permite realizar un escaneo de vulnerabilidades ligero. En una prueba de penetración, podemos usar Nmap cuando no haya disponible un escáner de vulnerabilidades completo o cuando queramos verificar los hallazgos de otras herramientas.
