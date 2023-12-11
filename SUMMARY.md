@@ -224,7 +224,7 @@
   * [Active Information Gathering](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/README.md)
     * [DNS Enumeracion](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/dns-enumeracion.md)
     * [Escaneo de puertos con nmap](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/escaneo-de-puertos-con-nmap.md)
-    * [Page 8](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/page-8.md)
+    * [SMB enumeracion](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/smb-enumeracion.md)
     * [Page 6](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/page-6.md)
   * [Page 5](ethical-hacker/penetration-testing-offsec-oscp/page-5.md)
   * [Page 3](ethical-hacker/penetration-testing-offsec-oscp/page-3.md)

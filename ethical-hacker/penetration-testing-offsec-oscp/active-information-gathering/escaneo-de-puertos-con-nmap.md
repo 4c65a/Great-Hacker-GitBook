@@ -180,4 +180,327 @@ PORT     STATE SERVICE
 
 **En el próximo capítulo, exploraremos el escaneo de conexión TCP de Nmap, que realiza una conexión TCP completa para determinar el estado de un puerto.**
 
-\
+Escaneo de puertos de Nmap: TCP Connect Scan y UDP
+
+**Cuando un usuario que ejecuta Nmap no tiene privilegios de socket raw, Nmap utilizará por defecto la técnica de escaneo de conexión TCP.** A diferencia del escaneo SYN, que no requiere privilegios elevados, el escaneo de conexión TCP utiliza la API Berkeley sockets para realizar el protocolo de enlace de tres vías. Esto implica que el escaneo de conexión TCP tarda mucho más en completarse que un escaneo SYN.
+
+**Podemos necesitar realizar un escaneo de conexión en ocasiones, como cuando escaneamos a través de ciertos tipos de proxies.** Podemos usar la opción `-sT` para iniciar un escaneo de conexión.
+
+```
+kali@kali:~$ nmap -sT 192.168.50.149
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-09 06:44 EST
+Nmap scan report for 192.168.50.149
+Host is up (0.11s latency).
+Not shown: 989 closed tcp ports (conn-refused)
+PORT      STATE SERVICE
+53/tcp    open  domain
+88/tcp    open  kerberos-sec
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+389/tcp   open  ldap
+445/tcp   open  microsoft-ds
+464/tcp   open  kpasswd5
+593/tcp   open  http-rpc-epmap
+636/tcp   open  ldapssl
+3268/tcp  open  globalcatLDAP
+3269/tcp  open  globalcatLDAPssl
+...
+```
+
+**El resultado muestra que el escaneo de conexión generó algunos servicios abiertos que solo están activos en el host basado en Windows, especialmente los controladores de dominio.** Una conclusión importante, incluso de este simple escaneo, es que ya podemos inferir el sistema operativo subyacente y el rol del host objetivo.
+
+**Habiendo revisado las técnicas de escaneo TCP más comunes de Nmap, aprendamos sobre el escaneo UDP.**
+
+**Al realizar un escaneo UDP,** Nmap utilizará una combinación de dos métodos diferentes para determinar si un puerto está abierto o cerrado. Para la mayoría de los puertos, utilizará el método estándar "ICMP puerto inalcanzable" descrito anteriormente enviando un paquete vacío a un puerto determinado. Sin embargo, para puertos comunes, como el puerto 161 que utiliza SNMP, enviará un paquete SNMP específico del protocolo en un intento de obtener una respuesta de una aplicación enlazada a ese puerto. Para realizar un escaneo UDP, usaremos la opción `-sU`, con `sudo` requerido para acceder a sockets raw.
+
+```
+kali@kali:~$ sudo nmap -sU 192.168.50.149
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-03-04 11:46 EST
+Nmap scan report for 192.168.131.149
+Host is up (0.11s latency).
+Not shown: 977 closed udp ports (port-unreach)
+PORT STATE SERVICE
+123/udp open ntp
+389/udp open ldap
+```
+
+**El escaneo UDP detectó algunos puertos abiertos adicionales:**
+
+* 161/udp: SNMP
+* 53/udp: DNS
+* 67/udp: BOOTP
+
+**El escaneo UDP puede ser útil para identificar servicios que no utilizan TCP, como SNMP o BOOTP. Sin embargo, es importante tener en cuenta que el escaneo UDP puede ser más ruidoso que el escaneo TCP y puede generar respuestas de dispositivos que no sean el objetivo previsto.**\
+
+
+### Escaneo UDP y Escaneo Combinado UDP/TCP
+
+**El escaneo UDP (-sU) también se puede usar junto con un escaneo TCP SYN (-sS) para construir una imagen más completa de nuestro objetivo.**
+
+```
+kali@kali:~$ sudo nmap -sU -sS 192.168.50.149
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-09 08:16 EST
+Nmap scan report for 192.168.50.149
+Host is up (0.10s latency).
+Not shown: 989 closed tcp ports (reset), 977 closed udp ports (port-unreach)
+PORT     STATE SERVICE
+53/tcp    open domain
+88/tcp    open kerberos-sec
+135/tcp   open msrpc
+139/tcp   open netbios-ssn
+389/tcp   open ldap
+445/tcp   open microsoft-ds
+464/tcp   open kpasswd5
+593/tcp   open http-rpc-epmap
+636/tcp   open ldapssl
+3268/tcp  open globalcatLDAP
+3269/tcp  open globalcatLDAPssl
+53/udp    open domain
+123/udp   open ntp
+389/udp   open ldap
+...
+```
+
+**Nuestro escaneo conjunto TCP y UDP reveló puertos UDP abiertos adicionales, revelando aún más qué servicios se están ejecutando en el host objetivo.**
+
+### Escaneo de red (Network Sweeping)
+
+**Ahora podemos extender lo que hemos aprendido de un solo host y aplicarlo a una red completa a través del Network Sweeping.**
+
+Para lidiar con grandes volúmenes de hosts, o para intentar conservar el tráfico de red, podemos intentar sondear los objetivos utilizando técnicas de Network Sweeping en las que comenzamos con escaneos amplios y luego usamos escaneos más específicos contra los hosts de interés.
+
+**Al realizar un barrido de red con Nmap usando la opción `-sn`, el proceso de descubrimiento de host consiste en algo más que enviar una solicitud de eco ICMP. Nmap también envía un paquete SYN TCP al puerto 443, un paquete ACK TCP al puerto 80 y una solicitud de marca de tiempo ICMP para verificar si un host está disponible.**
+
+```
+kali@kali:~$ nmap -sn 192.168.50.1-253
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-10 03:19 EST
+Nmap scan report for 192.168.50.6
+Host is up (0.12s latency).
+Nmap scan report for 192.168.50.8
+Host is up (0.12s latency).
+...
+Nmap done: 254 IP addresses (13 hosts up) scanned in 3.74 seconds
+```
+
+**Al usar el escaneo de red, podemos identificar rápidamente qué hosts están activos en una red y luego enfocar nuestros esfuerzos en escanear esos hosts con más detalle.**
+
+### Escaneo de red con Nmap: Greppable Output y Escaneos Específicos
+
+**Buscar máquinas activas usando el comando `grep` en una salida estándar de Nmap puede ser engorroso. En lugar de eso, usemos el parámetro de salida "greppable" de Nmap, `-oG`, para guardar estos resultados en un formato más manejable.**
+
+```
+kali@kali:~$ nmap -v -sn 192.168.50.1-253 -oG ping-sweep.txt
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-10 03:21 EST
+Initiating Ping Scan at 03:21
+...
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 254 IP addresses (13 hosts up) scanned in 3.74 seconds
+...
+```
+
+**Luego podemos usar `grep` para encontrar hosts activos en el archivo de salida:**
+
+```
+kali@kali:~$ grep Up ping-sweep.txt | cut -d " " -f 2
+192.168.50.6
+192.168.50.8
+192.168.50.9
+...
+```
+
+**También podemos escanear en busca de puertos TCP o UDP específicos en la red, sondeando servicios y puertos comunes en un intento de localizar sistemas que puedan ser útiles o tener vulnerabilidades conocidas. Este escaneo tiende a ser más preciso que un ping sweep.**
+
+```
+kali@kali:~$ nmap -p 80 192.168.50.1-253 -oG web-sweep.txt
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-10 03:50 EST
+Nmap scan report for 192.168.50.6
+Host is up (0.11s latency).
+PORT     STATE SERVICE
+80/tcp    open http
+Nmap scan report for 192.168.50.8
+Host is up (0.11s latency).
+PORT     STATE SERVICE
+80/tcp   closed http
+...
+```
+
+**A continuación, podemos usar `grep` para encontrar hosts con el puerto 80 abierto:**
+
+```
+kali@kali:~$ grep open web-sweep.txt | cut -d" " -f2
+192.168.50.6
+192.168.50.20
+192.168.50.21
+```
+
+**Para ahorrar tiempo y recursos de red, también podemos escanear varias IP, sondeando una lista corta de puertos comunes. Por ejemplo, realicemos un escaneo de conexión TCP para los 20 puertos TCP principales con la opción `--top-ports` y habilitemos la detección de la versión del sistema operativo, el escaneo de scripts y el traceroute con `-A`.**
+
+```
+nmap -sT -A --top-ports=20 192.168.50.1-253 -oG top-port-sweep.txt
+```
+
+**Al utilizar diferentes opciones de escaneo y salida, Nmap nos permite recopilar información valiosa sobre los hosts en una red y comprender mejor su configuración de seguridad.**
+
+Los 20 puertos principales de Nmap se determinan mediante el archivo `/usr/share/nmap/nmap-services`, que utiliza un formato simple de tres columnas separadas por espacios en blanco.
+
+* La primera columna es el nombre del servicio.
+* La segunda columna contiene el número de puerto y el protocolo.
+* La tercera columna es la "frecuencia del puerto", que se basa en la frecuencia con la que se encontró abierto el puerto durante los escaneos de investigación periódicos de Internet.
+
+Todo lo que sigue a la tercera columna se ignora, pero se usa habitualmente para comentarios, como se muestra con el signo de almohadilla (#).
+
+**Ejemplo:**
+
+```
+...
+finger      79/udp     0.000956
+http        80/sctp    0.000000 # www-http | www | World Wide Web HTTP
+http        80/tcp     0.484143 # World Wide Web HTTP
+http        80/udp     0.035767 # World Wide Web HTTP
+hosts2-ns  81/tcp     0.012056 # HOSTS2 Name Server
+hosts2-ns  81/udp     0.001005 # HOSTS2 Name Server
+...
+```
+
+El archivo `nmap-services` nos ayuda a identificar rápidamente los servicios más comunes que se ejecutan en los hosts que escaneamos.
+
+**Escaneo exhaustivo y técnicas de descubrimiento de host:**
+
+* En este punto, podemos realizar un escaneo más exhaustivo contra máquinas individuales que son ricas en servicios o son interesantes de otra manera.
+* Hay muchas formas diferentes en las que podemos ser creativos con nuestro escaneo para conservar el ancho de banda o reducir nuestro perfil, así como interesantes técnicas de descubrimiento de host que vale la pena investigar más a fondo.
+
+**Huella digital del sistema operativo:**
+
+* Ahora hemos escaneado hosts que revelaron algunos servicios, por lo que podemos adivinar la naturaleza del sistema operativo del objetivo.
+* Afortunadamente para nosotros, Nmap ya viene con una opción de detección de huellas dactilares del sistema operativo.
+* La detección de huellas dactilares del sistema operativo se puede habilitar con la opción `-O`. Esta función intenta adivinar el sistema operativo del objetivo inspeccionando los paquetes devueltos.
+* Esto funciona porque los sistemas operativos a menudo usan implementaciones ligeramente diferentes de la pila TCP/IP (como valores TTL predeterminados variables y diferentes respuestas de paquetes TCP) que pueden ser identificadas por Nmap.
+
+**Próximos pasos:**
+
+* En el siguiente capítulo, exploraremos la detección de huellas dactilares del sistema operativo con más detalle y veremos cómo podemos utilizar esta información para obtener una mejor comprensión de nuestros objetivos.
+*   11
+
+    ### Detección de Huella Dactilar del Sistema Operativo con Nmap
+
+    **Nmap puede identificar el sistema operativo de un host inspeccionando los paquetes recibidos del objetivo y comparando la huella dactilar con una lista conocida. Por defecto, Nmap solo mostrará el sistema operativo detectado si la huella digital recuperada es muy precisa.**
+
+    **Para obtener una idea aproximada del sistema operativo objetivo, podemos incluir la opción `--osscan-guess` para forzar a Nmap a imprimir el resultado adivinado, incluso si no es completamente exacto.**
+
+    **Aquí hay un ejemplo de un escaneo simple de huella digital del sistema operativo de Nmap:**
+
+    ```
+    kali@kali:~$ sudo nmap -O 192.168.50.14 --osscan-guess
+    ...
+    Running (JUST GUESSING): Microsoft Windows 2008|2012|2016|7|Vista (88%)
+    OS CPE: cpe:/o:microsoft:windows_server_2008::sp1
+    cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_server_2012:r2
+    cpe:/o:microsoft:windows_server_2016 cpe:/o:microsoft:windows_7
+    cpe:/o:microsoft:windows_vista::sp1:home_premium
+    Aggressive OS guesses: Microsoft Windows Server 2008 SP1 or Windows Server 2008 R2
+    (88%), Microsoft Windows Server 2012 or Windows Server 2012 R2 (88%), Microsoft
+    Windows Server 2012 R2 (88%), Microsoft Windows Server 2012 (87%), Microsoft Windows
+    Server 2016 (87%), Microsoft Windows 7 (86%), Microsoft Windows Vista Home Premium SP1
+    (85%), Microsoft Windows 7 Professional (85%)
+    No exact OS matches for host (If you know what OS is running on it, see
+    https://nmap.org/submit/ ).
+    ...
+    ```
+
+    **La respuesta sugiere que el sistema operativo subyacente de este objetivo es Windows 2008 R2, 2012, 2016, Vista o Windows 7.**
+
+    **Tenga en cuenta que la detección de huellas dactilares del sistema operativo no siempre es 100% precisa, a menudo debido a dispositivos de red como firewalls o proxies que reescriben los encabezados de los paquetes en la comunicación.**
+
+    **Una vez que hemos reconocido el sistema operativo subyacente, podemos ir más allá e identificar los servicios que se ejecutan en puertos específicos inspeccionando las pancartas de servicio con el parámetro `-A`, que también ejecuta varios scripts de enumeración de servicios y SO contra el objetivo.**
+
+    **Ejemplo:**
+
+    ```
+    kali@kali:~$ nmap -sT -A 192.168.50.14
+    ```
+
+    **Al utilizar la detección de huellas dactilares del sistema operativo y la enumeración de servicios, podemos obtener una mejor comprensión de la configuración del sistema objetivo y sus posibles vulnerabilidades.**
+*   ### &#x20;Escaneo de servicios con Nmap
+
+    **En el ejemplo anterior, usamos el parámetro `-A` para ejecutar un escaneo de servicios con opciones adicionales. Si queremos ejecutar un escaneo de servicios simple de Nmap, podemos hacerlo proporcionando solo el parámetro `-sV`.**
+
+    **La captura de banners afecta significativamente la cantidad de tráfico utilizado, así como la velocidad de nuestro escaneo. Siempre debemos tener en cuenta las opciones que usamos con Nmap y cómo afectan nuestros escaneos.**
+
+    **Los banners pueden ser modificados por los administradores del sistema y configurados intencionalmente para falsificar nombres de servicios con el fin de engañar a posibles atacantes.**
+
+    **Ahora que hemos cubierto las características principales de Nmap, nos centraremos en scripts específicos de Nmap englobados por el Motor de Scripts de Nmap (NSE).**
+
+    **Podemos usar el NSE266 para lanzar scripts creados por el usuario a fin de automatizar varias tareas de escaneo. Estos scripts realizan una amplia gama de funciones, que incluyen enumeración de DNS, ataques de fuerza bruta e incluso identificación de vulnerabilidades. Los scripts NSE se encuentran en el directorio `/usr/share/nmap/scripts`.**
+
+    **El script `http-headers`, por ejemplo, intenta conectarse al servicio HTTP en un sistema de destino y determinar los encabezados admitidos.**
+
+    Esta información es esencial para comprender cómo se comunican los servicios con el cliente y, en algunos casos, puede revelar vulnerabilidades o configuraciones incorrectas.
+
+
+
+```
+kali@kali:~$ nmap --script http-headers 192.168.50.6
+```
+
+1
+
+### Obteniendo información adicional sobre scripts NSE
+
+**Para ver más información sobre un script, podemos usar la opción `--script-help`, que muestra una descripción del script y una URL donde podemos encontrar información más detallada, como los argumentos del script y ejemplos de uso.**
+
+```
+kali@kali:~$ nmap --script-help http-headers
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-10 13:54 EST
+D
+zi
+http-headers
+Categories: discovery safe
+https://nmap.org/nsedoc/scripts/http-headers.html
+Performs a HEAD request for the root folder ("/") of a web server and displays the
+HTTP headers returned.
+...
+```
+
+**Cuando no hay acceso a Internet, gran parte de esta información también se puede encontrar en el propio archivo de script NSE.**
+
+**Vale la pena explorar los diversos scripts NSE, ya que muchos de ellos son útiles y ahorran tiempo.**
+
+**Habiendo aprendido cómo realizar el escaneo de puertos desde Kali, exploremos cómo podemos aplicar los mismos conceptos desde un host de Windows.**
+
+**Si estamos realizando una enumeración inicial de la red desde una computadora portátil con Windows sin acceso a Internet, no podemos instalar ninguna herramienta adicional que pueda ayudarnos, como la versión de Nmap para Windows. En un escenario tan limitado, nos vemos obligados a seguir la estrategia "vivir de la tierra" que discutimos anteriormente. Afortunadamente, hay algunas funciones de PowerShell integradas útiles que podemos usar.**
+
+**Sources**
+
+### Escaneo de puertos con PowerShell
+
+**La función `Test-NetConnection` verifica si una IP responde al ICMP y si un puerto TCP especificado en el host objetivo está abierto.**
+
+Por ejemplo, desde el cliente de Windows 11, podemos verificar si el puerto SMB 445 está abierto en un controlador de dominio de la siguiente manera:
+
+```
+PS C:\Users\student> Test-NetConnection -Port 445 192.168.50.151
+ComputerName : 192.168.50.151
+RemoteAddress : 192.168.50.151
+RemotePort : 445
+InterfaceAlias : Ethernet0
+SourceAddress : 192.168.50.152
+TcpTestSucceeded : True
+```
+
+**El valor devuelto en el parámetro `TcpTestSucceeded` indica que el puerto 445 está abierto.**
+
+**Podemos programar aún más todo el proceso para escanear los primeros 1024 puertos en el controlador de dominio con la línea única de PowerShell que se muestra a continuación. Para hacerlo, necesitamos instanciar un objeto `TcpClient` Socket, ya que `Test-NetConnection` envía tráfico adicional que no es necesario para nuestros propósitos.**
+
+```
+PS C:\Users\student> 1..1024 | % {echo ((New-Object
+Net.Sockets.TcpClient).Connect("192.168.50.151", $_)) "TCP port $_ is open"} 2>$null
+TCP port 88 is open
+...
+```
+
+**Comenzamos canalizando los primeros 1024 enteros en un bucle for que asigna el valor entero incremental a la variable `$_`. Luego, creamos un objeto `Net.Sockets.TcpClient` y realizamos una conexión TCP contra la IP objetivo en ese puerto específico, y si la conexión es exitosa, muestra un mensaje de registro que incluye el puerto TCP abierto.**
+
+**Hemos cubierto solo el punto de partida de las capacidades de PowerShell, que se pueden ampliar aún más para emparejar las características tradicionales de Nmap.**
+
+**A continuación, exploraremos algunas técnicas avanzadas de escaneo de redes, como la detección de servicios y la identificación de sistemas operativos.**
+
