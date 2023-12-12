@@ -68,8 +68,8 @@ Utilizamos búsquedas directas, que solicitan la dirección IP de un nombre de h
 
 Creamos una lista de posibles nombres de host.
 
+{% code title="list.txt" %}
 ```
-cat list.txt
 www
 ftp
 mail
@@ -78,6 +78,7 @@ proxy
 router
 no
 ```
+{% endcode %}
 
 A continuación, podemos usar una línea de comandos de Bash para intentar resolver cada nombre de host.
 
@@ -91,7 +92,7 @@ Host proxy.example.com not found: 3(NXDOMAIN)
 router.vcom has address 51.222.169.214
 ```
 
-Utilizando esta lista de palabras simplificada, descubrimos entradas para "www", "mail" y "router". Sin embargo, los nombres de host "ftp", "owa" y "proxy" no se encontraron. Existen listas de palabras mucho más completas como parte del proyecto SecLists.
+Utilizando esta lista de palabras simplificada, descubrimos entradas para "www", "mail" y "router". Sin embargo, los nombres de host "ftp", "owa" y "proxy" no se encontraron.&#x20;
 
 Con la excepción del registro www, nuestra enumeración de fuerza bruta hacia adelante de DNS reveló un conjunto de direcciones IP dispersas en el mismo rango aproximado (51.222.169.X).&#x20;
 
@@ -129,7 +130,7 @@ dnsrecon -d example.com -t std
 Ahora intentemos forzar la búsqueda de nombres de host adicionales utilizando el archivo list.txt que creamos previamente para búsquedas directas.
 
 ```
-cat list.txt
+list.txt
 www
 ftp
 mail
@@ -141,7 +142,7 @@ router
 Para realizar nuestro intento de fuerza bruta, utilizaremos la opción `-d` para especificar un nombre de dominio, `-D` para especificar un nombre de archivo que contenga posibles cadenas de subdominio y `-t` para especificar el tipo de enumeración a realizar, en este caso `brt` para fuerza bruta.
 
 ```
-dnsrecon -d megacorpone.com -D ~/list.txt -t brt
+dnsrecon -d example.com -D ~/list.txt -t brt
 ```
 
 DNSEnum es otra herramienta popular de enumeración de DNS .
@@ -152,7 +153,7 @@ dnsenum example.com
 
 Exploremos qué tipo de enumeración de DNS podemos realizar desde una perspectiva de Windows.
 
-Podemos ejecutar una consulta simple para resolver el registro A del host `mail.megacorptwo.com`.
+Podemos ejecutar una consulta simple para resolver el registro A del host `mail.example.com`.
 
 ```
 nslookup mail.example.com
@@ -172,5 +173,3 @@ nslookup -type=TXT info.example.com 192.168.50.151
 Servidor: Desconocido
 Dirección: 192.168.50.151
 ```
-
-La utilidad `nslookup` es tan versátil como el comando `host` de Linux y las consultas también se pueden automatizar aún más a través de `PowerShell` o scripts de `Batch`.
