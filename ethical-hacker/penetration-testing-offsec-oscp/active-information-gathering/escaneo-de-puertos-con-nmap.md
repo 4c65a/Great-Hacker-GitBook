@@ -125,28 +125,16 @@ Nuestros resultados implican que un escaneo completo de Nmap de una red de clase
 
 ## Explorando las técnicas de escaneo de Nmap: SYN Scanning
 
-Habiendo aprendido sobre el uso básico de Nmap, ahora exploraremos algunas de las diversas técnicas de escaneo de Nmap, comenzando con el escaneo SYN/Stealth.
-
-El escaneo SYN, también conocido como "Stealth", es la técnica de escaneo de Nmap más popular. Ofrece muchos beneficios y, por lo tanto, es la opción de escaneo predeterminada cuando no se especifica ninguna opción en un comando de nmap y el usuario tiene los privilegios de sockets raw requeridos.
+El escaneo SYN, también conocido como "Stealth".Ofrece muchos beneficios y, por lo tanto, es la opción de escaneo predeterminada cuando no se especifica ninguna opción en un comando de nmap y el usuario tiene los privilegios de sockets raw requeridos.
 
 **¿Cómo funciona?**
 
 El escaneo SYN es un método de escaneo de puertos TCP que implica enviar paquetes SYN a varios puertos en una máquina objetivo sin completar el protocolo de enlace TCP de tres vías. Si un puerto TCP está abierto, la máquina objetivo debería enviar un paquete SYN-ACK, informándonos de que el puerto está abierto. En este punto, el escáner de puertos no se molesta en enviar el ACK final para completar el protocolo de enlace.
 
-**Ventajas:**
-
-* **Más discreto:** Debido a que el protocolo de enlace no se completa, la información no se pasa a la capa de aplicación y, como resultado, no aparecerá en ningún registro de la aplicación.
-* **Más rápido:** Un escaneo SYN es más rápido y eficiente porque se envían y reciben menos paquetes.
-
-**Desventajas:**
-
-* **No siempre es silencioso:** El término "stealth" se refiere al hecho de que, en el pasado, los firewalls no registraban las conexiones TCP incompletas. Sin embargo, este ya no es el caso con los firewalls modernos y, aunque el apodo de "stealth" se ha mantenido, puede ser engañoso.
-* **Puede ser bloqueado por firewalls:** Algunos firewalls están configurados para detectar y bloquear los escaneos SYN.
-
 **Ejemplo:**
 
 ```
-kali@kali:~$ sudo nmap -sS 192.168.50.149
+sudo nmap -sS 192.168.50.149
 Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-09 06:31 EST
 Nmap scan report for 192.168.50.149
 Host is up (0.11s latency).
@@ -166,9 +154,7 @@ PORT     STATE SERVICE
 ...
 ```
 
-**En el próximo capítulo, exploraremos el escaneo de conexión TCP de Nmap, que realiza una conexión TCP completa para determinar el estado de un puerto.**
-
-Escaneo de puertos de Nmap: TCP Connect Scan y UDP
+## Escaneo de puertos de Nmap: TCP Connect Scan y UDP
 
 **Cuando un usuario que ejecuta Nmap no tiene privilegios de socket raw, Nmap utilizará por defecto la técnica de escaneo de conexión TCP.** A diferencia del escaneo SYN, que no requiere privilegios elevados, el escaneo de conexión TCP utiliza la API Berkeley sockets para realizar el protocolo de enlace de tres vías. Esto implica que el escaneo de conexión TCP tarda mucho más en completarse que un escaneo SYN.
 
