@@ -123,7 +123,7 @@ Nuestros resultados implican que un escaneo completo de Nmap de una red de clase
 
 > Existen escáneres de puertos modernos como MASSCAN y RustScan que, aunque son más rápidos que Nmap, generan una cantidad considerable de tráfico concurrente. Nmap, por otro lado, utiliza un enfoque más metódico y escalonado, lo que puede ser beneficioso para evitar la detección y la denegación de servicio.
 
-## Explorando las técnicas de escaneo de Nmap: SYN Scanning
+### Explorando las técnicas de escaneo de Nmap: SYN Scanning
 
 El escaneo SYN, también conocido como "Stealth".Ofrece muchos beneficios y, por lo tanto, es la opción de escaneo predeterminada cuando no se especifica ninguna opción en un comando de nmap y el usuario tiene los privilegios de sockets raw requeridos.
 
@@ -137,7 +137,7 @@ El escaneo SYN es un método de escaneo de puertos TCP que implica enviar paquet
 sudo nmap -sS 192.168.50.149
 ```
 
-## Escaneo de puertos de Nmap: TCP Connect Scan y UDP
+### Escaneo de puertos de Nmap: TCP Connect Scan y UDP
 
 Cuando un usuario que ejecuta Nmap no tiene privilegios de socket raw, Nmap utilizará por defecto la técnica de escaneo de conexión TCP. A diferencia del escaneo SYN, que no requiere privilegios elevados, el escaneo de conexión TCP utiliza la API Berkeley sockets para realizar el protocolo de enlace de tres vías. Esto implica que el escaneo de conexión TCP tarda mucho más en completarse que un escaneo SYN.
 
@@ -147,7 +147,7 @@ Podemos necesitar realizar un escaneo de conexión en ocasiones, como cuando esc
 nmap -sT 192.168.50.149
 ```
 
-## Sobre el escaneo UDP
+### Sobre el escaneo UDP
 
 Al realizar un escaneo UDP, Nmap utilizará una combinación de dos métodos diferentes para determinar si un puerto está abierto o cerrado. Para la mayoría de los puertos, utilizará el método estándar "ICMP puerto inalcanzable" descrito anteriormente enviando un paquete vacío a un puerto determinado. Sin embargo, para puertos comunes, como el puerto 161 que utiliza SNMP, enviará un paquete SNMP específico del protocolo en un intento de obtener una respuesta de una aplicación enlazada a ese puerto.
 
@@ -183,7 +183,7 @@ Buscar máquinas activas usando el comando `grep` en una salida estándar de Nma
 nmap -v -sn 192.168.50.1-253 -oG ping-sweep.txt
 ```
 
-**Luego podemos usar `grep` para encontrar hosts activos en el archivo de salida:**
+Luego podemos usar `grep` para encontrar hosts activos en el archivo de salida:
 
 ```
 kali@kali:~$ grep Up ping-sweep.txt | cut -d " " -f 2
@@ -216,7 +216,7 @@ nmap -sT -A --top-ports=20 192.168.50.1-253 -oG top-port-sweep.txt
 
 El archivo `nmap-services` nos ayuda a identificar rápidamente los servicios más comunes que se ejecutan en los hosts que escaneamos.
 
-## Detección de Huella Dactilar del Sistema Operativo con Nmap
+### Detección de Huella Dactilar del Sistema Operativo con Nmap
 
 Nmap puede identificar el sistema operativo de un host inspeccionando los paquetes recibidos del objetivo y comparando la huella dactilar con una lista conocida. Por defecto, Nmap solo mostrará el sistema operativo detectado si la huella digital recuperada es muy precisa.
 
@@ -252,7 +252,7 @@ Una vez que hemos reconocido el sistema operativo subyacente, podemos ir más al
 nmap -sT -A 192.168.50.14
 ```
 
-## Escaneo de servicios con Nmap
+### Escaneo de servicios con Nmap
 
 La captura de banners afecta significativamente la cantidad de tráfico utilizado, así como la velocidad de nuestro escaneo. Siempre debemos tener en cuenta las opciones que usamos con Nmap y cómo afectan nuestros escaneos.
 
