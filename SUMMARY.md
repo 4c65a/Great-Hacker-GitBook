@@ -225,11 +225,7 @@
     * [DNS Enumeracion](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/dns-enumeracion.md)
     * [Escaneo de puertos con nmap](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/escaneo-de-puertos-con-nmap.md)
     * [SMB enumeracion](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/smb-enumeracion.md)
-    * [Evaluación de aplicaciones web](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/evaluacion-de-aplicaciones-web.md)
-  * [Page 5](ethical-hacker/penetration-testing-offsec-oscp/page-5.md)
-  * [Page 3](ethical-hacker/penetration-testing-offsec-oscp/page-3.md)
-  * [Page 2](ethical-hacker/penetration-testing-offsec-oscp/page-2.md)
-  * [Page](ethical-hacker/penetration-testing-offsec-oscp/page.md)
+  * [Evaluación de aplicaciones web](ethical-hacker/penetration-testing-offsec-oscp/evaluacion-de-aplicaciones-web.md)
 
 ## 🟢 Pentesting Web
 
