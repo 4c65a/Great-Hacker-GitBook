@@ -135,141 +135,52 @@ El escaneo SYN es un método de escaneo de puertos TCP que implica enviar paquet
 
 ```
 sudo nmap -sS 192.168.50.149
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-09 06:31 EST
-Nmap scan report for 192.168.50.149
-Host is up (0.11s latency).
-Not shown: 989 closed tcp ports (reset)
-PORT     STATE SERVICE
-53/tcp  open  domain
-88/tcp  open  kerberos-sec
-135/tcp open  msrpc
-139/tcp open  netbios-ssn
-389/tcp open  ldap
-445/tcp open  microsoft-ds
-464/tcp open  kpasswd5
-593/tcp open  http-rpc-epmap
-636/tcp open  ldapssl
-3268/tcp open  globalcatLDAP
-3269/tcp open  globalcatLDAPssl
-...
 ```
 
 ## Escaneo de puertos de Nmap: TCP Connect Scan y UDP
 
-**Cuando un usuario que ejecuta Nmap no tiene privilegios de socket raw, Nmap utilizará por defecto la técnica de escaneo de conexión TCP.** A diferencia del escaneo SYN, que no requiere privilegios elevados, el escaneo de conexión TCP utiliza la API Berkeley sockets para realizar el protocolo de enlace de tres vías. Esto implica que el escaneo de conexión TCP tarda mucho más en completarse que un escaneo SYN.
+Cuando un usuario que ejecuta Nmap no tiene privilegios de socket raw, Nmap utilizará por defecto la técnica de escaneo de conexión TCP. A diferencia del escaneo SYN, que no requiere privilegios elevados, el escaneo de conexión TCP utiliza la API Berkeley sockets para realizar el protocolo de enlace de tres vías. Esto implica que el escaneo de conexión TCP tarda mucho más en completarse que un escaneo SYN.
 
-**Podemos necesitar realizar un escaneo de conexión en ocasiones, como cuando escaneamos a través de ciertos tipos de proxies.** Podemos usar la opción `-sT` para iniciar un escaneo de conexión.
-
-```
-kali@kali:~$ nmap -sT 192.168.50.149
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-09 06:44 EST
-Nmap scan report for 192.168.50.149
-Host is up (0.11s latency).
-Not shown: 989 closed tcp ports (conn-refused)
-PORT      STATE SERVICE
-53/tcp    open  domain
-88/tcp    open  kerberos-sec
-135/tcp   open  msrpc
-139/tcp   open  netbios-ssn
-389/tcp   open  ldap
-445/tcp   open  microsoft-ds
-464/tcp   open  kpasswd5
-593/tcp   open  http-rpc-epmap
-636/tcp   open  ldapssl
-3268/tcp  open  globalcatLDAP
-3269/tcp  open  globalcatLDAPssl
-...
-```
-
-**El resultado muestra que el escaneo de conexión generó algunos servicios abiertos que solo están activos en el host basado en Windows, especialmente los controladores de dominio.** Una conclusión importante, incluso de este simple escaneo, es que ya podemos inferir el sistema operativo subyacente y el rol del host objetivo.
-
-**Habiendo revisado las técnicas de escaneo TCP más comunes de Nmap, aprendamos sobre el escaneo UDP.**
-
-**Al realizar un escaneo UDP,** Nmap utilizará una combinación de dos métodos diferentes para determinar si un puerto está abierto o cerrado. Para la mayoría de los puertos, utilizará el método estándar "ICMP puerto inalcanzable" descrito anteriormente enviando un paquete vacío a un puerto determinado. Sin embargo, para puertos comunes, como el puerto 161 que utiliza SNMP, enviará un paquete SNMP específico del protocolo en un intento de obtener una respuesta de una aplicación enlazada a ese puerto. Para realizar un escaneo UDP, usaremos la opción `-sU`, con `sudo` requerido para acceder a sockets raw.
+Podemos necesitar realizar un escaneo de conexión en ocasiones, como cuando escaneamos a través de ciertos tipos de proxies. Podemos usar la opción `-sT` para iniciar un escaneo de conexión.
 
 ```
-kali@kali:~$ sudo nmap -sU 192.168.50.149
-Starting Nmap 7.70 ( https://nmap.org ) at 2019-03-04 11:46 EST
-Nmap scan report for 192.168.131.149
-Host is up (0.11s latency).
-Not shown: 977 closed udp ports (port-unreach)
-PORT STATE SERVICE
-123/udp open ntp
-389/udp open ldap
+nmap -sT 192.168.50.149
 ```
 
-**El escaneo UDP detectó algunos puertos abiertos adicionales:**
+## Sobre el escaneo UDP
 
-* 161/udp: SNMP
-* 53/udp: DNS
-* 67/udp: BOOTP
+Al realizar un escaneo UDP, Nmap utilizará una combinación de dos métodos diferentes para determinar si un puerto está abierto o cerrado. Para la mayoría de los puertos, utilizará el método estándar "ICMP puerto inalcanzable" descrito anteriormente enviando un paquete vacío a un puerto determinado. Sin embargo, para puertos comunes, como el puerto 161 que utiliza SNMP, enviará un paquete SNMP específico del protocolo en un intento de obtener una respuesta de una aplicación enlazada a ese puerto.
 
-**El escaneo UDP puede ser útil para identificar servicios que no utilizan TCP, como SNMP o BOOTP. Sin embargo, es importante tener en cuenta que el escaneo UDP puede ser más ruidoso que el escaneo TCP y puede generar respuestas de dispositivos que no sean el objetivo previsto.**\
+```
+sudo nmap -sU 192.168.50.149
+```
 
+Es importante tener en cuenta que el escaneo UDP puede ser más ruidoso que el escaneo TCP y puede generar respuestas de dispositivos que no sean el objetivo previsto.
 
 ### Escaneo UDP y Escaneo Combinado UDP/TCP
 
-**El escaneo UDP (-sU) también se puede usar junto con un escaneo TCP SYN (-sS) para construir una imagen más completa de nuestro objetivo.**
+El escaneo UDP (-sU) también se puede usar junto con un escaneo TCP SYN (-sS) .
 
 ```
-kali@kali:~$ sudo nmap -sU -sS 192.168.50.149
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-09 08:16 EST
-Nmap scan report for 192.168.50.149
-Host is up (0.10s latency).
-Not shown: 989 closed tcp ports (reset), 977 closed udp ports (port-unreach)
-PORT     STATE SERVICE
-53/tcp    open domain
-88/tcp    open kerberos-sec
-135/tcp   open msrpc
-139/tcp   open netbios-ssn
-389/tcp   open ldap
-445/tcp   open microsoft-ds
-464/tcp   open kpasswd5
-593/tcp   open http-rpc-epmap
-636/tcp   open ldapssl
-3268/tcp  open globalcatLDAP
-3269/tcp  open globalcatLDAPssl
-53/udp    open domain
-123/udp   open ntp
-389/udp   open ldap
-...
+sudo nmap -sU -sS 192.168.50.149
 ```
-
-**Nuestro escaneo conjunto TCP y UDP reveló puertos UDP abiertos adicionales, revelando aún más qué servicios se están ejecutando en el host objetivo.**
 
 ### Escaneo de red (Network Sweeping)
 
-**Ahora podemos extender lo que hemos aprendido de un solo host y aplicarlo a una red completa a través del Network Sweeping.**
-
 Para lidiar con grandes volúmenes de hosts, o para intentar conservar el tráfico de red, podemos intentar sondear los objetivos utilizando técnicas de Network Sweeping en las que comenzamos con escaneos amplios y luego usamos escaneos más específicos contra los hosts de interés.
 
-**Al realizar un barrido de red con Nmap usando la opción `-sn`, el proceso de descubrimiento de host consiste en algo más que enviar una solicitud de eco ICMP. Nmap también envía un paquete SYN TCP al puerto 443, un paquete ACK TCP al puerto 80 y una solicitud de marca de tiempo ICMP para verificar si un host está disponible.**
+Al realizar un barrido de red con Nmap usando la opción `-sn`, el proceso de descubrimiento de host consiste en algo más que enviar una solicitud de eco ICMP. Nmap también envía un paquete SYN TCP al puerto 443, un paquete ACK TCP al puerto 80 y una solicitud de marca de tiempo ICMP para verificar si un host está disponible.
 
 ```
-kali@kali:~$ nmap -sn 192.168.50.1-253
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-10 03:19 EST
-Nmap scan report for 192.168.50.6
-Host is up (0.12s latency).
-Nmap scan report for 192.168.50.8
-Host is up (0.12s latency).
-...
-Nmap done: 254 IP addresses (13 hosts up) scanned in 3.74 seconds
+nmap -sn 192.168.50.1-253
 ```
-
-**Al usar el escaneo de red, podemos identificar rápidamente qué hosts están activos en una red y luego enfocar nuestros esfuerzos en escanear esos hosts con más detalle.**
 
 ### Escaneo de red con Nmap: Greppable Output y Escaneos Específicos
 
-**Buscar máquinas activas usando el comando `grep` en una salida estándar de Nmap puede ser engorroso. En lugar de eso, usemos el parámetro de salida "greppable" de Nmap, `-oG`, para guardar estos resultados en un formato más manejable.**
+Buscar máquinas activas usando el comando `grep` en una salida estándar de Nmap puede ser engorroso. En lugar de eso, usemos el parámetro de salida "greppable" de Nmap, `-oG`, para guardar estos resultados en un formato más manejable.
 
 ```
-kali@kali:~$ nmap -v -sn 192.168.50.1-253 -oG ping-sweep.txt
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-10 03:21 EST
-Initiating Ping Scan at 03:21
-...
-Read data files from: /usr/bin/../share/nmap
-Nmap done: 254 IP addresses (13 hosts up) scanned in 3.74 seconds
-...
+nmap -v -sn 192.168.50.1-253 -oG ping-sweep.txt
 ```
 
 **Luego podemos usar `grep` para encontrar hosts activos en el archivo de salida:**
@@ -282,58 +193,25 @@ kali@kali:~$ grep Up ping-sweep.txt | cut -d " " -f 2
 ...
 ```
 
-**También podemos escanear en busca de puertos TCP o UDP específicos en la red, sondeando servicios y puertos comunes en un intento de localizar sistemas que puedan ser útiles o tener vulnerabilidades conocidas. Este escaneo tiende a ser más preciso que un ping sweep.**
+También podemos escanear en busca de puertos TCP o UDP específicos en la red, sondeando servicios y puertos comunes en un intento de localizar sistemas que puedan ser útiles o tener vulnerabilidades conocidas. Este escaneo tiende a ser más preciso que un ping sweep.
 
 ```
-kali@kali:~$ nmap -p 80 192.168.50.1-253 -oG web-sweep.txt
-Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-10 03:50 EST
-Nmap scan report for 192.168.50.6
-Host is up (0.11s latency).
-PORT     STATE SERVICE
-80/tcp    open http
-Nmap scan report for 192.168.50.8
-Host is up (0.11s latency).
-PORT     STATE SERVICE
-80/tcp   closed http
-...
+nmap -p 80 192.168.50.1-253 -oG web-sweep.txt
 ```
 
 **A continuación, podemos usar `grep` para encontrar hosts con el puerto 80 abierto:**
 
 ```
-kali@kali:~$ grep open web-sweep.txt | cut -d" " -f2
+grep open web-sweep.txt | cut -d" " -f2
 192.168.50.6
 192.168.50.20
 192.168.50.21
 ```
 
-**Para ahorrar tiempo y recursos de red, también podemos escanear varias IP, sondeando una lista corta de puertos comunes. Por ejemplo, realicemos un escaneo de conexión TCP para los 20 puertos TCP principales con la opción `--top-ports` y habilitemos la detección de la versión del sistema operativo, el escaneo de scripts y el traceroute con `-A`.**
+Para ahorrar tiempo y recursos de red, también podemos escanear varias IP, sondeando una lista corta de puertos comunes. Por ejemplo, realicemos un escaneo de conexión TCP para los 20 puertos TCP principales con la opción `--top-ports` y habilitemos la detección de la versión del sistema operativo, el escaneo de scripts y el traceroute con `-A`.
 
 ```
 nmap -sT -A --top-ports=20 192.168.50.1-253 -oG top-port-sweep.txt
-```
-
-**Al utilizar diferentes opciones de escaneo y salida, Nmap nos permite recopilar información valiosa sobre los hosts en una red y comprender mejor su configuración de seguridad.**
-
-Los 20 puertos principales de Nmap se determinan mediante el archivo `/usr/share/nmap/nmap-services`, que utiliza un formato simple de tres columnas separadas por espacios en blanco.
-
-* La primera columna es el nombre del servicio.
-* La segunda columna contiene el número de puerto y el protocolo.
-* La tercera columna es la "frecuencia del puerto", que se basa en la frecuencia con la que se encontró abierto el puerto durante los escaneos de investigación periódicos de Internet.
-
-Todo lo que sigue a la tercera columna se ignora, pero se usa habitualmente para comentarios, como se muestra con el signo de almohadilla (#).
-
-**Ejemplo:**
-
-```
-...
-finger      79/udp     0.000956
-http        80/sctp    0.000000 # www-http | www | World Wide Web HTTP
-http        80/tcp     0.484143 # World Wide Web HTTP
-http        80/udp     0.035767 # World Wide Web HTTP
-hosts2-ns  81/tcp     0.012056 # HOSTS2 Name Server
-hosts2-ns  81/udp     0.001005 # HOSTS2 Name Server
-...
 ```
 
 El archivo `nmap-services` nos ayuda a identificar rápidamente los servicios más comunes que se ejecutan en los hosts que escaneamos.
