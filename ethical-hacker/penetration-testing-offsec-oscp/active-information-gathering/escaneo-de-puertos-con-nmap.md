@@ -216,77 +216,57 @@ nmap -sT -A --top-ports=20 192.168.50.1-253 -oG top-port-sweep.txt
 
 El archivo `nmap-services` nos ayuda a identificar rápidamente los servicios más comunes que se ejecutan en los hosts que escaneamos.
 
-**Escaneo exhaustivo y técnicas de descubrimiento de host:**
+## Detección de Huella Dactilar del Sistema Operativo con Nmap
 
-* En este punto, podemos realizar un escaneo más exhaustivo contra máquinas individuales que son ricas en servicios o son interesantes de otra manera.
-* Hay muchas formas diferentes en las que podemos ser creativos con nuestro escaneo para conservar el ancho de banda o reducir nuestro perfil, así como interesantes técnicas de descubrimiento de host que vale la pena investigar más a fondo.
+Nmap puede identificar el sistema operativo de un host inspeccionando los paquetes recibidos del objetivo y comparando la huella dactilar con una lista conocida. Por defecto, Nmap solo mostrará el sistema operativo detectado si la huella digital recuperada es muy precisa.
 
-**Huella digital del sistema operativo:**
+Para obtener una idea aproximada del sistema operativo objetivo, podemos incluir la opción `--osscan-guess` para forzar a Nmap a imprimir el resultado adivinado, incluso si no es completamente exacto.
 
-* Ahora hemos escaneado hosts que revelaron algunos servicios, por lo que podemos adivinar la naturaleza del sistema operativo del objetivo.
-* Afortunadamente para nosotros, Nmap ya viene con una opción de detección de huellas dactilares del sistema operativo.
-* La detección de huellas dactilares del sistema operativo se puede habilitar con la opción `-O`. Esta función intenta adivinar el sistema operativo del objetivo inspeccionando los paquetes devueltos.
-* Esto funciona porque los sistemas operativos a menudo usan implementaciones ligeramente diferentes de la pila TCP/IP (como valores TTL predeterminados variables y diferentes respuestas de paquetes TCP) que pueden ser identificadas por Nmap.
+**Aquí hay un ejemplo de un escaneo simple de huella digital del sistema operativo de Nmap:**
 
-**Próximos pasos:**
+```
+sudo nmap -O 192.168.50.14 --osscan-guess
+...
+Running (JUST GUESSING): Microsoft Windows 2008|2012|2016|7|Vista (88%)
+OS CPE: cpe:/o:microsoft:windows_server_2008::sp1
+cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_server_2012:r2
+cpe:/o:microsoft:windows_server_2016 cpe:/o:microsoft:windows_7
+cpe:/o:microsoft:windows_vista::sp1:home_premium
+Aggressive OS guesses: Microsoft Windows Server 2008 SP1 or Windows Server 2008 R2
+(88%), Microsoft Windows Server 2012 or Windows Server 2012 R2 (88%), Microsoft
+Windows Server 2012 R2 (88%), Microsoft Windows Server 2012 (87%), Microsoft Windows
+Server 2016 (87%), Microsoft Windows 7 (86%), Microsoft Windows Vista Home Premium SP1
+(85%), Microsoft Windows 7 Professional (85%)
+No exact OS matches for host (If you know what OS is running on it, see
+https://nmap.org/submit/ ).
+...
+```
 
-* En el siguiente capítulo, exploraremos la detección de huellas dactilares del sistema operativo con más detalle y veremos cómo podemos utilizar esta información para obtener una mejor comprensión de nuestros objetivos.
-*   11
+Tenga en cuenta que la detección de huellas dactilares del sistema operativo no siempre es 100% precisa, a menudo debido a dispositivos de red como firewalls o proxies que reescriben los encabezados de los paquetes en la comunicación.
 
-    ### Detección de Huella Dactilar del Sistema Operativo con Nmap
+Una vez que hemos reconocido el sistema operativo subyacente, podemos ir más allá e identificar los servicios que se ejecutan en puertos específicos inspeccionando las pancartas de servicio con el parámetro `-A`, que también ejecuta varios scripts de enumeración de servicios y SO contra el objetivo.
 
-    **Nmap puede identificar el sistema operativo de un host inspeccionando los paquetes recibidos del objetivo y comparando la huella dactilar con una lista conocida. Por defecto, Nmap solo mostrará el sistema operativo detectado si la huella digital recuperada es muy precisa.**
+**Ejemplo:**
 
-    **Para obtener una idea aproximada del sistema operativo objetivo, podemos incluir la opción `--osscan-guess` para forzar a Nmap a imprimir el resultado adivinado, incluso si no es completamente exacto.**
+```
+nmap -sT -A 192.168.50.14
+```
 
-    **Aquí hay un ejemplo de un escaneo simple de huella digital del sistema operativo de Nmap:**
+**Al utilizar la detección de huellas dactilares del sistema operativo y la enumeración de servicios, podemos obtener una mejor comprensión de la configuración del sistema objetivo y sus posibles vulnerabilidades.**
 
-    ```
-    kali@kali:~$ sudo nmap -O 192.168.50.14 --osscan-guess
-    ...
-    Running (JUST GUESSING): Microsoft Windows 2008|2012|2016|7|Vista (88%)
-    OS CPE: cpe:/o:microsoft:windows_server_2008::sp1
-    cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_server_2012:r2
-    cpe:/o:microsoft:windows_server_2016 cpe:/o:microsoft:windows_7
-    cpe:/o:microsoft:windows_vista::sp1:home_premium
-    Aggressive OS guesses: Microsoft Windows Server 2008 SP1 or Windows Server 2008 R2
-    (88%), Microsoft Windows Server 2012 or Windows Server 2012 R2 (88%), Microsoft
-    Windows Server 2012 R2 (88%), Microsoft Windows Server 2012 (87%), Microsoft Windows
-    Server 2016 (87%), Microsoft Windows 7 (86%), Microsoft Windows Vista Home Premium SP1
-    (85%), Microsoft Windows 7 Professional (85%)
-    No exact OS matches for host (If you know what OS is running on it, see
-    https://nmap.org/submit/ ).
-    ...
-    ```
+## Escaneo de servicios con Nmap
 
-    **La respuesta sugiere que el sistema operativo subyacente de este objetivo es Windows 2008 R2, 2012, 2016, Vista o Windows 7.**
+**La captura de banners afecta significativamente la cantidad de tráfico utilizado, así como la velocidad de nuestro escaneo. Siempre debemos tener en cuenta las opciones que usamos con Nmap y cómo afectan nuestros escaneos.**
 
-    **Tenga en cuenta que la detección de huellas dactilares del sistema operativo no siempre es 100% precisa, a menudo debido a dispositivos de red como firewalls o proxies que reescriben los encabezados de los paquetes en la comunicación.**
+**Los banners pueden ser modificados por los administradores del sistema y configurados intencionalmente para falsificar nombres de servicios con el fin de engañar a posibles atacantes.**
 
-    **Una vez que hemos reconocido el sistema operativo subyacente, podemos ir más allá e identificar los servicios que se ejecutan en puertos específicos inspeccionando las pancartas de servicio con el parámetro `-A`, que también ejecuta varios scripts de enumeración de servicios y SO contra el objetivo.**
+**Ahora que hemos cubierto las características principales de Nmap, nos centraremos en scripts específicos de Nmap englobados por el Motor de Scripts de Nmap (NSE).**
 
-    **Ejemplo:**
+**Podemos usar el NSE266 para lanzar scripts creados por el usuario a fin de automatizar varias tareas de escaneo. Estos scripts realizan una amplia gama de funciones, que incluyen enumeración de DNS, ataques de fuerza bruta e incluso identificación de vulnerabilidades. Los scripts NSE se encuentran en el directorio `/usr/share/nmap/scripts`.**
 
-    ```
-    kali@kali:~$ nmap -sT -A 192.168.50.14
-    ```
+**El script `http-headers`, por ejemplo, intenta conectarse al servicio HTTP en un sistema de destino y determinar los encabezados admitidos.**
 
-    **Al utilizar la detección de huellas dactilares del sistema operativo y la enumeración de servicios, podemos obtener una mejor comprensión de la configuración del sistema objetivo y sus posibles vulnerabilidades.**
-*   ### &#x20;Escaneo de servicios con Nmap
-
-    **En el ejemplo anterior, usamos el parámetro `-A` para ejecutar un escaneo de servicios con opciones adicionales. Si queremos ejecutar un escaneo de servicios simple de Nmap, podemos hacerlo proporcionando solo el parámetro `-sV`.**
-
-    **La captura de banners afecta significativamente la cantidad de tráfico utilizado, así como la velocidad de nuestro escaneo. Siempre debemos tener en cuenta las opciones que usamos con Nmap y cómo afectan nuestros escaneos.**
-
-    **Los banners pueden ser modificados por los administradores del sistema y configurados intencionalmente para falsificar nombres de servicios con el fin de engañar a posibles atacantes.**
-
-    **Ahora que hemos cubierto las características principales de Nmap, nos centraremos en scripts específicos de Nmap englobados por el Motor de Scripts de Nmap (NSE).**
-
-    **Podemos usar el NSE266 para lanzar scripts creados por el usuario a fin de automatizar varias tareas de escaneo. Estos scripts realizan una amplia gama de funciones, que incluyen enumeración de DNS, ataques de fuerza bruta e incluso identificación de vulnerabilidades. Los scripts NSE se encuentran en el directorio `/usr/share/nmap/scripts`.**
-
-    **El script `http-headers`, por ejemplo, intenta conectarse al servicio HTTP en un sistema de destino y determinar los encabezados admitidos.**
-
-    Esta información es esencial para comprender cómo se comunican los servicios con el cliente y, en algunos casos, puede revelar vulnerabilidades o configuraciones incorrectas.
+Esta información es esencial para comprender cómo se comunican los servicios con el cliente y, en algunos casos, puede revelar vulnerabilidades o configuraciones incorrectas.
 
 
 
