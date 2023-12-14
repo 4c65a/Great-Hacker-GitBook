@@ -110,3 +110,42 @@ Nos centraremos en Firefox, ya que es el navegador predeterminado en Kali Linux.
 Un buen lugar para comenzar nuestro mapeo de información de aplicaciones web es con una dirección URL. Las extensiones de archivos, que a veces forman parte de una URL, pueden revelar el lenguaje de programación en el que se escribió la aplicación. Algunas extensiones, como .php, son directas, pero otras son más crípticas y varían según los frameworks utilizados. Por ejemplo, una aplicación web basada en Java podría usar .jsp, .do o .html.
 
 Las extensiones de archivos en las páginas web son cada vez menos comunes, sin embargo, ya que muchos lenguajes y marcos ahora admiten el concepto de rutas, que permiten a los desarrolladores asignar un URI a una...\
+**Inspección de Encabezados de Respuesta HTTP y Mapas del Sitio**
+
+También podemos buscar información adicional en las respuestas del servidor. Hay dos tipos de herramientas que podemos utilizar para llevar a cabo esta tarea. El primer tipo es un proxy, como Burp Suite, que intercepta solicitudes y respuestas entre un cliente y un servidor web, y el otro es la herramienta de red propia del navegador.
+
+\
+**Encabezados del Servidor y Mapas del Sitio**
+
+El encabezado del servidor mostrado anteriormente a menudo revelará al menos el nombre del software del servidor web. En muchas configuraciones predeterminadas, también revela el número de versión.
+
+Los encabezados HTTP no siempre son generados únicamente por el servidor web. Por ejemplo, los servidores proxy web insertan activamente el encabezado X-Forwarded-For para informar al servidor web sobre la dirección IP original del cliente.
+
+Históricamente, los encabezados que comenzaban con "X-" se llamaban encabezados HTTP no estándar. Sin embargo, RFC6648 ahora desaconseja el uso de "X-" a favor de una convención de nomenclatura más clara.
+
+Los nombres o valores en el encabezado de respuesta a menudo revelan información adicional sobre la pila tecnológica utilizada por la aplicación. Algunos ejemplos de encabezados no estándar incluyen X-Powered-By, x-amz-cf-id y X-Aspnet-Version. Una investigación adicional sobre estos nombres podría revelar información adicional, como que el encabezado "x-amz-cf-id" indica que la aplicación utiliza Amazon CloudFront.
+
+Los mapas del sitio son otro elemento importante que debemos tener en cuenta al enumerar aplicaciones web. Las aplicaciones web pueden incluir archivos de mapa del sitio para ayudar a los motores de búsqueda a rastrear e indexar sus sitios. Estos archivos también incluyen directivas sobre qué URL no rastrear, típicamente páginas sensibles o consolas administrativas, que son precisamente el tipo de páginas que nos interesan.
+
+Las directivas inclusivas se realizan con el protocolo de mapas del sitio, mientras que robots.txt excluye URL de ser rastreadas.
+
+Por ejemplo, podemos recuperar el archivo robots.txt de [www.google.com](http://www.google.com/) con curl:
+
+```bash
+bashCopy codekali@kali:~$ curl https://www.google.com/robots.txt
+User-agent: *
+Disallow: /search
+Allow: /search/about
+Allow: /search/static
+Allow: /search/howsearchworks
+Disallow: /sdch
+Disallow: /groups
+Disallow: /index.html?
+Disallow: /?
+Allow: /?hl=
+...
+```
+
+Allow y Disallow son directivas para rastreadores web que indican páginas o directorios a los que los rastreadores web "educados" pueden o no acceder, respectivamente. En la mayoría de los casos, las páginas y directorios enumerados pueden no ser interesantes, e incluso algunos pueden ser inválidos. Sin embargo, no debemos pasar por alto los archivos de mapas del sitio porque pueden contener pistas sobre el diseño del sitio web u otra información interesante, como secciones aún no exploradas del objetivo.
+
+\

@@ -226,6 +226,7 @@
     * [Escaneo de puertos con nmap](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/escaneo-de-puertos-con-nmap.md)
     * [SMB enumeracion](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/smb-enumeracion.md)
   * [Evaluación de aplicaciones web](ethical-hacker/penetration-testing-offsec-oscp/evaluacion-de-aplicaciones-web.md)
+  * [Enumeración y Abuso de APIs](ethical-hacker/penetration-testing-offsec-oscp/enumeracion-y-abuso-de-apis.md)
 
 ## 🟢 Pentesting Web
 
