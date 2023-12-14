@@ -1,18 +1,8 @@
 # Cross-Site Scripting (XSS)
 
-## Cross-Site Scripting (XSS)
-
-Esta Unidad de Aprendizaje cubre los siguientes Objetivos de Aprendizaje:
-
-* Comprender los tipos de vulnerabilidades de Cross-Site Scripting.
-* Explotar Cross-Site Scripting básico.
-* Realizar Escalada de Privilegios a través de Cross-Site Scripting.
-
 Una de las características más importantes de una aplicación web bien defendida es la sanitización de datos, un proceso en el cual la entrada del usuario se procesa para eliminar o transformar todos los caracteres o cadenas peligrosas. Los datos no sanitizados permiten que un atacante inyecte y potencialmente ejecute código malicioso.
 
 Cross-Site Scripting (XSS) es una vulnerabilidad que explota la confianza de un usuario en un sitio web al inyectar dinámicamente contenido en la página renderizada por el navegador del usuario.
-
-En algún momento se pensó que XSS era una vulnerabilidad de riesgo relativamente bajo, pero hoy en día es de alto riesgo y prevalente, permitiendo que los atacantes inyecten scripts del lado del cliente, como JavaScript, en las páginas web visitadas por otros usuarios.
 
 #### 8.4.1 Teoría de XSS Almacenado vs. Reflejado
 
