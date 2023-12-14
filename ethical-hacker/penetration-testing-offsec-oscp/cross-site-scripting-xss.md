@@ -31,3 +31,32 @@ Cualquiera de estas dos variantes de vulnerabilidad puede manifestarse como del 
 **XSS basado en DOM:**
 
 El XSS basado en DOM ocurre únicamente dentro del Modelo de Objetos del Documento (DOM) de la página. Aunque no cubriremos demasiados detalles por ahora, debemos saber que los navegadores analizan el contenido HTML de una página y luego generan una representación interna del DOM. Este tipo de XSS ocurre cuando el DOM de una página se modifica con valores controlados por el usuario. El XSS basado en DOM puede ser almacenado o reflejado.
+
+La clave es que los ataques de XSS basados en DOM ocurren cuando un navegador analiza el contenido de la página y ejecuta el JavaScript insertado. No importa cómo se entregue y ejecute la carga útil de XSS, los scripts inyectados se ejecutan en el contexto del usuario que visita la página afectada. Esto significa que el navegador del usuario, no la aplicación web, ejecuta la carga útil de XSS. Sin embargo, estos ataques pueden ser significativos, con impactos que incluyen la toma de sesiones, la redirección forzada a páginas maliciosas, la ejecución de aplicaciones locales como ese usuario, o incluso aplicaciones web troyanizadas. En las secciones siguientes, exploraremos algunos de estos ataques.
+
+**JavaScript Refresher**
+
+JavaScript es un lenguaje de programación de alto nivel que se ha convertido en uno de los principales componentes de las aplicaciones web modernas. Todos los navegadores modernos incluyen un motor de JavaScript que ejecuta el código JavaScript desde dentro del propio navegador.
+
+Cuando un navegador procesa la respuesta HTTP de un servidor que contiene HTML, el navegador crea un árbol DOM y lo renderiza. El DOM está compuesto por todas las formas, entradas, imágenes, etc., relacionadas con la página web.
+
+El papel de JavaScript es acceder y modificar el DOM de la página, lo que resulta en una experiencia de usuario más interactiva. Desde la perspectiva de un atacante, esto también significa que si podemos inyectar código JavaScript en la aplicación, podemos acceder y modificar el DOM de la página. Con acceso al DOM, podemos redirigir formularios de inicio de sesión, extraer contraseñas y robar cookies de sesión.
+
+Al igual que muchos otros lenguajes de programación, JavaScript puede combinar un conjunto de instrucciones en una función.
+
+```javascript
+function multiplyValues(x, y) {
+  return x * y;
+}
+
+let a = multiplyValues(3, 5);
+console.log(a);
+```
+
+En el ejemplo anterior, declaramos una función llamada `multiplyValues` en las líneas 1-3 que acepta dos valores enteros como parámetros y devuelve su producto.
+
+En la línea 5, invocamos `multiplyValues` pasando dos valores enteros, 3 y 5, como parámetros y asignamos la variable `a` al valor devuelto por la función.
+
+Al declarar la variable `a`, no asignamos simplemente cualquier tipo a la variable, ya que JavaScript es un lenguaje de tipado laxo. Esto significa que el tipo real de la variable `a` se infiere como un tipo Number según el tipo de los argumentos de la función invocada, que son tipos Number. Como último paso, en la línea 6 imprimimos el valor de `a` en la consola.
+
+Podemos verificar el código anterior abriendo las herramientas de desarrollo en Firefox en la página about:blank para evitar desorden originado por cualquier biblioteca cargada adicionalmente.
