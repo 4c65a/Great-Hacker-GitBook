@@ -121,6 +121,7 @@
     * [SMB enumeracion](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/smb-enumeracion.md)
   * [Evaluación de aplicaciones web](ethical-hacker/penetration-testing-offsec-oscp/evaluacion-de-aplicaciones-web.md)
   * [Enumeración y Abuso de APIs](ethical-hacker/penetration-testing-offsec-oscp/enumeracion-y-abuso-de-apis.md)
+  * [Cross-Site Scripting (XSS)](ethical-hacker/penetration-testing-offsec-oscp/cross-site-scripting-xss.md)
 
 ## 🟢 Pentesting Web
 
