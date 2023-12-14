@@ -85,15 +85,7 @@ Algunas de las características clave de Burp Suite incluyen:
 5. **Secuencia de trabajo:** Proporciona un conjunto de herramientas integradas para diversos aspectos de pruebas de seguridad.
 6. **Intruder:** Facilita la automatización de ataques de fuerza bruta o de diccionario para evaluar la resistencia de contraseñas u otras características de seguridad.
 
-**Enumeración de Aplicaciones Web**
-
-Esta Unidad de Aprendizaje aborda los siguientes Objetivos de Aprendizaje:
-
-* Aprender a depurar el código fuente de una aplicación web.
-* Comprender cómo enumerar e inspeccionar encabezados, cookies y código fuente.
-* Aprender a llevar a cabo metodologías de prueba de API.
-
-En un Módulo anterior, aprendimos cómo la recopilación de información de manera pasiva puede desempeñar un papel crítico al mapear aplicaciones web, especialmente cuando repositorios públicos o búsquedas en Google revelan información sensible sobre nuestro objetivo. Ya sea al trabajar con credenciales filtradas o simplemente documentación de la aplicación, siempre debemos hacer referencia a la información recuperada de manera pasiva durante nuestras pruebas activas de aplicaciones web, ya que podría llevarnos por caminos inexplorados.
+## **Enumeración de Aplicaciones Web**
 
 Es importante identificar los componentes que conforman una aplicación web antes de intentar explotarla a ciegas. Muchas vulnerabilidades de aplicaciones web son agnósticas a la tecnología. Sin embargo, algunos exploits y payloads deben ser diseñados según los fundamentos tecnológicos de la aplicación, como el software de base de datos o el sistema operativo. Antes de lanzar cualquier ataque a una aplicación web, deberíamos intentar descubrir la pila tecnológica en uso. Las pilas tecnológicas generalmente constan de un sistema operativo host, software de servidor web, software de base de datos y un lenguaje de programación de frontend/backend.
 
@@ -103,25 +95,21 @@ Podemos aprovechar varias técnicas para recopilar esta información directament
 
 Como sugiere el nombre, aunque las Herramientas de Desarrollo se utilizan típicamente por desarrolladores, son útiles para nuestros propósitos porque ofrecen información sobre el funcionamiento interno de nuestra aplicación objetivo.
 
-Nos centraremos en Firefox, ya que es el navegador predeterminado en Kali Linux. Sin embargo, la mayoría de los navegadores incluyen herramientas similares.
-
-**8.3.1 Depuración del Contenido de la Página**
+### **Depuración del Contenido de la Página**
 
 Un buen lugar para comenzar nuestro mapeo de información de aplicaciones web es con una dirección URL. Las extensiones de archivos, que a veces forman parte de una URL, pueden revelar el lenguaje de programación en el que se escribió la aplicación. Algunas extensiones, como .php, son directas, pero otras son más crípticas y varían según los frameworks utilizados. Por ejemplo, una aplicación web basada en Java podría usar .jsp, .do o .html.
 
-Las extensiones de archivos en las páginas web son cada vez menos comunes, sin embargo, ya que muchos lenguajes y marcos ahora admiten el concepto de rutas, que permiten a los desarrolladores asignar un URI a una...\
-**Inspección de Encabezados de Respuesta HTTP y Mapas del Sitio**
+Las extensiones de archivos en las páginas web son cada vez menos comunes, sin embargo, ya que muchos lenguajes y marcos ahora admiten el concepto de rutas.
+
+### **Inspección de Encabezados de Respuesta HTTP y Mapas del Sitio**
 
 También podemos buscar información adicional en las respuestas del servidor. Hay dos tipos de herramientas que podemos utilizar para llevar a cabo esta tarea. El primer tipo es un proxy, como Burp Suite, que intercepta solicitudes y respuestas entre un cliente y un servidor web, y el otro es la herramienta de red propia del navegador.
 
-\
-**Encabezados del Servidor y Mapas del Sitio**
+### **Encabezados del Servidor y Mapas del Sitio**
 
 El encabezado del servidor mostrado anteriormente a menudo revelará al menos el nombre del software del servidor web. En muchas configuraciones predeterminadas, también revela el número de versión.
 
 Los encabezados HTTP no siempre son generados únicamente por el servidor web. Por ejemplo, los servidores proxy web insertan activamente el encabezado X-Forwarded-For para informar al servidor web sobre la dirección IP original del cliente.
-
-Históricamente, los encabezados que comenzaban con "X-" se llamaban encabezados HTTP no estándar. Sin embargo, RFC6648 ahora desaconseja el uso de "X-" a favor de una convención de nomenclatura más clara.
 
 Los nombres o valores en el encabezado de respuesta a menudo revelan información adicional sobre la pila tecnológica utilizada por la aplicación. Algunos ejemplos de encabezados no estándar incluyen X-Powered-By, x-amz-cf-id y X-Aspnet-Version. Una investigación adicional sobre estos nombres podría revelar información adicional, como que el encabezado "x-amz-cf-id" indica que la aplicación utiliza Amazon CloudFront.
 
@@ -132,7 +120,7 @@ Las directivas inclusivas se realizan con el protocolo de mapas del sitio, mient
 Por ejemplo, podemos recuperar el archivo robots.txt de [www.google.com](http://www.google.com/) con curl:
 
 ```bash
-bashCopy codekali@kali:~$ curl https://www.google.com/robots.txt
+curl https://www.google.com/robots.txt
 User-agent: *
 Disallow: /search
 Allow: /search/about
@@ -143,7 +131,7 @@ Disallow: /groups
 Disallow: /index.html?
 Disallow: /?
 Allow: /?hl=
-...
+
 ```
 
 Allow y Disallow son directivas para rastreadores web que indican páginas o directorios a los que los rastreadores web "educados" pueden o no acceder, respectivamente. En la mayoría de los casos, las páginas y directorios enumerados pueden no ser interesantes, e incluso algunos pueden ser inválidos. Sin embargo, no debemos pasar por alto los archivos de mapas del sitio porque pueden contener pistas sobre el diseño del sitio web u otra información interesante, como secciones aún no exploradas del objetivo.

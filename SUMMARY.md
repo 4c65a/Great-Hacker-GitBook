@@ -124,6 +124,7 @@
 
 ## 🟢 Pentesting Web
 
+* [Pentesting Api](pentesting-web/pentesting-api.md)
 * [GraphQL](pentesting-web/graphql/README.md)
   * [Checklist](pentesting-web/graphql/checklist.md)
 * [XSS Injection](pentesting-web/xss-injection/README.md)
@@ -142,7 +143,6 @@
 * [SSRF](pentesting-web/ssrf.md)
 * [HTTP Desync](pentesting-web/http-desync.md)
 * [RCE](pentesting-web/rce.md)
-* [Pentesting Api](pentesting-web/pentesting-api.md)
 * [Cookie Manipulation Attacks](pentesting-web/cookie-manipulation-attacks.md)
 * [HTTP Parameter Pollution](pentesting-web/http-parameter-pollution.md)
 * [Insecure Direct Object Reference (IDOR)](pentesting-web/insecure-direct-object-reference-idor.md)
