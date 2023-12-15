@@ -43,27 +43,23 @@ En el ejemplo anterior, declaramos una función llamada `multiplyValues` en las 
 
 Al declarar la variable `a`, no asignamos simplemente cualquier tipo a la variable, ya que JavaScript es un lenguaje de tipado laxo. Esto significa que el tipo real de la variable `a` se infiere como un tipo Number según el tipo de los argumentos de la función invocada, que son tipos Number. Como último paso, en la línea 6 imprimimos el valor de `a` en la consola.
 
-Identificación de Vulnerabilidades XSS
+### Identificación de Vulnerabilidades XSS
 
-Podemos encontrar posibles puntos de entrada para XSS al examinar una aplicación web e identificar campos de entrada (como campos de búsqueda) que aceptan datos no sanitizados, los cuales luego se muestran como salida en páginas subsiguientes.
+Podemos encontrar posibles puntos de entrada para XSS al examinar una aplicación web e identificar campos de entrada que aceptan datos no sanitizados.
 
 Una vez que identificamos un punto de entrada, podemos ingresar caracteres especiales y observar la salida para determinar si alguno de los caracteres especiales retorna sin filtrar.
-
-Los caracteres especiales más comúnmente utilizados para este propósito incluyen: < > ' " { } ; Listado 120 - Caracteres especiales para HTML y JavaScript
-
-Ahora describiremos el propósito de estos caracteres especiales. HTML utiliza "<" y ">" para denotar elementos, los diversos componentes que conforman un documento HTML. JavaScript utiliza "{" y "}" en declaraciones de funciones. Las comillas simples (') y dobles (") se utilizan para denotar cadenas, y los puntos y coma (;) se utilizan para marcar el final de una declaración.
 
 Si la aplicación no elimina ni codifica estos caracteres, podría ser vulnerable a XSS porque la aplicación interpreta los caracteres como código, lo que a su vez permite la ejecución de código adicional.
 
 Aunque existen múltiples tipos de codificación, las más comunes que encontraremos en aplicaciones web son la codificación HTML y la codificación de URL. La codificación de URL, a veces llamada codificación porcentual, se utiliza para convertir caracteres no ASCII y reservados en URL, como convertir un espacio a "%20".
 
-La codificación HTML (o referencias de caracteres) se puede utilizar para mostrar caracteres que normalmente tienen significados especiales, como elementos de etiquetas. Por ejemplo, "<" es la referencia de caracteres para "<". Cuando se encuentra con este tipo de codificación, el navegador no interpretará el carácter como el inicio de un elemento, sino que mostrará el carácter real tal como está.
+La codificación HTML se puede utilizar para mostrar caracteres que normalmente tienen significados especiales, como elementos de etiquetas. Cuando se encuentra con este tipo de codificación, el navegador no interpretará el carácter como el inicio de un elemento, sino que mostrará el carácter real tal como está.
 
 Si podemos inyectar estos caracteres especiales en la página, el navegador los tratará como elementos de código. Luego podemos comenzar a construir código que se ejecutará en el navegador de la víctima una vez que cargue el código JavaScript maliciosamente inyectado.
 
-Podría ser necesario utilizar conjuntos diferentes de caracteres según dónde se incluya nuestra entrada. Por ejemplo, si nuestra entrada se agrega entre etiquetas div, necesitaremos incluir nuestras propias etiquetas de script y ser capaces de inyectar "<" y ">" como parte de la carga útil. Si nuestra entrada se agrega dentro de una etiqueta JavaScript existente, es posible que solo necesitemos comillas y puntos y coma para agregar nuestro propio código.
+Podría ser necesario utilizar conjuntos diferentes de caracteres según dónde se incluya nuestra entrada.&#x20;
 
-XSS Básico
+### XSS Básico
 
 Vamos a demostrar un XSS básico con un ataque simple contra la instancia de WordPress de OffSec. La instalación de WordPress está ejecutando un plugin llamado "Visitors" que es vulnerable a XSS almacenado. El principal atributo vulnerable del plugin es su capacidad de almacenar datos de visitantes del sitio web, incluyendo campos como IP, origen y User-Agent.
 
