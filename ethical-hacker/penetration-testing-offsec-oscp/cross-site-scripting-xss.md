@@ -4,29 +4,25 @@ Una de las características más importantes de una aplicación web bien defendi
 
 Cross-Site Scripting (XSS) es una vulnerabilidad que explota la confianza de un usuario en un sitio web al inyectar dinámicamente contenido en la página renderizada por el navegador del usuario.
 
-#### 8.4.1 Teoría de XSS Almacenado vs. Reflejado
+### Teoría de XSS Almacenado vs. Reflejado
 
-Las vulnerabilidades XSS se pueden agrupar en dos clases principales: almacenado o reflejado.
-
-**Almacenado XSS:**
+#### **Almacenado XSS:**
 
 Los ataques de XSS almacenado, también conocidos como XSS persistente, ocurren cuando la carga útil del exploit se almacena en una base de datos o en caché de alguna otra manera por un servidor. La aplicación web luego recupera esta carga útil y la muestra a cualquiera que visite una página vulnerable. Por lo tanto, una sola vulnerabilidad de XSS almacenado puede atacar a todos los usuarios del sitio. Estas vulnerabilidades a menudo existen en software de foros, especialmente en secciones de comentarios, en revisiones de productos o en cualquier lugar donde se pueda almacenar y revisar el contenido del usuario más tarde.
 
-**Reflejado XSS:**
+#### **Reflejado XSS:**
 
 Los ataques de XSS reflejado generalmente incluyen la carga útil en una solicitud o enlace manipulado. La aplicación web toma este valor y lo coloca en el contenido de la página. Esta variante de XSS solo ataca a la persona que envía la solicitud o visita el enlace. Las vulnerabilidades de XSS reflejado a menudo pueden ocurrir en campos y resultados de búsqueda, así como en cualquier lugar donde la entrada del usuario se incluya en mensajes de error.
 
 Cualquiera de estas dos variantes de vulnerabilidad puede manifestarse como del lado del cliente (navegador) o del servidor; también pueden ser basadas en DOM.
 
-**XSS basado en DOM:**
+#### **XSS basado en DOM:**
 
-El XSS basado en DOM ocurre únicamente dentro del Modelo de Objetos del Documento (DOM) de la página. Aunque no cubriremos demasiados detalles por ahora, debemos saber que los navegadores analizan el contenido HTML de una página y luego generan una representación interna del DOM. Este tipo de XSS ocurre cuando el DOM de una página se modifica con valores controlados por el usuario. El XSS basado en DOM puede ser almacenado o reflejado.
+El XSS basado en DOM ocurre únicamente dentro del Modelo de Objetos del Documento (DOM) de la página. Debemos saber que los navegadores analizan el contenido HTML de una página y luego generan una representación interna del DOM. Este tipo de XSS ocurre cuando el DOM de una página se modifica con valores controlados por el usuario. El XSS basado en DOM puede ser almacenado o reflejado.
 
 La clave es que los ataques de XSS basados en DOM ocurren cuando un navegador analiza el contenido de la página y ejecuta el JavaScript insertado. No importa cómo se entregue y ejecute la carga útil de XSS, los scripts inyectados se ejecutan en el contexto del usuario que visita la página afectada. Esto significa que el navegador del usuario, no la aplicación web, ejecuta la carga útil de XSS. Sin embargo, estos ataques pueden ser significativos, con impactos que incluyen la toma de sesiones, la redirección forzada a páginas maliciosas, la ejecución de aplicaciones locales como ese usuario, o incluso aplicaciones web troyanizadas. En las secciones siguientes, exploraremos algunos de estos ataques.
 
-**JavaScript Refresher**
-
-JavaScript es un lenguaje de programación de alto nivel que se ha convertido en uno de los principales componentes de las aplicaciones web modernas. Todos los navegadores modernos incluyen un motor de JavaScript que ejecuta el código JavaScript desde dentro del propio navegador.
+## **JavaScript Refresher**
 
 Cuando un navegador procesa la respuesta HTTP de un servidor que contiene HTML, el navegador crea un árbol DOM y lo renderiza. El DOM está compuesto por todas las formas, entradas, imágenes, etc., relacionadas con la página web.
 
@@ -45,8 +41,4 @@ console.log(a);
 
 En el ejemplo anterior, declaramos una función llamada `multiplyValues` en las líneas 1-3 que acepta dos valores enteros como parámetros y devuelve su producto.
 
-En la línea 5, invocamos `multiplyValues` pasando dos valores enteros, 3 y 5, como parámetros y asignamos la variable `a` al valor devuelto por la función.
-
 Al declarar la variable `a`, no asignamos simplemente cualquier tipo a la variable, ya que JavaScript es un lenguaje de tipado laxo. Esto significa que el tipo real de la variable `a` se infiere como un tipo Number según el tipo de los argumentos de la función invocada, que son tipos Number. Como último paso, en la línea 6 imprimimos el valor de `a` en la consola.
-
-Podemos verificar el código anterior abriendo las herramientas de desarrollo en Firefox en la página about:blank para evitar desorden originado por cualquier biblioteca cargada adicionalmente.
