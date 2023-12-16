@@ -125,14 +125,15 @@
 
 ## 🟢 Pentesting Web
 
-* [OWASP Top Ten 2021](pentesting-web/owasp-top-ten-2021.md)
-* [Pentesting Api](pentesting-web/pentesting-api.md)
+* [OWASP Top Ten 2021](pentesting-web/owasp-top-ten-2021/README.md)
+  * [Broken access control](pentesting-web/owasp-top-ten-2021/broken-access-control.md)
+* [Pentesting Api](pentesting-web/pentesting-api/README.md)
+  * [OWASP Top 10 API Security Risks](pentesting-web/pentesting-api/owasp-top-10-api-security-risks.md)
 * [GraphQL](pentesting-web/graphql/README.md)
   * [Checklist](pentesting-web/graphql/checklist.md)
 * [Local File Inclusion (LFI)](pentesting-web/local-file-inclusion-lfi.md)
 * [CSRF](pentesting-web/csrf.md)
 * [Path Traversal](pentesting-web/path-traversal.md)
-* [IDOR/broken access control](pentesting-web/idor-broken-access-control.md)
 * [Remote File Inclusion (RFI)](pentesting-web/remote-file-inclusion-rfi.md)
 * [SSTI](pentesting-web/ssti.md)
 * [SSRF](pentesting-web/ssrf.md)
