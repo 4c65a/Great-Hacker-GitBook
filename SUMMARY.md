@@ -126,7 +126,8 @@
 ## 🟢 Pentesting Web
 
 * [OWASP Top Ten 2021](pentesting-web/owasp-top-ten-2021/README.md)
-  * [Broken access control](pentesting-web/owasp-top-ten-2021/broken-access-control.md)
+  * [Broken access control](pentesting-web/owasp-top-ten-2021/broken-access-control/README.md)
+    * [Path Traversal](pentesting-web/owasp-top-ten-2021/broken-access-control/path-traversal.md)
   * [Cryptographic Failures](pentesting-web/owasp-top-ten-2021/cryptographic-failures.md)
   * [Inyección](pentesting-web/owasp-top-ten-2021/inyeccion/README.md)
     * [SQL Injection](pentesting-web/owasp-top-ten-2021/inyeccion/sql-injection.md)
@@ -152,7 +153,6 @@
   * [Checklist](pentesting-web/graphql/checklist.md)
 * [Local File Inclusion (LFI)](pentesting-web/local-file-inclusion-lfi.md)
 * [CSRF](pentesting-web/csrf.md)
-* [Path Traversal](pentesting-web/path-traversal.md)
 * [Remote File Inclusion (RFI)](pentesting-web/remote-file-inclusion-rfi.md)
 * [SSTI](pentesting-web/ssti.md)
 * [HTTP Desync](pentesting-web/http-desync.md)
