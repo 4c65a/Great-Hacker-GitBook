@@ -125,6 +125,7 @@
 
 ## 🟢 Pentesting Web
 
+* [OWASP Top Ten 2021](pentesting-web/owasp-top-ten-2021.md)
 * [Pentesting Api](pentesting-web/pentesting-api.md)
 * [GraphQL](pentesting-web/graphql/README.md)
   * [Checklist](pentesting-web/graphql/checklist.md)
