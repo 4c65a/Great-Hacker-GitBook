@@ -32,3 +32,4 @@ Las herramientas que buscan secretos en el código fuente, como Gitrob o Gitleak
 * GitHub Gist
 * GitLab
 * SourceForge
+* [searchcode](https://searchcode.com/)
