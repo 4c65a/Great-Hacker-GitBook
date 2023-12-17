@@ -128,8 +128,8 @@
 
 * [OWASP Top Ten 2021](pentesting-web/owasp-top-ten-2021/README.md)
   * [Broken access control](pentesting-web/owasp-top-ten-2021/broken-access-control/README.md)
-    * [Path Traversal](pentesting-web/owasp-top-ten-2021/broken-access-control/path-traversal.md)
-    * [Link Following](pentesting-web/owasp-top-ten-2021/broken-access-control/link-following.md)
+    * [Path Traversal](pentesting-web/owasp-top-ten-2021/broken-access-control/path-traversal/README.md)
+      * [Link Following](pentesting-web/owasp-top-ten-2021/broken-access-control/path-traversal/link-following.md)
     * [Exposición de información confidencial](pentesting-web/owasp-top-ten-2021/broken-access-control/exposicion-de-informacion-confidencial.md)
     * [Page 2](pentesting-web/owasp-top-ten-2021/broken-access-control/page-2.md)
     * [Page 4](pentesting-web/owasp-top-ten-2021/broken-access-control/page-4.md)
