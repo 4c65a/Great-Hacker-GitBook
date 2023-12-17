@@ -141,7 +141,7 @@
       * [Exposure of Resource to Wrong Sphere](pentesting-web/owasp-top-ten-2021/broken-access-control/exposicion-de-informacion-confidencial/exposure-of-resource-to-wrong-sphere.md)
       * [Exposure of WSDL File Containing Sensitive Information](pentesting-web/owasp-top-ten-2021/broken-access-control/exposicion-de-informacion-confidencial/exposure-of-wsdl-file-containing-sensitive-information.md)
     * [Problemas de permisos y autorizaciones](pentesting-web/owasp-top-ten-2021/broken-access-control/problemas-de-permisos-y-autorizaciones/README.md)
-      * [Page 7](pentesting-web/owasp-top-ten-2021/broken-access-control/problemas-de-permisos-y-autorizaciones/page-7.md)
+      * [Permissions, Privileges, and Access Controls](pentesting-web/owasp-top-ten-2021/broken-access-control/problemas-de-permisos-y-autorizaciones/permissions-privileges-and-access-controls.md)
       * [Page 5](pentesting-web/owasp-top-ten-2021/broken-access-control/problemas-de-permisos-y-autorizaciones/page-5.md)
       * [Page 3](pentesting-web/owasp-top-ten-2021/broken-access-control/problemas-de-permisos-y-autorizaciones/page-3.md)
       * [Page 2](pentesting-web/owasp-top-ten-2021/broken-access-control/problemas-de-permisos-y-autorizaciones/page-2.md)
