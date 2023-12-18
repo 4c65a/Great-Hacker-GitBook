@@ -144,7 +144,7 @@
       * [Permissions, Privileges, and Access Controls](pentesting-web/owasp-top-ten-2021/broken-access-control/problemas-de-permisos-y-autorizaciones/permissions-privileges-and-access-controls.md)
       * [Permission Issues](pentesting-web/owasp-top-ten-2021/broken-access-control/problemas-de-permisos-y-autorizaciones/permission-issues.md)
       * [Incorrect Default Permissions](pentesting-web/owasp-top-ten-2021/broken-access-control/problemas-de-permisos-y-autorizaciones/incorrect-default-permissions.md)
-      * [Page 2](pentesting-web/owasp-top-ten-2021/broken-access-control/problemas-de-permisos-y-autorizaciones/page-2.md)
+      * [Improper Access Control](pentesting-web/owasp-top-ten-2021/broken-access-control/problemas-de-permisos-y-autorizaciones/improper-access-control.md)
       * [Page](pentesting-web/owasp-top-ten-2021/broken-access-control/problemas-de-permisos-y-autorizaciones/page.md)
       * [Page 1](pentesting-web/owasp-top-ten-2021/broken-access-control/problemas-de-permisos-y-autorizaciones/page-1.md)
     * [Page 4](pentesting-web/owasp-top-ten-2021/broken-access-control/page-4.md)
