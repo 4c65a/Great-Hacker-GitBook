@@ -419,3 +419,10 @@
 
 * [Recursos](malware/recursos.md)
 * [Tipos de Malware](malware/tipos-de-malware.md)
+
+## 📡  IoT/OT
+
+* [IoT](iot-ot/iot.md)
+* [OT](iot-ot/ot/README.md)
+  * [Telemetry Acquisition Systems](iot-ot/ot/telemetry-acquisition-systems.md)
+  * [SCADA](iot-ot/ot/scada.md)
