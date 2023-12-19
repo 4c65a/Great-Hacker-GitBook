@@ -108,6 +108,7 @@
   * [OWASP](ethical-hacker/checklist/owasp.md)
 * [Herramientas/Tools](ethical-hacker/herramientas-tools.md)
 * [Docker](ethical-hacker/docker.md)
+* [Criptografía](ethical-hacker/criptografia.md)
 * [Curl](ethical-hacker/curl.md)
 * [Penetration testing offSec(OSCP)](ethical-hacker/penetration-testing-offsec-oscp/README.md)
   * [Passive Information Gathering](ethical-hacker/penetration-testing-offsec-oscp/passive-information-gathering/README.md)
@@ -122,7 +123,6 @@
   * [Evaluación de aplicaciones web](ethical-hacker/penetration-testing-offsec-oscp/evaluacion-de-aplicaciones-web.md)
   * [Enumeración y Abuso de APIs](ethical-hacker/penetration-testing-offsec-oscp/enumeracion-y-abuso-de-apis.md)
   * [Cross-Site Scripting (XSS)](ethical-hacker/penetration-testing-offsec-oscp/cross-site-scripting-xss.md)
-* [Criptografía](ethical-hacker/criptografia.md)
 
 ## 🟢 Pentesting Web
 
