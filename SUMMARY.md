@@ -24,6 +24,7 @@
       * [Shoulder Surfing](ethical-hacker/ethical-hacker/ingenieria-social/ataques-fisicos/shoulder-surfing.md)
       * [Clonación de insignias](ethical-hacker/ethical-hacker/ingenieria-social/ataques-fisicos/clonacion-de-insignias.md)
     * [Herramientas](ethical-hacker/ethical-hacker/ingenieria-social/herramientas.md)
+  * [Clasificacion de ataques](ethical-hacker/ethical-hacker/clasificacion-de-ataques.md)
   * [Reporte Técnico](ethical-hacker/ethical-hacker/reporte-tecnico.md)
 * [Reconocimiento Pasivo](ethical-hacker/reconocimiento-pasivo/README.md)
   * [OSINT Tools](ethical-hacker/reconocimiento-pasivo/osint-tools/README.md)
