@@ -8,7 +8,9 @@ Los distintos tipos de ataques se pueden clasificar en 3 areas principales:
 
 ## **Ataque pasivo**
 
-Passive attacks involve intercepting and monitoring network traffic and data flow on the target network without tampering with the data. Attackers conduct reconnaissance on network activities using sniffers. These attacks are challenging to detect as the attacker has no active interaction with the target system or network. Passive attacks allow capturing data or files being transmitted without the user's consent, such as obtaining unencrypted data, clear-text credentials, or sensitive information for performing active attacks.
+Realiza una interceptacion y monitoreo del trafico de una red y el frlujo de datos en la red objectivo sin manipulacion de los datos.Los atacantes realizan un reconocimiento de las actividades de la red mediante rastreadores,estos ataques son retos a detectar como los objectivos que no tienen interacion con los objectivos como sistemas o redes.
+
+Los ataques pasivos permiten capturar datos o archivos que se transmiten sin el consentimiento del usuario, como la obtención de datos no cifrados, credenciales de texto sin cifrar o información confidencial para realizar ataques activos.
 
 **Ejemplos**
 
