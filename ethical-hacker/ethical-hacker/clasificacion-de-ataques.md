@@ -70,5 +70,4 @@ Los ataques de distribución ocurren cuando los atacantes manipulan hardware o s
 
 Ejemplos de ataques de distribución incluyen:
 
-* Modificación de software o hardware durante la producción
-* Modificación de software o hardware durante la distribución
+* Modificación de software o hardware durante la producción o la distribución
