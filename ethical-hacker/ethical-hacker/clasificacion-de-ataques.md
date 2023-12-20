@@ -21,7 +21,7 @@ Los ataques pasivos permiten capturar datos o archivos que se transmiten sin el 
 
 ## Ataque activo
 
-on the other hand, tamper with data in transit or disrupt communication and services between systems to bypass or break into secured systems. Attackers actively send traffic to launch attacks, which can be detected. These attacks exploit information in transit, penetrating the target's internal network and gaining access to compromise the system.
+Por otro lado ,manipule los datos en tránsito o interrumpa la comunicación y los servicios entre sistemas para eludir o irrumpir en sistemas seguros. Los atacantes envían tráfico activamente para lanzar ataques, que se pueden detectar. Estos ataques explotan la información en tránsito, penetran en la red interna del objetivo y obtienen acceso para comprometer el sistema.
 
 **Ejemplos**
 
@@ -49,8 +49,4 @@ on the other hand, tamper with data in transit or disrupt communication and serv
 
 ## Ataque cercano
 
-occur when the attacker is in close physical proximity to the target system or network. The goal is to gather, modify information, or disrupt access.&#x20;
-
-**Ejemplos**
-
-include social engineering techniques like eavesdropping, shoulder surfing, dumpster diving, and other methods.
+Ocurren cuando el atacante está muy cerca físicamente del sistema o red de destino. El objetivo es recopilar, modificar información o interrumpir el acceso.
