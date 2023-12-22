@@ -22,4 +22,8 @@
 
 ## Cheat sheet
 
+{% embed url="https://quickref.me/rust.html#google_vignette" %}
+
+{% embed url="https://cheats.rs/" %}
+
 ## Repositorios
