@@ -1,5 +1,10 @@
 ---
+cover: .gitbook/assets/Shutterstock_2017384166-1.jpg
+coverY: 0
 layout:
+  cover:
+    visible: true
+    size: full
   title:
     visible: true
   description:
