@@ -425,3 +425,7 @@
 * [OT](iot-ot/ot/README.md)
   * [Telemetry Acquisition Systems](iot-ot/ot/telemetry-acquisition-systems.md)
   * [SCADA](iot-ot/ot/scada.md)
+
+## 🛡 Blue Team
+
+* [Page 1](blue-team/page-1.md)
