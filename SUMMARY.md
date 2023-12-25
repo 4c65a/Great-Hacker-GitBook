@@ -27,6 +27,7 @@
   * [Clasificacion de ataques](ethical-hacker/ethical-hacker/clasificacion-de-ataques.md)
   * [Reporte Técnico](ethical-hacker/ethical-hacker/reporte-tecnico.md)
 * [Reconocimiento Pasivo](ethical-hacker/reconocimiento-pasivo/README.md)
+  * [Shodan](ethical-hacker/reconocimiento-pasivo/shodan.md)
   * [OSINT Tools](ethical-hacker/reconocimiento-pasivo/osint-tools/README.md)
     * [Recon-ng](ethical-hacker/reconocimiento-pasivo/osint-tools/recon-ng.md)
     * [SpiderFoot](ethical-hacker/reconocimiento-pasivo/osint-tools/spiderfoot.md)
