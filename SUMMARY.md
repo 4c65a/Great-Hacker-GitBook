@@ -73,6 +73,7 @@
   * [Escaneo de vulnerabilidades de sitios web](ethical-hacker/reconocimiento-activo/escaneo-de-vulnerabilidades-de-sitios-web/README.md)
     * [Nikto](ethical-hacker/reconocimiento-activo/escaneo-de-vulnerabilidades-de-sitios-web/nikto.md)
     * [Escanear host gvm](ethical-hacker/reconocimiento-activo/escaneo-de-vulnerabilidades-de-sitios-web/escanear-host-gvm.md)
+* [OSINT](ethical-hacker/osint.md)
 * [Técnicas posteriores a la explotación](ethical-hacker/tecnicas-posteriores-a-la-explotacion/README.md)
   * [Movimientos laterales, evitar la detección y enumerar](ethical-hacker/tecnicas-posteriores-a-la-explotacion/movimientos-laterales-evitar-la-deteccion-y-enumerar/README.md)
     * [Legitimate Utilities and Living-off-the-Land](ethical-hacker/tecnicas-posteriores-a-la-explotacion/movimientos-laterales-evitar-la-deteccion-y-enumerar/legitimate-utilities-and-living-off-the-land.md)
