@@ -421,12 +421,12 @@
 * [Tipos de Malware](malware/tipos-de-malware.md)
 * [Recursos](malware/recursos.md)
 
-## 📡  IoT/OT
+## 📡 Industrial Control Systems
 
-* [IoT](iot-ot/iot.md)
-* [OT](iot-ot/ot/README.md)
-  * [Telemetry Acquisition Systems](iot-ot/ot/telemetry-acquisition-systems.md)
-  * [SCADA](iot-ot/ot/scada.md)
+* [IoT](industrial-control-systems/iot.md)
+* [OT](industrial-control-systems/ot/README.md)
+  * [Telemetry Acquisition Systems](industrial-control-systems/ot/telemetry-acquisition-systems.md)
+  * [SCADA](industrial-control-systems/ot/scada.md)
 
 ## 🛡 Blue Team
 

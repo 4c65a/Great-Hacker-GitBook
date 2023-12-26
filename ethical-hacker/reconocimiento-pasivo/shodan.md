@@ -39,3 +39,31 @@ shodan parse .json
 shodan search ssh
 ```
 
+## Scan&#x20;
+
+```
+shodan scan internet
+```
+
+```
+shodan scan list
+```
+
+```
+shodan scan protocols
+```
+
+```
+shodan scan status
+```
+
+```
+shodan scan submit 
+```
+
+## Stats
+
+```
+shodan stats ftp
+```
+
