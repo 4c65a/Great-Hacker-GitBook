@@ -4,12 +4,15 @@ Shodan es un motor de búsqueda que permite encontrar dispositivos conectados a 
 
 {% embed url="https://cli.shodan.io/" %}
 
-## Download
+## Comandos
+
+### Download
 
 ```
+shodan download
 ```
 
-## Host enumeracion
+### Host enumeracion
 
 ```
 shodan host 1.1.1.1
@@ -19,7 +22,7 @@ shodan host 1.1.1.1
 shodan host 13.123.15.21
 ```
 
-## Parse DataSet
+### Parse DataSet
 
 {% embed url="https://help.shodan.io/mastery/working-with-shodan-data-files" %}
 
@@ -31,7 +34,7 @@ shodan myip
 shodan parse .json
 ```
 
-## Search Query
+### Search Query
 
 {% embed url="https://www.shodan.io/search/examples" %}
 
@@ -39,7 +42,7 @@ shodan parse .json
 shodan search ssh
 ```
 
-## Scan&#x20;
+### Scan&#x20;
 
 ```
 shodan scan internet
@@ -61,7 +64,7 @@ shodan scan status
 shodan scan submit 
 ```
 
-## Stats
+### Stats
 
 ```
 shodan stats ftp
