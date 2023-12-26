@@ -37,6 +37,7 @@ layout:
 | exit     | Salir                                                                               |
 | clear    | Limpiar terminal                                                                    |
 | shred -u | Eliminar de manera segura archivos y directorios,-u indica que debe eliminarse      |
+| w        | Muestra quién está conectado                                                        |
 
 ### Networks
 
