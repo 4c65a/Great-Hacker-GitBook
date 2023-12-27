@@ -38,6 +38,23 @@ layout:
 | clear    | Limpiar terminal                                                                    |
 | shred -u | Eliminar de manera segura archivos y directorios,-u indica que debe eliminarse      |
 | w        | Muestra quién está conectado                                                        |
+| tail -f  | cambios en vivo                                                                     |
+
+### Comandos combinados y avanzados
+
+
+
+| Comandos                        | Descripción                                               |
+| ------------------------------- | --------------------------------------------------------- |
+|  cut -d: -f1 /etc/passwd        | Extraer todos los nombres de usuario de una base de datos |
+| cut -d: -f1 /etc/passwd \| sort | Ordenar  con sort                                         |
+|                                 |                                                           |
+|                                 |                                                           |
+|                                 |                                                           |
+|                                 |                                                           |
+|                                 |                                                           |
+|                                 |                                                           |
+|                                 |                                                           |
 
 ### Networks
 
