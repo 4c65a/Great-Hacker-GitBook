@@ -44,17 +44,27 @@ layout:
 
 
 
-| Comandos                        | Descripción                                               |
-| ------------------------------- | --------------------------------------------------------- |
-|  cut -d: -f1 /etc/passwd        | Extraer todos los nombres de usuario de una base de datos |
-| cut -d: -f1 /etc/passwd \| sort | Ordenar  con sort                                         |
-|                                 |                                                           |
-|                                 |                                                           |
-|                                 |                                                           |
-|                                 |                                                           |
-|                                 |                                                           |
-|                                 |                                                           |
-|                                 |                                                           |
+| Comandos                        | Descripción                                                |
+| ------------------------------- | ---------------------------------------------------------- |
+| cut -d: -f1 /etc/passwd         | Extraer todos los nombres de usuario de una base de datos  |
+| cut -d: -f1 /etc/passwd \| sort | Ordenar  con sort                                          |
+| find \~ -name "_bash_"          | Buscar archivos                                            |
+| find \~/Music -mmin -5          | Buscar archivos que fueron creados hace menos de 5 minutos |
+| find /usr -size +2M             | Buscar archivos con tamano mayo a 2 MB                     |
+| find /usr/share/bug -type d     | Buscarr archivo de tipo directorio                         |
+| find /usr/share/bug -type d -ls | Buscar archivos de directorios con mas detalles            |
+|                                 |                                                            |
+|                                 |                                                            |
+|                                 |                                                            |
+|                                 |                                                            |
+|                                 |                                                            |
+|                                 |                                                            |
+|                                 |                                                            |
+|                                 |                                                            |
+|                                 |                                                            |
+|                                 |                                                            |
+|                                 |                                                            |
+|                                 |                                                            |
 
 ### Networks
 
