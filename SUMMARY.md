@@ -242,10 +242,10 @@
 
 ## ⚫ Red Team/Black Hat
 
-* [Reconocimiento](red-team-black-hat/reconocimiento/README.md)
-  * [Reconocimiento externo](red-team-black-hat/reconocimiento/reconocimiento-externo.md)
-  * [Reconocimeinto de Hots](red-team-black-hat/reconocimiento/reconocimeinto-de-hots.md)
-  * [Reconociemiento de dominios](red-team-black-hat/reconocimiento/reconociemiento-de-dominios.md)
+* [Reconocimiento Avanzado](red-team-black-hat/reconocimiento-avanzado/README.md)
+  * [Reconocimiento externo](red-team-black-hat/reconocimiento-avanzado/reconocimiento-externo.md)
+  * [Reconocimeinto de Hots](red-team-black-hat/reconocimiento-avanzado/reconocimeinto-de-hots.md)
+  * [Reconociemiento de dominios](red-team-black-hat/reconocimiento-avanzado/reconociemiento-de-dominios.md)
 * [Post-Explotación](red-team-black-hat/post-explotacion.md)
 * [Persistencia y Escalada de Privilegios](red-team-black-hat/persistencia-y-escalada-de-privilegios/README.md)
   * [Persistencia](red-team-black-hat/persistencia-y-escalada-de-privilegios/persistencia.md)
