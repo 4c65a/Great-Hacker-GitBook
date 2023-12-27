@@ -138,6 +138,6 @@ nmap -A -F -T1 10.10.23.51 -V
 
 \*\*\*DoGit:\*\*\*Repositories
 
-{% content-ref url="reconocimiento-pasivo/google-hacking/" %}
-[google-hacking](reconocimiento-pasivo/google-hacking/)
+{% content-ref url="reconocimiento-pasivo/motor-de-busqueda/google-hacking/" %}
+[google-hacking](reconocimiento-pasivo/motor-de-busqueda/google-hacking/)
 {% endcontent-ref %}

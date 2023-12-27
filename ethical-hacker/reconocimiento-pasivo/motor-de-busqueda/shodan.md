@@ -70,3 +70,8 @@ shodan scan submit
 shodan stats ftp
 ```
 
+## Enumeracion de subdominios
+
+```
+shodan domain google.com
+```
