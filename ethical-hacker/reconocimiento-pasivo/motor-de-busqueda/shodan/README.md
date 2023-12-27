@@ -75,3 +75,5 @@ shodan stats ftp
 ```
 shodan domain google.com
 ```
+
+{% embed url="https://github.com/SmoZy92/Shodomain" %}
