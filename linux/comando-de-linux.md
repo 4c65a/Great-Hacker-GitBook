@@ -38,7 +38,8 @@ layout:
 | clear    | Limpiar terminal                                                                    |
 | shred -u | Eliminar de manera segura archivos y directorios,-u indica que debe eliminarse      |
 | w        | Muestra quién está conectado                                                        |
-| tail -f  | cambios en vivo                                                                     |
+| tail -f  | Cambios en vivo                                                                     |
+| who      | Para obtener la lista actual de los usuarios en el sistema                          |
 
 ### Comandos combinados y avanzados
 
