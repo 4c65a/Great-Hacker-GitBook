@@ -1,10 +1,4 @@
-# Untitled
-
-```
--rw-r--r-- 1 root   root  18047 Dec 20  2017 alternatives.log       
-            
-drwxr-x--- 2 root   adm    4096 Dec 20  2017 apache2
-```
+# Mas informacion
 
 | Símbolo | Tipo de archivo    | Descripción                                                                    |
 | ------- | ------------------ | ------------------------------------------------------------------------------ |
@@ -16,81 +10,13 @@ drwxr-x--- 2 root   adm    4096 Dec 20  2017 apache2
 | `b`     | archivo bloque     | Usado para comunicaciones con el equipo (hardware).                            |
 | `c`     | archivo carácter   | Usado para comunicaciones con el equipo (hardware).                            |
 
-1.  **Permisos**
-
-    ```
-    drwxr-xr-x 2 root   root   4096 Apr 11  2014 upstart
-    ```
-
-    Los permisos indican cómo determinados usuarios pueden acceder a un archivo. Siga leyendo para obtener más información sobre los permisos.
-2.  **Número de enlaces directos**
-
-    ```
-    -rw-r----- 1 syslog adm    1346 Oct  2 22:17 auth.log
-    ```
-
-    Este número indica cuántos enlaces directos apuntan a este archivo. Los enlaces directos están fuera del alcance de este módulo, pero están cubiertos en el curso [NDG Linux Essentials](https://www.netacad.com/courses/linux-essentials/).
-3.  **Propietario del archivo**
-
-    ```
-    -rw-r----- 1 syslog adm     106 Oct  2 19:57 kern.log
-    ```
-
-    El usuario `syslog` posee este archivo. Cada vez que se crea un archivo, la propiedad se asigna automáticamente al usuario que lo creó.
-4.  **Grupo propietario del archivo**
-
-    ```
-    -rw-rw-r-- 1 root   utmp 292584 Oct  2 19:57 lastlog
-    ```
-
-    Indica qué grupo posee este archivo.
-5.  **Tamaño del archivo**
-
-    ```
-    -rw-r----- 1 syslog adm   19573 Oct  2 22:57 syslog
-    ```
-
-    Los directorios y archivos más grandes pueden mostrarse en kilobytes ya que mostrar su tamaño en bytes resultaría en un número demasiado grande. Por lo tanto, en el caso de un directorio, este número podría ser un múltiplo del tamaño de bloque utilizado por el sistema de archivos. El tamaño de bloque es el tamaño de una serie de datos almacenados en el sistema de archivos.
-6.  **Sello horario o de tiempo**
-
-    ```
-    drwxr-xr-x 2 root   root   4096 Dec  7  2017 fsck
-    ```
-
-    Indica la fecha y hora en que el contenido del archivo se modificó por última vez.
-7.  **Nombre del archivo**
-
-    ```
-    -rw-r--r-- 1 root   root  47816 Dec  7  2017 bootstrap.log
-    ```
-
-    El campo final contiene el nombre del archivo o directorio.
-8.  **A tener en cuenta**
-
-    En el caso de enlaces simbólicos, un archivo que apunta a otro archivo, el nombre del enlace se mostrará junto a una flecha y el nombre de la ruta del archivo original.
-
-    ```
-    lrwxrwxrwx. 1 root root 22 Nov 6 2012 /etc/grub.conf -> ../boot/grub/grub.conf
-    ```
-
-    Los enlaces simbólicos están fuera del alcance de este módulo, pero están cubiertos en el curso [NDG Linux Essentials](https://www.netacad.com/courses/linux-essentials/).
-
 ### Permisos
 
-Los permisos determinan la forma en que los diferentes usuarios pueden interactuar con un archivo o directorio. Al enumerar un archivo con el comando `ls -l`, el resultado incluye información sobre sus permisos. Para nuestro ejemplo usaremos un script llamado `hello.sh` ubicado en el directorio `Documents`:
+Los permisos determinan la forma en que los diferentes usuarios pueden interactuar con un archivo o directorio. Al enumerar un archivo con el comando `ls -l`, el resultado incluye información sobre sus permisos. Para nuestro ejemplo usaremos un script llamado `hello.sh` ubicado en el directorio `Documents`:                           &#x20;
 
-**Siga leyendo**
-
-Utilice el siguiente comando para cambiar al directorio `Documents`:
-
-<pre><code><strong>sysadmin@localhost:~$ cd ~/Documents
-</strong></code></pre>
-
-<pre><code><strong>sysadmin@localhost:~/Documents$ ls -l hello.sh                                  
-</strong>-rw-r--r-- 1 sysadmin sysadmin 647 Dec 20  2017 hello.sh
-</code></pre>
-
-A continuación repasamos los campos más relevantes para los permisos.
+```
+-rw-r--r-- 1 sysadmin sysadmin 647 Dec 20  2017 hello.sh
+```
 
 #### Tipo de archivo
 
@@ -99,8 +25,6 @@ A continuación repasamos los campos más relevantes para los permisos.
 ```
 
 El primer carácter de esta salida indica el tipo de archivo. Recuerde que si el primer carácter es un `-`, este es un archivo ordinario. Si el carácter fuera una `d`, se trataría de un directorio.
-
-#### Permisos
 
 ```
 -rw-r--r-- 1 sysadmin sysadmin 647 Dec 20  2017 hello.sh
@@ -117,10 +41,6 @@ Después del carácter de tipo de archivo, se muestran los permisos. Los permiso
     El primer grupo se refiere al usuario que posee el archivo. Si su cuenta actual es la propietaria del archivo, se usará el primer grupo de permisos y los demás permisos no tendrán efecto.
 
     El usuario propietario del archivo y a quién se refieren estos permisos se puede determinar mediante el campo que muestra el usuario propietario:
-
-    ```
-    -rw-r--r-- 1 sysadmin sysadmin 647 Dec 20  2017 hello.sh
-    ```
 2.  #### Grupo
 
     ```
@@ -128,12 +48,6 @@ Después del carácter de tipo de archivo, se muestran los permisos. Los permiso
     ```
 
     El segundo conjunto se refiere al grupo que posee el archivo. Si su cuenta actual no es la del propietario del archivo pero es miembro del grupo que posee el archivo, se aplicarán los permisos del grupo y los demás permisos no tendrán efecto.
-
-    El grupo propietario para este archivo puede ser determinado en el campo grupo propietario:
-
-    ```
-    -rw-r--r-- 1 sysadmin sysadmin 647 Dec 20  2017 hello.sh
-    ```
 3.  #### Otros
 
     ```
@@ -154,7 +68,7 @@ Un archivo o directorio puede presentar tres permisos diferentes: leer, escribir
 
 **A tener en cuenta**
 
-Comprender qué permisos se aplican en cada momento es una aptitud importante cuando trabajamos con Linux. Por ejemplo, considere el siguiente conjunto de permisos:
+Comprender qué permisos se aplican en cada momento es una aptitud importante cuando trabajamos con Linux.&#x20;
 
 ```
 -r--rw-rwx. 1 sysadmin staff 999 Apr  10  2013 /home/sysadmin/test
@@ -168,18 +82,9 @@ El comando `chmod` se utiliza para cambiar los permisos de un archivo o director
 
 **Considere esto**
 
-¿Por qué el comando se llama `chmod` en lugar de `chperm`? Los permisos solían denominarse modos de acceso, por lo que el comando `chmod` realmente significa cambiar los modos de acceso (**ch**ange access **mod**e).
+Hay dos métodos para cambiar permisos usando el comando `chmod`: el método simbólico y el método octal. El método simbólico es útil para cambiar un conjunto de permisos a la misma vez. El método octal o numérico requiere conocer el valor octal de cada uno de los permisos y requiere que los tres conjuntos de permisos (usuario, grupo, otros) se especifiquen cada vez. Para simplificar las cosas, solamente trataremos el método simbólico.
 
-Hay dos métodos para cambiar permisos usando el comando `chmod`: el método simbólico y el método octal. El método simbólico es útil para cambiar un conjunto de permisos a la misma vez. El método octal o numérico requiere conocer el valor octal de cada uno de los permisos y requiere que los tres conjuntos de permisos (usuario, grupo, otros) se especifiquen cada vez. Para simplificar las cosas, solamente trataremos el método simbólico. Para obtener más información sobre el método octal eche un vistazo al curso [NDG Linux Essentials](https://www.netdevgroup.com/online/courses/ndg\_linux\_essentials.html).
-
-**Siga leyendo**
-
-Utilice el siguiente comando para cambiar al directorio `Documents`:
-
-<pre><code><strong>sysadmin@localhost:~$ cd ~/Documents
-</strong></code></pre>
-
-#### El método simbólico
+### Comandos
 
 ```
 chmod [<COJUNTO DE PERMISOS><ACCIÓN><PERMISOS>]... ARCHIVO
