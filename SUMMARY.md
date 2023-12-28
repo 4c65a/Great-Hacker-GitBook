@@ -48,6 +48,7 @@
       * [Pages Containing Login Portals](ethical-hacker/reconocimiento-pasivo/motor-de-busqueda/google-hacking/pages-containing-login-portals.md)
       * [Google Hacking | Bug Bounty](ethical-hacker/reconocimiento-pasivo/motor-de-busqueda/google-hacking/google-hacking-or-bug-bounty.md)
     * [Censys](ethical-hacker/reconocimiento-pasivo/motor-de-busqueda/censys.md)
+  * [Wayback Machine](ethical-hacker/reconocimiento-pasivo/wayback-machine.md)
   * [OSINT Tools](ethical-hacker/reconocimiento-pasivo/osint-tools/README.md)
     * [Recon-ng](ethical-hacker/reconocimiento-pasivo/osint-tools/recon-ng.md)
     * [SpiderFoot](ethical-hacker/reconocimiento-pasivo/osint-tools/spiderfoot.md)
