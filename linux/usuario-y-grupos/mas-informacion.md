@@ -86,10 +86,6 @@ Hay dos métodos para cambiar permisos usando el comando `chmod`: el método sim
 
 ### Comandos
 
-```
-chmod [<COJUNTO DE PERMISOS><ACCIÓN><PERMISOS>]... ARCHIVO
-```
-
 Para usar el método simbólico de `chmod` primero debe indicar qué conjunto de permisos se está cambiando:
 
 ```
@@ -133,11 +129,11 @@ Finalmente, añada un espacio y los nombres de ruta para los archivos a los que 
 chmod [<CONJUNTO DE PERMISOS><ACCIÓN><PERMISOS>]... ARCHIVO
 ```
 
-El archivo `hello.sh` utilizado en los ejemplos de la página anterior es un script. Un script es un archivo que se puede ejecutar, similar a un comando:
+El archivo `hello.sh`                       &#x20;
 
-<pre><code><strong>sysadmin@localhost:~/Documents$ ls -l hello.sh                                  
-</strong>-rw-r--r-- 1 sysadmin sysadmin 647 Dec 20  2017 hello.sh
-</code></pre>
+```
+-rw-r--r-- 1 sysadmin sysadmin 647 Dec 20  2017 hello.sh
+```
 
 Sin embargo, actualmente, el permiso de ejecución no ha sido establecido para ninguno de los grupos de permisos:
 
@@ -145,15 +141,9 @@ Sin embargo, actualmente, el permiso de ejecución no ha sido establecido para n
 -rw-r--r-- 1 sysadmin sysadmin 647 Dec 20  2017 hello.sh
 ```
 
-De esta manera, intentar ejecutar este script utilizando la siguiente sintaxis produce un error:
-
-<pre><code><strong>sysadmin@localhost:~/Documents$ ./hello.sh                                      
-</strong>-bash: ./hello.sh: Permission denied
-</code></pre>
-
 Dado que el sistema está actualmente conectado como usuario `sysadmin`, y `sysadmin` es el propietario de este archivo, otorgar el permiso de ejecución al usuario propietario debería permitirle ejecutar este script. Usando el comando `chmod` con el carácter `u` para representar el conjunto de permisos del usuario propietario, y agregando el carácter `+` para indicar que se añade ­un permiso y el carácter `x` para representar el permiso de ejecución, el comando deberá ejecutarse con la siguiente sintaxis:
 
-<pre><code><strong>sysadmin@localhost:~/Documents$ chmod u+x hello.sh
+<pre><code><strong>chmod u+x hello.sh
 </strong></code></pre>
 
 No obtener un resultado/mensaje indica que el comando se ha realizado correctamente. Confírmelo examinando los permisos con el comando `ls -l`:
@@ -167,32 +157,3 @@ El usuario propietario ahora posee permiso para ejecutar:
 ```
 -rwxr--r-- 1 sysadmin sysadmin 647 Dec 20  2017 hello.sh
 ```
-
-Finalmente, intente ejecutar el script de nuevo. Utilice la sintaxis de comando que se muestra a continuación:
-
-```
-./hello.sh
-```
-
-<pre><code><strong>sysadmin@localhost:~/Documents$ ./hello.sh                                      
-</strong> ______________                                                                 
-( Hello World! )                                                                
- --------------                                                                 
-        \                                                                       
-         \                                                                      
-           &#x3C;(^)                                                                 
-            ( ) 
-</code></pre>
-
-**A tener en cuenta**
-
-Observe que para ejecutar el script en el ejemplo anterior, la siguiente combinación de caracteres `./` se colocó antes del nombre del script.
-
-```
-./hello.sh
-```
-
-Esto indica que el “comando” debe ejecutarse desde el directorio actual.
-
-* [ Previous](https://content.netdevgroup.com/contents/unhatched/bCdL9YLvTR/7)
-* [Next ](https://content.netdevgroup.com/contents/unhatched/bCdL9YLvTR/9)
