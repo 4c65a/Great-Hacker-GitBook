@@ -361,7 +361,7 @@
   * [Configuración de SSH](linux/administrador-de-servidores-en-linux/configuracion-de-ssh.md)
   * [Comprobación de la red desde la línea de comandos](linux/administrador-de-servidores-en-linux/comprobacion-de-la-red-desde-la-linea-de-comandos.md)
 * [Usuario y grupos](linux/usuario-y-grupos/README.md)
-  * [Untitled](linux/usuario-y-grupos/untitled.md)
+  * [Mas informacion](linux/usuario-y-grupos/mas-informacion.md)
   * [Actualizar password](linux/usuario-y-grupos/actualizar-password.md)
 * [Técnicas de seguridad de Linux](linux/tecnicas-de-seguridad-de-linux/README.md)
   * [Iptables](linux/tecnicas-de-seguridad-de-linux/iptables.md)
