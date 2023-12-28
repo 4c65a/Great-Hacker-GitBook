@@ -8,7 +8,7 @@ El comando `passwd` se utiliza para actualizar la contraseña de un usuario. Los
 passwd [OPCIONES] [USUARIO]
 ```
 
-Por ejemplo, ya que hemos iniciado sesión como usuario `sysadmin`, podemos cambiar la contraseña de esa cuenta. Ejecute el comando `passwd`. Se le pedirá que introduzca la contraseña actual una vez y la contraseña nueva dos veces. Por razones de seguridad, no se muestra ningún resultado mientras se está escribiendo la contraseña. La salida se muestra de la siguiente manera:
+Ejecute el comando `passwd`. Se le pedirá que introduzca la contraseña actual una vez y la contraseña nueva dos veces. Por razones de seguridad, no se muestra ningún resultado mientras se está escribiendo la contraseña. La salida se muestra de la siguiente manera:
 
 <pre><code><strong>sysadmin@localhost:~$ passwd                                                    
 </strong>Changing password for sysadmin.                                                 
@@ -40,25 +40,18 @@ Los campos de salida se explican a continuación:
 
 Cambie a la cuenta `root` mediante el siguiente comando:
 
-<pre><code><strong>sysadmin@localhost:~$ su root                                                   
-</strong>Password:                                                                       
-<strong>root@localhost:~#
+<pre><code><strong>su root                                                   
 </strong></code></pre>
-
-Use `netlab123` como contraseña.
 
 El usuario root puede cambiar la contraseña de cualquier usuario. Si el usuario root desea cambiar la contraseña de `sysadmin`, ejecutará el siguiente comando:
 
-<pre><code><strong>root@localhost:~# passwd sysadmin                                               
+<pre><code><strong>passwd sysadmin                                               
 </strong>Enter new UNIX password:                                                        
 Retype new UNIX password:                                                       
 passwd: password updated successfully
 </code></pre>
 
-**Siga leyendo**
-
 Salga de la cuenta `root` mediante el comando `exit`:
 
-<pre><code><strong>root@localhost:~# exit                                                        
-</strong>exit
-</code></pre>
+<pre><code><strong>exit                                                        
+</strong></code></pre>
