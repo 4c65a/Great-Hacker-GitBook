@@ -184,7 +184,7 @@
   * [DOM-Based Cross Site Scripting](pentesting-web/xss-injection/dom-based-cross-site-scripting.md)
   * [CSP-Bypass Cross Site Scripting](pentesting-web/xss-injection/csp-bypass-cross-site-scripting.md)
   * [Blind XSS](pentesting-web/xss-injection/blind-xss.md)
-* [XML](pentesting-web/xml.md)
+* [XML External Entity](pentesting-web/xml-external-entity.md)
 * [Inyección de comandos](pentesting-web/inyeccion-de-comandos.md)
 * [Secuestro de sesión(Session Hijacking)](pentesting-web/secuestro-de-sesion-session-hijacking.md)
 * [Web Security Issues](pentesting-web/web-security-issues/README.md)
