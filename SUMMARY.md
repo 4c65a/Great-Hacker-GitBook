@@ -429,12 +429,12 @@
 * [Tipos de Malware](malware/tipos-de-malware.md)
 * [Recursos](malware/recursos.md)
 
-## 📡 Industrial Control Systems
+## 📡 Tecnologías de automatización industrial.
 
-* [IoT](industrial-control-systems/iot.md)
-* [OT](industrial-control-systems/ot/README.md)
-  * [Telemetry Acquisition Systems](industrial-control-systems/ot/telemetry-acquisition-systems.md)
-  * [SCADA](industrial-control-systems/ot/scada.md)
+* [IoT](tecnologias-de-automatizacion-industrial./iot.md)
+* [OT](tecnologias-de-automatizacion-industrial./ot/README.md)
+  * [Telemetry Acquisition Systems](tecnologias-de-automatizacion-industrial./ot/telemetry-acquisition-systems.md)
+  * [SCADA](tecnologias-de-automatizacion-industrial./ot/scada.md)
 
 ## 🛡 Blue Team
 
