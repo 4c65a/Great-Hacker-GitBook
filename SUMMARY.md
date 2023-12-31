@@ -393,9 +393,6 @@
 * [Rust](programming/rust.md)
 * [Go](programming/go.md)
 * [Python](programming/python.md)
-* [JavaScript](programming/javascript.md)
-* [C](programming/c.md)
-* [Assembly](programming/assembly.md)
 
 ## 🟣 Reverse Engineering
 
