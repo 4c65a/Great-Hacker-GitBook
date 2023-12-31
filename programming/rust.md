@@ -22,6 +22,14 @@
 
 {% embed url="https://doc.rust-lang.org/std/#modules" %}
 
+{% embed url="https://doc.rust-lang.org/std/io/index.html" %}
+
+{% embed url="https://doc.rust-lang.org/std/os/index.html" %}
+
+{% embed url="https://doc.rust-lang.org/std/env/index.html" %}
+
+{% embed url="https://doc.rust-lang.org/std/net/index.html" %}
+
 {% embed url="https://doc.rust-lang.org/std/process/index.html" %}
 
 {% embed url="https://doc.rust-lang.org/std/os/windows/io/index.html" %}
