@@ -20,6 +20,12 @@
 
 ## Librerias
 
+{% embed url="https://doc.rust-lang.org/std/#modules" %}
+
+{% embed url="https://doc.rust-lang.org/std/process/index.html" %}
+
+{% embed url="https://doc.rust-lang.org/std/os/windows/io/index.html" %}
+
 ## Cheat sheet
 
 {% embed url="https://quickref.me/rust.html#google_vignette" %}
