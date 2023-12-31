@@ -26,6 +26,10 @@
 
 {% embed url="https://doc.rust-lang.org/std/os/index.html" %}
 
+{% embed url="https://doc.rust-lang.org/std/hash/index.html" %}
+
+{% embed url="https://doc.rust-lang.org/std/fs/index.html" %}
+
 {% embed url="https://doc.rust-lang.org/std/env/index.html" %}
 
 {% embed url="https://doc.rust-lang.org/std/net/index.html" %}
