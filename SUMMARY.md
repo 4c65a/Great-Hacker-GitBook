@@ -191,6 +191,7 @@
   * [Cross-Site Request Forgery (CSRF)](pentesting-web/web-security-issues/cross-site-request-forgery-csrf.md)
   * [Exposure of Private Personal Information to an Unauthorized Actor](pentesting-web/web-security-issues/exposure-of-private-personal-information-to-an-unauthorized-actor.md)
   * [Insecure Temporary File](pentesting-web/web-security-issues/insecure-temporary-file.md)
+* [Web Shell](pentesting-web/web-shell.md)
 
 ## 🔵 Pentesting Networks
 
