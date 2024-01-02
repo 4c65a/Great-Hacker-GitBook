@@ -228,6 +228,8 @@
   * [Hacking WEP/WPA/WPA2 WIFI Networks](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/README.md)
     * [Cambiar direccion MAC](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/cambiar-direccion-mac.md)
     * [Habilitación del modo Monitor en la tarjeta WiFi](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/habilitacion-del-modo-monitor-en-la-tarjeta-wifi.md)
+    * [Reunir informacion AP (Access Point) antes del cracking](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/reunir-informacion-ap-access-point-antes-del-cracking/README.md)
+      * [Escaneo de los puntos de acceso    Wi-Fi disponibles](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/reunir-informacion-ap-access-point-antes-del-cracking/escaneo-de-los-puntos-de-acceso-wi-fi-disponibles.md)
 * [Captura de Paquetes](pentesting-networks/captura-de-paquetes.md)
 * [Vectores de Ataques(Vulnerabilidades comunes)](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/README.md)
   * [On-Path Attacks](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/on-path-attacks.md)
