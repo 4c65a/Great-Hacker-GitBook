@@ -227,6 +227,7 @@
     * [Ataques de KARMA](pentesting-networks/wireless/explotacion-de-vulnerabilidades-inalambricas/ataques-de-karma.md)
   * [Hacking WEP/WPA/WPA2 WIFI Networks](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/README.md)
     * [Cambiar direccion MAC](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/cambiar-direccion-mac.md)
+    * [Habilitación del modo Monitor en la tarjeta WiFi](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/habilitacion-del-modo-monitor-en-la-tarjeta-wifi.md)
 * [Captura de Paquetes](pentesting-networks/captura-de-paquetes.md)
 * [Vectores de Ataques(Vulnerabilidades comunes)](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/README.md)
   * [On-Path Attacks](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/on-path-attacks.md)
