@@ -28,4 +28,4 @@ Con la escalada de privilegios horizontal,un usuario normal accede a funciones o
 \
 **Escalamiento de privilegios horizontal.**
 
-<img src="../../../.gitbook/assets/file.excalidraw (2).svg" alt="" class="gitbook-drawing">
+<img src="../../../.gitbook/assets/file.excalidraw (1) (1).svg" alt="" class="gitbook-drawing">
