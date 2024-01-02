@@ -22,7 +22,7 @@ El protocolo HTTP permite realizar una petición de datos y recursos, como HTML.
 
 Los servidores proxy HTTP actúan como servidores y clientes. Los servidores proxy realizan solicitudes a servidores web en nombre de otros clientes. Permiten transferencias HTTP a través de firewalls y también pueden brindar soporte para el almacenamiento en caché de mensajes HTTP. Los servidores proxy pueden desempeñar otras funciones en entornos complejos, incluida la traducción de direcciones de red (NAT) y el filtrado de solicitudes HTTP.
 
-<img src="../../.gitbook/assets/file.excalidraw (1) (1) (1) (1).svg" alt="" class="gitbook-drawing">
+<img src="../../.gitbook/assets/file.excalidraw (5).svg" alt="" class="gitbook-drawing">
 
 Cuando los servidores HTTP y los navegadores se comunican entre sí, realizan interacciones basadas en encabezados y contenido del cuerpo.
 

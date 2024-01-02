@@ -22,11 +22,11 @@ Windows PowerShell es un shell de Microsoft más nuevo que combina la antigua fu
 
 Con un shell de enlace, un atacante abre un puerto o un escucha en el sistema comprometido y espera una conexión. Esto se hace para conectarse a la víctima desde cualquier sistema y ejecutar comandos y manipular aún más a la víctima.&#x20;
 
-<img src="../../../.gitbook/assets/file.excalidraw (2).svg" alt="" class="gitbook-drawing">
+<img src="../../../.gitbook/assets/file.excalidraw (3).svg" alt="" class="gitbook-drawing">
 
 Un shell inverso es una vulnerabilidad en la que un sistema atacante tiene un oyente (puerto abierto y la víctima inicia una conexión con el sistema atacante.
 
-<img src="../../../.gitbook/assets/file.excalidraw (3).svg" alt="" class="gitbook-drawing">
+<img src="../../../.gitbook/assets/file.excalidraw (7).svg" alt="" class="gitbook-drawing">
 
 ### Netcat
 
