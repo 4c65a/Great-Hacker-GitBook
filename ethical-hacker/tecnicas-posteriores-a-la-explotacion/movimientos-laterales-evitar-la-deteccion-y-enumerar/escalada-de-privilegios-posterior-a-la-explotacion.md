@@ -20,7 +20,7 @@ Con la escalada de privilegios vertical,un usuario con privilegios más bajos ac
 \
 **Escalamiento de privilegios vertical.**
 
-<img src="../../../.gitbook/assets/file.excalidraw (1).svg" alt="" class="gitbook-drawing">
+<img src="../../../.gitbook/assets/file.excalidraw (1) (1).svg" alt="" class="gitbook-drawing">
 
 ### Escalada de privilegios horizontales
 
@@ -28,4 +28,4 @@ Con la escalada de privilegios horizontal,un usuario normal accede a funciones o
 \
 **Escalamiento de privilegios horizontal.**
 
-<img src="../../../.gitbook/assets/file.excalidraw (1) (1).svg" alt="" class="gitbook-drawing">
+<img src="../../../.gitbook/assets/file.excalidraw (1) (1) (1).svg" alt="" class="gitbook-drawing">
