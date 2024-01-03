@@ -1,10 +1,12 @@
 ---
-cover: .gitbook/assets/Shutterstock_2017384166-1.jpg
+cover: >-
+  .gitbook/assets/Copia de Banner para Linkedin Licenciada Marketing Minimalista
+  Beige.png
 coverY: 0
 layout:
   cover:
     visible: true
-    size: full
+    size: hero
   title:
     visible: true
   description:
