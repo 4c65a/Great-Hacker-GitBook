@@ -1,6 +1,4 @@
-# Docker
-
-## CheatSheetDocker
+# Cheat Sheet Docker
 
 ## Comandos básicos
 

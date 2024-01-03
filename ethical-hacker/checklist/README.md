@@ -14,8 +14,10 @@ layout:
 
 # Checklist
 
-Web\_Checklist\_by\_Chintan\_Gurjar.pdf
+## Recopilación de distintos checklist
 
-Web\_Application\_Penetration\_Testing\_Checklist\_by\_Tushar\_Verma.pdf
-
-[https://github.com/0xRadi/OWASP-Web-Checklist](https://github.com/0xRadi/OWASP-Web-Checklist)
+| URL                                                                                            |
+| ---------------------------------------------------------------------------------------------- |
+| Web\_Checklist\_by\_Chintan\_Gurjar.pdf                                                        |
+| Web\_Application\_Penetration\_Testing\_Checklist\_by\_Tushar\_Verma.pdf                       |
+| [https://github.com/0xRadi/OWASP-Web-Checklist](https://github.com/0xRadi/OWASP-Web-Checklist) |
