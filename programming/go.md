@@ -12,6 +12,20 @@
 
 ## Librerias
 
+{% embed url="https://pkg.go.dev/net/http" %}
+
+{% embed url="https://pkg.go.dev/net" %}
+
+{% embed url="https://pkg.go.dev/std" %}
+
+
+
+{% embed url="https://pkg.go.dev/bufio@go1.21.5" %}
+
+
+
+
+
 ## Cheat sheet
 
 {% embed url="https://devhints.io/go" %}
