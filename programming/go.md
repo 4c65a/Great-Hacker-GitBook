@@ -18,3 +18,4 @@
 
 {% embed url="https://cuarzo.dev/cheat-sheets/go" %}
 
+{% embed url="https://zerotomastery.io/cheatsheets/golang-cheat-sheet/" %}
