@@ -18,13 +18,25 @@
 
 {% embed url="https://pkg.go.dev/std" %}
 
-
+{% embed url="https://pkg.go.dev/encoding@go1.21.5" %}
 
 {% embed url="https://pkg.go.dev/bufio@go1.21.5" %}
 
+{% embed url="https://pkg.go.dev/hash@go1.21.5" %}
 
+{% embed url="https://pkg.go.dev/io@go1.21.5" %}
 
+{% embed url="https://pkg.go.dev/log@go1.21.5" %}
 
+{% embed url="https://pkg.go.dev/maps@go1.21.5" %}
+
+{% embed url="https://pkg.go.dev/os@go1.21.5" %}
+
+{% embed url="https://pkg.go.dev/path@go1.21.5" %}
+
+{% embed url="https://pkg.go.dev/time@go1.21.5" %}
+
+{% embed url="https://pkg.go.dev/github.com/spf13/cobra" %}
 
 ## Cheat sheet
 
