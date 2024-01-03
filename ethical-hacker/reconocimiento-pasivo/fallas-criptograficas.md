@@ -61,7 +61,7 @@ sslscan google.com
 sslscan -t dominios.txt
 ```
 
-**Escanea los puestos del servidor**
+**Escanea los puertos del servidor**
 
 ```
 sslscan -d 192.168.1.1 -p 443
