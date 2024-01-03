@@ -231,6 +231,7 @@
     * [Reunir informacion AP (Access Point) antes del cracking](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/reunir-informacion-ap-access-point-antes-del-cracking/README.md)
       * [Escaneo de los puntos de acceso    Wi-Fi disponibles](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/reunir-informacion-ap-access-point-antes-del-cracking/escaneo-de-los-puntos-de-acceso-wi-fi-disponibles.md)
       * [Captura de paquetes de un punto de acceso Wi-Fi específico](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/reunir-informacion-ap-access-point-antes-del-cracking/captura-de-paquetes-de-un-punto-de-acceso-wi-fi-especifico.md)
+      * [Desconectar cualquier dispositivo desde cualquier punto de acceso](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/reunir-informacion-ap-access-point-antes-del-cracking/desconectar-cualquier-dispositivo-desde-cualquier-punto-de-acceso.md)
 * [Captura de Paquetes](pentesting-networks/captura-de-paquetes.md)
 * [Vectores de Ataques(Vulnerabilidades comunes)](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/README.md)
   * [On-Path Attacks](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/on-path-attacks.md)
