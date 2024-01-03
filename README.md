@@ -28,12 +28,7 @@ Considero esta guía o notas en **GitBook** como un proyecto a largo plazo en el
 Como mi aprendizaje es constante día a día, busco aprender cosas nuevas o reforzar lo aprendido, y añado muchas de estas experiencias aquí. Siempre me esforzaré por mejorarlo, actualizar cada área y ampliar diversos aspectos.
 
 {% hint style="success" %}
-Siempre trato de agregar los enlaces de donde obtuve la información. Obtengo todo de distintas páginas, videos, documentos, PDF o cursos. La base principal son los cursos de **Cisco de ciberseguridad, redes o de Ethical Hacker**.
-
-Enlaces:
-
-* [**https://skillsforall.com/**](https://skillsforall.com/)
-* [**https://www.netacad.com/**](https://www.netacad.com/)
+Siempre trato de agregar los enlaces de donde obtuve la información. Obtengo todo de distintas páginas, videos, documentos, PDF o cursos.
 {% endhint %}
 
 ## [cumplimiento-normativo.md](ethical-hacker/ethical-hacker/cumplimiento-normativo.md "mention")
