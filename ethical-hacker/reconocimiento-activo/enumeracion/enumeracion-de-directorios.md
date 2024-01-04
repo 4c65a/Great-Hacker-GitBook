@@ -1,2 +1,0 @@
-# Enumeración de directorios
-

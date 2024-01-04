@@ -64,7 +64,6 @@
   * [Nmap](ethical-hacker/reconocimiento-activo/nmap/README.md)
     * [Combinaciones](ethical-hacker/reconocimiento-activo/nmap/combinaciones.md)
   * [Enumeracion](ethical-hacker/reconocimiento-activo/enumeracion/README.md)
-    * [Enumeración de directorios](ethical-hacker/reconocimiento-activo/enumeracion/enumeracion-de-directorios.md)
     * [Host Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/host-enumeration.md)
     * [User Enumeration](ethical-hacker/reconocimiento-activo/enumeracion/user-enumeration/README.md)
       * [SMB enumeration](ethical-hacker/reconocimiento-activo/enumeracion/user-enumeration/smb-enumeration.md)
