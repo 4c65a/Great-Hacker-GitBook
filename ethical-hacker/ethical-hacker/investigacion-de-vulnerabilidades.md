@@ -14,7 +14,7 @@ layout:
 
 # Investigación de vulnerabilidades
 
-## [US-CERT](https://www.cisa.gov/)
+[US-CERT](https://www.cisa.gov/)
 
 El Equipo de Respuesta ante Emergencias Informáticas de los Estados Unidos (US-CERT) se estableció para proteger la infraestructura de Internet de los Estados Unidos. El objetivo principal de US-CERT es trabajar con agencias del sector público y privado para aumentar la eficiencia del intercambio de datos sobre vulnerabilidades.
 
@@ -47,7 +47,3 @@ Common Weakness Enumeration (CWE), a un alto nivel, es una lista de debilidades 
 Cada vulnerabilidad representa un riesgo potencial que los actores de amenazas pueden utilizar para comprometer los sistemas y la red. Cada vulnerabilidad conlleva un cierto nivel de riesgo. Uno de los estándares más ampliamente adoptados para calcular la gravedad de una vulnerabilidad es el Sistema de Puntuación de Vulnerabilidades Común (CVSS), que tiene tres componentes: puntuaciones base, temporales y ambientales. Cada componente se presenta como una puntuación en una escala de 0 a 10.
 
 CVSS es un estándar de la industria mantenido por el Foro de Equipos de Respuesta a Incidentes y Seguridad (FIRST) que utilizan muchos Equipos de Respuesta a Incidentes de Seguridad de Productos (PSIRT) para transmitir información sobre la gravedad de las vulnerabilidades que divulgan a sus clientes. En CVSS, una vulnerabilidad se evalúa según tres aspectos, con una puntuación asignada a cada uno de ellos:
-
-### Referencias
-
-{% embed url="https://skillsforall.com/es/course/ethical-hacker?courseLang=en-US&instance_id=80c156bc-84a4-47c9-a233-5eafe7bdde82" %}
