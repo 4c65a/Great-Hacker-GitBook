@@ -5,10 +5,12 @@ Los distintos tipos de ataques se pueden clasificar en 3 areas principales ,pero
 1. **Ataque pasivo**
 2. **Ataque activo**
 3. **Ataque cercanos**
+4. **Ataque internos**
+5. **Ataques distribución**
 
 ## **Ataque pasivo**
 
-Realiza una interceptacion y monitoreo del trafico de una red y el frlujo de datos en la red objectivo sin manipulacion de los datos.Los atacantes realizan un reconocimiento de las actividades de la red mediante rastreadores,estos ataques son retos a detectar como los objectivos que no tienen interacion con los objectivos como sistemas o redes.
+Realiza una interceptación y monitoreo del tráfico de una red y el flujo de datos en la red objetivo sin manipulación de los datos. Los atacantes realizan un reconocimiento de las actividades de la red mediante rastreadores,estos ataques son retos a detectar como los objetivos que no tienen interacción con los objetivos como sistemas o redes.
 
 Los ataques pasivos permiten capturar datos o archivos que se transmiten sin el consentimiento del usuario, como la obtención de datos no cifrados, credenciales de texto sin cifrar o información confidencial para realizar ataques activos.
 
