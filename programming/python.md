@@ -16,3 +16,10 @@
 
 ## Cheat Sheet
 
+{% embed url="https://www.pythoncheatsheet.org/" %}
+
+{% embed url="https://www.geeksforgeeks.org/python-cheat-sheet/" %}
+
+{% embed url="https://zerotomastery.io/cheatsheets/python-cheat-sheet/" %}
+
+{% embed url="https://www.codecademy.com/resources/cheatsheets/language/python" %}
