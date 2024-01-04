@@ -12,7 +12,19 @@
 
 ## Librerías
 
+{% embed url="https://docs.python.org/3/library/index.html" %}
 
+{% embed url="https://docs.python.org/3/tutorial/stdlib.html" %}
+
+{% embed url="https://python-docs-es.readthedocs.io/es/3.10/library/index.html" %}
+
+{% embed url="https://docs.python.org/3/library/socket.html" %}
+
+{% embed url="https://docs.python.org/3/library/sys.html" %}
+
+{% embed url="https://docs.python.org/3/library/os.html" %}
+
+{% embed url="https://pypi.org/project/requests/" %}
 
 ## Cheat Sheet
 
