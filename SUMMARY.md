@@ -29,7 +29,6 @@
 * [Reconocimiento Pasivo](ethical-hacker/reconocimiento-pasivo/README.md)
   * [Motor de búsqueda](ethical-hacker/reconocimiento-pasivo/motor-de-busqueda/README.md)
     * [Shodan](ethical-hacker/reconocimiento-pasivo/motor-de-busqueda/shodan/README.md)
-      * [Page](ethical-hacker/reconocimiento-pasivo/motor-de-busqueda/shodan/page.md)
       * [Sitios con informacion](ethical-hacker/reconocimiento-pasivo/motor-de-busqueda/shodan/sitios-con-informacion.md)
     * [Google Hacking](ethical-hacker/reconocimiento-pasivo/motor-de-busqueda/google-hacking/README.md)
       * [Bug bounty program](ethical-hacker/reconocimiento-pasivo/motor-de-busqueda/google-hacking/bug-bounty-program.md)
