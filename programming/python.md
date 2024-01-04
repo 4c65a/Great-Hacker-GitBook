@@ -26,6 +26,10 @@
 
 {% embed url="https://pypi.org/project/requests/" %}
 
+{% embed url="https://docs.python.org/3/library/argparse.html" %}
+
+{% embed url="https://docs.python.org/3/library/subprocess.html" %}
+
 ## Cheat Sheet
 
 {% embed url="https://www.pythoncheatsheet.org/" %}
