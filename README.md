@@ -32,5 +32,3 @@ Como mi aprendizaje es constante día a día, busco aprender cosas nuevas o refo
 {% hint style="success" %}
 Siempre trato de agregar los enlaces de donde obtuve la información. Obtengo todo de distintas páginas, videos, documentos, PDF o cursos.
 {% endhint %}
-
-## [cumplimiento-normativo.md](ethical-hacker/ethical-hacker/cumplimiento-normativo.md "mention")
