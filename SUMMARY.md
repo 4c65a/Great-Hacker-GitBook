@@ -11,7 +11,7 @@
   * [Investigación de vulnerabilidades](ethical-hacker/ethical-hacker/investigacion-de-vulnerabilidades.md)
   * [Cumplimiento normativo](ethical-hacker/ethical-hacker/cumplimiento-normativo.md)
   * [Introducción de las Fases de pentesting](ethical-hacker/ethical-hacker/introduccion-de-las-fases-de-pentesting.md)
-  * [Ingeniería social](ethical-hacker/ethical-hacker/ingenieria-social.md)
+  * [Ingeniería social](ethical-hacker/ethical-hacker/ingenieria-social/README.md)
     * [Ataques de ingeniería social](ethical-hacker/ethical-hacker/ingenieria-social/ataques-de-ingenieria-social/README.md)
       * [Email Phishing](ethical-hacker/ethical-hacker/ingenieria-social/ataques-de-ingenieria-social/email-phishing.md)
       * [Vishing](ethical-hacker/ethical-hacker/ingenieria-social/ataques-de-ingenieria-social/vishing.md)

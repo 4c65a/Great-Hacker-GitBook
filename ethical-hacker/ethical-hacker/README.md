@@ -20,7 +20,7 @@ Ethical Hacker es un profesional de la seguridad cibernética que utiliza sus ha
 * [investigacion-de-vulnerabilidades.md](investigacion-de-vulnerabilidades.md "mention")
 * [cumplimiento-normativo.md](cumplimiento-normativo.md "mention")
 * [introduccion-de-las-fases-de-pentesting.md](introduccion-de-las-fases-de-pentesting.md "mention")
-* [ingenieria-social.md](ingenieria-social.md "mention")
+* [ingenieria-social](ingenieria-social/ "mention")
 * [clasificacion-de-ataques.md](clasificacion-de-ataques.md "mention")
 * [reporte-tecnico.md](reporte-tecnico.md "mention")
 
