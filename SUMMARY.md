@@ -353,6 +353,7 @@
   * [Emulating Ransomware](red-team-black-hat/explotacion/emulating-ransomware.md)
   * [Collection](red-team-black-hat/explotacion/collection.md)
 * [Red Team Tools](red-team-black-hat/red-team-tools.md)
+* [Recursos](red-team-black-hat/recursos.md)
 
 ## 🔵 Linux
 
