@@ -17,3 +17,5 @@ Podemos usar el filtro para buscar archivos específicos
 * /admin/
 
 {% embed url="https://web.archive.org/" %}
+
+<figure><img src="../../.gitbook/assets/Captura de pantalla_2024-01-08_14-43-55.png" alt=""><figcaption></figcaption></figure>
