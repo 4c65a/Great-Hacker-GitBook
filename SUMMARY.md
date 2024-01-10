@@ -232,6 +232,7 @@
       * [Desconectar cualquier dispositivo desde cualquier punto de acceso](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/reunir-informacion-ap-access-point-antes-del-cracking/desconectar-cualquier-dispositivo-desde-cualquier-punto-de-acceso.md)
       * [Detectar redes de wifi ocultas(hidden) ESSIDs](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/reunir-informacion-ap-access-point-antes-del-cracking/detectar-redes-de-wifi-ocultas-hidden-essids.md)
       * [Interferencia (Jamming) de cualquier punto de acceso Wi-Fi](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/reunir-informacion-ap-access-point-antes-del-cracking/interferencia-jamming-de-cualquier-punto-de-acceso-wi-fi.md)
+    * [Cracking WEB encriptado](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/cracking-web-encriptado.md)
 * [Captura de Paquetes](pentesting-networks/captura-de-paquetes.md)
 * [Vectores de Ataques(Vulnerabilidades comunes)](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/README.md)
   * [On-Path Attacks](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/on-path-attacks.md)
