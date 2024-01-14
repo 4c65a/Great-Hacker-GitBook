@@ -197,3 +197,39 @@ En una de las líneas del primer escaneo se puede observar que tiene la ruta /we
 {% embed url="http://10.10.11.224:55555/web" %}
 
 <figure><img src="../../../.gitbook/assets/PrincipalWeb.png" alt=""><figcaption></figcaption></figure>
+
+Realizo la creación de un basket.
+
+<figure><img src="../../../.gitbook/assets/create.png" alt=""><figcaption></figcaption></figure>
+
+Y me dirijo a este sitio.
+
+<figure><img src="../../../.gitbook/assets/B.png" alt=""><figcaption></figcaption></figure>
+
+En la pagina principal se puede observar que herramienta utilizan y que version.
+
+Powered by [request-baskets](https://github.com/darklynx/request-baskets) | Version: 1.2.1
+
+request-baskets version 1.2.1 vulnerability
+
+Se puede observar que al realizar la busqueda resquest baskets es vulnerable a SSRF.
+
+{% embed url="https://medium.com/@li_allouche/request-baskets-1-2-1-server-side-request-forgery-cve-2023-27163-2bab94f201f7" %}
+
+En el sitio anterior en la parte de ajuste aparece esto:
+
+<figure><img src="../../../.gitbook/assets/ConfigurationSettings.png" alt=""><figcaption></figcaption></figure>
+
+Realice  algunas pruebas en el momento que cree un basket me dirige a:
+
+http://10.10.11.224:55555/web/ufz0o5s
+
+Voy a Configuration Settings , previamente sabemos que es vulnerable a SSRF.
+
+<figure><img src="../../../.gitbook/assets/10.10..png" alt=""><figcaption></figcaption></figure>
+
+Utilizo esta configuracion y creo un archivo index.html para podes ver si logramos ver lo que alamcena el servicio que levantemos en nuestra maquina atacante.
+
+Levanto un servidro en mi pc para ver que respuestas tengo creando un archivo index.html desde mi maquina de atacante levanto el servidor con el port 80 :: 10.10.14.100 python3 -m http.server 80
+
+http://10.10.14.100:8000/ Aparece el index creado internamente procesa la solicitud
