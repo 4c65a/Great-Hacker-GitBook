@@ -183,3 +183,17 @@ Realizando otro tipo de escaneo se puede observar que posiblemente tenga los pue
 
 ## Reconocimiento del sitio
 
+En una de las líneas del primer escaneo se puede observar que tiene la ruta /web en el puerto 55555.
+
+```bash
+|     HTTP/1.0 302 Found
+|     Content-Type: text/html; charset=utf-8
+|     Location: /web
+|     Date: Sun, 14 Jan 2024 13:25:06 GMT
+|     Content-Length: 27
+|     href="/web">Found</a>.
+```
+
+{% embed url="http://10.10.11.224:55555/web" %}
+
+<figure><img src="../../../.gitbook/assets/PrincipalWeb.png" alt=""><figcaption></figcaption></figure>
