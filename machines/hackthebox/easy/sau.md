@@ -242,15 +242,23 @@ Aparece el index creado, y el sitio internamente procesa la solicitud.
 
 <figure><img src="../../../.gitbook/assets/hola.png" alt=""><figcaption></figcaption></figure>
 
-Devido a que no se sabe bien si el port 80 esta aboerto con el paso anteriro podemos probar 127.0.1:80 http://127.0.0.1:80/ http://10.10.11.224:55555/ufz0o5s/ agrego una /&#x20;
+Debido a que no se sabe bien si el puerto 80 esta abierto con el paso anteriro podemos probar 127.0.1:80&#x20;
+
+{% embed url="http://127.0.0.1/" %}
+
+Recargamos el sitio.
+
+http://10.10.11.224:55555/ufz0o5s/ agrego una / para que se cargue todo el sitio bien, ya que no se ve nada en la primer recarga.
 
 <figure><img src="../../../.gitbook/assets/loginm.png" alt=""><figcaption></figcaption></figure>
 
-sevicio web interno version Maltrail (v0.53) encontre un exploit es vulnerable a RCE https://github.com/josephberger/Maltrail-v0.53-RCE
+Servicio web interno versión Maltrail (v0.53) encontré un exploit,es vulnerable a RCE.
+
+{% @github-files/github-code-block url="https://github.com/josephberger/Maltrail-v0.53-RCE" %}
 
 <figure><img src="../../../.gitbook/assets/exploit.png" alt=""><figcaption></figcaption></figure>
 
-Realizamos la busqueda de la primer bandera ,luego se eso hacemos un sudo -l
+Realizamos la búsqueda de la primera bandera, luego sé eso hacemos un sudo -l
 
 ```bash
 sudo -l
@@ -292,12 +300,19 @@ WARNING: terminal is not fully functional
              ├─2589 /bin/sh -c logger -p auth.info -t "maltrail[894]" "Failed p>
              ├─2592 bash
              ├─2593 bash -i
-!sh 
-whoami
-root
-navegamos a la carpeta root
-y tenemos la ultima bandera
-cat root.txt
-16e730314fd6e56f5d6162992f06cfe3
+```
+
+Escribimos.
 
 ```
+!sh 
+```
+
+Hacemos un whoami .
+
+```
+whoami
+root
+```
+
+Navegamos a la carpeta root y listo la ultima bandera.
