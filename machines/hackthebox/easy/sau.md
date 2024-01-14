@@ -136,7 +136,7 @@ Nmap done: 1 IP address (1 host up) scanned in 192.42 seconds
 
 ```
 
-Se encontraron 2 puertos abiertos el puerto 22 y el puerto 55555,especialmente el puerto 55555 se puede observar que vamos a interactuar con un sitio web.
+Se encontraron 2 puertos abiertos el puerto 22 y el puerto 55555,especialmente el puerto 55555 se puede observar que vamos a interactuar con un sitio web.El puerto 55555 TCP es un puerto no registrado, lo que significa que no está asignado a ningún servicio o protocolo específico.
 
 ```bash
 sudo nmap -p- -sS --min-rate 5000 -vvv -n -Pn 10.10.11.224
@@ -178,3 +178,8 @@ Nmap done: 1 IP address (1 host up) scanned in 21.79 seconds
            Raw packets sent: 102819 (4.524MB) | Rcvd: 83985 (3.361MB)
 
 ```
+
+Realizando otro tipo de escaneo se puede observar que posiblemente tenga los puertos 80 y 8338 abiertos.
+
+## Reconocimiento del sitio
+
