@@ -138,6 +138,43 @@ Nmap done: 1 IP address (1 host up) scanned in 192.42 seconds
 
 Se encontraron 2 puertos abiertos el puerto 22 y el puerto 55555,especialmente el puerto 55555 se puede observar que vamos a interactuar con un sitio web.
 
-```
-// Some code
+```bash
+sudo nmap -p- -sS --min-rate 5000 -vvv -n -Pn 10.10.11.224
+[sudo] contraseña para kirov:
+Host discovery disabled (-Pn). All addresses will be marked 'up' and scan
+times may be slower.
+Starting Nmap 7.94 ( https://nmap.org ) at 2024-01-14 12:19 -03
+Initiating SYN Stealth Scan at 12:19
+Scanning 10.10.11.224 [65535 ports]
+Discovered open port 22/tcp on 10.10.11.224
+Increasing send delay for 10.10.11.224 from 0 to 5 due to max_successful_t
+ryno increase to 4
+Discovered open port 55555/tcp on 10.10.11.224
+Increasing send delay for 10.10.11.224 from 5 to 10 due to 1005 out of 334
+9 dropped probes since last increase.
+Increasing send delay for 10.10.11.224 from 10 to 20 due to max_successful
+_tryno increase to 5
+Increasing send delay for 10.10.11.224 from 20 to 40 due to max_successful
+_tryno increase to 6
+Increasing send delay for 10.10.11.224 from 40 to 80 due to 4069 out of 13563 dropped probes since last increase.
+Increasing send delay for 10.10.11.224 from 80 to 160 due to max_successful_tryno increase to 7
+Increasing send delay for 10.10.11.224 from 160 to 320 due to 11489 out of 38295 dropped probes since last increase.
+Increasing send delay for 10.10.11.224 from 320 to 640 due to 601 out of 2002 dropped probes since last increase.
+Increasing send delay for 10.10.11.224 from 640 to 1000 due to max_successful_tryno increase to 8
+Warning: 10.10.11.224 giving up on port because retransmission cap hit (10).
+Completed SYN Stealth Scan at 12:20, 21.66s elapsed (65535 total ports)
+Nmap scan report for 10.10.11.224
+Host is up, received user-set (0.21s latency).
+Scanned at 2024-01-14 12:19:40 -03 for 22s
+Not shown: 65531 closed tcp ports (reset)
+PORT      STATE    SERVICE REASON
+22/tcp    open     ssh     syn-ack ttl 63
+80/tcp    filtered http    no-response
+8338/tcp  filtered unknown no-response
+55555/tcp open     unknown syn-ack ttl 63
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 21.79 seconds
+           Raw packets sent: 102819 (4.524MB) | Rcvd: 83985 (3.361MB)
+
 ```
