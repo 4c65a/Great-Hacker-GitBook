@@ -228,8 +228,17 @@ Voy a Configuration Settings , previamente sabemos que es vulnerable a SSRF.
 
 <figure><img src="../../../.gitbook/assets/10.10..png" alt=""><figcaption></figcaption></figure>
 
-Utilizo esta configuracion y creo un archivo index.html para podes ver si logramos ver lo que alamcena el servicio que levantemos en nuestra maquina atacante.
+Utilizo esta configuración y creo un archivo index.html para poder ver si logramos ver lo que almacena el servicio que levantemos en nuestra máquina atacante.
 
-Levanto un servidro en mi pc para ver que respuestas tengo creando un archivo index.html desde mi maquina de atacante levanto el servidor con el port 80 :: 10.10.14.100 python3 -m http.server 80
+Levanto un servidor en mi pc para ver que respuestas tengo.
 
-http://10.10.14.100:8000/ Aparece el index creado internamente procesa la solicitud
+```python
+python3 -m http.server 
+```
+
+En forward URL : `http://10.10.14.100:8000/`&#x20;
+
+Aparece el index creado, y el sitio internamente procesa la solicitud.
+
+<figure><img src="../../../.gitbook/assets/hola.png" alt=""><figcaption></figcaption></figure>
+
