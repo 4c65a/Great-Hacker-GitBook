@@ -38,6 +38,10 @@
 
 {% embed url="https://doc.rust-lang.org/std/os/windows/io/index.html" %}
 
+{% embed url="https://docs.rs/pnet/latest/pnet/" %}
+
+
+
 ## Cheat sheet
 
 {% embed url="https://quickref.me/rust.html#google_vignette" %}
