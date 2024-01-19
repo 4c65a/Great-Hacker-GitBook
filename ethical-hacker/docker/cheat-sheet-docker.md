@@ -2,19 +2,19 @@
 
 ## Comandos básicos
 
-**docker run**: Ejecuta un contenedor. Ejemplo: docker run nginx
+**docker run**: Ejecuta un contenedor. Ejemplo: `docker run nginx`
 
-**docker start**: Inicia un contenedor previamente creado. Ejemplo: docker start my\_container
+**docker start**: Inicia un contenedor previamente creado. Ejemplo: `docker start my_container`
 
-**docker stop**: Detiene un contenedor en ejecución. Ejemplo: docker stop my\_container
+**docker stop**: Detiene un contenedor en ejecución. Ejemplo: `docker stop my_container`
 
-**docker rm**: Elimina un contenedor. Ejemplo: docker rm my\_container
+**docker rm**: Elimina un contenedor. Ejemplo: `docker rm my_container`
 
-**docker ps**: Muestra los contenedores en ejecución. Ejemplo: docker ps
+**docker ps**: Muestra los contenedores en ejecución. `Ejemplo: docker ps`
 
-**docker images**: Muestra las imágenes disponibles en el host. Ejemplo: docker images
+**docker images**: Muestra las imágenes disponibles en el host. Ejemplo: `docker images`
 
-**docker pull**: Descarga una imagen de un repositorio. Ejemplo: docker pull ubuntu
+**docker pull**: Descarga una imagen de un repositorio. Ejemplo: `docker pull ubuntu`
 
 ## Trabajo con imágenes
 
