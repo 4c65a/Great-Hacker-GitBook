@@ -117,19 +117,6 @@
   * [Cheat Sheet Docker](ethical-hacker/docker/cheat-sheet-docker.md)
 * [Criptografía](ethical-hacker/criptografia.md)
 * [Curl](ethical-hacker/curl.md)
-* [Penetration testing offSec(OSCP)](ethical-hacker/penetration-testing-offsec-oscp/README.md)
-  * [Passive Information Gathering](ethical-hacker/penetration-testing-offsec-oscp/passive-information-gathering/README.md)
-    * [Whois enumeracion](ethical-hacker/penetration-testing-offsec-oscp/passive-information-gathering/whois-enumeracion.md)
-    * [Open Sourcer code](ethical-hacker/penetration-testing-offsec-oscp/passive-information-gathering/open-sourcer-code.md)
-    * [Netcraft](ethical-hacker/penetration-testing-offsec-oscp/passive-information-gathering/netcraft.md)
-    * [Security Headers and SSL/TLS](ethical-hacker/penetration-testing-offsec-oscp/passive-information-gathering/security-headers-and-ssl-tls.md)
-  * [Active Information Gathering](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/README.md)
-    * [DNS Enumeracion](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/dns-enumeracion.md)
-    * [Escaneo de puertos con nmap](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/escaneo-de-puertos-con-nmap.md)
-    * [SMB enumeracion](ethical-hacker/penetration-testing-offsec-oscp/active-information-gathering/smb-enumeracion.md)
-  * [Evaluación de aplicaciones web](ethical-hacker/penetration-testing-offsec-oscp/evaluacion-de-aplicaciones-web.md)
-  * [Enumeración y Abuso de APIs](ethical-hacker/penetration-testing-offsec-oscp/enumeracion-y-abuso-de-apis.md)
-  * [Cross-Site Scripting (XSS)](ethical-hacker/penetration-testing-offsec-oscp/cross-site-scripting-xss.md)
 
 ## 🟢 Pentesting Web
 
