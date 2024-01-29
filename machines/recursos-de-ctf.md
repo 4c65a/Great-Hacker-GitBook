@@ -18,7 +18,7 @@ layout:
 
 {% embed url="https://www.vulnhub.com/" %}
 
-{% embed url="https://github.com/vulhub/vulhub" %}
+{% @github-files/github-code-block url="https://github.com/vulhub/vulhub" %}
 
 {% embed url="https://www.hackthebox.com/" %}
 
@@ -64,13 +64,13 @@ layout:
 
 {% embed url="https://google-gruyere.appspot.com/" %}
 
-{% embed url="https://github.com/nahamsec/nahamsec.training/" %}
+{% @github-files/github-code-block %}
 
-{% embed url="https://github.com/digininja/DVWA" %}
+{% @github-files/github-code-block %}
 
-{% embed url="https://github.com/ajpalok/bWAPP" %}
+{% @github-files/github-code-block %}
 
-{% embed url="https://github.com/rapid7/metasploitable3" %}
+{% @github-files/github-code-block %}
 
 {% embed url="https://ctftime.org/ctfs" %}
 
@@ -96,12 +96,14 @@ layout:
 
 {% embed url="https://reversing.ctfd.io/challenges" %}
 
-{% embed url="https://github.com/ReversingID/Crackmes-Repository/" %}
+{% @github-files/github-code-block url="https://github.com/ReversingID/Crackmes-Repository/" %}
 
 {% embed url="https://reverse.put.as/crackmes/" %}
 
-{% embed url="https://github.com/ctfs" %}
+{% @github-files/github-code-block url="https://github.com/ctfs" %}
 
 {% embed url="https://websploit.org/" %}
 
 {% embed url="https://pwnable.kr/" %}
+
+{% embed url="https://www.hackinghub.io/" %}
