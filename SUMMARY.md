@@ -435,3 +435,9 @@
 ## 🛡 Blue Team Próximamente
 
 * [Page 1](blue-team-proximamente/page-1.md)
+
+## 🔐 Blockchain
+
+* [Blockchain](blockchain/blockchain.md)
+* [Web3 Penetration Testing](blockchain/web3-penetration-testing.md)
+* [Page](blockchain/page.md)
