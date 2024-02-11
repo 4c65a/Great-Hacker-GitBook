@@ -178,6 +178,12 @@
   * [Insecure Temporary File](pentesting-web/web-security-issues/insecure-temporary-file.md)
 * [Web Shell](pentesting-web/web-shell.md)
 
+## 🔐 Blockchain
+
+* [Blockchain](blockchain/blockchain.md)
+* [Web3 Penetration Testing](blockchain/web3-penetration-testing.md)
+* [Smart Contract Audits](blockchain/smart-contract-audits.md)
+
 ## 🔵 Pentesting Networks
 
 * [Network Services](pentesting-networks/network-services/README.md)
@@ -435,9 +441,3 @@
 ## 🛡 Blue Team Próximamente
 
 * [Page 1](blue-team-proximamente/page-1.md)
-
-## 🔐 Blockchain
-
-* [Blockchain](blockchain/blockchain.md)
-* [Web3 Penetration Testing](blockchain/web3-penetration-testing.md)
-* [Smart Contract Audits](blockchain/smart-contract-audits.md)
