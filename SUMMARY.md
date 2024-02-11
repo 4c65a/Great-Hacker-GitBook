@@ -440,4 +440,4 @@
 
 * [Blockchain](blockchain/blockchain.md)
 * [Web3 Penetration Testing](blockchain/web3-penetration-testing.md)
-* [Page](blockchain/page.md)
+* [Smart Contract Audits](blockchain/smart-contract-audits.md)
