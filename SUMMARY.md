@@ -178,12 +178,6 @@
   * [Insecure Temporary File](pentesting-web/web-security-issues/insecure-temporary-file.md)
 * [Web Shell](pentesting-web/web-shell.md)
 
-## 🔐 Blockchain
-
-* [Blockchain](blockchain/blockchain.md)
-* [Web3 Penetration Testing](blockchain/web3-penetration-testing.md)
-* [Smart Contract Audits](blockchain/smart-contract-audits.md)
-
 ## 🔵 Pentesting Networks
 
 * [Network Services](pentesting-networks/network-services/README.md)
@@ -267,6 +261,18 @@
 * [BASH](linux/bash.md)
 * [Backup](linux/backup.md)
 
+## 🟤 Windows Próximamente
+
+* [PowerShell](windows-proximamente/powershell.md)
+* [CMD](windows-proximamente/cmd.md)
+* [Directorios](windows-proximamente/directorios.md)
+* [Batch](windows-proximamente/batch.md)
+* [Servicios basicos](windows-proximamente/servicios-basicos.md)
+* [Comandos basicos](windows-proximamente/comandos-basicos.md)
+* [Seguridad](windows-proximamente/seguridad.md)
+* [Backup](windows-proximamente/backup.md)
+* [Networks](windows-proximamente/networks.md)
+
 ## 🟠 Machines
 
 * [HackTheBox](machines/hackthebox/README.md)
@@ -277,8 +283,7 @@
     * [✅ Broker](machines/hackthebox/easy/broker.md)
     * [✅ Pilgrimage](machines/hackthebox/easy/pilgrimage.md)
     * [✅ Sau](machines/hackthebox/easy/sau.md)
-  * [🔵 Medium](machines/hackthebox/medium/README.md)
-    * [✅ Zipping](machines/hackthebox/medium/zipping.md)
+  * [🔵 Medium](machines/hackthebox/medium.md)
   * [🟣 Hard](machines/hackthebox/hard.md)
   * [🔴 Insane](machines/hackthebox/insane.md)
 * [Docker/Vulnhub](machines/docker-vulnhub.md)
@@ -413,23 +418,17 @@
 * [Red Team Tools](red-team-black-hat-proximamente/red-team-tools.md)
 * [Recursos](red-team-black-hat-proximamente/recursos.md)
 
-## 🟤 Windows Próximamente
-
-* [PowerShell](windows-proximamente/powershell.md)
-* [CMD](windows-proximamente/cmd.md)
-* [Directorios](windows-proximamente/directorios.md)
-* [Batch](windows-proximamente/batch.md)
-* [Servicios basicos](windows-proximamente/servicios-basicos.md)
-* [Comandos basicos](windows-proximamente/comandos-basicos.md)
-* [Seguridad](windows-proximamente/seguridad.md)
-* [Backup](windows-proximamente/backup.md)
-* [Networks](windows-proximamente/networks.md)
-
 ## 🔴 Malware Próximamente
 
 * [Introducción](malware-proximamente/introduccion.md)
 * [Tipos de Malware](malware-proximamente/tipos-de-malware.md)
 * [Recursos](malware-proximamente/recursos.md)
+
+## 🔐 Blockchain
+
+* [Blockchain](blockchain/blockchain.md)
+* [Web3 Penetration Testing](blockchain/web3-penetration-testing.md)
+* [Smart Contract Audits](blockchain/smart-contract-audits.md)
 
 ## 📡 Tecnologías de automatización industrial. Próximamente
 
