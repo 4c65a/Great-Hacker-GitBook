@@ -37,8 +37,6 @@ export SHELL=bash
 
 Con esto conseguimos tener los atajos de teclado disponibles como Ctrl+L, y que la _shell_ sea una bash.
 
-> Ahora ya tenemos una TTY totalmente interactiva y que no se nos va a romper, podemos pulsar Ctrl+C sin miedo y tabular para completar comandos.
-
 Ahora abriremos una consola en nuestra máquina e introduciremos el siguiente comando:
 
 `stty size`

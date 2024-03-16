@@ -438,6 +438,6 @@
   * [Telemetry Acquisition Systems](tecnologias-de-automatizacion-industrial.-proximamente/ot/telemetry-acquisition-systems.md)
   * [SCADA](tecnologias-de-automatizacion-industrial.-proximamente/ot/scada.md)
 
-## 🛡 Blue Team Próximamente
+## 🛡️ Blue Team Próximamente
 
 * [Page 1](blue-team-proximamente/page-1.md)
