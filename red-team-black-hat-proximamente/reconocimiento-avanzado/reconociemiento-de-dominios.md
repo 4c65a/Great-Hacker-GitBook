@@ -1,2 +1,0 @@
-# Reconociemiento de dominios
-

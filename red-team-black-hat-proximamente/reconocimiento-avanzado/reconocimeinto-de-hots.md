@@ -1,2 +1,0 @@
-# Reconocimeinto de Hots
-
