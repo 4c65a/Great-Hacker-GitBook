@@ -221,6 +221,7 @@
   * [Exfiltration](red-team-black-hat-proximamente/explotacion/exfiltration.md)
   * [Emulating Ransomware](red-team-black-hat-proximamente/explotacion/emulating-ransomware.md)
   * [Collection](red-team-black-hat-proximamente/explotacion/collection.md)
+* [Tecnologías de automatización industrial](red-team-black-hat-proximamente/tecnologias-de-automatizacion-industrial.md)
 * [Red Team Tools](red-team-black-hat-proximamente/red-team-tools.md)
 * [Recursos](red-team-black-hat-proximamente/recursos.md)
 
