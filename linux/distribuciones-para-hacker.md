@@ -21,7 +21,7 @@ Existen distintos tipos de distribuciones de Linux para hacker,incluso se puede 
 * Parrot Security
 * Arch strike
 
-También se puede utilizar estas distribuciones que pueden ser modificada al igual que las anteriores pero estas no vienen con las herramientas de un hacker.
+También se puede utilizar estas distribuciones que pueden ser modificada al igual que las anteriores pero estas no vienen con las herramientas que se utilizan en ciberseguridad.
 
 * Arch Linux
 * Ubuntu
