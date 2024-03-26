@@ -221,7 +221,11 @@
   * [Exfiltration](red-team-black-hat-proximamente/explotacion/exfiltration.md)
   * [Emulating Ransomware](red-team-black-hat-proximamente/explotacion/emulating-ransomware.md)
   * [Collection](red-team-black-hat-proximamente/explotacion/collection.md)
-* [Tecnologías de automatización industrial](red-team-black-hat-proximamente/tecnologias-de-automatizacion-industrial.md)
+* [Tecnologías de automatización industrial](red-team-black-hat-proximamente/tecnologias-de-automatizacion-industrial/README.md)
+  * [OT](red-team-black-hat-proximamente/tecnologias-de-automatizacion-industrial/ot/README.md)
+    * [Telemetry Acquisition Systems](red-team-black-hat-proximamente/tecnologias-de-automatizacion-industrial/ot/telemetry-acquisition-systems.md)
+    * [SCADA](red-team-black-hat-proximamente/tecnologias-de-automatizacion-industrial/ot/scada.md)
+  * [IoT](red-team-black-hat-proximamente/tecnologias-de-automatizacion-industrial/iot.md)
 * [Red Team Tools](red-team-black-hat-proximamente/red-team-tools.md)
 * [Recursos](red-team-black-hat-proximamente/recursos.md)
 
@@ -413,11 +417,6 @@
 * [Smart Contract Audits](blockchain-proximamente/smart-contract-audits.md)
 
 ## 📡 Tecnologías de automatización industrial. Próximamente
-
-* [IoT](tecnologias-de-automatizacion-industrial.-proximamente/iot.md)
-* [OT](tecnologias-de-automatizacion-industrial.-proximamente/ot/README.md)
-  * [Telemetry Acquisition Systems](tecnologias-de-automatizacion-industrial.-proximamente/ot/telemetry-acquisition-systems.md)
-  * [SCADA](tecnologias-de-automatizacion-industrial.-proximamente/ot/scada.md)
 
 ## 🛡️ Blue Team Próximamente
 
