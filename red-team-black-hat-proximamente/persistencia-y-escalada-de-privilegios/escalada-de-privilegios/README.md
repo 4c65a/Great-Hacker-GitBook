@@ -1,2 +1,0 @@
-# Escalada de Privilegios
-
