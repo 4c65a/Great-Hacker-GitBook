@@ -120,10 +120,9 @@
 
 ## ⚫ Red Team/Black Hat Próximamente
 
-* [Post-Explotación](red-team-black-hat-proximamente/post-explotacion.md)
 * [Persistencia y Escalada de Privilegios](red-team-black-hat-proximamente/persistencia-y-escalada-de-privilegios/README.md)
-  * [Linux](red-team-black-hat-proximamente/persistencia-y-escalada-de-privilegios/linux.md)
-  * [Windows](red-team-black-hat-proximamente/persistencia-y-escalada-de-privilegios/windows.md)
+  * [Linux](red-team-black-hat-proximamente/persistencia-y-escalada-de-privilegios/escalada-de-privilegios/linux.md)
+  * [Windows](red-team-black-hat-proximamente/persistencia-y-escalada-de-privilegios/escalada-de-privilegios/windows.md)
 * [Credenciales y Suplantación de Usuario](red-team-black-hat-proximamente/credenciales-y-suplantacion-de-usuario/README.md)
   * [Password Cracking](red-team-black-hat-proximamente/credenciales-y-suplantacion-de-usuario/password-cracking.md)
   * [Credentials & User Impersonation](red-team-black-hat-proximamente/credenciales-y-suplantacion-de-usuario/credentials-and-user-impersonation.md)
