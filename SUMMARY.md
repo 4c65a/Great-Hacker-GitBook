@@ -129,6 +129,8 @@
     * [Sudo](red-team-black-hat-proximamente/persistencia-y-escalada-de-privilegios/linux/sudo.md)
     * [Cron Job](red-team-black-hat-proximamente/persistencia-y-escalada-de-privilegios/linux/cron-job.md)
     * [SUID/SGID](red-team-black-hat-proximamente/persistencia-y-escalada-de-privilegios/linux/suid-sgid.md)
+    * [Password y Keys](red-team-black-hat-proximamente/persistencia-y-escalada-de-privilegios/linux/password-y-keys.md)
+    * [NFS](red-team-black-hat-proximamente/persistencia-y-escalada-de-privilegios/linux/nfs.md)
   * [Windows](red-team-black-hat-proximamente/persistencia-y-escalada-de-privilegios/escalada-de-privilegios/windows.md)
 * [Credenciales y Suplantación de Usuario](red-team-black-hat-proximamente/credenciales-y-suplantacion-de-usuario/README.md)
   * [Password Cracking](red-team-black-hat-proximamente/credenciales-y-suplantacion-de-usuario/password-cracking.md)
