@@ -2,15 +2,15 @@
 
 ## Executables Known Exploit
 
-Encuentra todos los ejecutables SUID/SGID en la máquina virtual Debian: bash
+Encuentra todos los ejecutables SUID/SGID en la máquina virtual Debian:
 
 find / -type f -a ( -perm -u+s -o -perm -g+s ) -exec ls -l {} ; 2> /dev/null
+
+Se puede buscar los exploit de los programas que aparezcan.
 
 ## Executables Shared Object Injection
 
 El ejecutable SUID /usr/local/bin/suid-so es vulnerable a la inyección de objeto compartido.
-
-Primero, ejecuta el archivo y toma nota de que actualmente muestra una barra de progreso antes de salir:
 
 ```bash
 /usr/local/bin/suid-so
@@ -126,3 +126,6 @@ rm /tmp/rootbash
 exit
 ```
 
+<mark style="color:red;">**CTF**</mark>
+
+{% embed url="https://tryhackme.com/r/room/linuxprivesc" %}
