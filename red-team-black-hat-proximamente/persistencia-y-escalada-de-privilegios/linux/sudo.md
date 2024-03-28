@@ -82,3 +82,6 @@ sudo LD_LIBRARY_PATH=/tmp apache2
 
 ```
 
+<mark style="color:red;">**Recursos**</mark>
+
+[Sudo Part-2 – Linux Privelege Escalation - Juggernaut-Sec](https://juggernaut-sec.com/sudo-part-2-lpe/)
