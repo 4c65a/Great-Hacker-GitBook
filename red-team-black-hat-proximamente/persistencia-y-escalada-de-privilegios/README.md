@@ -14,6 +14,6 @@ La escalada de privilegios implica obtener niveles más altos de acceso y contro
 
 {% embed url="https://msmk.university/ciberseguridad/que-es-la-escalada-de-privilegios-msmk-university" %}
 
-[Privilege Escalation, Tactic TA0004 - Enterprise | MITRE ATT\&CK®](https://attack.mitre.org/tactics/TA0004/)
+{% embed url="https://attack.mitre.org/tactics/TA0004/" %}
 
-[Persistence, Tactic TA0003 - Enterprise | MITRE ATT\&CK®](https://attack.mitre.org/tactics/TA0003/)
+{% embed url="https://attack.mitre.org/tactics/TA0003/" %}
