@@ -125,7 +125,7 @@
     * [Enumeración](red-team-black-hat-proximamente/persistencia-y-escalada-de-privilegios/linux/enumeracion.md)
     * [Service Exploit](red-team-black-hat-proximamente/persistencia-y-escalada-de-privilegios/linux/service-exploit.md)
     * [Kernel Exploit](red-team-black-hat-proximamente/persistencia-y-escalada-de-privilegios/linux/kernel-exploit.md)
-    * [Scripts](red-team-black-hat-proximamente/persistencia-y-escalada-de-privilegios/linux/scripts.md)
+    * [Weak File permissions](red-team-black-hat-proximamente/persistencia-y-escalada-de-privilegios/linux/weak-file-permissions.md)
   * [Windows](red-team-black-hat-proximamente/persistencia-y-escalada-de-privilegios/escalada-de-privilegios/windows.md)
 * [Credenciales y Suplantación de Usuario](red-team-black-hat-proximamente/credenciales-y-suplantacion-de-usuario/README.md)
   * [Password Cracking](red-team-black-hat-proximamente/credenciales-y-suplantacion-de-usuario/password-cracking.md)
