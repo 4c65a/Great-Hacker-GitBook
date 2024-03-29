@@ -103,8 +103,6 @@ Ejecuta el ejecutable suid-env2 para obtener una shell de root:
 /usr/local/bin/suid-env2
 ```
 
-Nota: Esto no funcionará en versiones de Bash 4.4 y superiores.
-
 Cuando está en modo de depuración, Bash utiliza la variable de entorno PS4 para mostrar un indicador adicional para declaraciones de depuración.
 
 Ejecuta el ejecutable /usr/local/bin/suid-env2 con la depuración de bash habilitada y la variable PS4 establecida en un comando incrustado que crea una versión SUID de /bin/bash:
@@ -117,13 +115,6 @@ Ejecuta el ejecutable /tmp/rootbash con -p para obtener una shell que se ejecuta
 
 ```bash
 /tmp/rootbash -p
-```
-
-Recuerda eliminar el ejecutable /tmp/rootbash y salir de la shell elevada antes de continuar, ya que crearás este archivo nuevamente más adelante en la sala:
-
-```bash
-rm /tmp/rootbash
-exit
 ```
 
 <mark style="color:red;">**CTF**</mark>

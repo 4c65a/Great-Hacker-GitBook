@@ -40,3 +40,7 @@ De regreso en la VM de Debian, como el usuario de bajo privilegio, ejecuta el ar
 ```bash
 /tmp/shell.elf
 ```
+
+<mark style="color:red;">**Recursos**</mark>
+
+{% embed url="https://juggernaut-sec.com/nfs-no_root_squash/" %}
