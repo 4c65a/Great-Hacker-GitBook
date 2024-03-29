@@ -120,3 +120,7 @@ Ejecuta el ejecutable /tmp/rootbash con -p para obtener una shell que se ejecuta
 <mark style="color:red;">**CTF**</mark>
 
 {% embed url="https://tryhackme.com/r/room/linuxprivesc" %}
+
+{% embed url="https://juggernaut-sec.com/suid-sgid-part-2-lpe/" %}
+
+{% embed url="https://juggernaut-sec.com/suid-sgid-lpe/" %}
