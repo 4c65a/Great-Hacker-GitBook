@@ -139,3 +139,7 @@ rm /home/user/shell.elf
 rm /home/user/--checkpoint=1
 rm /home/user/--checkpoint-action=exec=shell.elf
 ```
+
+<mark style="color:red;">**CTF**</mark>
+
+{% embed url="https://tryhackme.com/room/linuxprivesc" %}
