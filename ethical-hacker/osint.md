@@ -15,3 +15,5 @@
 {% embed url="https://start.me/p/rx6Qj8/nixintel-s-osint-resource-list" %}
 
 {% embed url="https://start.me/p/wMdQMQ/tools" %}
+
+{% embed url="https://www.sans.org/blog/list-of-resource-links-from-open-source-intelligence-summit-2021/" %}
