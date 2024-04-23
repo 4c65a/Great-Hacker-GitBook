@@ -1,6 +1,6 @@
 # OSINT
 
-
+**Open Source Intelligence** o también llamado **Inteligencia de Fuentes Abiertas**, es una técnica utilizada para la recopilación de información que esta publica en internet.
 
 <mark style="color:red;">**Recursos**</mark>
 
