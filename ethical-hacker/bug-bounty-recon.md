@@ -20,6 +20,12 @@ Muchas veces cuando tenes la extensión de shodan en el navegador te avisa que p
 
 Link = [https://security.snyk.io/](https://security.snyk.io/) [https://www.cve.org/](https://www.cve.org/)
 
+
+
+{% hint style="danger" %}
+Tener cuidado con la velocidades.
+{% endhint %}
+
 ### Paso 1 <a href="#user-content-phase-one" id="user-content-phase-one"></a>
 
 ```
@@ -131,12 +137,6 @@ nmap -A -F -T1 10.10.23.51 -V
 ```
 ./waybackurls yahoo.com
 ```
-
-\*\*\*Searchsploit:\*\*\*Search vulnerability
-
-\*\*\*Wappalyzer:\*\*\*Tools
-
-\*\*\*DoGit:\*\*\*Repositories
 
 {% content-ref url="reconocimiento-pasivo/motor-de-busqueda/google-hacking/" %}
 [google-hacking](reconocimiento-pasivo/motor-de-busqueda/google-hacking/)
