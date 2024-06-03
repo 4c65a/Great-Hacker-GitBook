@@ -47,3 +47,23 @@
 {% embed url="https://www.hacksplaining.com/" %}
 
 {% embed url="https://google-gruyere.appspot.com/" %}
+
+{% @github-files/github-code-block url="https://github.com/nahamsec/nahamsec.training/" %}
+
+{% @github-files/github-code-block url="https://github.com/digininja/DVWA" %}
+
+{% @github-files/github-code-block url="https://github.com/ajpalok/bWAPP" %}
+
+{% @github-files/github-code-block url="https://github.com/rapid7/metasploitable3" %}
+
+{% embed url="https://ctftime.org/ctfs" %}
+
+{% embed url="https://capturetheflag.withgoogle.com/beginners-quest" %}
+
+{% embed url="https://capturetheflag.withgoogle.com/challenges/hw-parking" %}
+
+{% embed url="https://crackmes.one/" %}
+
+{% embed url="https://pwnable.kr/play.php" %}
+
+{% embed url="https://vulnyx.com/" %}
