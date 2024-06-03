@@ -425,6 +425,6 @@
 
 * [Page 1](blue-team-proximamente/page-1.md)
 
-## Group 1
+## 🐞 CTF
 
-* [Recursos de CTF](group-1/recursos-de-ctf.md)
+* [Recursos de CTF](ctf/recursos-de-ctf.md)

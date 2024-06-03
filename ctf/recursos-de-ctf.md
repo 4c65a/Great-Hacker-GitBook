@@ -93,3 +93,7 @@
 {% embed url="https://www.hackinghub.io/" %}
 
 {% @github-files/github-code-block url="https://github.com/OWASP/wrongsecrets-ctf-party" %}
+
+{% @github-files/github-code-block url="https://github.com/InsiderPhD/Generic-University" %}
+
+{% @github-files/github-code-block url="https://github.com/OWASP/crAPI" %}
