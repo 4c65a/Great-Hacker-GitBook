@@ -17,3 +17,33 @@
 {% embed url="https://www.root-me.org/?lang=en" %}
 
 {% embed url="https://overthewire.org/wargames/bandit/" %}
+
+{% embed url="https://defendtheweb.net/dashboard" %}
+
+{% embed url="https://portswigger.net/web-security/all-labs" %}
+
+{% embed url="https://pentesterlab.com/" %}
+
+{% embed url="https://w3challs.com/" %}
+
+{% embed url="https://ctf.hacker101.com/ctf" %}
+
+{% embed url="https://www.hacksplaining.com/lessons" %}
+
+{% embed url="https://picoctf.com/" %}
+
+{% embed url="https://exploit.education/phoenix/stack-two/" %}
+
+{% embed url="https://attackdefense.com/" %}
+
+{% embed url="https://ctf101.org/" %}
+
+{% embed url="https://ctfchallenge.com/" %}
+
+{% embed url="https://xss-game.appspot.com/level1" %}
+
+{% embed url="https://www.bugbountyhunter.com/" %}
+
+{% embed url="https://www.hacksplaining.com/" %}
+
+{% embed url="https://google-gruyere.appspot.com/" %}
