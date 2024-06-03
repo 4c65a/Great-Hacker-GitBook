@@ -424,3 +424,7 @@
 ## 🛡️ Blue Team Próximamente
 
 * [Page 1](blue-team-proximamente/page-1.md)
+
+## Group 1
+
+* [Recursos de CTF](group-1/recursos-de-ctf.md)
