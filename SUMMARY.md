@@ -256,7 +256,7 @@
 * [Remote File Inclusion (RFI)](pentesting-web/remote-file-inclusion-rfi.md)
 * [SSTI](pentesting-web/ssti.md)
 * [HTTP Desync](pentesting-web/http-desync.md)
-* [RCE](pentesting-web/rce.md)
+* [Remote Code Execution (RCE)](pentesting-web/remote-code-execution-rce.md)
 * [Cookie Manipulation Attacks](pentesting-web/cookie-manipulation-attacks.md)
 * [HTTP Parameter Pollution](pentesting-web/http-parameter-pollution.md)
 * [Insecure Direct Object Reference (IDOR)](pentesting-web/insecure-direct-object-reference-idor.md)
