@@ -206,7 +206,7 @@ Se han creado varias utilidades para realizar túneles DNS.
 
 {% embed url="https://www.metasploit.com/" %}
 
-{% embed url="https://github.com/rapid7/metasploit-framework/tree/master/scripts/meterpreter" %}
+{% @github-files/github-code-block %}
 
 **BeEF :** [**https://beefproject.com/**](https://beefproject.com/)
 
@@ -244,7 +244,7 @@ Objdump es un programa de Linux que se puede utilizar para mostrar información 
 
 ## Análisis forense
 
-{% embed url="https://github.com/The-Art-of-Hacking/h4cker/tree/master/dfir" %}
+{% @github-files/github-code-block %}
 
 **ADIA** : [_https://forensics.cert.org/#ADIA_](https://forensics.cert.org/#ADIA)
 

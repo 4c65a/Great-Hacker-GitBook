@@ -1,5 +1,7 @@
 # Recursos de CTF
 
+> Los sitios con Not Found si funciona,es un problema de gitbook.
+
 {% embed url="https://www.vulnhub.com/" %}
 
 {% @github-files/github-code-block url="https://github.com/vulhub/vulhub" %}
