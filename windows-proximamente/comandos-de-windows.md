@@ -36,3 +36,11 @@
 | netstat       | Muestra conexiones y puertos en escucha en el sistema  |
 |               |                                                        |
 |               |                                                        |
+
+
+
+<mark style="color:red;">**Recursos**</mark>
+
+{% embed url="https://learn.microsoft.com/es-es/windows-server/administration/windows-commands/windows-commands" %}
+
+{% embed url="https://tryhackme.com/r/room/windowscommandline" %}
