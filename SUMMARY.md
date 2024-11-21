@@ -380,7 +380,7 @@
 
 ## 🟤 Windows Próximamente
 
-* [Comandos basicos](windows-proximamente/comandos-basicos.md)
+* [Comandos de Windows](windows-proximamente/comandos-de-windows.md)
 * [Servicios basicos](windows-proximamente/servicios-basicos.md)
 * [PowerShell](windows-proximamente/powershell.md)
 * [CMD](windows-proximamente/cmd.md)
