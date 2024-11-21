@@ -383,7 +383,6 @@
 * [Comandos de Windows](windows-proximamente/comandos-de-windows.md)
 * [Servicios basicos](windows-proximamente/servicios-basicos.md)
 * [PowerShell](windows-proximamente/powershell.md)
-* [CMD](windows-proximamente/cmd.md)
 * [Directorios](windows-proximamente/directorios.md)
 * [Batch](windows-proximamente/batch.md)
 * [Seguridad](windows-proximamente/seguridad.md)
