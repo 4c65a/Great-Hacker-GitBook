@@ -12,7 +12,7 @@ Se puede recopilar información de distintas formas y en distintos sitios.
 6. **Foros y comunidades en línea**: Participar o analizar discusiones en foros y comunidades en línea para obtener información sobre temas específicos.
 7. **Análisis de información pública**: Examinar documentos públicos, informes gubernamentales, registros comerciales, etc.
 
-
+**Lista de Herramientas:** [osint-tools](../reconocimiento-pasivo/osint-tools/ "mention")
 
 <mark style="color:red;">**Recursos**</mark>
 
