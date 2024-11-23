@@ -6,4 +6,6 @@
 
 {% embed url="https://kwcsec.gitbook.io/the-red-team-handbook/" %}
 
-{% embed url="https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki" %}
+{% embed url="https://www.thehacker.recipes/" %}
+
+{% @github-files/github-code-block url="https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki" %}
