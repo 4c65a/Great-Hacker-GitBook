@@ -76,6 +76,7 @@
     * [Nikto](ethical-hacker/reconocimiento-activo/escaneo-de-vulnerabilidades-de-sitios-web/nikto.md)
     * [Escanear host gvm](ethical-hacker/reconocimiento-activo/escaneo-de-vulnerabilidades-de-sitios-web/escanear-host-gvm.md)
 * [OSINT](ethical-hacker/osint/README.md)
+  * [Internet of Things Search Engines](ethical-hacker/osint/internet-of-things-search-engines.md)
   * [Google Searching](ethical-hacker/osint/google-searching.md)
 * [Técnicas posteriores a la explotación](ethical-hacker/tecnicas-posteriores-a-la-explotacion/README.md)
   * [Movimientos laterales, evitar la detección y enumerar](ethical-hacker/tecnicas-posteriores-a-la-explotacion/movimientos-laterales-evitar-la-deteccion-y-enumerar/README.md)
@@ -232,7 +233,7 @@
   * [OT](tecnologias-de-automatizacion-industrial.-proximamente/ot/README.md)
     * [Telemetry Acquisition Systems](tecnologias-de-automatizacion-industrial.-proximamente/ot/telemetry-acquisition-systems.md)
     * [SCADA](tecnologias-de-automatizacion-industrial.-proximamente/ot/scada.md)
-  * [IoT](tecnologias-de-automatizacion-industrial.-proximamente/iot.md)
+  * [IoT (The Internet of Things)](red-team-black-hat-proximamente/tecnologias-de-automatizacion-industrial/iot-the-internet-of-things.md)
 * [Red Team Tools](red-team-black-hat-proximamente/red-team-tools.md)
 * [Recursos](red-team-black-hat-proximamente/recursos.md)
 
