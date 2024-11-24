@@ -233,7 +233,8 @@
   * [OT](tecnologias-de-automatizacion-industrial.-proximamente/ot/README.md)
     * [Telemetry Acquisition Systems](tecnologias-de-automatizacion-industrial.-proximamente/ot/telemetry-acquisition-systems.md)
     * [SCADA](tecnologias-de-automatizacion-industrial.-proximamente/ot/scada.md)
-  * [IoT (The Internet of Things)](red-team-black-hat-proximamente/tecnologias-de-automatizacion-industrial/iot-the-internet-of-things.md)
+  * [IoT (The Internet of Things)](red-team-black-hat-proximamente/tecnologias-de-automatizacion-industrial/iot-the-internet-of-things/README.md)
+    * [Explorar un Firmware](red-team-black-hat-proximamente/tecnologias-de-automatizacion-industrial/iot-the-internet-of-things/explorar-un-firmware.md)
 * [Red Team Tools](red-team-black-hat-proximamente/red-team-tools.md)
 * [Recursos](red-team-black-hat-proximamente/recursos.md)
 
@@ -408,6 +409,7 @@
 
 ## 🟣 Reverse Engineering
 
+* [Reverse Engineering IoT: Firmware Extraction](reverse-engineering/reverse-engineering-iot-firmware-extraction.md)
 * [Recursos](reverse-engineering/recursos.md)
 * [Binary exploitation](reverse-engineering/binary-exploitation.md)
 
