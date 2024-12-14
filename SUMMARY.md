@@ -342,7 +342,7 @@
       * [Interferencia (Jamming) de cualquier punto de acceso Wi-Fi](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/reunir-informacion-ap-access-point-antes-del-cracking/interferencia-jamming-de-cualquier-punto-de-acceso-wi-fi.md)
     * [Cracking WEP encriptado](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/cracking-wep-encriptado/README.md)
       * [Descifrar el cifrado WEP](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/cracking-wep-encriptado/descifrar-el-cifrado-wep.md)
-      * [Falsa authentication](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/cracking-wep-encriptado/falsa-authentication.md)
+      * [Falsa autenticación](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/cracking-wep-encriptado/falsa-autenticacion.md)
       * [Cracking WEP utilizando el Ataque Korek Chopchop](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/cracking-wep-encriptado/cracking-wep-utilizando-el-ataque-korek-chopchop.md)
       * [Cracking WEP utilizando el Ataque de Repetición de Solicitudes ARP](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/cracking-wep-encriptado/cracking-wep-utilizando-el-ataque-de-repeticion-de-solicitudes-arp.md)
       * [Cracking WEP utilizando el Ataque Hirte](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/cracking-wep-encriptado/cracking-wep-utilizando-el-ataque-hirte.md)
