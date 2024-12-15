@@ -345,7 +345,7 @@
       * [Falsa autenticación](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/cracking-wep-encriptado/falsa-autenticacion.md)
       * [Cracking WEP utilizando el Ataque Korek Chopchop](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/cracking-wep-encriptado/cracking-wep-utilizando-el-ataque-korek-chopchop.md)
       * [Cracking WEP utilizando el Ataque de Repetición de Solicitudes ARP](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/cracking-wep-encriptado/cracking-wep-utilizando-el-ataque-de-repeticion-de-solicitudes-arp.md)
-      * [Cracking WEP utilizando el Ataque Hirte](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/cracking-wep-encriptado/cracking-wep-utilizando-el-ataque-hirte.md)
+      * [Cracking WEP utilizando el Ataque de Hirte y fragmentación](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/cracking-wep-encriptado/cracking-wep-utilizando-el-ataque-de-hirte-y-fragmentacion.md)
 * [Captura de Paquetes](pentesting-networks/captura-de-paquetes.md)
 * [Vectores de Ataques(Vulnerabilidades comunes)](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/README.md)
   * [On-Path Attacks](pentesting-networks/vectores-de-ataques-vulnerabilidades-comunes/on-path-attacks.md)
