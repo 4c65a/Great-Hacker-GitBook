@@ -351,7 +351,6 @@
       * [Capturar Handshake / fuerza bruta con diccionario](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/cracking-wpa-wpa2/capturar-handshake-fuerza-bruta-con-diccionario.md)
       * [Cracking WPA/WPA2 con Hashcat](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/cracking-wpa-wpa2/cracking-wpa-wpa2-con-hashcat.md)
     * [Man in the Middle Attacks](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/page-2.md)
-    * [Page 1](pentesting-networks/wireless/hacking-wep-wpa-wpa2-wifi-networks/page-1.md)
 * [Captura de Paquetes](pentesting-networks/captura-de-paquetes/README.md)
   * [Tshark](pentesting-networks/captura-de-paquetes/tshark.md)
   * [tcpdump](pentesting-networks/captura-de-paquetes/tcpdump.md)
