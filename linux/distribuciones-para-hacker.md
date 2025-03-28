@@ -1,4 +1,5 @@
 ---
+icon: user-cowboy
 layout:
   title:
     visible: true

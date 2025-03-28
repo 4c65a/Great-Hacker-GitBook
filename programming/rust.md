@@ -1,3 +1,7 @@
+---
+icon: rust
+---
+
 # Rust
 
 ## Recursos de aprendizaje

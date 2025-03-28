@@ -1,3 +1,7 @@
+---
+icon: python
+---
+
 # Python
 
 ## Recursos de aprendizaje

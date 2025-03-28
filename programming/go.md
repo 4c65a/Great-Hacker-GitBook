@@ -1,3 +1,7 @@
+---
+icon: golang
+---
+
 # Go
 
 ## Recursos de aprendizaje

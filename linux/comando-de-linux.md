@@ -1,4 +1,5 @@
 ---
+icon: square-terminal
 layout:
   title:
     visible: true

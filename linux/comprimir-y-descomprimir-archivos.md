@@ -1,4 +1,5 @@
 ---
+icon: file-zipper
 layout:
   title:
     visible: true

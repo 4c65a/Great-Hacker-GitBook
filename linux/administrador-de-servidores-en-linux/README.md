@@ -1,4 +1,5 @@
 ---
+icon: user-tie
 layout:
   title:
     visible: true
@@ -12,5 +13,5 @@ layout:
     visible: true
 ---
 
-# Administrador del servidores Linux
+# Administrador de servidores en Linux
 

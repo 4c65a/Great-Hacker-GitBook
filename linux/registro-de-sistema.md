@@ -1,4 +1,5 @@
 ---
+icon: list-timeline
 layout:
   title:
     visible: true

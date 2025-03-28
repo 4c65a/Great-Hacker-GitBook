@@ -1,4 +1,5 @@
 ---
+icon: folder-bookmark
 layout:
   title:
     visible: true
@@ -12,7 +13,7 @@ layout:
     visible: true
 ---
 
-# Carpetas
+# Directorios
 
 **/**: Es el directorio de nivel superior del sistema de archivos. Debe incluir todos los archivos necesarios para arrancar el sistema Linux antes de que se monte otro sistema de archivos. Todos los demás sistemas de archivos se montan en un punto de montaje bien definido y estándar debido a los directorios del sistema de archivos raíz después de que el sistema se inicia.
 

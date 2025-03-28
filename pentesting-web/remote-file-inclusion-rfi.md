@@ -1,4 +1,5 @@
 ---
+icon: laptop-arrow-down
 layout:
   title:
     visible: true

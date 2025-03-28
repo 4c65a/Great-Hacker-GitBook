@@ -1,4 +1,5 @@
 ---
+icon: claw-marks
 layout:
   title:
     visible: true

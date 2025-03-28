@@ -1,4 +1,5 @@
 ---
+icon: osi
 layout:
   title:
     visible: true
@@ -14,4 +15,4 @@ layout:
 
 # Recursos
 
-{% embed url="https://github.com/The-Art-of-Hacking/h4cker/tree/master/reverse_engineering" %}
+{% @github-files/github-code-block url="https://github.com/The-Art-of-Hacking/h4cker/tree/master/reverse_engineering" %}

@@ -370,7 +370,7 @@
 ## 🔵 Linux
 
 * [Distribuciones para hacker](linux/distribuciones-para-hacker.md)
-* [Carpetas](linux/carpetas.md)
+* [Directorios](linux/carpetas.md)
 * [Comando de Linux](linux/comando-de-linux.md)
 * [Comprimir y descomprimir archivos](linux/comprimir-y-descomprimir-archivos.md)
 * [Registro de sistema](linux/registro-de-sistema.md)
@@ -396,10 +396,9 @@
 * [Servicios basicos](windows-proximamente/servicios-basicos.md)
 * [PowerShell](windows-proximamente/powershell.md)
 * [Directorios](windows-proximamente/directorios.md)
-* [Batch](windows-proximamente/batch.md)
 * [Seguridad](windows-proximamente/seguridad.md)
 * [Backup](windows-proximamente/backup.md)
-* [Networks](windows-proximamente/networks.md)
+* [Redes y servicios](windows-proximamente/networks.md)
 
 ## 🟡 Programming
 

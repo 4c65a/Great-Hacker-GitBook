@@ -1,6 +1,8 @@
+---
+icon: windows
+---
+
 # Comandos de Windows
-
-
 
 | Comandos     | Descripción                                             |
 | ------------ | ------------------------------------------------------- |
