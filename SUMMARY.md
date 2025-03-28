@@ -406,6 +406,10 @@
 * [Go](programming/go.md)
 * [Python](programming/python.md)
 
+***
+
+* [C/C++](c-c++.md)
+
 ## 🟢 Cloud Security
 
 * [Tipos de ataques](cloud-security/tipos-de-ataques/README.md)
