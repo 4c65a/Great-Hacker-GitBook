@@ -60,7 +60,7 @@ Es una herramienta basada en menús que se puede utilizar para automatizar la re
 
 Se puede utilizar para reconocimiento pasivo para encontrar información sobre dispositivos y redes en Internet
 
-## Active Reconnaissance
+## Reconocimiento Activo
 
 **Nmap :** [**https://nmap.org/**](https://nmap.org/)
 
@@ -88,7 +88,7 @@ Es una gran herramienta para enumerar recursos compartidos de SMB, implementacio
 
 **Nikto :** [**https://github.com/sullo/nikto**](https://github.com/sullo/nikto)
 
-**OWASP (ZAP) :** [**https://www.owasp.org/index.php/OWASP\_Zed\_Attack\_Proxy\_Project**](https://www.owasp.org/index.php/OWASP\_Zed\_Attack\_Proxy\_Project)
+**OWASP (ZAP) :** [**https://www.owasp.org/index.php/OWASP\_Zed\_Attack\_Proxy\_Project**](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)
 
 **w3af :** [**https://w3af.org/**](https://w3af.org/)
 
@@ -142,26 +142,17 @@ Es un marco de prueba de penetración que permite a los profesionales de segurid
 
 ## Persistencia
 
-**Netcat:** Utilizado para crear un shell de enlace en un sistema víctima y ejecutar el shell Bash.
-
-**Protocolos de acceso remoto:**
-
-* Protocolo de escritorio remoto (RDP) de Microsoft.
-* Escritorio remoto de Apple.
-* VNC.
-* Reenvío del servidor X.
-
-**PowerShell:**
-
-* Puede ser utilizado para obtener listados de directorios, copiar y mover archivos, obtener una lista de procesos en ejecución y realizar tareas administrativas.
-
-**PowerSploit:**
+**PowerSploit:** [**https://github.com/PowerShellMafia/PowerSploit**](https://github.com/PowerShellMafia/PowerSploit)
 
 * Colección de módulos de PowerShell para la fase posterior a la explotación y otras fases de una evaluación.
 
-**Empire:**
+**Empire:** [**https://github.com/EmpireProject/Empire**](https://github.com/EmpireProject/Empire)
 
 * Marco de post explotación basado en PowerShell. Incluye un agente PowerShell para Windows y un agente Python para Linux.
+
+**Sliver:** [**https://github.com/BishopFox/sliver**](https://github.com/BishopFox/sliver)
+
+* Es un framework de emulación de adversarios que permite generar implantes capaces de establecer persistencia en sistemas comprometidos, facilitando el acceso continuo durante evaluaciones de seguridad.
 
 ## Evasión
 
@@ -206,7 +197,7 @@ Se han creado varias utilidades para realizar túneles DNS.
 
 {% embed url="https://www.metasploit.com/" %}
 
-{% @github-files/github-code-block %}
+{% @github-files/github-code-block url="https://github.com/rapid7/metasploit-framework/tree/master/scripts/meterpreter" %}
 
 **BeEF :** [**https://beefproject.com/**](https://beefproject.com/)
 
@@ -244,7 +235,7 @@ Objdump es un programa de Linux que se puede utilizar para mostrar información 
 
 ## Análisis forense
 
-{% @github-files/github-code-block %}
+{% @github-files/github-code-block url="https://github.com/The-Art-of-Hacking/h4cker/tree/master/dfir" %}
 
 **ADIA** : [_https://forensics.cert.org/#ADIA_](https://forensics.cert.org/#ADIA)
 
@@ -276,7 +267,7 @@ La estación de trabajo SANS Investigative Forensic Toolkit (SIFT) demuestra que
 
 Este es un programa Python para probar redes inalámbricas.
 
-**Rogue access points :** [https://github.com/The-Art-of-Hacking/h4cker/blob/master/wireless\_resources/virtual\_adapters.md](https://github.com/The-Art-of-Hacking/h4cker/blob/master/wireless\_resources/virtual\_adapters.md)
+**Rogue access points :** [https://github.com/The-Art-of-Hacking/h4cker/blob/master/wireless\_resources/virtual\_adapters.md](https://github.com/The-Art-of-Hacking/h4cker/blob/master/wireless_resources/virtual_adapters.md)
 
 Puede crear fácilmente puntos de acceso no autorizados utilizando herramientas de código abierto como hostapd.
 
@@ -304,7 +295,7 @@ Esta herramienta se utiliza para realizar ataques de fuerza bruta contra impleme
 
 **snow :** [_https://github.com/mattkwan-zz/snow_](https://github.com/mattkwan-zz/snow).
 
-**Coagula :** [_https://www.abc.se/\~re/Coagula/Coagula.html_](https://www.abc.se/\~re/Coagula/Coagula.html).
+**Coagula :** [_https://www.abc.se/\~re/Coagula/Coagula.html_](https://www.abc.se/~re/Coagula/Coagula.html).
 
 **Sonic Visualiser :** [_https://www.sonicvisualiser.org_](https://www.sonicvisualiser.org/).
 
