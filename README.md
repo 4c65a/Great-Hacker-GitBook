@@ -1,4 +1,5 @@
 ---
+icon: door-open
 cover: >-
   .gitbook/assets/Copia de Banner para Linkedin Licenciada Marketing Minimalista
   Beige.png
