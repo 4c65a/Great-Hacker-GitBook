@@ -1,4 +1,5 @@
 ---
+icon: explosion
 layout:
   title:
     visible: true

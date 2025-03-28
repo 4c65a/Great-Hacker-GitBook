@@ -1,3 +1,7 @@
+---
+icon: osi
+---
+
 # Recursos
 
 {% embed url="https://atomicredteam.io/atomics/" %}

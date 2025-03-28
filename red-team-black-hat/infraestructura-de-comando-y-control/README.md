@@ -1,3 +1,7 @@
+---
+icon: road-bridge
+---
+
 # Infraestructura de Comando y Control
 
 #### Infraestructura de Comando y Control:
