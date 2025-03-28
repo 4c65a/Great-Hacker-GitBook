@@ -1,4 +1,5 @@
 ---
+icon: user-hoodie
 layout:
   title:
     visible: true

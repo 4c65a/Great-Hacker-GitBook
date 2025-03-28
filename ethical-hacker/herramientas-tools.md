@@ -1,4 +1,5 @@
 ---
+icon: toolbox
 layout:
   title:
     visible: true

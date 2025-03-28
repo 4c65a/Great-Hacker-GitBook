@@ -1,4 +1,5 @@
 ---
+icon: wifi-fair
 layout:
   title:
     visible: true
@@ -12,5 +13,5 @@ layout:
     visible: true
 ---
 
-# Network Basics
+# Teoría Network
 

@@ -1,4 +1,5 @@
 ---
+icon: curling-stone
 layout:
   title:
     visible: true

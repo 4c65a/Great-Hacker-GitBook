@@ -1,4 +1,5 @@
 ---
+icon: clipboard-list
 layout:
   title:
     visible: true

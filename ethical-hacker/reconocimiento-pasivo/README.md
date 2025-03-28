@@ -1,4 +1,5 @@
 ---
+icon: trowel-bricks
 layout:
   title:
     visible: true
