@@ -1,6 +1,6 @@
 ---
 icon: door-open
-cover: .gitbook/assets/Great (1).png
+cover: .gitbook/assets/Great (2).png
 coverY: 0
 layout:
   cover:
