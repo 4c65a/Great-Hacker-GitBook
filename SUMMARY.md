@@ -4,7 +4,7 @@
 
 * [Bienvenidos](README.md)
 
-## ⚪ Ethical Hacker
+## Ethical Hacker
 
 * [Ethical Hacker](ethical-hacker/ethical-hacker/README.md)
   * [Metodologías](ethical-hacker/ethical-hacker/metodologias.md)
@@ -112,7 +112,7 @@
   * [tcpdump](ethical-hacker/captura-de-paquetes/tcpdump.md)
 * [Transferencias de Archivos](ethical-hacker/transferencias-de-archivos.md)
 
-## ⚫ Red Team/Black Hat
+## Red Team/Black Hat
 
 * [Credenciales y Suplantación de Usuario](red-team-black-hat/credenciales-y-suplantacion-de-usuario/README.md)
   * [Password Cracking](red-team-black-hat/credenciales-y-suplantacion-de-usuario/password-cracking.md)
@@ -309,7 +309,7 @@
   * [Radios](networks/radios.md)
   * [Satellite](networks/satellite.md)
 
-## 🟢 Pentesting Web
+## Pentesting Web
 
 * [OWASP Top Ten 2021](pentesting-web/owasp-top-ten-2021/README.md)
   * [1 :Broken access control](pentesting-web/owasp-top-ten-2021/1-broken-access-control.md)
@@ -370,7 +370,7 @@
 * [Web Shell](pentesting-web/web-shell.md)
 * [File Upload Vulnerabilities](pentesting-web/file-upload-vulnerabilities.md)
 
-## 🔵 Linux
+## Linux
 
 * [Distribuciones para hacker](linux/distribuciones-para-hacker.md)
 * [Directorios](linux/carpetas.md)
@@ -393,7 +393,7 @@
 * [Tratamiento de la TTY](linux/tratamiento-de-la-tty.md)
 * [Backup](linux/backup.md)
 
-## 🟤 Windows Próximamente
+## Windows Próximamente
 
 * [Comandos de Windows](windows-proximamente/comandos-de-windows.md)
 * [Servicios basicos](windows-proximamente/servicios-basicos.md)
@@ -403,7 +403,7 @@
 * [Backup](windows-proximamente/backup.md)
 * [Redes y servicios](windows-proximamente/networks.md)
 
-## 🟡 Programming
+## Programming
 
 * [Rust](programming/rust.md)
 * [Go](programming/go.md)
@@ -413,7 +413,7 @@
 
 * [C/C++](c-c++.md)
 
-## 🟢 Cloud Security
+## Cloud Security
 
 * [Tipos de ataques](cloud-security/tipos-de-ataques/README.md)
   * [Adquisición de cuenta (Account Takeover)](cloud-security/tipos-de-ataques/adquisicion-de-cuenta-account-takeover.md)
@@ -422,28 +422,28 @@
   * [Ataques al servicio de metadatos](cloud-security/tipos-de-ataques/ataques-al-servicio-de-metadatos.md)
   * [Ataques de canal lateral](cloud-security/tipos-de-ataques/ataques-de-canal-lateral.md)
 
-## 🟣 Reverse Engineering
+## Reverse Engineering
 
 * [Reverse Engineering IoT: Firmware Extraction](reverse-engineering/reverse-engineering-iot-firmware-extraction.md)
 * [Recursos](reverse-engineering/recursos.md)
 * [Binary exploitation](reverse-engineering/binary-exploitation.md)
 
-## 🔴 Malware Próximamente
+## Malware Próximamente
 
 * [Introducción](malware-proximamente/introduccion.md)
 * [Tipos de Malware](malware-proximamente/tipos-de-malware.md)
 * [Recursos](malware-proximamente/recursos.md)
 
-## 🔐 Blockchain Próximamente
+## Blockchain Próximamente
 
 * [Blockchain](blockchain-proximamente/blockchain.md)
 * [Web3 Penetration Testing](blockchain-proximamente/web3-penetration-testing.md)
 * [Smart Contract Audits](blockchain-proximamente/smart-contract-audits.md)
 
-## 🛡️ Blue Team Próximamente
+## Blue Team Próximamente
 
 * [SOC Fundamentals](blue-team-proximamente/soc-fundamentals.md)
 
-## 🐞 CTF
+## CTF
 
 * [Recursos de CTF](ctf/recursos-de-ctf.md)

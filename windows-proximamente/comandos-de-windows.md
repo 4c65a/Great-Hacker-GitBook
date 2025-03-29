@@ -1,5 +1,5 @@
 ---
-icon: windows
+icon: rectangle-terminal
 ---
 
 # Comandos de Windows
