@@ -124,4 +124,4 @@ La configuración protegida de Wi-Fi (WPS) es un protocolo que simplifica la imp
 
 Una herramienta llamada Reaver hace que los ataques WPS sean muy simples y fáciles de ejecutar.&#x20;
 
-{% embed url="https://github.com/t6x/reaver-wps-fork-t6x" %}
+{% @github-files/github-code-block %}
