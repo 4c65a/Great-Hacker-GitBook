@@ -370,6 +370,10 @@
 * [Web Shell](pentesting-web/web-shell.md)
 * [File Upload Vulnerabilities](pentesting-web/file-upload-vulnerabilities.md)
 
+***
+
+* [Business Logic Vulnerability](business-logic-vulnerability.md)
+
 ## Linux
 
 * [Distribuciones para hacker](linux/distribuciones-para-hacker.md)
