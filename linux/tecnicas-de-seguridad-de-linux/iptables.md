@@ -111,3 +111,23 @@ sudo iptables -D INPUT 1
 
 ***
 
+### Para guardar las configuraciones
+
+```bash
+sudo iptables-save > /etc/sysconfig/iptables/iptables.rules
+```
+
+Donde se guardan las configuraciones depende de cada sistema.
+
+<pre class="language-bash"><code class="lang-bash"><strong># ArchLinux
+</strong><strong>sudo iptables-save > /etc/iptables/iptables.rules
+</strong></code></pre>
+
+Para cargar las configuraciones.
+
+```bash
+sudo iptables-restore < /etc/iptables/iptables.rules
+```
+
+***
+
