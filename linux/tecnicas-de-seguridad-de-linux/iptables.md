@@ -131,3 +131,8 @@ sudo iptables-restore < /etc/iptables/iptables.rules
 
 ***
 
+#### Para mas exploración
+
+{% embed url="https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands" %}
+
+{% embed url="https://www.redhat.com/en/blog/iptables" %}
