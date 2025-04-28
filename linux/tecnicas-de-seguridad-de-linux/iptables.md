@@ -6,8 +6,6 @@ Esta herramienta es fundamental para la gestión del tráfico de red en sistemas
 
 ## Configuración Básica
 
-La primera tarea para fortificar un sistema Linux es establecer políticas estrictas con iptables. Procedemos de inmediato a verificar el estado actual y a aplicar las primeras reglas defensivas.
-
 ### Verificar instalación de iptables
 
 Antes de aplicar cualquier regla, es necesario comprobar que iptables está operativo en el sistema:
@@ -15,13 +13,11 @@ Antes de aplicar cualquier regla, es necesario comprobar que iptables está oper
 <pre class="language-bash"><code class="lang-bash"><strong>sudo iptables -L
 </strong></code></pre>
 
-Este comando lista todas las reglas activas. Si no muestra errores, iptables está instalado y funcionando.
-
 ***
 
 ### Establecer políticas por defecto seguras
 
-Todo tráfico que no esté explícitamente permitido debe ser rechazado por defecto. Ejecuta:
+Todo tráfico que no esté explícitamente permitido debe ser rechazado por defecto.
 
 ```bash
 sudo iptables -P INPUT DROP
