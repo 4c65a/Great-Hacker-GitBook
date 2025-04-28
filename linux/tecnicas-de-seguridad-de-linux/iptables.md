@@ -10,8 +10,9 @@ Esta herramienta es fundamental para la gestión del tráfico de red en sistemas
 
 Antes de aplicar cualquier regla, es necesario comprobar que iptables está operativo en el sistema:
 
-<pre class="language-bash"><code class="lang-bash"><strong>sudo iptables -L
-</strong></code></pre>
+```bash
+sudo iptables -L
+```
 
 ***
 
@@ -116,8 +117,8 @@ sudo iptables-save > /etc/sysconfig/iptables/iptables.rules
 Donde se guardan las configuraciones depende de cada sistema.
 
 <pre class="language-bash"><code class="lang-bash"><strong># ArchLinux
-</strong><strong>sudo iptables-save > /etc/iptables/iptables.rules
-</strong></code></pre>
+</strong>sudo iptables-save > /etc/iptables/iptables.rules
+</code></pre>
 
 Para cargar las configuraciones.
 
