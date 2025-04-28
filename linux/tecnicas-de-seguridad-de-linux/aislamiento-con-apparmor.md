@@ -1,0 +1,2 @@
+# Aislamiento con AppArmor
+
