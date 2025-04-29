@@ -50,7 +50,7 @@
   * [OSINT Tools](ethical-hacker/reconocimiento-pasivo/osint-tools/README.md)
     * [Recon-ng](ethical-hacker/reconocimiento-pasivo/osint-tools/recon-ng.md)
     * [SpiderFoot](ethical-hacker/reconocimiento-pasivo/osint-tools/spiderfoot.md)
-  * [Github-Dorks](ethical-hacker/reconocimiento-pasivo/github-dorks/README.md)
+  * [GitHub Dorks para Encontrar Información Sensible](ethical-hacker/reconocimiento-pasivo/github-dorks/README.md)
     * [Githacker](ethical-hacker/reconocimiento-pasivo/github-dorks/githacker.md)
   * [DNS Lookups](ethical-hacker/reconocimiento-pasivo/dns-lookups.md)
   * [Whois](ethical-hacker/reconocimiento-pasivo/whois.md)

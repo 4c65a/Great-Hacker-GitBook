@@ -12,7 +12,7 @@ layout:
     visible: true
 ---
 
-# Github-Dorks
+# GitHub Dorks para Encontrar Información Sensible
 
 ## **Tool**
 
@@ -24,164 +24,135 @@ layout:
 
 [**https://github.com/hisxo/gitGraber**](https://github.com/hisxo/gitGraber)
 
-## GitHub Dorks para Encontrar Información Sensible
+
 
 ### 🗂️ Archivos y Configuraciones Comunes
 
-```bash
-filename:manifest.xml
-filename:travis.yml
-filename:vim_settings.xml
-filename:database
-filename:prod.exs NOT prod.secret.exs
-filename:prod.secret.exs
-filename:.npmrc _auth
-filename:.dockercfg auth
-filename:WebServers.xml
-filename:.bash_history
-filename:.bash_profile aws
-filename:.sh_history
-filename:sftp-config.json
-filename:sftp.json path:.vscode
-filename:secrets.yml password
-filename:.esmtprc password
-filename:passwd path:etc
-filename:shadow path:etc
-filename:dbeaver-data-sources.xml
-filename:config.php dbpasswd
-filename:configuration.php JConfig password
-filename:wp-config.php
-filename:proftpdpasswd
-filename:.pgpass
-filename:idea14.key
-filename:hub oauth_token
-filename:.git-credentials
-filename:.htpasswd
-filename:.env
-filename:.env.production
-filename:.env.local
-filename:.env.development
-filename:credentials.json
-filename:firebase.json
-filename:settings.py SECRET_KEY
-filename:config.js apiKey
-filename:config.json apiKey
-filename:local.properties
-filename:gradle.properties
-filename:secrets.json
-filename:secrets.yml
-filename:docker-compose.yml
-filename:docker-compose.override.yml
-filename:docker-compose.prod.yml
-filename:docker-compose.dev.yml
-filename:docker-compose.test.yml
-filename:docker-compose.ci.yml
-filename:docker-compose.staging.yml
-filename:docker-compose.local.yml
-filename:docker-compose.prod.override.yml
-filename:docker-compose.dev.override.yml
-filename:docker-compose.test.override.yml
-filename:docker-compose.ci.override.yml
-filename:docker-compose.staging.override.yml
-filename:docker-compose.local.override.yml
-filename:docker-compose.override.prod.yml
-filename:docker-compose.override.dev.yml
-filename:docker-compose.override.test.yml
-filename:docker-compose.override.ci.yml
-filename:docker-compose.override.staging.yml
-filename:docker-compose.override.local.yml
-filename:docker-compose.override.prod.override.yml
-filename:docker-compose.override.dev.override.yml
-filename:docker-compose.override.test.override.yml
-filename:docker-compose.override.ci.override.yml
-filename:docker-compose.override.staging.override.yml
-filename:docker-compose.override.local.override.yml
-filename:docker-compose.override.override.yml
-filename:.env.example
-filename:.env.sample
-filename:.env.backup
-filename:.env.bak
-filename:config.json password
-filename:config.yaml password
-filename:settings.ini password
-filename:credentials.yml password
-filename:secrets.env
-filename:secrets.txt
-filename:secrets.conf
-filename:secret.key
-filename:secret_token.rb
-filename:secrets.py
-filename:secrets.js
-filename:secrets.php
-filename:secrets.rb
-filename:secrets.go
-filename:secrets.swift
-filename:secrets.kt
-filename:secrets.scala
-filename:secrets.ts
-filename:secrets.rs
-filename:secrets.dart
-filename:secrets.elixir
-filename:secrets.clj
-filename:secrets.hs
-filename:secrets.m
-filename:secrets.vb
-filename:secrets.cs
-filename:secrets.cpp
-filename:secrets.c
-filename:secrets.asm
-filename:secrets.m
-filename:secrets.r
-filename:secrets.pl
-filename:secrets.lua
-filename:secrets.groovy
-filename:secrets.erl
-filename:secrets.f
-filename:secrets.pas
-filename:secrets.dpr
-filename:secrets.adb
-filename:secrets.pro
-filename:secrets.lisp
-filename:secrets.scm
-filename:secrets.ml
-filename:secrets.fs
-filename:secrets.coffee
-filename:secrets.elm
-filename:secrets.cr
-filename:secrets.nim
-filename:secrets.re
-filename:secrets.reb
-filename:secrets.st
-filename:secrets.vala
-filename:secrets.zig
-filename:secrets.pony
-filename:secrets.janet
-filename:secrets.gleam
-filename:secrets.grain
-filename:secrets.roc
-filename:secrets.bsq
-filename:secrets.carbon
-filename:secrets.dark
-filename:secrets.dsp
-filename:secrets.flink
-filename:secrets.hydra
-filename:secrets.ink
-filename:secrets.jl
-filename:secrets.kojo
-filename:secrets.livecode
-filename:secrets.mod
-filename:secrets.obr
-filename:secrets.plk
-filename:secrets.quorum
-filename:secrets.rexx
-filename:secrets.sage
-filename:secrets.terra
-filename:secrets.uni
-filename:secrets.v
-filename:secrets.vhdl
-filename:secrets.xojo
-filename:secrets.xtend
-```
+<pre class="language-bash"><code class="lang-bash">path:**/.git
+<strong>path:**/.npmrc _auth
+</strong>path:**/.dockercfg auth
+path:**/.bash_history
+path:**/.bash_profile aws
+path:**/.sh_history
+path:**/sftp-config.json
+path:**/sftp.json
+path:**/secrets.yml password
+path:**/.esmtprc password
+path:**/passwd
+path:**/shadow
+path:**/dbeaver-data-sources.xml
+path:**/config.php dbpasswd
+path:**/configuration.php JConfig password
+path:**/wp-config.php
+path:**/proftpdpasswd
+path:**/.pgpass
+path:**/idea14.key
+path:**/hub oauth_token
+path:**/.git-credentials
+path:**/.htpasswd
+path:**/.env
+path:**/.env.production
+path:**/.env.local
+path:**/.env.development
+path:**/credentials.json
+path:**/firebase.json
+path:**/settings.py SECRET_KEY
+path:**/config.js apiKey
+path:**/config.json apiKey
+path:**/local.properties
+path:**/gradle.properties
+path:**/secrets.json
+path:**/secrets.yml
+path:**/docker-compose.yml
+path:**/docker-compose.override.yml
+path:**/docker-compose.prod.yml
+path:**/docker-compose.dev.yml
+path:**/docker-compose.test.yml
+path:**/docker-compose.ci.yml
+path:**/docker-compose.staging.yml
+path:**/docker-compose.local.yml
+path:**/.env.example
+path:**/.env.sample
+path:**/.env.backup
+path:**/.env.bak
+path:**/config.json password
+path:**/config.yaml password
+path:**/settings.ini password
+path:**/credentials.yml password
+path:**/secrets.env
+path:**/secrets.txt
+path:**/secrets.conf
+path:**/secret.key
+path:**/secret_token.rb
+path:**/secrets.py
+path:**/secrets.js
+path:**/secrets.php
+path:**/secrets.rb
+path:**/secrets.go
+path:**/secrets.swift
+path:**/secrets.kt
+path:**/secrets.scala
+path:**/secrets.ts
+path:**/secrets.rs
+path:**/secrets.dart
+path:**/secrets.elixir
+path:**/secrets.clj
+path:**/secrets.hs
+path:**/secrets.vb
+path:**/secrets.cs
+path:**/secrets.cpp
+path:**/secrets.c
+path:**/secrets.asm
+path:**/secrets.r
+path:**/secrets.pl
+path:**/secrets.lua
+path:**/secrets.groovy
+path:**/secrets.erl
+path:**/secrets.pas
+path:**/secrets.dpr
+path:**/secrets.adb
+path:**/secrets.pro
+path:**/secrets.lisp
+path:**/secrets.scm
+path:**/secrets.ml
+path:**/secrets.fs
+path:**/secrets.coffee
+path:**/secrets.elm
+path:**/secrets.cr
+path:**/secrets.nim
+path:**/secrets.re
+path:**/secrets.st
+path:**/secrets.vala
+path:**/secrets.zig
+path:**/secrets.pony
+path:**/secrets.janet
+path:**/secrets.gleam
+path:**/secrets.grain
+path:**/secrets.roc
+path:**/secrets.bsq
+path:**/secrets.carbon
+path:**/secrets.dark
+path:**/secrets.dsp
+path:**/secrets.flink
+path:**/secrets.hydra
+path:**/secrets.ink
+path:**/secrets.jl
+path:**/secrets.kojo
+path:**/secrets.livecode
+path:**/secrets.mod
+path:**/secrets.obr
+path:**/secrets.plk
+path:**/secrets.quorum
+path:**/secrets.rexx
+path:**/secrets.sage
+path:**/secrets.terra
+path:**/secrets.uni
+path:**/secrets.v
+path:**/secrets.vhdl
+path:**/secrets.xojo
+path:**/secrets.xtend
+
+</code></pre>
 
 ***
 
