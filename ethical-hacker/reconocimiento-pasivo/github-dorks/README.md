@@ -28,7 +28,7 @@ layout:
 
 ### 🗂️ Archivos y Configuraciones Comunes
 
-<pre class="language-bash"><code class="lang-bash">path:**/.git
+<pre class="language-git"><code class="lang-git">path:**/.git
 <strong>path:**/.npmrc _auth
 </strong>path:**/.dockercfg auth
 path:**/.bash_history
@@ -158,7 +158,7 @@ path:**/secrets.xtend
 
 ### 👤 Nombres de Usuario y Correos Electrónicos
 
-```
+```git
 user:name
 org:name type:users
 in:login
@@ -171,7 +171,7 @@ in:email
 
 ### 🧠 Dorks por Lenguaje de Programación
 
-```
+```git
 language:python username
 language:php username
 language:sql username
@@ -255,7 +255,7 @@ language:zig token
 
 ## 🔑 Autenticación general y claves de API
 
-```
+```git
 api_key
 apikey
 api_token
@@ -279,7 +279,7 @@ token
 
 ## ☁️ Plataformas cloud comunes
 
-```
+```git
 aws_access_key_id
 aws_secret_access_key
 AWS_ACCESS_KEY_ID
@@ -290,7 +290,7 @@ AZURE_SUBSCRIPTION_KEY
 
 ## 📡 Servicios de terceros (comunes en integraciones)
 
-```
+```git
 GITHUB_TOKEN
 GITLAB_TOKEN
 BITBUCKET_TOKEN
@@ -312,7 +312,7 @@ TELEGRAM_BOT_TOKEN
 
 ## 🌐 Redes sociales y plataformas
 
-```
+```git
 FACEBOOK_API_KEY
 GOOGLE_API_KEY
 YOUTUBE_API_KEY
@@ -330,7 +330,7 @@ INSTAGRAM_API_KEY
 
 ## 📧 Email y SMTP
 
-```
+```git
 smtp_password
 smtp_user
 smtp_username
@@ -340,7 +340,7 @@ gmail_username
 
 ## 🔒 Contraseñas, credenciales y hashes
 
-```
+```git
 password
 passwd
 passcode
@@ -359,7 +359,7 @@ password_hash
 
 ## 👤 Usuarios y logins
 
-```
+```git
 username
 user
 user_password
@@ -373,7 +373,7 @@ ssh_user
 
 ## 💾 Bases de datos
 
-```
+```git
 mysql_password
 postgres_password
 mongodb_password
@@ -384,7 +384,7 @@ connection_string
 
 ## 🔧 Configs comunes
 
-```
+```git
 auth
 authentication
 authorizationToken
@@ -394,7 +394,7 @@ bucket_password
 
 ## 🔍 Otros útiles para búsquedas
 
-```
+```git
 "api token"
 "db_password"
 "connectionstring"
