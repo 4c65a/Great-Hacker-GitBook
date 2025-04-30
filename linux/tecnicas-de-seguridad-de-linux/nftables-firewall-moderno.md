@@ -8,50 +8,47 @@
 
 **Mostrar todas las cadenas existentes**
 
-```bash
-nft list chains
-```
+<pre class="language-bash"><code class="lang-bash"><strong>sudo nft list chains
+</strong></code></pre>
 
 **Ver todas las reglas de la tabla**
 
 ```bash
-nft list table inet filter
+sudo nft list table inet filter
 ```
 
 **Ver reglas con identificadores**
 
 ```bash
-nft -a list table inet filter
+sudo nft -a list table inet filter
 ```
 
 **Exportar configuración en JSON**
 
-```bash
-nft export json
-```
+<pre class="language-bash"><code class="lang-bash"><strong>sudo nft export json
+</strong></code></pre>
 
 **Exportar configuración en XML**
 
-```bash
-nft export xml
-```
+<pre class="language-bash"><code class="lang-bash"><strong>sudo nft export xml
+</strong></code></pre>
 
 **Ver todo el ruleset**
 
 ```bash
-nft list ruleset
+sudo nft list ruleset
 ```
 
 **Vaciar todas las reglas del sistema:**
 
 ```bash
-nft flush ruleset
+sudo nft flush ruleset
 ```
 
 **Vaciar una tabla específica:**
 
 ```bash
-nft flush table inet filter
+sudo nft flush table inet filter
 ```
 
 ***
