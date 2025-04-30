@@ -1,6 +1,6 @@
 # nftables: Firewall Moderno
 
-`nftables` es una herramienta que filtra paquetes y los clasifica, actuando como un firewall para sistemas Linux. Es el sustituto directo de `iptables`, `ip6tables`, `arptables` y `ebtables`, unificando todos estos frameworks en una sola solución más limpia, estructurada y eficiente. Su función es controlar el tráfico de red, permitiendo o bloqueando conexiones según reglas que el administrador define. Así, protege el sistema, organiza el flujo de datos y previene accesos no deseados.
+`nftables` es una herramienta que filtra paquetes y los clasifica, actuando como un firewall para sistemas Linux. Es el sustituto directo de `iptables`, `ip6tables`, `arptables` , unificando todos estos frameworks en una sola solución más limpia, estructurada y eficiente. Su función es controlar el tráfico de red, permitiendo o bloqueando conexiones según reglas que el administrador define. Así, protege el sistema, organiza el flujo de datos y previene accesos no deseados.
 
 ***
 
@@ -106,25 +106,37 @@ sudo nft add rule inet filter input position 3 tcp dport 80 accept
 
 **Reglas comunes de filtrado**
 
+**Descarta paquetes con estado de conexión inválido**
+
 ```bash
 sudo nft add rule inet filter input ct state invalid drop
 ```
+
+**Permite todo el tráfico entrante desde la interfaz de loopback**
 
 ```bash
 sudo nft add rule inet filter input iifname lo accept
 ```
 
+**Permite paquetes que son parte de una conexión ya establecida o relacionadas**
+
 ```bash
 sudo nft add rule inet filter input ct state established,related accept
 ```
+
+**Permite tráfico entrante al puerto 80**
 
 ```bash
 sudo nft add rule inet filter input tcp dport 80 accept
 ```
 
+**Permite tráfico entrante al puerto 443**
+
 ```bash
 sudo nft add rule inet filter input tcp dport 443 accept
 ```
+
+**Bloquea todo el tráfico entrante que no haya sido explícitamente permitido antes**
 
 ```bash
 sudo nft add rule inet filter input drop
