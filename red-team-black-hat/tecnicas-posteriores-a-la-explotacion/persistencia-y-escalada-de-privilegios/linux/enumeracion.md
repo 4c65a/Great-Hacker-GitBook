@@ -31,6 +31,11 @@ CMD: El comando o ejecutable en ejecución (NO mostrará ningún parámetro de l
 
 El comando env mostrará variables de entorno.
 
+```bash
+printenv
+env
+```
+
 **sudo -l**
 
 El sistema objetivo puede estar configurado para permitir que los usuarios ejecuten algunos (o todos) los comandos con privilegios de root. El comando sudo -l se puede usar para enumerar todos los comandos que tu usuario puede ejecutar usando sudo.
@@ -75,22 +80,37 @@ Buscar en el sistema objetivo información importante y posibles vectores de esc
 
 **Carpetas y archivos que se pueden escribir o ejecutar desde:**
 
-```typescript
+```bash
 find / -writable -type d 2>/dev/null: 
 find / -perm -222 -type d 2>/dev/null:
 find / -perm -o w -type d 2>/dev/null:
 ```
 
-```typescript
+```bash
 find / -perm -o x -type d 2>/dev/null: 
 ```
 
 **Buscar herramientas de desarrollo y lenguajes compatibles:**
 
-```arduino
+```bash
 find / -name perl*
 find / -name python*
 find / -name gcc*
+```
+
+**Buscar por extenciones:**
+
+<pre class="language-bash"><code class="lang-bash"><strong>find  -name "*.db" 2>/dev/null
+</strong>find  -name "*.sqlite" 2>/dev/null
+find  -name "*.sqlite3" 2>/dev/null
+find  -name "*.py" 2>/dev/null
+find -name ".env" 2>/dev/null
+</code></pre>
+
+**Buscar base de datos:**
+
+```bash
+find / -type f \( -iname "*.db" -o -iname "*.sqlite" -o -iname "*.sqlite3" -o -iname "*.mdb" -o -iname "*.accdb" \) 2>/dev/null
 ```
 
 **Buscar permisos de archivo específicos:**
@@ -100,3 +120,47 @@ Encontrar archivos con el bit SUID, lo que nos permite ejecutar el archivo con u
 ```typescript
 find / -perm -u=s -type f 2>/dev/null:
 ```
+
+**Buscar claves,ceritificados y credenciales:**
+
+```bash
+find / -type f \( -iname "*.pem" -o -iname "*.key" -o -iname "*.crt" -o -iname "*.cer" -o -iname "*.pfx" -o -iname "*.p12" -o -iname "*.kdb" -o -iname "*.kdbx" \) 2>/dev/null
+```
+
+**Buscar backups y versiones antiguas:**
+
+```bash
+find / -type f \( -iname "*.bak" -o -iname "*.old" -o -iname "*.orig" -o -iname "*~" \) 2>/dev/null
+```
+
+**Buscar log y archivos de textos:**
+
+```bash
+find / -type f \( -iname "*.txt" -o -iname "*.log" \) 2>/dev/null
+```
+
+**Buscar archivos de contenedores y proyectos devops:**
+
+```bash
+find / -type f \( -iname "Dockerfile" -o -iname "docker-compose.yml" -o -iname "*.tf" -o -iname "*.iml" -o -iname "*.csproj" -o -iname "*.sln" -o -iname "*.xcodeproj" \) 2>/dev/null
+```
+
+**Lo mas importante:**
+
+```bash
+find / -type f \( -iname "*.db" -o -iname "*.conf" -o -iname "*.env" -o -iname "*.pem" -o -iname "*.bak" -o -iname "*.sh" -o -iname "*.log" \) 2>/dev/null
+```
+
+**Enumerar conexiones de red activas y puertos escuchando:**
+
+```bash
+ss -lnt
+```
+
+**Enumerar interfaces de red , rutas de red y gateways**
+
+```bash
+ip addr show
+ip route show
+```
+
