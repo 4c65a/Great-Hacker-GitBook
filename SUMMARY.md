@@ -112,6 +112,25 @@
   * [tcpdump](ethical-hacker/captura-de-paquetes/tcpdump.md)
 * [Transferencias de Archivos](ethical-hacker/transferencias-de-archivos.md)
 
+## Blue Team Próximamente
+
+* [SOC Fundamentals](blue-team-proximamente/soc-fundamentals.md)
+
+***
+
+* [Threat Hunting](threat-hunting.md)
+* [Vulnerability Management](vulnerability-management.md)
+* [Digital Forensics](digital-forensics.md)
+* [Network Analysis](network-analysis.md)
+* [Dark Web Operations](dark-web-operations.md)
+* [Phishing Analysis](phishing-analysis.md)
+* [Threat Intelligence](threat-intelligence.md)
+* [Incident Response](incident-response.md)
+* [Security Operations Manager](security-operations-manager/README.md)
+  * [Modern Security Operations](security-operations-manager/modern-security-operations.md)
+  * [Building a Security Operations Team](security-operations-manager/building-a-security-operations-team.md)
+  * [Metrics, Maturity, and Measuring Success](security-operations-manager/metrics-maturity-and-measuring-success.md)
+
 ## Red Team/Black Hat
 
 * [Credenciales y Suplantación de Usuario](red-team-black-hat/credenciales-y-suplantacion-de-usuario/README.md)
@@ -447,10 +466,6 @@
 * [Blockchain](blockchain-proximamente/blockchain.md)
 * [Web3 Penetration Testing](blockchain-proximamente/web3-penetration-testing.md)
 * [Smart Contract Audits](blockchain-proximamente/smart-contract-audits.md)
-
-## Blue Team Próximamente
-
-* [SOC Fundamentals](blue-team-proximamente/soc-fundamentals.md)
 
 ## CTF
 
