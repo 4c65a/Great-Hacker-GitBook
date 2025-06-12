@@ -118,14 +118,14 @@
 
 ***
 
+* [Threat Intelligence](threat-intelligence.md)
 * [Threat Hunting](threat-hunting.md)
-* [Vulnerability Management](vulnerability-management.md)
+* [Incident Response](incident-response.md)
 * [Digital Forensics](digital-forensics.md)
 * [Network Analysis](network-analysis.md)
-* [Dark Web Operations](dark-web-operations.md)
 * [Phishing Analysis](phishing-analysis.md)
-* [Threat Intelligence](threat-intelligence.md)
-* [Incident Response](incident-response.md)
+* [Vulnerability Management](vulnerability-management.md)
+* [Dark Web Operations](dark-web-operations.md)
 * [Security Operations Manager](security-operations-manager/README.md)
   * [Modern Security Operations](security-operations-manager/modern-security-operations.md)
   * [Building a Security Operations Team](security-operations-manager/building-a-security-operations-team.md)
