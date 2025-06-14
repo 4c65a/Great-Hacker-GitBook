@@ -109,12 +109,14 @@
 * [Curl](ethical-hacker/curl.md)
 * [Transferencias de Archivos](ethical-hacker/transferencias-de-archivos.md)
 
-## Blue Team Próximamente
-
-* [SOC Fundamentals](blue-team-proximamente/soc-fundamentals.md)
+## Blue Team
 
 ***
 
+* [Security Operations Manager](security-operations-manager/README.md)
+  * [Modern Security Operations Center (SOC)](security-operations-manager/modern-security-operations-center-soc.md)
+  * [Building a Security Operations Team](security-operations-manager/building-a-security-operations-team.md)
+  * [Metrics, Maturity, and Measuring Success](security-operations-manager/metrics-maturity-and-measuring-success.md)
 * [Threat Intelligence](threat-intelligence/README.md)
   * [Grupos APT Lista](threat-intelligence/grupos-apt-lista.md)
   * [Como investigar](threat-intelligence/como-investigar.md)
@@ -134,10 +136,6 @@
 * [Dark Web Operations](dark-web-operations/README.md)
   * [Accediendo a TOR con el navegador](dark-web-operations/accediendo-a-tor-con-el-navegador.md)
   * [Configuracion de TOR en Linux](dark-web-operations/configuracion-de-tor-en-linux.md)
-* [Security Operations Manager](security-operations-manager/README.md)
-  * [Modern Security Operations](security-operations-manager/modern-security-operations.md)
-  * [Building a Security Operations Team](security-operations-manager/building-a-security-operations-team.md)
-  * [Metrics, Maturity, and Measuring Success](security-operations-manager/metrics-maturity-and-measuring-success.md)
 
 ## Red Team/Black Hat
 

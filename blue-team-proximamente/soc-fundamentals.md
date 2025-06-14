@@ -1,6 +1,0 @@
----
-icon: socks
----
-
-# SOC Fundamentals
-

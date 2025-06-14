@@ -1,5 +1,5 @@
 ---
-icon: shield
+icon: opera
 ---
 
 # Security Operations Manager
