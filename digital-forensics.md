@@ -1,6 +1,0 @@
----
-icon: asterisk
----
-
-# Digital Forensics
-

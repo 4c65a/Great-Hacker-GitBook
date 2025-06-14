@@ -1,6 +1,0 @@
----
-icon: threads
----
-
-# Threat Hunting
-
