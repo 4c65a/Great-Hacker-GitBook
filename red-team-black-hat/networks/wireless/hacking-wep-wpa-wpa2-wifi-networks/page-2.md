@@ -6,7 +6,7 @@
 
 
 
-<img src="../../../.gitbook/assets/file.excalidraw (15).svg" alt="" class="gitbook-drawing">
+<img src="../../../../.gitbook/assets/file.excalidraw (15).svg" alt="" class="gitbook-drawing">
 
 
 
@@ -48,7 +48,7 @@ nmap -sCV --open --top-ports 192.168.0.1/24
 
 ### Realizar el ataque
 
-Antes de empezar el ataque se debe saber que es [ARP](../../../ethical-hacker/teoria-network/arp.md).
+Antes de empezar el ataque se debe saber que es [ARP](../../../../ethical-hacker/teoria-network/arp.md).
 
 Tenemos el protocolo de resolución de direcciones o ARP. ARP es un protocolo de la capa de red utilizado para convertir cualquier dirección IP en una dirección física. ARP se usa para vincular nuestra dirección IP a la dirección MAC para comunicarse con cualquier dispositivo en tu red.
 

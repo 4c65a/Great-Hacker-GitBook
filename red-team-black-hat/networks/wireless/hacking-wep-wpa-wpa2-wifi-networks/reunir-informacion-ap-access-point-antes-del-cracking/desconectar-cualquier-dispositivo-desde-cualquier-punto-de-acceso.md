@@ -14,7 +14,7 @@ Corremos el modo monitor y se escanea la red objetiva.
 
 > Se puede saber que compañía fabrico el producto. Copiamos el MAC y vamos a este sitio web: MAC Vendors: https://macvendors.com/
 
-<figure><img src="../../../../.gitbook/assets/MACVendor.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/MACVendor.png" alt=""><figcaption></figcaption></figure>
 
 Para desconectar debemos hacer lo siguiente:&#x20;
 
@@ -24,9 +24,9 @@ aireplay-ng -0 3 -a BSSID -C STATION wlan0mon -0:
 
 Esta opción indica que se realizará un ataque de desautenticación. Este ataque consiste en enviar paquetes de desautenticación falsos a un punto de acceso o a un cliente inalámbrico, forzando su desconexión de la red.
 
-* \-0 3: Este número especifica la cantidad de paquetes de desautenticación que se enviarán. En este caso, se enviarán 3 paquetes.
-* \-a BSSID: Esta opción especifica la dirección MAC del punto de acceso objetivo del ataque. El BSSID es el identificador único de la red inalámbrica.
-* \-C STATION: Esta opción indica la dirección MAC del cliente inalámbrico que se desea desconectar de la red.
+* -0 3: Este número especifica la cantidad de paquetes de desautenticación que se enviarán. En este caso, se enviarán 3 paquetes.
+* -a BSSID: Esta opción especifica la dirección MAC del punto de acceso objetivo del ataque. El BSSID es el identificador único de la red inalámbrica.
+* -C STATION: Esta opción indica la dirección MAC del cliente inalámbrico que se desea desconectar de la red.
 * wlan0mon: Este es el nombre de la interfaz de red inalámbrica que se utilizará para realizar el ataque. Esta interfaz debe estar en modo monitor, lo cual permite capturar y enviar paquetes de forma inalámbrica.
 
 El comando completo  realiza un ataque de desautenticación a la red inalámbrica con el BSSID especificado, enviando 3 paquetes de desautenticación para desconectar al cliente con la dirección MAC STATION. Este ataque se realiza a través de la interfaz wlan0mon, que debe estar en modo monitor.

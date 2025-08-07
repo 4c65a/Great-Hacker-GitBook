@@ -1,6 +1,6 @@
 # DNS Lookups
 
-### Para ver mas comandos y herramientas ir a [53-dns.md](../../networks/network-services/53-dns.md "mention")
+### Para ver mas comandos y herramientas ir a [53-dns.md](../../red-team-black-hat/networks/network-services/53-dns.md "mention")
 
 ### Recuperación de registros DNS
 

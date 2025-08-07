@@ -1,12 +1,12 @@
 # Cambiar direccion MAC
 
-{% content-ref url="../../../ethical-hacker/teoria-network/mac.md" %}
-[mac.md](../../../ethical-hacker/teoria-network/mac.md)
+{% content-ref url="../../../../ethical-hacker/teoria-network/mac.md" %}
+[mac.md](../../../../ethical-hacker/teoria-network/mac.md)
 {% endcontent-ref %}
 
 ## Como se compone  la estructura de MAC
 
-<img src="../../../.gitbook/assets/file.excalidraw (1).svg" alt="" class="gitbook-drawing">
+<img src="../../../../.gitbook/assets/file.excalidraw (1).svg" alt="" class="gitbook-drawing">
 
 ### Como cambiar la dirección MAC
 
