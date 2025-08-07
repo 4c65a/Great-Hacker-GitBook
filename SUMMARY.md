@@ -191,8 +191,6 @@
     * [SCADA](red-team-black-hat/tecnologias-de-automatizacion-industrial/ot/scada.md)
   * [IoT (The Internet of Things)](red-team-black-hat/tecnologias-de-automatizacion-industrial/iot-the-internet-of-things/README.md)
     * [Explorar un Firmware](red-team-black-hat/tecnologias-de-automatizacion-industrial/iot-the-internet-of-things/explorar-un-firmware.md)
-* [Red Team Tools](red-team-black-hat/red-team-tools.md)
-* [Recursos](red-team-black-hat/recursos.md)
 * [Técnicas posteriores a la explotación](red-team-black-hat/tecnicas-posteriores-a-la-explotacion/README.md)
   * [Persistencia](red-team-black-hat/tecnicas-posteriores-a-la-explotacion/persistencia/README.md)
     * [Invertir y vincular shells(Reverser/Bind Shells)](red-team-black-hat/tecnicas-posteriores-a-la-explotacion/persistencia/invertir-y-vincular-shells-reverser-bind-shells.md)
@@ -229,6 +227,7 @@
       * [SUID/SGID](red-team-black-hat/tecnicas-posteriores-a-la-explotacion/persistencia-y-escalada-de-privilegios/linux/suid-sgid.md)
       * [Password y Keys](red-team-black-hat/tecnicas-posteriores-a-la-explotacion/persistencia-y-escalada-de-privilegios/linux/password-y-keys.md)
       * [NFS](red-team-black-hat/tecnicas-posteriores-a-la-explotacion/persistencia-y-escalada-de-privilegios/linux/nfs.md)
+      * [System Tools Exploitation](red-team-black-hat/tecnicas-posteriores-a-la-explotacion/persistencia-y-escalada-de-privilegios/linux/system-tools-exploitation.md)
     * [Windows](red-team-black-hat/tecnicas-posteriores-a-la-explotacion/persistencia-y-escalada-de-privilegios/windows.md)
   * [Movimiento Lateral](red-team-black-hat/tecnicas-posteriores-a-la-explotacion/movimiento-lateral/README.md)
     * [Lateral Movement](red-team-black-hat/tecnicas-posteriores-a-la-explotacion/movimiento-lateral/lateral-movement.md)
@@ -302,6 +301,8 @@
     * [Ataques de inanición de DHCP y servidores DHCP no autorizados](red-team-black-hat/networks/vectores-de-ataques-vulnerabilidades-comunes/ataques-de-inanicion-de-dhcp-y-servidores-dhcp-no-autorizados.md)
   * [Radios](red-team-black-hat/networks/radios.md)
   * [Satellite](red-team-black-hat/networks/satellite.md)
+* [Red Team Tools](red-team-black-hat/red-team-tools.md)
+* [Recursos](red-team-black-hat/recursos.md)
 
 ## Pentesting Web
 
