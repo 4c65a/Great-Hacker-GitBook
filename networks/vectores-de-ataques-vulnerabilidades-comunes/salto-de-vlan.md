@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Salto de VLAN
 
 En una red local (LAN), los dispositivos comparten una dirección de red IP de Capa 3 y están en el mismo dominio de transmisión de Capa 2. Una VLAN (Virtual LAN) es un dominio de difusión de Capa 2 controlado por un conmutador. Los dispositivos en una VLAN están asociados con un conmutador, y los puertos del conmutador determinan la pertenencia a una VLAN. En una configuración predeterminada, todos los puertos están asignados a la VLAN 1.

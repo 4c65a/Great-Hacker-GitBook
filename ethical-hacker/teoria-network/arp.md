@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # ARP
 
 El primer protocolo a nivel de red es el ARP (Address Resolution Protocol - Protocolo de resolución de direcciones). ARP convierte dinámicamente las direcciones de Internet en las direcciones de hardware exclusivas de las redes de área local.

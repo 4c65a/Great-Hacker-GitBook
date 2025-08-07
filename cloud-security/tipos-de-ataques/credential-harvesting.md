@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Credential Harvesting
 
 La recolección de credenciales es una técnica de recopilan credenciales de usuario (como ID de usuario, direcciones de correo electrónico, contraseñas y otra información de inicio de sesión).

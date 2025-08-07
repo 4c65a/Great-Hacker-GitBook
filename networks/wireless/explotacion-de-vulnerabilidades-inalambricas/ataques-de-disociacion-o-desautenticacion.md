@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Ataques de disociación (o desautenticación)
 
 Un atacante puede hacer que los clientes inalámbricos legítimos se desautenticar de los AP o enrutadores inalámbricos legítimos para realizar una condición DoS o hacer que esos clientes se conecten a un gemelo malvado. Este tipo de ataque también se conoce como ataque de disociación porque el atacante disocia (intenta desconectar) al usuario del AP inalámbrico de autenticación y luego lleva a cabo otro ataque para obtener las credenciales válidas del usuario.

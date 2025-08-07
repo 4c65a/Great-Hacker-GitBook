@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Omisión del control de acceso a la red (NAC)
 
 NAC es una tecnología diseñada para interrogar puntos finales antes de unirse a una red cableada o inalámbrica. Normalmente se utiliza junto con 802.1X para la gestión y el cumplimiento de identidades.&#x20;

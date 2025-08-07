@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Legitimate Utilities and Living-off-the-Land
 
 Se pueden utilizar muchas utilidades legítimas diferentes de Windows, como PowerShell, Windows Management Instrumentation (WMI) y Sysinternals, para actividades posteriores a la explotación, como se describe en las siguientes secciones. De manera similar, puede utilizar herramientas legítimas y aplicaciones instaladas en sistemas Linux y macOS para realizar actividades posteriores a la explotación. Si un sistema comprometido tiene Python instalado, puede usarlo para explotación y exfiltración adicionales. De manera similar, puede utilizar el shell Bash y herramientas como Netcat post-explotación.

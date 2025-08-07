@@ -1,18 +1,4 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
-# Configuring an NFS File Server
+# Configuracion de NFS
 
 ## Configuración del Servidor NFS
 

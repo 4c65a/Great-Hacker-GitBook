@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # User Enumeration
 
 La enumeración de usuarios es el proceso de identificar los usuarios activos en una red. Esto se puede hacer con una variedad de herramientas y técnicas.

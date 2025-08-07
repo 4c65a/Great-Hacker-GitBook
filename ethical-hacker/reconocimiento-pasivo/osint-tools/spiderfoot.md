@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # SpiderFoot
 
 SpiderFoot es un escáner OSINT automatizado que viene incluido en Kali. SpiderFoot consulta más de 1000 fuentes de información abiertas y presenta los resultados en una GUI fácil de usar. SpiderFoot también puede ejecutarse desde una consola.

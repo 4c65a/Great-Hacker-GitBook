@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Adquisición de cuenta (Account Takeover)
 
 La mecánica subyacente y el motivo del atacante de un ataque de apropiación de cuentas en la nube son los mismos que para una apropiación de cuentas que se lleva a cabo en las instalaciones. En una apropiación de cuentas , el actor de amenazas obtiene acceso a una cuenta de usuario o aplicación y la utiliza para luego obtener acceso a más cuentas e información. Hay diferentes formas en que puede ocurrir una apropiación de cuenta en la nube.&#x20;

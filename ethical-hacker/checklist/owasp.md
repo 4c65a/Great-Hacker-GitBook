@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # OWASP
 
 {% embed url="https://github.com/0xRadi/OWASP-Web-Checklist" %}

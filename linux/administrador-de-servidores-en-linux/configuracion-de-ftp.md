@@ -1,18 +1,4 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
-# Configuring an FTP Server
+# Configuración de FTP
 
 ### Cómo instalar vsftpd en Linux
 
@@ -122,10 +108,6 @@ sudo nvim /etc/vsftpd.conf
     ```
     sudo systemctl restart vsftpd
     ```
-
-    ***
-
-    ***
 4.  Para probar el inicio de sesión anónimo, emita el `ftp 127.0.0.1`comando, utilícelo `anonymous`como nombre de usuario y una contraseña en blanco. Debería recibir un `230 Login successful.`
 
 

@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Vishing
 
 El vishing abreviatura de phishing de voz es un ataque de ingeniería social que se lleva a cabo en una conversación telefónica. El atacante persuade al usuario para que revele información personal y financiera privada o información sobre otra persona o empresa.

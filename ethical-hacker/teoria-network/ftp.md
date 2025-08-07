@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # FTP
 
 El Protocolo de Transferencia de Archivos (File Transfer Protocol) brinda un método sencillo para transferir archivos de una computadora a otra.FTP puede acceder a un servidor FTP para realizar diversas funciones de administración de archivos, entre ellas subir y descargar archivos.

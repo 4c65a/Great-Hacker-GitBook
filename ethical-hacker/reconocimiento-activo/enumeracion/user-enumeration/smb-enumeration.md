@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # SMB enumeration
 
 Recopilar una lista  de usuarios. Cuando tienes el nombre de usuario, puedes comenzar a realizar intentos de fuerza bruta para obtener la contraseña de la cuenta. Realizas la enumeración de usuarios cuando has obtenido acceso a la red interna.
@@ -23,3 +9,4 @@ El script smb-enum-users.nse es un script Nmap que se utiliza para enumerar usua
 ```
 nmap  --script smb-enum-users.nse 192.168.88.251
 ```
+

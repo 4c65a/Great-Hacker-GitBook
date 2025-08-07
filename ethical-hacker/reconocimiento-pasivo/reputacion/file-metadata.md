@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # File metadata
 
 Los metadatos son datos que proporcionan información sobre otros datos. Pueden incluir cosas como el nombre del archivo, el tamaño, la fecha de creación y el autor, así como información más específica sobre el contenido del archivo.

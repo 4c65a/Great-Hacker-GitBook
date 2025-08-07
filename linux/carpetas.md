@@ -1,16 +1,5 @@
 ---
 icon: folder-bookmark
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Directorios

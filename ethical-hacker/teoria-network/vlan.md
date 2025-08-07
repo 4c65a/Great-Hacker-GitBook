@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # VLAN
 
 Una LAN virtual (VLAN) es una red de área local que asigna dispositivos según una base distinta a la ubicación geográfica, por ejemplo, por departamento, tipo de usuario o aplicación principal. El tráfico que fluye entre diferentes VLAN debe pasar a través de un enrutador, como si las VLAN estuvieran en dos LAN separadas.

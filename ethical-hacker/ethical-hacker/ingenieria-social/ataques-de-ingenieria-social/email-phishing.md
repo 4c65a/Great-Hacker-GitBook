@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Email Phishing
 
 Con el phishing, un atacante presenta a un usuario un enlace o un archivo adjunto que parece un recurso válido y de confianza. Cuando el usuario hace clic en él, se le pide que revele información confidencial, como su nombre de usuario y contraseña.

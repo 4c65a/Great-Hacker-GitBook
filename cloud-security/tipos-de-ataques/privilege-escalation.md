@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Privilege Escalation
 
 La escalada de privilegios es el acto de explotar un error o una falla de diseño en una aplicación de software o firmware para obtener acceso a recursos que normalmente habrían estado protegidos de una aplicación o un usuario. Esto da como resultado que un usuario obtenga privilegios adicionales más allá de los que el desarrollador de la aplicación pretendía originalmente.

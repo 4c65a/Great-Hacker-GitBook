@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Escaneo post-explotación
 
 El movimiento lateral implica escanear una red en busca de otros sistemas, explotar vulnerabilidades en otros sistemas, comprometer credenciales y recopilar información confidencial para su filtración. El movimiento lateral es posible si una organización no segmenta su red adecuadamente.,la segmentación de la red es muy importante.

@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Ataques de ingeniería social
 
 Un ataque de ingeniería social aprovecha el eslabón más débil de una organización, que es el usuario humano. Si un atacante puede hacer que un usuario revele información, es mucho más fácil para el atacante causar daño que mediante el uso de algún otro método de reconocimiento.

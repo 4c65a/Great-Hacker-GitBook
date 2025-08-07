@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # MAC
 
 Es el identificador único asignado por el fabricante a una pieza de hardware de red MAC significa Media Access Control.

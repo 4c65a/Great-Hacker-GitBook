@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Explotaciones SMTP
 
 Se puede aprovechar los  servidores SMTP inseguros para enviar spam y realizar phishing y otros ataques basados ​​en correo electrónico. SMTP es un protocolo de servidor a servidor.

@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Cómo cubrir tus huellas
 
 Después de comprometer un sistema durante una prueba de penetración, siempre debe cubrir sus pistas para evitar la detección suprimiendo registros, eliminando cuentas de usuario que podrían haberse creado en el sistema y eliminando cualquier archivo que se haya creado. Además, una vez finalizada la prueba de penetración, debe limpiar todos los sistemas. Como mejor práctica, debe discutir estas tareas y documentarlas en el documento de reglas de participación durante la fase previa al compromiso. Las siguientes son algunas de las mejores prácticas a tener en cuenta durante el proceso de limpieza:

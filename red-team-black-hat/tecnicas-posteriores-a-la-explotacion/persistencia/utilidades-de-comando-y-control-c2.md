@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Utilidades de comando y control (C2)
 
 Los atacantes suelen utilizar sistemas de comando y control (denominados C2 o CnC) para enviar comandos e instrucciones a los sistemas comprometidos. El C2 puede ser el sistema del atacante (una computadora de escritorio, una computadora portátil) o un servidor físico o virtual dedicado. Un C2 crea un canal encubierto con el sistema comprometido. Un canal encubierto es una técnica adversarial que permite al atacante transferir objetos de información entre procesos o sistemas que, según una política de seguridad, no deberían poder comunicarse.

@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # TCP/IP
 
 Es un conjunto de reglas que permite el intercambio o transportes de datos,generalmente el protocolo en distintos niveles de capas:

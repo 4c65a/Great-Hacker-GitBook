@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Ataques DoS y DDoS
 
 Los ataques de denegación de servicio (DoS) y denegación de servicio distribuido (DDoS) son intentos maliciosos de interrumpir las operaciones normales del servidor, servicio o red objetivo a través de una inundación de tráfico de Internet.

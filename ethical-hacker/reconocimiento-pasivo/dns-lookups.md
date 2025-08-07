@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # DNS Lookups
 
 ### Para ver mas comandos y herramientas ir a [53-dns.md](../../networks/network-services/53-dns.md "mention")

@@ -109,34 +109,6 @@
 * [Curl](ethical-hacker/curl.md)
 * [Transferencias de Archivos](ethical-hacker/transferencias-de-archivos.md)
 
-## Blue Team
-
-***
-
-* [Security Operations Manager](security-operations-manager/README.md)
-  * [Modern Security Operations Center (SOC)](security-operations-manager/modern-security-operations-center-soc.md)
-  * [Building a Security Operations Team](security-operations-manager/building-a-security-operations-team.md)
-  * [Metrics, Maturity, and Measuring Success](security-operations-manager/metrics-maturity-and-measuring-success.md)
-* [Threat Intelligence](threat-intelligence/README.md)
-  * [Grupos APT Lista](threat-intelligence/grupos-apt-lista.md)
-  * [Como investigar](threat-intelligence/como-investigar.md)
-  * [TTPs](threat-intelligence/ttps.md)
-  * [Campañas](threat-intelligence/campanas.md)
-* [Threat Hunting](threat-hunting/README.md)
-  * [Malware](threat-hunting/malware.md)
-* [Incident Response](incident-response.md)
-* [Digital Forensics](digital-forensics/README.md)
-  * [Tipos de evidencia](digital-forensics/tipos-de-evidencia.md)
-  * [Esteganografía](digital-forensics/esteganografia.md)
-  * [Descifrar ZIP](digital-forensics/descifrar-zip.md)
-* [Network Analysis](network-analysis.md)
-* [Phishing Analysis](phishing-analysis/README.md)
-  * [Gophish](phishing-analysis/gophish.md)
-* [Vulnerability Management](vulnerability-management.md)
-* [Dark Web Operations](dark-web-operations/README.md)
-  * [Accediendo a TOR con el navegador](dark-web-operations/accediendo-a-tor-con-el-navegador.md)
-  * [Configuracion de TOR en Linux](dark-web-operations/configuracion-de-tor-en-linux.md)
-
 ## Red Team/Black Hat
 
 * [Credenciales y Suplantación de Usuario](red-team-black-hat/credenciales-y-suplantacion-de-usuario/README.md)
@@ -445,6 +417,32 @@
 ***
 
 * [C/C++](c-c++.md)
+
+## Blue Team
+
+* [Security Operations Manager](blue-team/security-operations-manager/README.md)
+  * [Modern Security Operations Center (SOC)](blue-team/security-operations-manager/modern-security-operations-center-soc.md)
+  * [Building a Security Operations Team](blue-team/security-operations-manager/building-a-security-operations-team.md)
+  * [Metrics, Maturity, and Measuring Success](blue-team/security-operations-manager/metrics-maturity-and-measuring-success.md)
+* [Threat Intelligence](blue-team/threat-intelligence/README.md)
+  * [Grupos APT Lista](blue-team/threat-intelligence/grupos-apt-lista.md)
+  * [Como investigar](blue-team/threat-intelligence/como-investigar.md)
+  * [TTPs](blue-team/threat-intelligence/ttps.md)
+  * [Campañas](blue-team/threat-intelligence/campanas.md)
+* [Threat Hunting](blue-team/threat-hunting/README.md)
+  * [Malware](blue-team/threat-hunting/malware.md)
+* [Incident Response](blue-team/incident-response.md)
+* [Digital Forensics](blue-team/digital-forensics/README.md)
+  * [Tipos de evidencia](blue-team/digital-forensics/tipos-de-evidencia.md)
+  * [Esteganografía](blue-team/digital-forensics/esteganografia.md)
+  * [Descifrar ZIP](blue-team/digital-forensics/descifrar-zip.md)
+* [Network Analysis](blue-team/network-analysis.md)
+* [Phishing Analysis](blue-team/phishing-analysis/README.md)
+  * [Gophish](blue-team/phishing-analysis/gophish.md)
+* [Vulnerability Management](blue-team/vulnerability-management.md)
+* [Dark Web Operations](blue-team/dark-web-operations/README.md)
+  * [Accediendo a TOR con el navegador](blue-team/dark-web-operations/accediendo-a-tor-con-el-navegador.md)
+  * [Configuracion de TOR en Linux](blue-team/dark-web-operations/configuracion-de-tor-en-linux.md)
 
 ## Cloud Security
 

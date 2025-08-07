@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Invertir y vincular shells(Reverser/Bind Shells)
 
 Un _shell_ es una utilidad que actúa como interfaz entre un usuario y el sistema operativo.&#x20;

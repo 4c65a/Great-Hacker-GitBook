@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # OSI
 
 El modelo Open Systems Interconnection (OSI) , el OSI proporciona un estándar para que distintos sistemas de equipos puedan comunicarse entre sí.

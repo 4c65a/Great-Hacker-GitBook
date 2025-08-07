@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Recon-ng
 
 Utilizado para la recopilación de información y reconocimiento de red automatizada. Es una herramienta que puede ser utilizada por profesionales de la seguridad, investigadores y cualquier persona que necesite obtener información sobre un objetivo.

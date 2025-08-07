@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Whois
 
 Whois es un protocolo de Internet que se utiliza para recuperar información sobre un nombre de dominio. Esta información puede incluir el propietario del dominio, el administrador del dominio, la dirección IP del servidor DNS, la fecha de registro del dominio y la fecha de vencimiento del dominio.

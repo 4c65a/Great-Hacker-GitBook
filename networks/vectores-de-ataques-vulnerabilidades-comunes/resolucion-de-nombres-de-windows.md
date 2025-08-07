@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Resolución de nombres de Windows
 
 Existen varias tecnologías y protocolos de resolución de nombre a dirección IP, incluido el sistema básico de entrada/salida de red (NetBIOS), la resolución de nombres de multidifusión local de enlace (LLMNR) y el sistema de nombres de dominio (DNS).

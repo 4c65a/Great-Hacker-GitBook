@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # On-Path Attacks
 
 En un ataque en ruta (anteriormente conocido como ataque de hombre en el medio \[MITM]), un atacante se coloca en línea entre dos dispositivos o individuos que se comunican para espiar (es decir, robar datos confidenciales) o manipular los datos que se transfieren.

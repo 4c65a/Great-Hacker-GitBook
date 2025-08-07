@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Fallas criptográficas
 
 Durante la fase de reconocimiento, los atacantes a menudo pueden inspeccionar los certificados SSL para obtener información sobre la organización, posibles fallas criptográficas e implementaciones débiles. Dentro de los certificados digitales se puede encontrar mucha información: el número de serie del certificado, el nombre común del sujeto, el URI del servidor al que se asignó, el nombre de la organización, la información del OCSP, el URI de la CRL, etc.

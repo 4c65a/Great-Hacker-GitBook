@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Bluejacking y Bluesnarfing
 
 El bluejacking es un ataque que se puede realizar mediante Bluetooth con dispositivos vulnerables dentro del alcance. Un atacante envía mensajes no solicitados a una víctima a través de Bluetooth, incluida una tarjeta de contacto (vCard) que normalmente contiene un mensaje en el campo de nombre. Esto se hace utilizando el protocolo Object Exchange (OBEX). Una vCard puede contener nombre, dirección, números de teléfono, direcciones de correo electrónico y URL web relacionadas.

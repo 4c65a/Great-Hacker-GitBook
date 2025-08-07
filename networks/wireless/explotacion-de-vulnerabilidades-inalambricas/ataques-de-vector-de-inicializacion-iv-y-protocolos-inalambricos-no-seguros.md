@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Ataques de vector de inicialización (IV) y protocolos inalámbricos no seguros
 
 Un atacante puede provocar alguna modificación en el **vector de inicialización** (IV) de un paquete inalámbrico que se cifra durante la transmisión. El objetivo del atacante es obtener mucha información sobre el texto sin formato de un solo paquete y generar otra clave de cifrado que luego pueda usarse para descifrar otros paquetes usando el mismo IV. WEP es susceptible a muchos ataques diferentes, incluidos los ataques intravenosos.

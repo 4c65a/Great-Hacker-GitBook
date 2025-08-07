@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Ataques al servicio de metadatos
 
 Tradicionalmente, los desarrolladores de software utilizaban credenciales codificadas para acceder a diferentes servicios, como bases de datos y archivos compartidos en un servidor FTP.&#x20;

@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Ingeniería social
 
 La ingeniería social es un ataque hacia una persona para manipular y obtener información,es utilizada por un atacante  para convencer al usuario objetivo de que realice una cierta acción, cómo enviarle dinero, divulgar información delicada del cliente o revelar credenciales de autenticación,tener influencia sobre la víctima ,interrogar,preguntas básicas.&#x20;

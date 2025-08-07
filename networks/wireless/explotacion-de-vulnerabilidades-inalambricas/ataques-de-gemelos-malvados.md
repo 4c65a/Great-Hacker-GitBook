@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Ataques de gemelos malvados
 
 En un ataque gemelo malvado , el atacante crea un punto de acceso no autorizado y lo configura exactamente igual que la red corporativa existente.

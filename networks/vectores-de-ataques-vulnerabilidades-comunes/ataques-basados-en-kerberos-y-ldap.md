@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Ataques basados ​​en Kerberos y LDAP
 
 Kerberos es un protocolo de autenticación definido en RFC 4120 que Windows ha utilizado durante varios años.Es un protocolo que facilita la autenticación mutua a través de una red que no es de confianza y la autorización de un cliente  a servicios.

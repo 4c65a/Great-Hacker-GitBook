@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Watering Hole Attacks
 
 Las campañas de phishing suelen utilizar mensajes de texto para enviar malware o enlaces maliciosos a dispositivos móviles.

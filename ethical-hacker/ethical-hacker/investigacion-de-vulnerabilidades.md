@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Investigación de vulnerabilidades
 
 ## [US-CERT](https://www.cisa.gov/)
@@ -30,7 +16,7 @@ El Instituto Nacional de Estándares y Tecnología (NIST) es una agencia del Dep
 
 Equipo de Respuesta ante Emergencias Informáticas de Japón (JPCERT) es una organización que trabaja con proveedores de servicios, proveedores de seguridad y agencias del sector privado y gubernamental para proporcionar capacidades de respuesta a incidentes, aumentar la concienciación sobre la ciberseguridad, realizar investigaciones y análisis de incidentes de seguridad y colaborar con otros equipos CERT internacionales. El JPCERT es responsable de las actividades del Equipo de Respuesta a Incidentes de Seguridad Informática (CSIRT) en la región japonesa y de Asia Pacífico.
 
-## [CAPEC](https://www.google.com/url?sa=t\&rct=j\&q=\&esrc=s\&source=web\&cd=\&ved=2ahUKEwiMkeSlypmCAxX2l5UCHbW\_BJoQFnoECAcQAQ\&url=https%3A%2F%2Fcapec.mitre.org%2F\&usg=AOvVaw0PFSqsuGB3azYfwgA-Ozeq\&opi=89978449)
+## [CAPEC](https://www.google.com/url?sa=t\&rct=j\&q=\&esrc=s\&source=web\&cd=\&ved=2ahUKEwiMkeSlypmCAxX2l5UCHbW_BJoQFnoECAcQAQ\&url=https%3A%2F%2Fcapec.mitre.org%2F\&usg=AOvVaw0PFSqsuGB3azYfwgA-Ozeq\&opi=89978449)
 
 La Enumeración y Clasificación de Patrones de Ataque Común (CAPEC) es un esfuerzo impulsado por la comunidad para catalogar los patrones de ataque observados en el mundo real para que puedan utilizarse para identificar de forma más eficiente las amenazas activas. CAPEC, que es mantenido por MITRE, actúa como un diccionario de ataques conocidos que se han observado en el mundo real.
 

@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Ataques de KARMA
 
 KARMA (que significa _karma ataca automáticamente a las máquinas de radio_ ) es un ataque en ruta que implica la creación de un AP no autorizado y permitir que un atacante intercepte el tráfico inalámbrico. Una máquina de radio podría ser un dispositivo móvil, una computadora portátil o cualquier dispositivo con Wi-Fi.

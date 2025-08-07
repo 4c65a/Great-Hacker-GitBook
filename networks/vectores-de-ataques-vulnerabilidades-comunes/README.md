@@ -1,16 +1,5 @@
 ---
 icon: vector-circle
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Vectores de Ataques(Vulnerabilidades comunes)

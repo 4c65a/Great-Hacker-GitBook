@@ -1,19 +1,10 @@
 ---
 icon: terminal
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Tratamiento de la TTY
+
+
 
 1. `script /dev/null -c bash`
 2. `python3 -c 'import pty;pty.spawn("/bin/bash")'`

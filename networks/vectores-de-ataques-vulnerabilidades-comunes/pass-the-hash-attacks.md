@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Pass-the-Hash Attacks
 
 Todas las versiones de Windows almacenan las contraseñas como hashes en un archivo llamado archivo Administrador de cuentas de seguridad (SAM). El sistema operativo no sabe cuál es la contraseña real porque solo almacena un hash de la contraseña

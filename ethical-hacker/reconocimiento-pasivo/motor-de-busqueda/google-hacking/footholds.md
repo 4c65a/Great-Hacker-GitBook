@@ -1,16 +1,5 @@
 ---
 description: https://www.exploit-db.com/google-hacking-database?category=1
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Footholds

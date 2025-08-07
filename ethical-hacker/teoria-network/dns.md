@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # DNS
 
 En las redes de datos, los dispositivos se etiquetan con direcciones IP.Los nombres de dominio se crearon para convertir las direcciones numéricas en un nombre sencillo y reconocible .Los DNS o llamado el sistema de nombres de dominios ([The Domain Name System](https://www.cloudflare.com/learning/dns/what-is-dns/)),lo que hace es asignarle un nombre o apodo a una dirección IP,por defecto este tiene el puerto 53.
