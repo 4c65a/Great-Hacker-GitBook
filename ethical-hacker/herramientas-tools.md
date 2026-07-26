@@ -74,6 +74,7 @@ Es una gran herramienta para enumerar recursos compartidos de SMB, implementacio
 
 **Qualys :** [**https://www.qualys.com/**](https://www.qualys.com/)
 
+**Dark-Moon :** [**https://github.com/ASCIT31/Dark-Moon**](https://github.com/ASCIT31/Dark-Moon) - Pentester autonomo de codigo abierto (GPL-3.0) con IA, host MCP.
 **SQLmap :** [**http://sqlmap.org/**](http://sqlmap.org/)
 
 **Nikto :** [**https://github.com/sullo/nikto**](https://github.com/sullo/nikto)
